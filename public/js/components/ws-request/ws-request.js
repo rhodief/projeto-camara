@@ -177,7 +177,9 @@
                     ultimoStatus_situacao: 'ultimoStatus.situacao',
                     ultimoStatus_view: 'ultimoStatus.uri',
                     ultimoStatus_partido_view: 'ultimoStatus.uriPartido',
-                    ultimoStatus_foto: 'ultimoStatus.urlFoto',
+                    ultimoStatus_foto: ['ultimoStatus.urlFoto', /.+/g, function(value){
+                        return value.split('http').join('https')
+                    }],
                     ultimoStatus_site: 'ultimoStatus.urlWebsite'
                 }
             }
