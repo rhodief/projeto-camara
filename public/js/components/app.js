@@ -5,7 +5,7 @@ if (typeof (Storage) === "undefined") {
         'use strict';
         angular.module('app', ['meuEspacoCamara', 'browserStorage', 'panelsGen', 'search'])
         .constant('APP', {
-            url: '/www/camara/public/js/components/'
+            url: 'js/components/'
         });
     })();
 }
