@@ -66,7 +66,7 @@
         }
 
         function _getCoords(latitude,longitude, accuracy){
-            var url = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='+latitude+','+longitude+'&sensor=true';
+            var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng='+latitude+','+longitude+'&sensor=true';
             return $http.get(url)
                 .then(successCallback)
                 .catch(errorCallback);
