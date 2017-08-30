@@ -110,7 +110,8 @@
                 var isArray = angular.isArray(v);
                 var value = (isArray ? v[0]: v);
                 var item = $parse(value)(data);
-                outputObj[k] = (isArray && item ? item.match(v[1])[0] : item);
+                var prevalue = (isArray && item ? item.match(v[1])[0] : item);
+                outputObj[k] = (isArray && v && v[2] ? v[2](prevalue) : prevalue);
             });
             return outputObj;
         }
@@ -136,7 +137,9 @@
                     uf_sig: 'siglaUf',
                     view: 'uri',
                     view_partido: 'uriPartido',
-                    foto: "urlFoto"
+                    foto: ["urlFoto", /.+/g, function(value){
+                        return value.split('http').join('https')
+                    }]
                 }
             }
         }
