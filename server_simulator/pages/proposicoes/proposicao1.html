@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../../../public/style/app.css">
+    <title>PL 456/2006</title>
+</head>
+
+<body ng-app="app">
+    <header>Cabeçalho: Logo e Acessibilidade</header>
+    <menu ng-controller="searchController as srch">
+        [Menu Principal]
+        <input type="text" ng-keyup="srch.lookup()">
+    </menu>
+    <section>[Notificações]
+        <noscript>Javascript não ativado!!</noscript>
+        <div id="main-messages"></div>
+    </section>
+    <article>
+        <p>Projeto de Lei n. 456/2006</p>
+        <p>Conteúdo do Projeto...</p>
+    </article>
+    <section id="discussao" ng-app="camaraDiscussao">
+        <camara-discussao></camara-discussao>
+    </section>
+    <footer>Rodapé!</footer>
+
+    <section class="hidden" id="section-meuEspacoCamara">
+        <div id="button-meuEspacoCamara" ng-controller="meuEspacoCamaraController as meuEspacoCamara">
+            <a href="#" ng-click="meuEspacoCamara.toggleMescam()">#MeuEspaçoCâmara</a>
+            <meu-espaco-camara id="meuEspacoCamara" action="meuEspacoCamara.toggleMescam()" class="w3-sidebar w3-bar-block"></meu-espaco-camara>
+        </div>
+    </section>
+
+
+
+      <!-- Scripts Bower -->
+      <script src="../../../public/bower_components/angular/angular.min.js"></script>
+      <!-- lazyLoad -->
+      <script src="../../../public/bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+      <!-- Main App -->
+      <script src="../../../public/js/components/app.js"></script>
+      <script src="../../../public/js/components/app.run.js"></script>
+      <!-- camara - discussão -->
+      <script src="../../../public/js/camara-discussao/camara-discussao.js"></script>
+      <!-- Search -->
+      <script src="../../../public/js/components/search/search.js"></script>
+      <!-- Meu Espaço Câmara -->
+      <script src="../../../public/js/components/meu-espaco-camara/meu-espaco-camara.js"></script>
+      <script src="../../../public/js/components/meu-espaco-camara/meu-espaco-camara.controller.js"></script>
+      <script src="../../../public/js/components/meu-espaco-camara/meu-espaco-camara.espaco-nav.js"></script>
+      <!-- Browser Storage -->
+      <script src="../../../public/js/components/browser-storage/browser-storage.js"></script>
+      <script src="../../../public/js/components/browser-storage/browser-storage.localStorageService.js"></script>
+      <!-- Panels Gen -->
+      <script src="../../../public/js/components/panels-gen/panels-gen.js"></script>
+      <script src="../../../public/js/components/panels-gen/panels-gen.directive.js"></script>
+      <script src="../../../public/js/components/panels-gen/panels-gen.service.js"></script>
+      <script src="../../../public/js/components/panels-gen/locale_pt-br.js"></script>
+  
+      <script src="../../../public/js/components/ws-request/ws-request.js"></script>
+      <script src="../../../public/js/components/gps/gps.js"></script>
+     
+    
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+{
+    "meta": {
+        "name": "#MESCAM",
+        "versao": 0.1
+    },
+    "panels": [
+        {
+            "section": "acesso_rapido",
+            "label": "Acesso Rápido",
+            "panels": [
+                {
+                    "name": "agenda",
+                    "label": "Agenda",
+                    "pos": 1,
+                    "activated": false
+                }
+            ]
+        },
+        {
+            "section": "noticias",
+            "label": "Notícias",
+            "panels": []
+        },
+        {
+            "section": "atividade_parlamentar",
+            "label": "Atividade Parlamentar",
+            "panels": [
+                {
+                    "name": "seus_representantes",
+                    "label": "Seus Representantes",
+                    "pos": 1,
+                    "activated": false
+                }
+            ]
+        },
+        {
+            "section": "participe",
+            "label": "Participe",
+            "panels":[
+                {
+                    "name": "meu_teste",
+                    "label": "Meu Teste!!",
+                    "pos": 2,
+                    "activated": false
+                }
+            ]
+        },
+        {
+            "section": "fiscalize",
+            "label": "Fiscalize",
+            "panels": []
+        },
+        {
+            "section": "educacao",
+            "label": "Educação para Democracia",
+            "panels": []
+        }
+    ]
+}

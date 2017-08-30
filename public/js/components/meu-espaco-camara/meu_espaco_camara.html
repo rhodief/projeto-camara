@@ -1,0 +1,36 @@
+<button ng-click="vm.close()">Sair</button>
+<div class="title">[#MeuEspaçoCâmara]</div>
+<div class="actions">
+    <a href="#" ng-click="vm.selectTab('favoritos')">Favoritos</a>
+    <a href="#" ng-click="vm.selectTab('paineis')">Painéis</a>
+    <a href="#" ng-click="vm.selectTab('preferencias')">Preferências</a>
+</div>
+<div class="content" style="color:green">
+    <div ng-switch="vm.selectedTab">
+        <div ng-switch-when="desconhecido">
+            <p>Este é um espaço para Configuraçao personalizada. Aqui você pode salvar partes do sites que desejar acessar rapidamente, bem como adicionar painés personalizados na página inicial para facilitar o acompamhamento do trabalho parlamentar.</p>
+            <p>Funciona assim assim assado...</p>
+            <a href="#" ng-click="vm.gotIt()">Iniciar o #meuEspaçoCâmara</a>
+        </div>
+        <div ng-switch-when="favoritos">
+            [Favoritos]
+        </div>
+        <div ng-switch-when="paineis">
+            <div class="mescam-title">[PAINEIS]</div>
+            <div class="mescam-content">
+                <div ng-repeat="section in vm.panels">
+                    <p>
+                        <strong>{{section.label}}</strong>
+                        <br>
+                        <span ng-repeat="panel in section.panels">
+                            {{panel.activated ? "[" : ""}}{{panel.label}}{{panel.activated ? "]" : ""}} <button ng-click="vm.togglePanel(panel, $parent.section)">{{panel.activated ? "Desativar" : "Ativar"}}</button>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div ng-switch-when="preferencias">
+            PREFERÊNCIAS
+        </div>
+    </div>
+</div>

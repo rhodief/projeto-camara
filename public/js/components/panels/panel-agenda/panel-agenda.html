@@ -1,0 +1,52 @@
+<div class="w3-card-4" style="max-width:1000px;">
+    <header class="w3-container w3-teal">
+        <h5>AGENDA</h5>
+    </header>
+    <div class="panel-general-actions">
+    </div>
+    <div class="w3-container">
+        <div class="panel-container-3">
+            <div pickadate ng-model="vm.date"></div>
+        </div>
+        <div class="panel-container-3">
+            <div>
+                <input class="w3-input" type="text" placeholder="procurar..."></p>
+            </div>
+            <ul class="w3-ul w3-card-4 panel-list">
+                <li class="w3-padding-16 panel-list-item" ng-class="{'w3-hover-teal w3-teal': vm.isSelected(evento.id), 'w3-hover-light-grey': !vm.isSelected(evento.id)}"
+                    ng-repeat="evento in vm.agenda" ng-click="vm.getDetail(evento.id, evento.orgao_id, evento.dataInicio)">
+                    <div class="w3-cell-row">
+                        <div class="w3-cell w3-cell-middle w3-rightbar">
+                            <p>{{::evento.horaInicio}}</p>
+                        </div>
+                        <div class="w3-cell w3-cell-middle w3-center">
+                            <div class="w3-tag w3-teal w3-tiny">{{::evento.descricaoTipo}}</div>
+                            <div><strong>{{::evento.orgao_sigla}}</strong></div>
+                            <div class="w3-small">{{::evento.titulo}}</div>
+                            <div>{{::evento.localCamara_nome}}</div>
+                            <div class="w3-tag w3-red w3-tiny">{{::evento.descricaoSituacao}}</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="panel-container-3 panel-view">
+            <div class="w3-container w3-center">
+                <div ng-if="view.ultimoStatus_nome===undefined">
+                    <img src="img_avatar2.png" alt="Avatar" style="width:80%">
+                    <h4>Selecione</h4>
+                    <h6>Um parlamentar</h6>
+                </div>
+                <div ng-if="view.ultimoStatus_nome">
+                    <h4>{{vm.view.ultimoStatus_nome}}</h4>
+                    <h6>{{vm.view.ultimoStatus_partido_sig}}/{{vm.view.ultimoStatus_uf_sig}}</h6>
+
+                    <div class="w3-section">
+                        <button class="w3-button w3-green">Accept</button>
+                        <button class="w3-button w3-red">Decline</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

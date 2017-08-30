@@ -1,0 +1,140 @@
+{
+    "proposicaoId": 123,
+    "score": {
+        "favoravel": 34,
+        "parcial": 21,
+        "contrario": 12
+    },
+    "participantes": [
+        {
+            "id": 1,
+            "nome": "Gabriel Joel",
+            "redeSocial": {
+                "name": "twitter",
+                "user": "@gabjoel"
+            },
+            "posicao": "favoravel"
+        },
+        {
+            "id": 2,
+            "nome": "Izaias Malaquias",
+            "redeSocial": {
+                "name": "facebook",
+                "user": "@izamal"
+            },
+            "posicao": "contrario"
+        },
+        {
+            "id": 3,
+            "nome": "Larissa Souza",
+            "redeSocial": {
+                "name": "facebook",
+                "user": "@larilari"
+            },
+            "posicao": "favoravel"
+        },
+        {
+            "id": 4,
+            "nome": "Mara Mariana",
+            "redeSocial": {
+                "name": "facebook",
+                "user": "@maramari"
+            },
+            "posicao": "contrario"
+        },
+        {
+            "id": 5,
+            "nome": "Sérgio Ferreira",
+            "redeSocial": {
+                "name": "twitter",
+                "user": "@serfer"
+            },
+            "posicao": "parcial"
+        }
+    ],
+    "discussao": [
+        {
+            "participanteId": 1,
+            "texto": "Eu acho esse projeto muito importante, pois ajuda a dinamizar setores fundamentais da economia, o que facilitará a retomada do crescimento",
+            "score": {
+                "concordo": 23,
+                "parte": 19,
+                "discordo": 9
+            },
+            "comentarios": [
+                {
+                    "id": 2,
+                    "participanteId": 3,
+                    "opiniao": "concordo",
+                    "texto": "Sim, esse dinamismo ocorrerá provavelmente no setor de serviço, em que há demandas variadas em relação ao tempo e ao valor pago",
+                    "score": {
+                        "concordo": 20,
+                        "parte": 5,
+                        "discordo": 9
+                    }
+                },
+                {
+                    "id": 3,
+                    "participanteId": 2,
+                    "opiniao": "discordo",
+                    "texto": "Não vejo como esssa proposta pode ajudar a dinamizar qualquer setor, aliás, entendo que a proposta prejudica e muito. Veja, por exemplo, o <document id=123 art=2 par=4 inc=0, ali=0 ite=0/>, haverá uma diminuição da fiscalização, o que abre margem para que ilegalidades sejam cometidas com mais facilidade",
+                    "score": {
+                        "concordo": 15,
+                        "parte": 2,
+                        "discordo": 8
+                    },
+                    "comentarios": [
+                        {
+                            "id": 4,
+                            "participanteId": 1,
+                            "opiniao": "parte",
+                            "texto": "Isso não necessariamente vai acontecer, pois a fiscalização será feita por órgãos externos. Mas concordo que se estes órgaõs não atuarem, haverá problemas",
+                            "score": {
+                                "concordo": 2
+                            }
+                        },
+                        {
+                            "id": 5,
+                            "participanteId": 5,
+                            "opiniao": "discordo",
+                            "texto": "A proposta não trata disso, estamos falando de outro tema. A <quote id=2 /> explicou bem sobre o ganho do setor de serviço, nesse ponto será vantajoso mesmo. Vejo outros problemas na proposta, mas este especificamente não é.",
+                            "score": {
+                                "concordo": 3
+                            }
+                        },
+                        {
+                            "id": 6,
+                            "participanteId": 2,
+                            "opiniao": "concordo",
+                            "texto": "<quote id=1 />, <quote id=2 /> e <quote id=5 />. A proposta abre margem para isso, ainda que a fiscalização seja disciplinada em outra lei, não será motivo para se preocupação? Caso isso seja aprovado, será necessário outra lei para corrigir essa burrice.",
+                            "score": {
+                                "concordo": 2,
+                                "parte": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "participanteId": 4,
+                    "opiniao": "discordo",
+                    "texto": "Não haverá retormada do crescimento. Leiam o projeto! <quote id=3 /> colocou um ponto que nem é o mais importante. Esse projeto todo é um desastre, principalmente quanto à perda de direitos dos mais pobres. O que a <quote id=2 /> falou não vai acontecer, pois o impacto é desprezível",
+                    "score": {
+                        "concordo": 15,
+                        "parte": 2,
+                        "discordo": 8
+                    }
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "participanteId": 2,
+            "texto": "Essa proposta sem pé e sem cabeça, nada elencado pela proposta causará qualquer impacto no que diz respeito à retomanda do crescimento",
+            "score": {
+                "concordo": 14,
+                "parte": 15,
+                "discordo": 9
+            }
+        }
+    ]
+}

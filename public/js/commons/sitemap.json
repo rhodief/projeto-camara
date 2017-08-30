@@ -1,0 +1,313 @@
+{
+    "root": [
+        {
+            "name": "A Câmara",
+            "children": [
+                {
+                    "name": "Centro de Estudos e Debates Estratégicos"
+                },
+                {
+                    "name": "Conheça a Câmara"
+                },
+                {
+                    "name": "Conselho de Ética e Decoro Parlamentar"
+                },
+                {
+                    "name": "Corregedoria Parlamentar"
+                },
+                {
+                    "name": "Estrutura Administrativa"
+                },
+                {
+                    "name": "Mesa Diretora"
+                },
+                {
+                    "name": "Missão, Visão e Valores"
+                },
+                {
+                    "name": "Ouvidoria Parlamentar"
+                },
+                {
+                    "name": "Presidência"
+                },
+                {
+                    "name": "Procuradoria Parlamentar"
+                },
+                {
+                    "name": "Programas Institucionais"
+                },
+                {
+                    "name": "Secretaria da Mulher"
+                }
+            ]
+        },
+        {
+            "name": "Deputados",
+            "children": [
+                {
+                    "name": "Conheça os Deputados"
+                },
+                {
+                    "name": "Discursos e Notas Taquigráficas"
+                },
+                {
+                    "name": "Frentes Parlamentares"
+                },
+                {
+                    "name": "Histórico de Movimentação Parlamentar"
+                },
+                {
+                    "name": "Intercâmbio Parlamentar"
+                },
+                {
+                    "name": "Lideranças e Bancadas"
+                }
+            ]
+        },
+        {
+            "name": "Atividade Legislativa",
+            "children": [
+                {
+                    "name": "Agenda"
+                },
+                {
+                    "name": "Comissões"
+                },
+                {
+                    "name": "Conheça o Processo Legislativo"
+                },
+                {
+                    "name": "Estudos e Notas Técnicas"
+                },
+                {
+                    "name": "Legislação"
+                },
+                {
+                    "name": "Plenário"
+                },
+                {
+                    "name": "Projetos de Lei e Outras Proposições"
+                },
+                {
+                    "name": "WebCâmara"
+                }
+            ]
+        },
+        {
+            "name": "Orçamento",
+            "children": [
+                {
+                    "name": "Comissão Mista de Orçamento – CMO"
+                },
+                {
+                    "name": "Emendas Parlamentares"
+                },
+                {
+                    "name": "Estudos e Notas Técnicas"
+                },
+                {
+                    "name": "Fiscalize as Transferências"
+                },
+                {
+                    "name": "LDO – Lei de Diretrizes Orçamentárias"
+                },
+                {
+                    "name": "LOA – Lei Orçamentária Anual"
+                },
+                {
+                    "name": "Orçamento Brasil"
+                },
+                {
+                    "name": "PPA – Plano Plurianual"
+                }
+            ]
+        },
+        {
+            "name": "Documentos e Pesquisa",
+            "children": [
+                {
+                    "name": "Biblioteca Digital"
+                },
+                {
+                    "name": "Biblioteca a Arquivo"
+                },
+                {
+                    "name": "Fique por Dentro"
+                },
+                {
+                    "name": "Publicações e Estudos"
+                }
+            ]
+        },
+        {
+            "name": "Comunicação",
+            "children": [
+                {
+                    "name": "Assessoria de Imprensa"
+                },
+                {
+                    "name": "Banco de Imagens"
+                },
+                {
+                    "name": "Câmara Notícias"
+                },
+                {
+                    "name": "Jornal da Câmara"
+                },
+                {
+                    "name": "Rádio Câmara"
+                },
+                {
+                    "name": "Rede Legislativa de Rádio e TV"
+                },
+                {
+                    "name": "TV Câmara"
+                }
+            ]
+        },
+        {
+            "name": "Transparência",
+            "children": [
+                {
+                    "name": "A Transparência na Câmara"
+                },
+                {
+                    "name": "Acompanhe seu Deputado"
+                },
+                {
+                    "name": "Câmara Aberta"
+                },
+                {
+                    "name": "Concursos"
+                },
+                {
+                    "name": "Cota para Exercício da Atividade Parlamentar"
+                },
+                {
+                    "name": "Dados Abertos"
+                },
+                {
+                    "name": "Gestão na Câmara dos Deputados"
+                },
+                {
+                    "name": "Imóveis Funcionais e Auxílio-Moradia"
+                },
+                {
+                    "name": "Laboratório Hacker"
+                },
+                {
+                    "name": "Lei de Acesso à Informação"
+                },
+                {
+                    "name": "Licitações e Contratos"
+                },
+                {
+                    "name": "Obras em Andamento"
+                },
+                {
+                    "name": "Procedimento de Manifestação de Interesse"
+                },
+                {
+                    "name": "Recursos Humanos"
+                },
+                {
+                    "name": "Viagens em Missão Oficial"
+                }
+            ]
+        },
+        {
+            "name": "Responsabilidade Social",
+            "children": [
+                {
+                    "name": "A prática na Câmara"
+                },
+                {
+                    "name": "Bosque dos Constituintes"
+                },
+                {
+                    "name": "EcoCâmara"
+                },
+                {
+                    "name": "Educação Legislativa e Estágios"
+                },
+                {
+                    "name": "Missão Pedagógica no Parlamento"
+                },
+                {
+                    "name": "Parlamento Jovem"
+                },
+                {
+                    "name": "Plenarinho"
+                },
+                {
+                    "name": "Programa de Acessibilidade"
+                },
+                {
+                    "name": "Programa Pró-Adolesce"
+                }
+            ]
+        },
+        {
+            "name": "Participe",
+            "children": [
+                {
+                    "name": "A Participação na Câmara"
+                },
+                {
+                    "name": "Bate-Papos"
+                },
+                {
+                    "name": "Debates no e-Democracia"
+                },
+                {
+                    "name": "Enquetes"
+                },
+                {
+                    "name": "Eventos"
+                },
+                {
+                    "name": "Fale com a Ouvidoria"
+                },
+                {
+                    "name": "Fale com o Deputado"
+                },
+                {
+                    "name": "Fale Conosco"
+                },
+                {
+                    "name": "Meus boletins eletrônicos"
+                },
+                {
+                    "name": "Redes Sociais"
+                },
+                {
+                    "name": "Sua proposta pode virar Lei"
+                }
+            ]
+        },
+        {
+            "name": "Acessibilidade"
+        },
+        {
+            "name": "English"
+        },
+        {
+            "name": "Español"
+        },
+        {
+            "name": "Extranet"
+        },
+        {
+            "name": "Perguntas Frequentes"
+        },
+        {
+            "name": "Fale Conosco"
+        },
+        {
+            "name": "Glossário"
+        },
+        {
+            "name": "Sobre o Portal"
+        }
+    ]
+}
