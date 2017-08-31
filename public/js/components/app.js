@@ -3,7 +3,7 @@ if (typeof (Storage) === "undefined") {
 } else {
     (function () {
         'use strict';
-        angular.module('app', ['meuEspacoCamara', 'browserStorage', 'panelsGen', 'search'])
+        angular.module('app', ['meuEspacoCamara', 'browserStorage', 'panelsGen', 'search', 'selectFilter'])
         .constant('APP', {
             url: 'js/components/'
         });

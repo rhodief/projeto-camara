@@ -1002,7 +1002,7 @@
                                     <div class="form">
                                         <div class="col size1">
                                             <label for="deputados_federais">Deputados Federais</label>
-                                            <input type="text" name="deputados_federais" id="deputados_federais" placeholder="Digite o nome do Deputado">
+                                            <div style="position:relative" select-filter="deputadosList" name="deputados_federais" ng-placeholder="Digite o nome do Deputado" open-link="true"></div>
                                         </div>
                                         <div class="col size2">
                                             <label for="proposicoes">Preposições</label>
@@ -1158,6 +1158,8 @@
     <script src="js/components/app.run.js"></script>
     <!-- Search -->
     <script src="js/components/search/search.js"></script>
+    <!-- SelectFilter -->
+    <script src="js/components/select-filter/select-filter.js"></script>
     <!-- Meu Espaço Câmara -->
     <script src="js/components/meu-espaco-camara/meu-espaco-camara.js"></script>
     <script src="js/components/meu-espaco-camara/meu-espaco-camara.controller.js"></script>
