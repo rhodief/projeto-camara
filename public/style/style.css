@@ -211,7 +211,7 @@ a,
 .shadow{-webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.11); box-shadow: 0 3px 3px 0 rgba(0,0,0,0.11);}
 .shadow:hover{-webkit-box-shadow: 0 3px 3px 3px rgba(0,0,0,0.22); box-shadow: 0 3px 3px 3px rgba(0,0,0,0.22);}
 
-.section-news{background: #ebebeb; padding: 50px 0;}
+.section-news{background: #ebebeb; padding: 20px 0;}
 .section-news .box-news{background: none; max-width: none;}
 .section-news .center{padding: 0;}
 .section-news .last-news{background: #fff; margin: 0 10px 10px; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box;}
