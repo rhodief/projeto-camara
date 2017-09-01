@@ -204,8 +204,9 @@ a,
 
 .my-camara{position: fixed; right: 2%; bottom: 2%; width: 40px; height: 40px; background: url(../img/layout/espaco_camara.png) no-repeat center center; background-size: 100%; border-radius: 50%; text-indent: -5000em;}
 #meuEspacoCamara{background: #fff;}
-.notification{padding: 10px; font-size: 14px; background: #0094db; color: #fff; position: relative;}
+.notification{padding: .5em; background: #0094db; color: #fff; position: relative; text-align: center}
 .notification .close{position: absolute; right: 10px; top:10px; font-size: 14px; line-height: 15px; color:#fff; text-decoration: none; background: #004a2f; border-radius: 50%; width:18px; height: 18px; text-align: center;}
+.nojavscript{background-color:red; color:white; display:block;text-align:center;padding:.5em};
 .shadow{-webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.11); box-shadow: 0 3px 3px 0 rgba(0,0,0,0.11);}
 .shadow:hover{-webkit-box-shadow: 0 3px 3px 3px rgba(0,0,0,0.22); box-shadow: 0 3px 3px 3px rgba(0,0,0,0.22);}
 

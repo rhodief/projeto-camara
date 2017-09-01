@@ -9,6 +9,8 @@
 
     function appRun(localStorageService) {
 
+        var message = 'Você conhece o #MeuEspaçoCamara? Clique no ícone da Câmara dos Deputados no canto inferior direto da sua tela e conheça diversas de personalizar sua experiência neste Portal';
+
         function active() {
             initMeuEspacoCamaraButton();
             verifyKnownMeuEspacoCamara();
@@ -28,8 +30,13 @@
                 .then(thisKnown)
 
             function thisKnown(data) {
-                if(!data)
-                    angular.element(document.getElementById('main-messages')).html('Você conhece o #MeuEspaçoCamara? Clique no ícone da câmara ao lado e conheça diversas de personalizar sua experiência neste portal');
+                if(!data){
+                    var notificationSection = angular.element(document.getElementById('notification'));
+                    var divMessage = angular.element(document.getElementById('main-messages'));
+                    notificationSection.css('display', 'block');
+                    divMessage.html(message);
+                }
+                    
             }
         }
     }
