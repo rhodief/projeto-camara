@@ -32,8 +32,15 @@ $(document).ready(function(){
 		abrirSubitemList(firstChild);
 		return false;
 	});
+	$('.bg-easy-access').click(function(){
+		fecharSubitem();
+	});
 	$('.menu-subitem > li > a').click(function(){
 		abrirSubitemList($(this));
+		return false;
+	});
+	$('.notification .close').click(function(){
+		$(this).parent().slideUp();
 		return false;
 	});
 	
@@ -72,13 +79,16 @@ function fecharBusca(){
 function abrirSubitem(e){
 	if($(e).parent().hasClass('act')){
 		$('.menu-easy-access > li').removeClass('act').children('.subitem').slideUp();
+		$('.bg-easy-access').fadeOut();
 	}else{
 		$('.menu-easy-access > li').removeClass('act').children('.subitem').slideUp();
 		$(e).parent().addClass('act').children('.subitem').slideDown();
+		$('.bg-easy-access').fadeIn();
 	}
 }
 function fecharSubitem(){
 	$('.menu-easy-access > li').removeClass('act').children('.subitem').slideUp();
+	$('.bg-easy-access').fadeOut();
 }
 function abrirSubitemList(e){
 	if($(e).parent().hasClass('act')){

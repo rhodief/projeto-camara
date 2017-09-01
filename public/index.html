@@ -20,16 +20,24 @@
     <script type="text/javascript" src="js/commons/scripts.js"></script>
     <script type="text/javascript" src="js/commons/svg.js"></script>
 
-    <!-- ##### INÍCIO TEMPORÁRIO ############## -->
+    <!-- ##### INÍCIO TEMPORÁRIO ############## 
 
     <link rel="stylesheet" href="style/w3.css">
 
-    <!-- ##### FIM TEMPORÁRIO ############## -->
+    ##### FIM TEMPORÁRIO ############## -->
 
 </head>
 
 
 <body ng-app="app">
+	<!-- ################ INÍCIO ESPAÇO PARA NOTIFICAÇOES ########## -->
+	<div class="notification">
+		<a href="#" class="close" title="Fechar notificação">x</a>
+		[Notificações]
+		<noscript>Javascript não ativado!!</noscript>
+		<div id="main-messages"></div>
+	</div>
+	<!-- ################ FIM ESPAÇO PARA NOTIFICAÇOES ############ -->
     <header>
         <div class="header">
             <div class="top-header">
@@ -648,6 +656,7 @@
                     </nav>
                 </div>
             </div>
+            <div class="bg-easy-access"></div>
             <div class="easy-access">
                 <div class="center">
                     <nav>
@@ -947,18 +956,67 @@
                 </div>
             </div>
         </div>
-
-
-
-        <!-- ################ INÍCIO ESPAÇO PARA NOTIFICAÇOES ########## -->
-        <div>[Notificações]
-            <noscript>Javascript não ativado!!</noscript>
-            <div id="main-messages"></div>
-        </div>
-        <!-- ################ FIM ESPAÇO PARA NOTIFICAÇOES ############ -->
-
-
     </header>
+    <section>
+    	<div class="section-news">
+    		<div class="center">
+    			<div class="box-news">
+					<div class="last-news shadow">
+						<h2 class="title">Últimas Notícias</h2>
+						<ul>
+							<li><a href="">Deputados mantêm em MP regras sobre concessão de uso de instalações olímpicas</a><p class="date-time">2 horas atrás</p></li>
+							<li><a href="">Plenário mantém cargos previstos em autarquia que vai administrar legado olímpico</a><p class="date-time">4 horas atrás</p></li>
+							<li><a href="">Plenário aprova MP que cria autarquia para administrar legado olímpico; falta votar destaques</a><p class="date-time">5 horas atrás</p></li>
+							<li><a href="">Deputado critica autorização para uso de instalações esportivas sem concorrência</a><p class="date-time">6 horas atrás</p></li>
+							<li><a href="">Comissão que trata de taxa de juros para contratos do BNDES vota relatório em agosto</a><p class="date-time">7 horas atrás</p></li>
+						</ul>
+						<a href="#" class="button more-news">Ver mais notícias</a>
+					</div>
+   					<div class="list-news">
+   						<ul>
+   							<li class="size1 type1 shadow">
+   								<a href="#">
+   									<span class="img"><img src="img/uploads/img_03.jpg" alt=""></span>
+   									<span class="box-text">
+										<span class="title">Parecer sobre a denúncia contra Temer deve ser lido na CCJ na próxima segunda</span>
+										<span class="date-category"><span>Política</span>05/07/2017</span>
+   									</span>
+   								</a>
+   							</li>
+   							<li class="size2 type2 shadow">
+   								<a href="#">
+   									<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+   									<span class="box-text">
+										<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+										<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+									</span>
+   								</a>
+   							</li>
+   							<li class="size1 type3 shadow">
+   								<a href="#">
+   									<span class="img"><img src="img/uploads/img_05.jpg" alt=""></span>
+   									<span class="box-text">
+										<span class="title">Projetos que estimulam enoturismo são aprovados</span>
+										<span class="text">Os dois projetos tramitam em caráter conclusivo e devem ser transformados em um texto único, que segue para o Senado, a não ser que haja recurso</span>
+										<span class="date-category"><span>Turismo</span>04/07/2017</span>
+									</span>
+   								</a>
+   							</li>
+   							<li class="size2 type2 shadow">
+   								<a href="#">
+   									<span class="img"><img src="img/uploads/img_06.jpg" alt=""></span>
+   									<span class="box-text">
+										<span class="title">Principal desafio para cumprimento das metas do PNE é o financiamento, apontam debatedores</span>
+										<span class="date-category"><span>Administração Pública</span>04/07/2017</span>
+									</span>
+   								</a>
+   							</li>
+   						</ul>
+   					</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
 
 
 
@@ -981,8 +1039,7 @@
 
     </section>
     <section>
-        <h2>[Atividade Parlamentar]
-            <h2>
+		<h2>[Atividade Parlamentar]</h2>
                 <h4>Deputados</h4>
                 <a href="../server_simulator/pages/deputados/deputado1.html">Deputados 01</a>
                 <a href="../server_simulator/pages/deputados/deputado2.html">Deputados 02</a>
@@ -1005,7 +1062,7 @@
 
     <section class="hidden" id="section-meuEspacoCamara">
         <div id="button-meuEspacoCamara" ng-controller="meuEspacoCamaraController as meuEspacoCamara">
-            <a href="#" ng-click="meuEspacoCamara.toggleMescam()">#MeuEspaçoCâmara</a>
+            <a href="#" class="my-camara" ng-click="meuEspacoCamara.toggleMescam()">#MeuEspaçoCâmara</a>
             <meu-espaco-camara id="meuEspacoCamara" action="meuEspacoCamara.toggleMescam()" class="w3-sidebar w3-bar-block" style="z-index:1000"></meu-espaco-camara>
         </div>
     </section>
