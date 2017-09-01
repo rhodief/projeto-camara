@@ -20,8 +20,8 @@
                 <li class="w3-padding-16 panel-list-item" ng-class="{'w3-hover-teal w3-teal': vm.isSelected(deputado.id), 'w3-hover-light-grey': !vm.isSelected(deputado.id)}"
                     ng-repeat="deputado in vm.deputados" ng-click="vm.getDetail(deputado.id)">
                     <img ng-src="{{deputado.foto}}" class="w3-left w3-circle w3-margin-right" style="max-width:40px">
-                    <span class="w3-large">{{::deputado.nome}}</span><br>
-                    <span>{{::deputado.partido_sig}}/{{::deputado.uf_sig}}</span>
+                    <span class="w3-large">{{deputado.nome}}</span><br>
+                    <span>{{deputado.partido_sig}}/{{deputado.uf_sig}}</span>
                 </li>
             </ul>
         </div>
@@ -34,8 +34,8 @@
                 </div>
                 <div ng-if="vm.view.ultimoStatus_nome">
                     <img ng-src="{{vm.view.ultimoStatus_foto}}" alt="Avatar" style="max-width:80%">
-                    <h4>{{::vm.view.ultimoStatus_nome}}</h4>
-                    <h6>{{::vm.view.ultimoStatus_partido_sig}}/{{::vm.view.ultimoStatus_uf_sig}}</h6>
+                    <h4>{{vm.view.ultimoStatus_nome}}</h4>
+                    <h6>{{vm.view.ultimoStatus_partido_sig}}/{{vm.view.ultimoStatus_uf_sig}}</h6>
 
                     <div class="w3-section">
                         <button class="w3-button w3-green">Accept</button>
