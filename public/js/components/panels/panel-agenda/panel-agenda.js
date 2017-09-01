@@ -44,10 +44,7 @@
         vm.viewId;
         vm.getDetail = getDetail;
         vm.detail;
-        vm.teste = function (){
-            console.log('Agenda Controller');
-        }
-
+        
 
         activate();
 
@@ -71,6 +68,7 @@
             _getAgenda(vm.date).then(okAgenda).catch(errorAgenda);
 
             function okAgenda(data) {
+                console.log(data);
                 vm.agenda = data;
             }
 
