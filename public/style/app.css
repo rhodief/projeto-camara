@@ -1,45 +1,75 @@
-.show{
-    display: block;
+.show{display: block;}
+
+.hidden{display: none;}
+
+#meuEspacoCamara{width:300px;right:0;display:none;position:fixed;top: 0;}
+
+.panel-wrapper{    display: -webkit-box;display: -ms-flexbox;display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;}
+
+.panel-wrapper .col.size1 {
+    -webkit-box-flex: 2;
+    -ms-flex: 2 2 308px;
+    flex: 2 2 308px;
+    
+}
+.panel-wrapper .col {
+    margin: 1rem;
+    background: #fff
 }
 
-.hidden{
-    display: none;
+.panel-content{
+    font-size: 1rem;
+}
+.pickadate-prev{
+    position: absolute;
+    left:0;
 }
 
-#meuEspacoCamara{
-    width:300px;
-    right:0;
-    display:none;
-    position:fixed;
-    top: 0;
+.pickadate-controls a{
+    padding: 0 0.5em;
+    font-size: 0.9em;
+    border-style: solid;
+    border-width: 1px;
+}
+   
+
+
+@media screen and (min-width: 768px){
+    .panel-wrapper{
+        background: #fff;
+        margin: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    };
+    .panel-wrapper .col.size1 {
+        -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        -webkit-box-flex: 2;
+        -ms-flex: 2 2 308px;
+        flex: 2 2 308px;
+    }
+    .panel-wrapper .col {
+        margin: 0
+    }
+    .panel-container-3{border: 2px solid lightgray;height: 330px;width: 32%;float: left;margin: 2px;}
+    
 }
 
-.panel-container{
-    border: 2px solid lightgray;
-    height: 330px;
-    width: 47%;
-    float: left;
-    margin: 2px;
-}
+.panel-container{border: 2px solid lightgray;height: 330px;width: 47%;float: left;margin: 2px;}
 
-.panel-container-3{
-    border: 2px solid lightgray;
-    height: 330px;
-    width: 32%;
-    float: left;
-    margin: 2px;
-}
 
-.panel-list{
-    height: 270px;
-    overflow: auto;
 
-}
+.panel-list{height: 270px;overflow: auto;}
 
-.panel-view{
-    overflow: auto;
-}
+.panel-view{overflow: auto;}
 
-.panel-list-item{
-    cursor: pointer;
-}
+.panel-list-item{cursor: pointer;}
+

@@ -17,6 +17,8 @@
         function link(scope, element, attrs) {
             var newElement, section, pos;
 
+            attrs.$set('class', 'panel-wrapper');
+
             function active() {
                 verifyCatAndPosAttr()
             }
