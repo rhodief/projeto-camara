@@ -45,14 +45,14 @@
         vm.getDetail = getDetail;
         vm.detail;
         
+        $scope.$watch('vm.date', watchDate);
+        
 
         activate();
 
         function activate() {
             vm.date = setToday();
         }
-
-        $scope.$watch('vm.date', watchDate);
 
         function watchDate(date, teste) {
             if (date) {
@@ -68,7 +68,6 @@
             _getAgenda(vm.date).then(okAgenda).catch(errorAgenda);
 
             function okAgenda(data) {
-                console.log(data);
                 vm.agenda = data;
             }
 

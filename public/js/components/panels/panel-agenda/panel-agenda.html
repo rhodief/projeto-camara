@@ -9,12 +9,12 @@
             <div pickadate ng-model="vm.date"></div>
         </div>
         <div class="col size1 panel-container-3">
-            <div>
-                <input class="w3-input" type="text" placeholder="procurar..."></p>
+            <div class="form">
+                <input type="text" placeholder="Filtrar..." ng-model="vm.agendaFilter"></p>
             </div>
-            <ul class="w3-ul w3-card-4 panel-list">
-                <li class="w3-padding-16 panel-list-item" ng-class="{'w3-hover-teal w3-teal': vm.isSelected(evento.id), 'w3-hover-light-grey': !vm.isSelected(evento.id)}"
-                    ng-repeat="evento in vm.agenda" ng-click="vm.getDetail(evento.id, evento.orgao_id, evento.dataInicio)">
+            <ul class="panel-list">
+                <li class="panel-list-item" ng-class="{'w3-hover-teal w3-teal': vm.isSelected(evento.id), 'w3-hover-light-grey': !vm.isSelected(evento.id)}"
+                    ng-repeat="evento in vm.agenda | filter:vm.agendaFilter" ng-click="vm.getDetail(evento.id, evento.orgao_id, evento.dataInicio)">
                     <div class="w3-cell-row">
                         <div class="w3-cell w3-cell-middle w3-rightbar">
                             <p>{{evento.horaInicio}}</p>
