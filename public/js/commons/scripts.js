@@ -10,10 +10,19 @@ $(document).ready(function(){
 	$('.bg-menu').click(function(){
 		fecharMenu();
 	});
-	$('.bt-submenu').click(function(){
-		$(this).toggleClass('act').parent().toggleClass('act').next('.submenu').slideToggle();
+	$('.main-menu > li > a').click(function(){
+		if($(this).hasClass('act')){
+			$('.main-menu > li > a').removeClass('act').parent().removeClass('act').children('.submenu').slideUp();
+		}else{
+			$('.main-menu > li > a').removeClass('act').parent().removeClass('act').children('.submenu').slideUp();
+			$(this).addClass('act').parent().addClass('act').children('.submenu').slideDown();
+		}
 		return false;
 	});
+	/*$('.bt-submenu').click(function(){
+		$(this).toggleClass('act').parent().toggleClass('act').next('.submenu').slideToggle();
+		return false;
+	});*/
 	$('.bt-search').click(function(){
 		if($(this).hasClass('act')){
 			fecharBusca();
@@ -26,7 +35,7 @@ $(document).ready(function(){
 		fecharBusca();
 	});
 	$('.menu-easy-access > li > a').click(function(){
-		$('.menu-subitem > li').removeClass('act').children('.subitems-list').slideUp();
+		$('.menu-subitem > li').removeClass('act').children('.subitems-list').hide();
 		abrirSubitem($(this));
 		var firstChild = $('.menu-subitem > li:first-child > a');
 		abrirSubitemList(firstChild);
@@ -78,11 +87,11 @@ function fecharBusca(){
 }
 function abrirSubitem(e){
 	if($(e).parent().hasClass('act')){
-		$('.menu-easy-access > li').removeClass('act').children('.subitem').slideUp();
+		$('.menu-easy-access > li').removeClass('act').children('.subitem').hide();
 		$('.bg-easy-access').fadeOut();
 	}else{
-		$('.menu-easy-access > li').removeClass('act').children('.subitem').slideUp();
-		$(e).parent().addClass('act').children('.subitem').slideDown();
+		$('.menu-easy-access > li').removeClass('act').children('.subitem').hide();
+		$(e).parent().addClass('act').children('.subitem').show();
 		$('.bg-easy-access').fadeIn();
 	}
 }
@@ -92,9 +101,9 @@ function fecharSubitem(){
 }
 function abrirSubitemList(e){
 	if($(e).parent().hasClass('act')){
-		$('.menu-subitem > li').removeClass('act').children('.subitems-list').slideUp();
+		$('.menu-subitem > li').removeClass('act').children('.subitems-list').hide();
 	}else{
-		$('.menu-subitem > li').removeClass('act').children('.subitems-list').slideUp();
-		$(e).parent().addClass('act').children('.subitems-list').slideDown();
+		$('.menu-subitem > li').removeClass('act').children('.subitems-list').hide();
+		$(e).parent().addClass('act').children('.subitems-list').show();
 	}
 }
