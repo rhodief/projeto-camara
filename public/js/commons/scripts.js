@@ -53,7 +53,6 @@ $(document).ready(function(){
 		return false;
 	});
 	
-	
 	menu_max_height();
 });
 $(window).resize(function (e) {

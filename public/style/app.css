@@ -24,6 +24,7 @@
     position: absolute;
     left:0;
 }
+<<<<<<< HEAD
 
 .pickadate-controls a{
     padding: 0 0.5em;
@@ -33,6 +34,11 @@
 }
    
 
+=======
+.panel-list{
+    height: 270px;
+    overflow: auto;
+>>>>>>> Html
 
 @media screen and (min-width: 768px){
     .panel-wrapper{
@@ -63,6 +69,7 @@
     
 }
 
+<<<<<<< HEAD
 .panel-container{border: 2px solid lightgray;height: 330px;width: 47%;float: left;margin: 2px;}
 
 
@@ -73,3 +80,8 @@
 
 .panel-list-item{cursor: pointer;}
 
+=======
+.panel-list-item{
+    cursor: pointer;
+}
+>>>>>>> Html
