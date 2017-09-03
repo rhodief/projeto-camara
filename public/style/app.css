@@ -21,23 +21,10 @@
     float: left;
     margin: 2px;
 }
-
-.panel-container-3{
-    border: 2px solid lightgray;
-    height: 330px;
-    width: 32%;
-    float: left;
-    margin: 2px;
-}
-
 .panel-list{
     height: 270px;
     overflow: auto;
 
-}
-
-.panel-view{
-    overflow: auto;
 }
 
 .panel-list-item{
