@@ -255,7 +255,7 @@ a,
 .box-news .news-highlight img{max-width: 100%; width:300px; height: 184px; -o-object-fit: cover; object-fit: cover; display: block;}
 .box-news .news-highlight .title{display: block; position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0,48,30,0.75); color:#fff; font-size: 14px; font-weight: 600; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: left; text-transform:none;}
 
-.my-camara{position: fixed; right: 2%; bottom: 2%; width: 56px; height: 56px; background: url(../img/layout/espaco_camara.png) no-repeat center center; background-size: 100%; border-radius: 50%; text-indent: -5000em;opacity: 0.8; border-style: solid; border-width: 1px; border-color: cornflowerblue;}
+.my-camara{position: fixed; right: 2%; bottom: 2%; width: 56px; height: 56px; background: url(../img/layout/espaco_camara.png) no-repeat center center; background-size: 100%; border-radius: 50%; text-indent: -5000em;opacity: 0.8; border-style: solid; border-width: 1px; border-color: cornflowerblue; z-index: 10}
 .my-camara:hover{opacity: 1}
 #meuEspacoCamara{background: #fff;}
 .notification{padding: .5em 2em; background: #0094db; color: #fff; position: relative; text-align: center}
@@ -288,6 +288,23 @@ a,
 .list-news .box-text .text{display: none; font-size: 14px; color: #333333;}
 .list-news .box-text .date-category{font-size: 14px; line-height: 16px; color: #333333; display: block; margin-bottom: 10px; text-align: center;}
 .list-news .box-text .date-category span{display: block;}
+
+.section-about{background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed; padding: 20px 0; position: relative;}
+.section-about:before{content: ''; background: rgba(0,0,0,0.5); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;}
+.section-about .center{position: relative; z-index: 1;}
+.section-about .title{font-size: 24px; display: block; text-align: center; color: #fff; font-weight: 600; margin-bottom: 10px;}
+.section-about .resume{font-size: 14px; display: block; text-align: center; color: #fff; font-weight: normal; margin-bottom: 20px;}
+.section-about .box-links .row{display: block; padding:5px; margin-bottom: 20px; text-align: center;}
+.section-about .box-links .title-link{color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 10px; margin: 10px;}
+.box-links .links{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: center; -ms-flex-align: center; align-items: center}
+.box-links .links a{color: #fff; font-size: 18px; font-weight: 600; text-decoration: none; padding: 10px; display: block;}
+.box-links .links li{margin: 5px;-webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.11); box-shadow: 0 3px 3px 0 rgba(0,0,0,0.11); -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto;}
+.section-about .box-links .type-1{background: rgba(39,108,77,0.3);}
+.type-1 .links li{background-color: #276c4d;}
+.section-about .box-links .type-2{background: rgba(17,106,181,0.3);}
+.type-2 .links li{background-color: #116ab5;}
+.section-about .box-links .type-3{background: rgba(224,193,13,0.3);}
+.type-3 .links li{background-color: #e0c10d;}
 
 @media screen and (max-width: 767px) {
 	.section-news .box-news.mobile-invert-order{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
@@ -345,6 +362,10 @@ a,
 	.list-news .type3 .box-text{width: 49%; display: inline-block; vertical-align: top; -webkit-box-sizing:border-box; box-sizing:border-box; position:relative; height:100%; padding-bottom:50px;}
 	.list-news .type3 .box-text .text{display: block; max-height:17ch; overflow: hidden;}
 	.list-news .type3 .box-text .date-category{position: absolute; bottom:0; left: 0; width: 100%;}
+	.section-about{padding: 40px 0;}
+	.section-about .title{font-size: 30px;}
+	.section-about .resume{font-size: 18px; text-align: left; max-width: 720px; margin: 0 auto 40px;}
+	.section-about .box-links .title-link{font-size: 24px;}
 }
 @media screen and (min-width: 1024px) {
 	.header .logo{-webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1; width:300px;}
