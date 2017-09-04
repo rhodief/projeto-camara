@@ -11,9 +11,9 @@
         .module('wsRequest')
         .factory('wsRequestService', wsRequestService)
 
-    wsRequestService.$inject = ['$http', '$parse'];
+    wsRequestService.$inject = ['$http'];
 
-    function wsRequestService($http, $parse) {
+    function wsRequestService($http) {
 
         var ufsList;
 
@@ -25,110 +25,10 @@
             getAgendaDetail: getAgendaDetail
         };
 
-        return service;
-
-        function getDeputados(params) {
-            return _getDeputadosWs(params).then(_formatDeputados).catch(_wsError);
-        }
-
-        function getDeputado(id) {
-            return _getDeputado(id).then(_formatDeputado).catch(_wsError);
-        }
-
-        function getUfsList() {
-            return _getUfsList().then(_formatUfsList).catch(_wsError);
-        }
-
-        function getAgenda(date) {
-            return _getAgenda(date).then(_formatAgenda).catch(_wsError);
-        }
-
-        function getAgendaDetail(id, idOrg, date){
-            return _getAgendaDetail(id, idOrg, date).then(_formatAgendaDetail).catch(_wsError);
-        }
-
-        function _getDeputadosWs(params) {
-            var url = 'https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome&siglaUf=' + params.siglaUf;
-            return $http.get(url);
-        }
-
-        function _getDeputado(id) {
-            var url = 'https://dadosabertos.camara.leg.br/api/v2/deputados/' + id;
-            return $http.get(url);
-        }
-
-        function _getUfsList() {
-            var url = 'https://dadosabertos.camara.leg.br/api/v2/referencias/uf';
-            return $http.get(url);
-        }
-
-        function _getAgenda(date) {
-            var url = 'https://dadosabertos.camara.leg.br/api/v2/eventos?dataInicio=' + date + '&dataFim=' + date + '&ordem=ASC&itens=100&ordenarPor=dataHoraInicio';
-            return $http.get(url);
-        }
-
-        function _getAgendaDetail(id, idOrg, date){
-            //var urlOrg = 'https://www.camara.leg.br/SitCamaraWS/Orgaos.asmx/ObterPauta?IDOrgao=2003&datIni=17/08/2017&datFim=17/08/2017';
-            //console.log(date);
-            //return $http.get(urlOrg);
-        }
-
-        function _formatDeputados(data) {
-            return _formatWithSchema(data, _deputadosListSchema);
-        }
-
-        function _formatDeputado(data) {
-            return _formatWithSchema(data, _deputadoViewSchema);
-        }
-
-        function _formatUfsList(data) {
-            return data.data.dados;
-        }
-
-        function _formatAgenda(data) {
-            return _formatWithSchema(data, _agendaListSchema)
-        }
-
-        function _formatAgendaDetail(data){
-            return _formatWithSchema(data, _agendaDetailSchema)
-        }
-
-        function _formatWithSchema(data, schema) {
-            //Schema as function
-            var schema = schema();
-            var mainData = $parse(schema.path)(data);
-            var list
-            if (schema.type === 'list') {
-                return _getDataFromList(mainData, schema.schema);
-            }
-            return _getDataFromSingle(mainData, schema.schema);
-        }
-
-        function _getDataFromSingle(data, schema) {
-            var outputObj = {};
-            angular.forEach(schema, function (v, k) {
-                var isArray = angular.isArray(v);
-                var value = (isArray ? v[0]: v);
-                var item = $parse(value)(data);
-                var prevalue = (isArray && item ? item.match(v[1])[0] : item);
-                outputObj[k] = (isArray && v && v[2] ? v[2](prevalue) : prevalue);
-            });
-            return outputObj;
-        }
-
-        function _getDataFromList(list, schema) {
-            var output = [];
-            for (let i = 0; i < list.length; i++) {
-                var item = _getDataFromSingle(list[i], schema);
-                output.push(item);
-            }
-            return output;
-        }
-
-        function _deputadosListSchema() {
-            return {
+        const SCHEMA = {
+            deputadosList: {
                 path: 'data.dados',
-                type: 'list',
+                list: true,
                 schema: {
                     id: 'id',
                     nome: 'nome',
@@ -137,17 +37,14 @@
                     uf_sig: 'siglaUf',
                     view: 'uri',
                     view_partido: 'uriPartido',
-                    foto: ["urlFoto", /.+/g, function(value){
+                    foto: ["urlFoto", /.+/g, function (value) {
                         return value.split('http').join('https')
                     }]
                 }
-            }
-        }
-
-        function _deputadoViewSchema() {
-            return {
+            },
+            deputadoView: {
                 path: 'data.dados',
-                type: 'single',
+                list: false,
                 schema: {
                     cpf: 'cpf',
                     dataFalecimento: 'dataFalecimento',
@@ -177,18 +74,20 @@
                     ultimoStatus_situacao: 'ultimoStatus.situacao',
                     ultimoStatus_view: 'ultimoStatus.uri',
                     ultimoStatus_partido_view: 'ultimoStatus.uriPartido',
-                    ultimoStatus_foto: ['ultimoStatus.urlFoto', /.+/g, function(value){
+                    ultimoStatus_foto: ['ultimoStatus.urlFoto', /.+/g, function (value) {
                         return value.split('http').join('https')
                     }],
                     ultimoStatus_site: 'ultimoStatus.urlWebsite'
                 }
-            }
-        }
+            },
+            agendaList: {
+                url: function (params) {
+                    if (!params || !params.date) throw new Error('É obrigatório passar o parâmetro DATE');
+                    return 'https://dadosabertos.camara.leg.br/api/v2/eventos?dataInicio=' + params.date + '&dataFim=' + params.date + '&ordem=ASC&itens=100&ordenarPor=dataHoraInicio';
 
-        function _agendaListSchema() {
-            return {
+                },
                 path: 'data.dados',
-                type: 'list',
+                list: true,
                 schema: {
                     id: 'id',
                     titulo: 'titulo',
@@ -199,34 +98,176 @@
                     horaFim: ['dataHoraFim', /\d{2}:\d{2}/g],
                     descricaoSituacao: 'descricaoSituacao',
                     descricaoTipo: 'descricaoTipo',
-                    localCamara_andar:'localCamara.andar',
+                    localCamara_andar: 'localCamara.andar',
                     localCamara_nome: 'localCamara.nome',
                     localCamara_predio: 'localCamara.predio',
                     localCamara_sala: 'localCamara.sala',
                     localExterno: 'localExterno',
-                    orgao_id: 'orgao.id',
-                    orgao_idTipoOrgao: 'orgao.idTipoOrgao',
-                    orgao_nome: 'orgao.nome',
-                    orgao_sigla: 'orgao.sigla',
-                    orgao_tipoOrgao: 'orgao.tipoOrgao',
-                    orgao_uri: 'orgao.uri'
+                    orgaos: {
+                        path: 'orgaos',
+                        schema: {
+                            id: 'id',
+                            idTipoOrgao: 'idTipoOrgao',
+                            nome: 'nome',
+                            sigla: 'sigla',
+                            tipoOrgao: 'tipoOrgao',
+                            uri: 'uri'
+                        }
+                    }
                 }
-            }
-        }
-
-        function _agendaDetailSchema(){
-            return {
+            },
+            agendaView: {
+                url: function(params){
+                    return 'https://dadosabertos.camara.leg.br/api/v2/eventos/'+params.id;
+                },
                 path: 'data.dados',
-                type: 'single',
+                list: false,
                 schema: {
-
+                    id: 'id',
+                    titulo: 'titulo',
+                    uri: 'uri',
+                    dataInicio: ['dataHoraInicio', /\d{4}-\d{2}-\d{2}/g],
+                    horaInicio: ['dataHoraInicio', /\d{2}:\d{2}/g],
+                    dataFim: ['dataHoraFim', /\d{4}-\d{2}-\d{2}/g],
+                    horaFim: ['dataHoraFim', /\d{2}:\d{2}/g],
+                    descricaoSituacao: 'descricaoSituacao',
+                    descricaoTipo: 'descricaoTipo',
+                    localCamara_andar: 'localCamara.andar',
+                    localCamara_nome: 'localCamara.nome',
+                    localCamara_predio: 'localCamara.predio',
+                    localCamara_sala: 'localCamara.sala',
+                    localExterno: 'localExterno',
+                    orgaos: {
+                        path: 'orgaos',
+                        schema: {
+                            id: 'id',
+                            idTipoOrgao: 'idTipoOrgao',
+                            nome: 'nome',
+                            sigla: 'sigla',
+                            tipoOrgao: 'tipoOrgao',
+                            uri: 'uri'
+                        }
+                    }
                 }
+            }
+        };
+
+        return service;
+
+        function getDeputados(params) {
+            //return _getDeputadosWs(params).then(_formatDeputados).catch(_wsError);
+        }
+
+        function getDeputado(id) {
+            //return _getDeputado(id).then(_formatDeputado).catch(_wsError);
+        }
+
+        function getUfsList() {
+            //return _getUfsList().then(_formatUfsList).catch(_wsError);
+        }
+
+        function getAgenda(date) {
+            var params = { date: date }
+            return _getDataWs(SCHEMA.agendaList, params);
+        }
+
+        function getAgendaDetail(id) {
+            var params = { id: id};
+            return _getDataWs(SCHEMA.agendaView, params);
+        }
+
+
+
+        function _getDataWs(schemaObj, params) {
+            return _getData(schemaObj.url(params)).then(_formatData.bind(null, schemaObj)).catch(_erro);
+        }
+
+        function _getData(url) {
+            return _requestDataFromWs(url);
+        }
+
+        function _formatData(schemaObj, data) {
+            return _formatWithSchema(data, schemaObj);
+        }
+
+        function _formatWithSchema(data, schema) {
+            var mainData = Rparse(schema.path, data);
+            //return mainData;
+            if (schema.list) {
+                return _getDataFromList(mainData, schema.schema);
+            }
+            return _getDataFromSingle(mainData, schema.schema);
+        }
+
+        function _getDataFromSingle(data, schema) {
+            var outputObj = {};
+            for (var k in schema) {
+                var isList = (schema[k] && schema[k].path);
+                var isRegex = angular.isArray(schema[k]);
+                if (isList) {
+                    outputObj[k] = _getDataFromList(Rparse(schema[k].path, data), schema[k].schema);
+                } else {
+                    var value = (isRegex ? schema[k][0] : schema[k]);
+                    var item = Rparse(value, data);
+                    var prevalue = (isRegex && item ? item.match(schema[k][1])[0] : item);
+                    outputObj[k] = (typeof prevalue === 'object' ? null : prevalue);
+                }
+            }
+            return outputObj;
+        }
+
+        function _getDataFromList(list, schema) {
+            var output = [];
+            var listToRun = (list instanceof Array ? list : new Array(list));
+            for (let i = 0; i < listToRun.length; i++) {
+                output[i] = _getDataFromSingle(listToRun[i], schema);
+            }
+            return output;
+        }
+
+        function Rparse(script, context) {
+            var explode = script.split('.');
+            var out = context;
+            var len = explode.length;
+            for (let i = 0; i < len; i++) {
+                var index = explode[i];
+                var item = out[index];
+                if (item === undefined) {
+                    //Tenta executar com o índice 0, se for array...
+                    if (out[0] && out[0][index]) {
+                        item = out[0][index];
+                    } else {
+                        //Tentar como expressão regular...
+                        var exps = index.split('|-|');
+                        for (let j = 0; j < exps.length; j++) {
+                            var vl = out[exps[j]];
+                            if (vl) item = vl;
+                        }
+                    }
+                }
+                if (item === undefined) {
+                    console.log('Index [' + index + '] não encontrado');
+                } else {
+                    var testeNumero = parseInt(item)
+                    out = (testeNumero !== NaN ? item : testeNumero);
+                }
+
+            }
+            return (out && out[0] && out.length === 1 ? out[0] : out);
+        }
+
+
+        function _erro(e) {
+            //##### COLOCAR UM DEBUG NO ENV ##########
+            console.log(e);
+            return {
+                erro: e,
+                msg: "Não foi possível recuperar os dados do WSCN"
             }
         }
 
-        function _wsError(e) {
-            console.log(e);
-            console.log('Não foi possível retornar a lista do servidor');
+        function _requestDataFromWs(url) {
+            return $http.get(url);
         }
 
     }

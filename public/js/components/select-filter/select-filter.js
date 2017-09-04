@@ -46,8 +46,7 @@
             scope.toggle = toggle;
 
            scope.$watch('input.name', function(value){
-               console.log(value);
-                if(passLabel !== value){
+               if(passLabel !== value){
                     if(value && value.length >= minLengh){
                         open();
                     }else if(!value || value.length < 1){

@@ -80,9 +80,9 @@
             return id === vm.viewId;
         }
 
-        function getDetail(id, idOrg, date) {
+        function getDetail(id) {
             vm.viewId = id;
-            return _getDetail(id, idOrg, date).then(okDetail).catch(errorDetail);
+            _getDetail(id).then(okDetail).catch(errorDetail);
 
             function okDetail(data) {
                 vm.detail = data;
