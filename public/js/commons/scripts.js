@@ -54,9 +54,11 @@ $(document).ready(function(){
 	});
 	
 	menu_max_height();
+	atualizaMinHeight();
 });
 $(window).resize(function (e) {
 	menu_max_height();
+	atualizaMinHeight();
 });
 
 function abrirMenu(){
@@ -105,4 +107,7 @@ function abrirSubitemList(e){
 		$('.menu-subitem > li').removeClass('act').children('.subitems-list').hide();
 		$(e).parent().addClass('act').children('.subitems-list').show();
 	}
+}
+function atualizaMinHeight(){
+	$('.h-window').css('min-height',$(window).height());
 }
