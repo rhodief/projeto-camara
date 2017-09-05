@@ -86,6 +86,7 @@
 
             function okDetail(data) {
                 vm.detail = data;
+                console.log(data);
             }
             function errorDetail(erro) {
                 _error(erro);

@@ -57,8 +57,8 @@
 			<div class="panel-container-3 step-1">
 				<div pickadate ng-model="vm.date"></div>
 			</div>
-			<div class="panel-container-3 step-2">
-				<a href="#" class="back">Voltar</a>
+			<div class="panel-container-3 step-2" ng-class="{act: vm.date}">
+				<a href="#" class="back" ng-click="vm.date = null">Voltar</a>
 				<div class="filter">
 					<div class="field">
 						<input class="w3-input" type="text" placeholder="Pesquisar por ex.: Audiência Pública" ng-model="vm.agendaFilter">
@@ -80,8 +80,8 @@
 					</li>
 				</ul>
 			</div>
-			<div class="panel-container-3 panel-view step-3">
-				<a href="#" class="back">Voltar</a>
+			<div class="panel-container-3 panel-view step-3" ng-class="{act: vm.viewId}">
+				<a href="#" class="back" ng-click="vm.viewId = null">Voltar</a>
 				<div class="w3-container w3-center detail">
 					<div ng-if="view.ultimoStatus_nome===undefined">
 						<div class="inact">
