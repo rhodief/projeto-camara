@@ -110,7 +110,7 @@
         return {
 
           parseDate: function(dateString) {
-            if (!dateString) return;
+            if (!dateString || angular.isObject(dateString)) return;
             if (angular.isDate(dateString)) return new Date(dateString);
 
             var formatRegex = '(dd|MM|yyyy)',
@@ -201,7 +201,7 @@
           },
 
           getMonthOffset: function(date1, date2) {
-            return date1.getMonth() - date2.getMonth() + (12 * (date1.getFullYear() - date2.getFullYear()));
+            if(date1 && date2) return date1.getMonth() - date2.getMonth() + (12 * (date1.getFullYear() - date2.getFullYear()));
           }
         };
       };

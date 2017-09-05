@@ -228,9 +228,13 @@ a,
 .detail .text p{font-size: 18px; color: #333333; font-weight: 600; display: block; margin-bottom: 20px;}
 .detail .text p span{display: block;}
 
+/* VOU COLOCAR AQUI O CSS DA SELEÇÃO DOS ITENS DA LISTA     */
+
+
 .field{margin: 5px 10px;}
 .step-2 .list{background: #eee;margin: 10px 10px 0;padding: 0 10px;display: block;height: 270px;overflow: auto;}
 .step-2 .list li{background: #fff; margin: 10px 0; padding: 10px; display: block; text-align: left; cursor: pointer;}
+.step-2 .list .item-selected{background: rgba(3, 49, 30, 0.75); color: #fff !important}
 .step-2 .list li div{font-size: 12px; color: #686868;}
 .step-2 .list li .date-time{font-size: 12px; color: #686868;}
 .step-2 .list li .title{font-size: 14px; line-height: 15px; color: #004a2f; font-weight: 600; margin-bottom: 5px;}
