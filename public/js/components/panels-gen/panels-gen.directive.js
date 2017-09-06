@@ -58,7 +58,7 @@
                     files: [
                         url,
                         'bower_components/angular-pickadate/dist/angular-pickadate.css',
-                        'bower_components/angular-pickadate/dist/angular-pickadate.min.js'
+                        'bower_components/angular-pickadate/dist/angular-pickadate.js'
                     ]
                 });
             }
