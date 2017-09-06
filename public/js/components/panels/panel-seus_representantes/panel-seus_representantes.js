@@ -29,15 +29,22 @@
             var vm = this;
             vm.deputados = [];
             vm.view = {};
-            vm.idView;
+            vm.viewId;
             vm.getDetail = getDetail;
             vm.isSelected = isSelected
             vm.ufsList;
             vm.uf = 'AC';
-            vm.changeUf = changeUf
+            vm.changeUf = changeUf;
+            vm.loadingList;
+            vm.loadingListMessage = 'Carregando Lista de Deputados';
+            vm.loadingView;
+            vm.loadingViewMessage = 'Carregando Deputado(a)';
+
+            vm.reloadButton;
             
 
             function active() {
+                vm.loadingList = true;
                 getLocation().then(getDeputadosGps).catch(_error)
                 getUfsList().then(setUfsList).catch(_error)
             }
@@ -49,21 +56,13 @@
                 var params = {
                     siglaUf: vm.uf
                 }
-                getDeputados(params)
-                    .then(function (data) {
-                        vm.deputados = data;
-                    })
-                    .catch(_error);
+                getDeputados(params);
             }
 
 
             function getDetail(id) {
-                vm.idView = id;
-                getDeputado(id)
-                    .then(function (data) {
-                        vm.view = data;
-                    })
-                    .catch(_error);
+                vm.viewId = id;
+                getDeputado(id);
             }
 
             function changeUf(uf) {
@@ -71,24 +70,40 @@
                 var params = {
                     siglaUf: vm.uf
                 }
-                
-                getDeputados(params)
-                    .then(function (data) {
-                        vm.deputados = data;
-                    })
-                    .catch(_error);
+                getDeputados(params);
             }
 
             function setUfsList(list) {
                 vm.ufsList = list;
             }
 
+            function getDeputados(params){
+                vm.loadingList = true;
+                return _getDeputados(params).then(_renderDeputados).catch(_error);
+            }
+
             function getDeputado(id) {
+                vm.loadingView = true;
+                return _getDeputado(id).then(_renderDeputado).catch(_error);
+            }
+
+            function _getDeputados(params) {
+                return wsRequestService.getDeputados(params);
+            }
+
+            function _getDeputado(id){
                 return wsRequestService.getDeputado(id);
             }
 
-            function getDeputados(params) {
-                return wsRequestService.getDeputados(params);
+            function _renderDeputados(data){
+                vm.deputados = data;
+                vm.loadingList = false;
+            }
+
+            function _renderDeputado(data){
+                vm.view = data;
+                vm.loadingView = false;
+                console.log(data);
             }
 
             function getUfsList() {
@@ -100,7 +115,7 @@
             }
 
             function isSelected(id) {
-                return id === vm.idView;
+                return id === vm.viewId;
             }
 
             function _error(e) {

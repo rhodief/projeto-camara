@@ -1,3 +1,4 @@
+<!-- 
 <div class="w3-card-4" style="max-width:700px;">
     <header class="w3-container w3-teal">
         <h5>Seus Representantes</h5>
@@ -40,6 +41,76 @@
                     <div class="w3-section">
                         <button class="w3-button w3-green">Accept</button>
                         <button class="w3-button w3-red">Decline</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ -->
+
+<div class="appointment">
+    <div class="center">
+        <div>
+            <div class="panel-container-3 step-2 list act">
+                <div class="filter">
+                    <div>
+                        <button ng-class="gps ? 'w3-green' : 'w3-grey'">GPS ON</button>
+                        <select name="option" ng-model="vm.uf" ng-change="vm.changeUf(vm.uf)">
+                            <option ng-repeat="uf in vm.ufsList" ng-model-options="uf.sigla">{{uf.sigla}}</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <input class="w3-input" type="text" placeholder="Filtrar..." ng-model="vm.agendaFilter">
+                    </div>
+                </div>
+                <ul class="panel-list list" id="container-list">
+                    <div ng-if="vm.loadingList">
+                        <span class="loading">{{vm.loadingListMessage}}</span>
+                        <div ng-if="vm.reloadButton"><a href="" onClick="location.reload()">Recarregue a Página</a></div>
+                    </div>
+                    <div ng-if="!vm.loadingList">
+                        <div ng-if="vm.deputados[0]">
+                            <li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(deputado.id)}" ng-repeat="deputado in vm.deputados | filter:vm.deputadosFilter"
+                                ng-click="vm.getDetail(deputado.id)" id="anchor-{{$index}}">
+                                <div>
+                                    <img ng-src="{{deputado.foto}}" class="w3-left w3-circle w3-margin-right" style="max-width:40px">
+                                    <span class="w3-large">{{deputado.nome}}</span><br>
+                                    <span>{{deputado.partido_sig}}/{{deputado.uf_sig}}</span>
+                                </div>
+                            </li>
+                        </div>
+                        <div ng-if="!vm.deputados[0]">
+                            <span class="no-event">Não há ocorrências para esta busca.</span>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="panel-container-3 panel-view step-3" ng-class="{act: vm.viewId}">
+                <a href="#" class="back" ng-click="vm.viewId = null">Voltar</a>
+                <div class="detail">
+                    <div ng-if="vm.loadingView">
+                        <span class="loading">{{vm.loadingViewMessage}}</span>
+                        <div ng-if="vm.reloadButton"><a href="" onClick="location.reload()">Recarregue a Página</a></div>
+                    </div>
+                    <div ng-if="!vm.loadingView">
+                        <div ng-if="vm.view.ultimoStatus_nome===undefined">
+                            <div class="inact">
+                                <div class="img">
+                                    <img src="img/img_avatar2.png" alt="Avatar">
+                                </div>
+                                <div class="text">
+                                    <p>Selecione um<br><span>Paralemntar</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if="vm.view.ultimoStatus_nome">
+                            <div class="text">
+                                    <img ng-src="{{vm.view.ultimoStatus_foto}}" alt="Avatar" style="max-width:60%">
+                                    <h4>{{vm.view.ultimoStatus_nome}}</h4>
+                                    <h6>{{vm.view.ultimoStatus_partido_sig}}/{{vm.view.ultimoStatus_uf_sig}}</h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

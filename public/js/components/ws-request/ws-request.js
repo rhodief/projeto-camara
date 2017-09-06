@@ -27,6 +27,10 @@
 
         const SCHEMA = {
             deputadosList: {
+                url: function(params){
+                    var siglaUf = params.siglaUf || '';
+                    return 'https://dadosabertos.camara.leg.br/api/v2/deputados?siglaUf=' + siglaUf + '&itens=1000&ordem=ASC&ordenarPor=nome';
+                },
                 path: 'data.dados',
                 list: true,
                 schema: {
@@ -38,11 +42,18 @@
                     view: 'uri',
                     view_partido: 'uriPartido',
                     foto: ["urlFoto", /.+/g, function (value) {
-                        return value.split('http').join('https')
+                        var splitS = value.split('https');
+                        if(splitS[1]){
+                            return value;
+                        }
+                        return value.split('http').join('https');
                     }]
                 }
             },
             deputadoView: {
+                url: function(params){
+                    return 'https://dadosabertos.camara.leg.br/api/v2/deputados/' + params.id;
+                },
                 path: 'data.dados',
                 list: false,
                 schema: {
@@ -75,9 +86,12 @@
                     ultimoStatus_view: 'ultimoStatus.uri',
                     ultimoStatus_partido_view: 'ultimoStatus.uriPartido',
                     ultimoStatus_foto: ['ultimoStatus.urlFoto', /.+/g, function (value) {
-                        return value.split('http').join('https')
-                    }],
-                    ultimoStatus_site: 'ultimoStatus.urlWebsite'
+                        var splitS = value.split('https');
+                        if(splitS[1]){
+                            return value;
+                        }
+                        return value.split('http').join('https');
+                    }]
                 }
             },
             agendaList: {
@@ -149,21 +163,35 @@
                         }
                     }
                 }
+            },
+            ufList:{
+                url: function(){
+                    return 'https://dadosabertos.camara.leg.br/api/v2/referencias/uf';
+                },
+                path: 'data.dados',
+                list: true,
+                schema:{
+                    id: 'id',
+                    sigla: 'sigla',
+                    nome: 'nome',
+                    descricao: 'descricao'
+                }
             }
         };
 
         return service;
 
         function getDeputados(params) {
-            //return _getDeputadosWs(params).then(_formatDeputados).catch(_wsError);
+            return _getDataWs(SCHEMA.deputadosList, params);
         }
 
         function getDeputado(id) {
-            //return _getDeputado(id).then(_formatDeputado).catch(_wsError);
+            var params = {id:id};
+            return _getDataWs(SCHEMA.deputadoView, params);
         }
 
         function getUfsList() {
-            //return _getUfsList().then(_formatUfsList).catch(_wsError);
+            return _getDataWs(SCHEMA.ufList);
         }
 
         function getAgenda(date) {
@@ -203,13 +231,18 @@
             var outputObj = {};
             for (var k in schema) {
                 var isList = (schema[k] && schema[k].path);
-                var isRegex = angular.isArray(schema[k]);
+                var isParams = angular.isArray(schema[k]);
                 if (isList) {
                     outputObj[k] = _getDataFromList(Rparse(schema[k].path, data), schema[k].schema);
                 } else {
-                    var value = (isRegex ? schema[k][0] : schema[k]);
+                    var value = (isParams ? schema[k][0] : schema[k]);
                     var item = Rparse(value, data);
-                    var prevalue = (isRegex && item ? item.match(schema[k][1])[0] : item);
+                    if(isParams){
+                        var prev = (schema[k][1] && item ? item.match(schema[k][1])[0] : item);
+                        var prevalue = (schema[k][2] ? schema[k][2](prev) : prev);
+                    }else{
+                        var prevalue = item;
+                    }
                     outputObj[k] = (typeof prevalue === 'object' ? null : prevalue);
                 }
             }

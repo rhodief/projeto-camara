@@ -212,7 +212,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .subitems-list .links svg,
 .subitems-list .links img{display: block; width: 16px; height: 16px;}
 
-.appointment{padding: 10px 0; position: relative; width: 100%; overflow: hidden;}
+.appointment{padding: 10px 0; position: relative; width: 100%; overflow: hidden;z-index: 10000}
 .appointment .center{max-width: 1240px;}
 .subitem .appointment h5{display: none;}
 .appointment .pickadate{background: #fff; padding: 10px;}
@@ -229,7 +229,11 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .appointment .pickadate-cell .pickadate-active{background: #0095db;}
 .panel-container-3{width: 100%;}
 .panel-container-3.step-1{position: relative; z-index: 1;}
+
+.panel-container-3.step-2.list.act{position:static; height:100%; width:100%}
+
 .panel-container-3.step-2{padding: 10px 0; background: #fff;position: absolute; z-index: 2; left:100%; top:10px; min-height:calc(100% - 20px);-webkit-box-sizing:border-box;box-sizing:border-box;}
+
 .panel-container-3.step-3{position: absolute; z-index: 2; left:100%; top:10px; background: #fff; min-height:calc(100% - 20px);-webkit-box-sizing:border-box;box-sizing:border-box;}
 .panel-container-3.step-2.act{left: 10%; width: 90%;}
 .panel-container-3.step-3.act{left: 15%; width: 85%;}
