@@ -49,7 +49,9 @@
         vm.loadingView;
         vm.loadingViewMessage = 'Carregando a View!!!';
         vm.reloadButton;
-        
+        vm.customFilter = undefined;
+
+
         $scope.$watch('vm.date', watchDate);
         
 

@@ -7,8 +7,14 @@
 			<div class="panel-container-3 step-2" ng-class="{act: vm.date}">
 				<a href="#" class="back" ng-click="vm.date = ''">Voltar</a>
 				<div class="filter">
+					<div>
+						<button ng-click="vm.customFilter.$ = undefinded" ng-class="{act:vm.customFilter.$ == undefined}">Todos</button>
+						<button ng-click="vm.customFilter.$ = 'Plenário da Câmara dos Deputados'" ng-class="{act:vm.customFilter.$ == 'Plenário da Câmara dos Deputados'}">Plenário</button>
+						<button ng-click="vm.customFilter.$ = 'Comissão '" ng-class="{act:vm.customFilter.$ == 'Comissão '}">Comissões</button>
+						<button ng-click="vm.customFilter.$ = '!Plenário da Câmara dos Deputados' || '!Comissão de '" ng-class="{act:vm.customFilter.$ == '!Plenário da Câmara dos Deputados' || '!Comissão de '}">Outros</button>
+					</div>
 					<div class="field">
-						<input class="w3-input" type="text" placeholder="Pesquisar por ex.: Audiência Pública" ng-model="vm.agendaFilter">
+						<input class="w3-input" type="text" placeholder="Pesquisar por ex.: Audiência Pública" ng-model="vm.agendaFilter.$">
 					</div>
 				</div>
 				<ul class="panel-list list" id="container-list">
@@ -18,17 +24,17 @@
 					</div>
 					<div ng-if="!vm.loadingList">
 						<div ng-if="vm.agenda[0]">
-								<li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(evento.id)}"
-								ng-repeat="evento in vm.agenda | filter:vm.agendaFilter" ng-click="vm.getDetail(evento.id)" id="anchor-{{$index}}">
-								   <div>
-									   <p class="date-time">{{evento.horaInicio}}</p>
-									   <div class="title">{{evento.orgaos[0].nome}}</div>
-									   <div><strong>{{evento.orgao_sigla}}</strong></div>
-									   <div class="">{{evento.descricaoTipo}}</div>
-									   <div>{{evento.localCamara_nome}}</div>
-									   <div class="">{{::evento.descricaoSituacao}}</div>
-								   </div>
-							   </li>
+							<li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(evento.id)}" ng-repeat="evento in vm.agenda | filter:vm.customFilter | filter:vm.agendaFilter"
+							 ng-click="vm.getDetail(evento.id)" id="anchor-{{$index}}">
+								<div>
+									<p class="date-time">{{evento.horaInicio}}</p>
+									<div class="title">{{evento.orgaos[0].nome}}</div>
+									<div><strong>{{evento.orgao_sigla}}</strong></div>
+									<div class="">{{evento.descricaoTipo}}</div>
+									<div>{{evento.localCamara_nome}}</div>
+									<div class="">{{::evento.descricaoSituacao}}</div>
+								</div>
+							</li>
 						</div>
 						<div ng-if="!vm.agenda[0]">
 							<span class="no-event">Não há eventos para este dia.</span>
