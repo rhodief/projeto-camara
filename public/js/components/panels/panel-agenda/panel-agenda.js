@@ -34,9 +34,9 @@
         return directive;
     }
 
-    panelAgendaController.$inject = ['$scope', '$filter', 'wsRequestService'];
+    panelAgendaController.$inject = ['$scope', '$filter', 'wsRequestService', '$location', '$anchorScroll', '$timeout'];
 
-    function panelAgendaController($scope, $filter, wsRequestService) {
+    function panelAgendaController($scope, $filter, wsRequestService, $location, $anchorScroll, $timeout) {
         var vm = this;
         vm.date;
         vm.agenda = [];
@@ -69,6 +69,10 @@
 
             function okAgenda(data) {
                 vm.agenda = data;
+                //Scroll
+                gotTo('7');
+                console.log('aqui');
+                //Scroll
             }
 
             function errorAgenda(erro) {
@@ -99,6 +103,26 @@
 
         function _getDetail(id, idOrg, date) {
             return wsRequestService.getAgendaDetail(id, idOrg, date);
+        }
+
+        function findFirst(array, fieldSearch, valueSearch){
+            angular.forEach(array, function(v){
+                if(v[fieldSearch] === valueSearch){
+                    return v.$$hashKey;
+                }
+            })
+        }
+
+        //Scroll - O Scroll tem que ocorrer na abertura, então o jquery controlla o relamento ou o angular a abertura....
+        function gotTo(x){
+            var newHash = 'anchor-' + x;
+            console.log($location.hash());
+            console.log(newHash);
+            $timeout(function(){
+                $location.hash(newHash);
+                $anchorScroll();
+                console.log('eu');
+            }, 5000)
         }
 
         function _error(e) {

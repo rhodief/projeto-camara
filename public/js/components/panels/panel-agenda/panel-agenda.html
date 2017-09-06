@@ -11,9 +11,9 @@
 						<input class="w3-input" type="text" placeholder="Pesquisar por ex.: Audiência Pública" ng-model="vm.agendaFilter">
 					</div>
 				</div>
-				<ul class="panel-list list">
+				<ul class="panel-list list" id="container-list">
 					<li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(evento.id)}"
-					 ng-repeat="evento in vm.agenda | filter:vm.agendaFilter" ng-click="vm.getDetail(evento.id)">
+					 ng-repeat="evento in vm.agenda | filter:vm.agendaFilter" ng-click="vm.getDetail(evento.id)" id="anchor-{{$index}}">
 						<div>
 							<p class="date-time">{{evento.horaInicio}}</p>
 							<div class="title">{{evento.orgaos[0].nome}}</div>
