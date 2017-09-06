@@ -44,6 +44,11 @@
         vm.viewId;
         vm.getDetail = getDetail;
         vm.detail;
+        vm.loadingList;
+        vm.loadingListMessage = 'Carregando a Lista';
+        vm.loadingView;
+        vm.loadingViewMessage = 'Carregando a View!!!';
+        vm.reloadButton;
         
         $scope.$watch('vm.date', watchDate);
         
@@ -65,17 +70,20 @@
         }
 
         function getAgenda(date) {
+            vm.loadingList = true;
             _getAgenda(vm.date).then(okAgenda).catch(errorAgenda);
 
             function okAgenda(data) {
                 vm.agenda = data;
+                vm.loadingList = false;
                 //Scroll
-                gotTo('7');
-                console.log('aqui');
+                //gotTo('7');
                 //Scroll
             }
 
             function errorAgenda(erro) {
+                vm.loadingListMessage = 'Não foi possível Carregar a Lista';
+                vm.reloadButton = true;
                 _error(erro);
             }
         }
@@ -86,13 +94,16 @@
 
         function getDetail(id) {
             vm.viewId = id;
+            vm.loadingView = true;
             _getDetail(id).then(okDetail).catch(errorDetail);
 
             function okDetail(data) {
                 vm.detail = data;
+                vm.loadingView = false;
                 console.log(data);
             }
             function errorDetail(erro) {
+                vm.loadingViewMessage = 'Não Foi Possível Carregar os Detalhes do Evento, Recarregue a Página';
                 _error(erro);
             }
         }

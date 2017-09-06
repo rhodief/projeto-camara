@@ -35,6 +35,7 @@
 
             function _buildPanel(data) {
                 var params = _buildNameAndUrl(data);
+                var loading = initLoad(element, scope);
                 lazyLoad(params.url)
                     .then(ok)
                     .catch(fail);
@@ -42,6 +43,7 @@
                 function ok() {
                     if (data.activate) {
                         newElement = $compile(params.element)(scope);
+                        destroyLoad(element, loading);
                         element.append(newElement);
                     } else {
                         if (newElement) newElement.remove();
@@ -89,6 +91,17 @@
                 if (!attrs.section || !attrs.pos) throw new Error('Missing CAT or POS params!');
                 section = attrs.section;
                 pos = attrs.pos;
+            }
+
+            function initLoad(el){
+                var span = '<span class="loading">Carregando Painél</span>';
+                var loading = $compile(span)(scope);
+                el.append(loading);
+                return loading;
+            }
+
+            function destroyLoad(el, loading){
+                if(loading) loading.remove();
             }
 
             function capitalizeFirstLetter(string) {

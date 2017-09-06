@@ -11,9 +11,9 @@
         .module('wsRequest')
         .factory('wsRequestService', wsRequestService)
 
-    wsRequestService.$inject = ['$http'];
+    wsRequestService.$inject = ['$http', '$q'];
 
-    function wsRequestService($http) {
+    function wsRequestService($http, $q) {
 
         var ufsList;
 
@@ -179,7 +179,7 @@
 
 
         function _getDataWs(schemaObj, params) {
-            return _getData(schemaObj.url(params)).then(_formatData.bind(null, schemaObj)).catch(_erro);
+            return _getData(schemaObj.url(params)).then(_formatData.bind(null, schemaObj));
         }
 
         function _getData(url) {
@@ -256,15 +256,6 @@
             return (out && out[0] && out.length === 1 ? out[0] : out);
         }
 
-
-        function _erro(e) {
-            //##### COLOCAR UM DEBUG NO ENV ##########
-            console.log(e);
-            return {
-                erro: e,
-                msg: "Não foi possível recuperar os dados do WSCN"
-            }
-        }
 
         function _requestDataFromWs(url) {
             return $http.get(url);

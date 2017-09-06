@@ -12,37 +12,54 @@
 					</div>
 				</div>
 				<ul class="panel-list list" id="container-list">
-					<li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(evento.id)}"
-					 ng-repeat="evento in vm.agenda | filter:vm.agendaFilter" ng-click="vm.getDetail(evento.id)" id="anchor-{{$index}}">
-						<div>
-							<p class="date-time">{{evento.horaInicio}}</p>
-							<div class="title">{{evento.orgaos[0].nome}}</div>
-							<div><strong>{{evento.orgao_sigla}}</strong></div>
-							<div class="">{{evento.descricaoTipo}}</div>
-							<div>{{evento.localCamara_nome}}</div>
-							<div class="">{{::evento.descricaoSituacao}}</div>
+					<div ng-if="vm.loadingList">
+						<span class="loading">{{vm.loadingListMessage}}</span>
+						<div ng-if="vm.reloadButton"><a href="" onClick="location.reload()">Recarregue a Página</a></div>
+					</div>
+					<div ng-if="!vm.loadingList">
+						<div ng-if="vm.agenda[0]">
+								<li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(evento.id)}"
+								ng-repeat="evento in vm.agenda | filter:vm.agendaFilter" ng-click="vm.getDetail(evento.id)" id="anchor-{{$index}}">
+								   <div>
+									   <p class="date-time">{{evento.horaInicio}}</p>
+									   <div class="title">{{evento.orgaos[0].nome}}</div>
+									   <div><strong>{{evento.orgao_sigla}}</strong></div>
+									   <div class="">{{evento.descricaoTipo}}</div>
+									   <div>{{evento.localCamara_nome}}</div>
+									   <div class="">{{::evento.descricaoSituacao}}</div>
+								   </div>
+							   </li>
 						</div>
-					</li>
+						<div ng-if="!vm.agenda[0]">
+							<span class="no-event">Não há eventos para este dia.</span>
+						</div>
+					</div>
 				</ul>
 			</div>
 			<div class="panel-container-3 panel-view step-3" ng-class="{act: vm.viewId}">
 				<a href="#" class="back" ng-click="vm.viewId = null">Voltar</a>
 				<div class="detail">
-					<div ng-if="vm.detail.titulo===undefined">
-						<div class="inact">
-							<div class="img">
-								<img src="img/layout/calendar.svg" alt="Avatar">
-							</div>
-							<div class="text">
-								<p>Selecione um<br><span>Evento</span></p>
+					<div ng-if="vm.loadingView">
+						<span class="loading">{{vm.loadingViewMessage}}</span>
+						<div ng-if="vm.reloadButton"><a href="" onClick="location.reload()">Recarregue a Página</a></div>
+					</div>
+					<div ng-if="!vm.loadingView">
+						<div ng-if="vm.detail.titulo===undefined">
+							<div class="inact">
+								<div class="img">
+									<img src="img/layout/calendar.svg" alt="Avatar">
+								</div>
+								<div class="text">
+									<p>Selecione um<br><span>Evento</span></p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div ng-if="vm.detail.titulo">
-						<div class="text">
-							<p>{{vm.detail.titulo}}</p>
-							<p>{{vm.detail.descricaoSituacao}}</p>
-							<p>Formatar - Ver colocar pauta aqui, pois essas informações já constam da lista...</p>
+						<div ng-if="vm.detail.titulo">
+							<div class="text">
+								<p>{{vm.detail.titulo}}</p>
+								<p>{{vm.detail.descricaoSituacao}}</p>
+								<p>Formatar - Ver colocar pauta aqui, pois essas informações já constam da lista...</p>
+							</div>
 						</div>
 					</div>
 				</div>
