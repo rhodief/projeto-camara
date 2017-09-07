@@ -7,11 +7,14 @@
 			<div class="panel-container-3 step-2" ng-class="{act: vm.date}">
 				<a href="#" class="back" ng-click="vm.date = ''">Voltar</a>
 				<div class="filter">
-					<div>
-						<button ng-click="vm.customFilter.$ = undefinded" ng-class="{act:vm.customFilter.$ == undefined}">Todos</button>
-						<button ng-click="vm.customFilter.$ = 'Plenário da Câmara dos Deputados'" ng-class="{act:vm.customFilter.$ == 'Plenário da Câmara dos Deputados'}">Plenário</button>
-						<button ng-click="vm.customFilter.$ = 'Comissão de'" ng-class="{act:vm.customFilter.$ == 'Comissão '}">Comissões</button>
-						<button ng-click="vm.customFilter.$ = '!Plenário da Câmara dos Deputados' || '!Comissão de '" ng-class="{act:vm.customFilter.$ == '!Plenário da Câmara dos Deputados' || '!Comissão de '}">Outros</button>
+					<div class="field-dropdown-mobile">
+						<div class="dropdown shadow">
+							<button ng-click="vm.customFilter.$ = undefinded" ng-class="{act:vm.customFilter.$ == undefined}">Todos</button>
+							<button ng-click="vm.customFilter.$ = 'Plenário da Câmara dos Deputados'" ng-class="{act:vm.customFilter.$ == 'Plenário da Câmara dos Deputados'}">Plenário</button>
+							<button ng-click="vm.customFilter.$ = 'Comissão de'" ng-class="{act:vm.customFilter.$ == 'Comissão '}">Comissões</button>
+							<button ng-click="vm.customFilter.$ = '!Plenário da Câmara dos Deputados' || '!Comissão de '" ng-class="{act:vm.customFilter.$ == '!Plenário da Câmara dos Deputados' || '!Comissão de '}">Outros</button>
+						</div>
+						<button class="toggle-dropdown filter" type="button" onclick="toggleDropdown(this)">&#9660;</button>
 					</div>
 					<div class="field">
 						<input class="w3-input" type="text" placeholder="Pesquisar por ex.: Audiência Pública" ng-model="vm.agendaFilter.$">

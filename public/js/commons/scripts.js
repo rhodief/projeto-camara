@@ -139,3 +139,8 @@ function bodyScrollDisable(){
 function bodyScrollEnable(){
 	$('body').removeClass('no-scroll');
 }
+
+function toggleDropdown(e){
+	$(e).parent().children('.dropdown').toggleClass('act');
+	return false;
+};
