@@ -43,11 +43,11 @@
                 function ok() {
                     if (data.activate) {
                         newElement = $compile(params.element)(scope);
-                        destroyLoad(element, loading);
                         element.append(newElement);
                     } else {
                         if (newElement) newElement.remove();
                     }
+                    destroyLoad(element, loading);
                 }
 
                 function fail(error) {
