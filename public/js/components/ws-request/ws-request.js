@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('wsRequest', []);
+    angular.module('wsRequest', ['wsMock']);
 })();
 
 (function () {
@@ -11,9 +11,9 @@
         .module('wsRequest')
         .factory('wsRequestService', wsRequestService)
 
-    wsRequestService.$inject = ['$http', '$q'];
+    wsRequestService.$inject = ['$http', 'wsMockService'];
 
-    function wsRequestService($http, $q) {
+    function wsRequestService($http, wsMockService) {
 
         var ufsList;
 
@@ -27,6 +27,7 @@
 
         const SCHEMA = {
             deputadosList: {
+                name: 'deputados-list',
                 url: function(params){
                     var siglaUf = params.siglaUf || '';
                     return 'https://dadosabertos.camara.leg.br/api/v2/deputados?siglaUf=' + siglaUf + '&itens=1000&ordem=ASC&ordenarPor=nome';
@@ -51,6 +52,7 @@
                 }
             },
             deputadoView: {
+                name: 'deputado-view',
                 url: function(params){
                     return 'https://dadosabertos.camara.leg.br/api/v2/deputados/' + params.id;
                 },
@@ -95,6 +97,7 @@
                 }
             },
             agendaList: {
+                name: 'agenda-list',
                 url: function (params) {
                     if (!params || !params.date) throw new Error('É obrigatório passar o parâmetro DATE');
                     return 'https://dadosabertos.camara.leg.br/api/v2/eventos?dataInicio=' + params.date + '&dataFim=' + params.date + '&ordem=ASC&itens=100&ordenarPor=dataHoraInicio';
@@ -131,6 +134,7 @@
                 }
             },
             agendaView: {
+                name: 'agenda-view',
                 url: function(params){
                     return 'https://dadosabertos.camara.leg.br/api/v2/eventos/'+params.id;
                 },
@@ -165,6 +169,7 @@
                 }
             },
             ufList:{
+                name: 'uf-list',
                 url: function(){
                     return 'https://dadosabertos.camara.leg.br/api/v2/referencias/uf';
                 },
@@ -207,7 +212,7 @@
 
 
         function _getDataWs(schemaObj, params) {
-            return _getData(schemaObj.url(params)).then(_formatData.bind(null, schemaObj));
+            return _getData(schemaObj.url(params)).then(_formatData.bind(null, schemaObj)).catch(_getMockData.bind(null, schemaObj));
         }
 
         function _getData(url) {
@@ -292,6 +297,11 @@
 
         function _requestDataFromWs(url) {
             return $http.get(url);
+        }
+
+        function _getMockData(schemaObj, error){
+            console.log('Não foi possível se conectar com o WebService da Câmara dos Deputados. Assim, os dados serão simulados para mostrar a experiência.')
+            return wsMockService.getData(schemaObj);
         }
 
     }
