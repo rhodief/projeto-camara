@@ -21,7 +21,7 @@
         //Iniciar o Botão #MeuEspaçoCâmara
         //###Iniciar direto no CSS, mas ver a conveniência disso....
         function initMeuEspacoCamaraButton() {
-            angular.element(document.getElementById('section-meuEspacoCamara')).css('display', 'block');
+            angular.element(document.getElementById('section-meuEspacoCamara')).addClass('act');
         }
 
         function verifyKnownMeuEspacoCamara() {
