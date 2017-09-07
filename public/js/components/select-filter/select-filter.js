@@ -22,7 +22,7 @@
                 name: "@"
             },
             restrict: 'A',
-            template:'<input type="hidden" name="{{name}}" id="{{name}}-id"><input type="text" placeholder="{{placeholder}}" ng-model="input.name"><button type="button" ng-click="toggle()">V</button><div style="position:absolute;top:100%;left:0;width:100%;font-size:initial"><div ng-repeat="data in datas | filter:input.name"><a ng-href="{{openLink ? data.link : \'#\'}}" ng-click="select(data.nome,data.cod)">{{data.nome}}</a></div></div><div ng-if=""></div>'
+            template:'<input type="hidden" name="{{name}}" id="{{name}}-id"><input type="text" placeholder="{{placeholder}}" ng-model="input.name"><button class="toggle-dropdown" type="button" ng-click="toggle()">&#9660;</button><div class="dropdown shadow"><div ng-repeat="data in datas | filter:input.name"><a ng-href="{{openLink ? data.link : \'#\'}}" ng-click="select(data.nome,data.cod)">{{data.nome}}</a></div></div><div ng-if=""></div>'
         };
         return directive;
 

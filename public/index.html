@@ -62,14 +62,6 @@
                     </div>
                     <div class="bg-search"></div>
                     <a href="#" class="bt-search"><img class="img-color-change" src="img/layout/search.svg" alt="Buscar"></a>
-                    <div class="box-search">
-                        <form>
-                            <div class="field">
-                                <input id="buscarPortal" name="buscarPortal" type="search" placeholder="Buscar no Portal">
-                                <a href="#" class="search-button"><img class="img-color-change color2" src="img/layout/search.svg" alt="Buscar"></a>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </div>
             <div class="bg-menu"></div>
@@ -870,13 +862,19 @@
 									<panels-gen section="acesso_rapido" pos="1"></panels-gen>
                                 </div>
                             </li>
-                            <li>
+                            <li class="search-form">
                                 <a href="#"><span class="icon"><img src="img/layout/search.svg" alt="Pesquisa" class="img-color-change color3"></span><span class="title">Pesquisa</span></a>
                                 <div class="subitem">
                                     <div class="form">
+										<div class="box-search">
+											<form>
+												<input id="buscarPortal" name="buscarPortal" type="search" placeholder="Buscar no Portal">
+												<a href="#" class="search-button"><img class="img-color-change color2" src="img/layout/search.svg" alt="Buscar"></a>
+											</form>
+										</div>
                                         <div class="col size1">
                                             <label for="deputados_federais">Deputados Federais</label>
-                                            <div style="position:relative" select-filter="deputadosList" name="deputados_federais" ng-placeholder="Digite o nome do Deputado" open-link="true"></div>
+                                            <div class="field-dropdown search" select-filter="deputadosList" name="deputados_federais" ng-placeholder="Digite o nome do Deputado" open-link="true"></div>
                                         </div>
                                         <div class="col size2">
                                             <label for="proposicoes">Preposições</label>
@@ -1098,31 +1096,27 @@
 							</div>
 						</a>
 					</div>
-					<div class="col no-margin">
-						<div class="flex-1">
-							<div class="row shadow">
-								<a href="#">
-									<div class="box-img">
-										<img src="img/uploads/img_09.jpg" alt="Lei de acesso à informação">
-									</div>
-									<div class="box-text">
-										<h3 class="title">Fiscalize o orçamento</h3>
-										<p>Consulte repasses e transferências de recursos financeiros</p>
-									</div>
-								</a>
+					<div class="col type-2 shadow">
+						<a href="#">
+							<div class="box-img">
+								<img src="img/uploads/img_09.jpg" alt="Lei de acesso à informação">
 							</div>
-							<div class="row shadow">
-								<a href="#">
-									<div class="box-img">
-										<img src="img/uploads/img_10.jpg" alt="Receitas e despesas">
-									</div>
-									<div class="box-text">
-										<h3 class="title">Receitas e despesas</h3>
-										<p>Informações e relatórios sobre receitas,  despesas e convênios</p>
-									</div>
-								</a>
+							<div class="box-text">
+								<h3 class="title">Fiscalize o orçamento</h3>
+								<p>Consulte repasses e transferências de recursos financeiros</p>
 							</div>
-						</div>
+						</a>
+					</div>
+					<div class="col type-2 shadow">
+						<a href="#">
+							<div class="box-img">
+								<img src="img/uploads/img_10.jpg" alt="Receitas e despesas">
+							</div>
+							<div class="box-text">
+								<h3 class="title">Receitas e despesas</h3>
+								<p>Informações e relatórios sobre receitas,  despesas e convênios</p>
+							</div>
+						</a>
 					</div>
 					<div class="col shadow">
 						<a href="#">
@@ -1313,8 +1307,8 @@
 
     <section class="hidden" id="section-meuEspacoCamara">
         <div id="button-meuEspacoCamara" ng-controller="meuEspacoCamaraController as meuEspacoCamara">
-            <a href="#" class="my-camara" ng-click="meuEspacoCamara.toggleMescam()">#MeuEspaçoCâmara</a>
-            <meu-espaco-camara id="meuEspacoCamara" action="meuEspacoCamara.toggleMescam()" class="w3-sidebar w3-bar-block" style="z-index:1000"></meu-espaco-camara>
+            <a href="#" class="my-camara blinker" ng-click="meuEspacoCamara.toggleMescam()">#MeuEspaçoCâmara</a>
+            <meu-espaco-camara id="meuEspacoCamara" action="meuEspacoCamara.toggleMescam()" class="w3-sidebar w3-bar-block"></meu-espaco-camara>
         </div>
     </section>
 

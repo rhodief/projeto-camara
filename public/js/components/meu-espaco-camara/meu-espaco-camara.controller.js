@@ -19,9 +19,9 @@
             //REVERF ISSO AQUI... É A DIRETIVA Q CONTROLA>... ############
             //Ver se trabalho com remove add e remove class... 
             if (vm.opened) {
-                angular.element(document.getElementById('meuEspacoCamara')).css('display', 'none');
+                angular.element(document.getElementById('section-meuEspacoCamara')).removeClass('act');
             } else {
-                angular.element(document.getElementById('meuEspacoCamara')).css('display', 'block');
+                angular.element(document.getElementById('section-meuEspacoCamara')).addClass('act');
             }
             vm.opened = !vm.opened;
             //Leitura de Configurações ao abrir.. se houver

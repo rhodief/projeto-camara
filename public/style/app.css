@@ -3,8 +3,6 @@
 
 .hidden{display: none;}
 
-#meuEspacoCamara{width:300px;right:0;display:none;position:fixed;top: 0;}
-
 .panel-wrapper{    display: -webkit-box;display: -ms-flexbox;display: flex;-ms-flex-wrap: wrap;flex-wrap: wrap;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;}
 
 .panel-wrapper .col.size1 {
