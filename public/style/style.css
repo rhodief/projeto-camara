@@ -2,6 +2,7 @@ html,body,header,footer,p,a,h1,h2,h3,h4,figure,form{margin: 0; padding: 0;}
 ul, li, ol{list-style: none; margin: 0; padding: 0;}
 body,
 .appointment .pickadate{font:normal 100% 'Open Sans', sans-serif;}
+.no-scroll{overflow: hidden;}
 
 button,
 textarea,
@@ -189,7 +190,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .menu-easy-access .icon svg,
 .menu-easy-access .icon img{max-width: 26px; max-height: 22px; display: block;}
 .menu-easy-access > li > a > .title{display:none;}
-.menu-easy-access > li .subitem{display:none; position: absolute; top:calc(100% - 1px); left: 0; background: #eaeaea;z-index: 1; width: 100%; border-top: 1px solid #acacac; -webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.11); box-shadow: 0 3px 3px 0 rgba(0,0,0,0.11);}
+.menu-easy-access > li .subitem{display:none; position: absolute; top:calc(100% - 1px); left: 0; background: #eaeaea;z-index: 1; width: 100%; border-top: 1px solid #acacac; -webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.11); box-shadow: 0 3px 3px 0 rgba(0,0,0,0.11); overflow: auto;}
 .menu-subitem > li{border-bottom: 1px solid #acacac; font-size: 0;}
 .menu-subitem > li > a{font-size:16px; font-size:1rem; text-transform: uppercase; padding: 5px; display: block;}
 .menu-subitem > li.act > a{text-decoration: underline;}
@@ -633,8 +634,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 	.footer-links{padding: 10px 0;}
 	.footer-links li a{display: block;}
 	.footer-links li a:hover{text-decoration: underline;}
-	/*.menu-easy-access > li .subitem{display: none!important;}
-	.menu-easy-access > li:hover .subitem{display:block!important;}
+	/*.menu-easy-access > li:hover .subitem{display:block!important;}
 	.subitem .subitems-list{display: none!important;}
 	.menu-subitem > li:hover .subitems-list{display: block!important;}
 	.menu-subitem > li.act{border-bottom-width: 0!important;}
