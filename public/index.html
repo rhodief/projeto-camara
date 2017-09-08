@@ -1305,12 +1305,17 @@
     <section>[Escola para Democracia]</section>
     <footer>Rodapé!</footer>
 
-    <section class="hidden" id="section-meuEspacoCamara">
-        <div id="button-meuEspacoCamara" ng-controller="meuEspacoCamaraController as meuEspacoCamara">
+    <div ng-controller="meuEspacoCamaraController as meuEspacoCamara">
+        <section class="hidden" id="section-meuEspacoCamara">
+            <div id="div-meuEspacoCamara">
+                <meu-espaco-camara id="meuEspacoCamara" action="meuEspacoCamara.toggleMescam()" class="w3-sidebar w3-bar-block"></meu-espaco-camara>
+            </div>
+        </section>
+        <div id="button-meuEspacoCamara" style="display:none">
             <a href="#" class="my-camara blinker" ng-click="meuEspacoCamara.toggleMescam()">#MeuEspaçoCâmara</a>
-            <meu-espaco-camara id="meuEspacoCamara" action="meuEspacoCamara.toggleMescam()" class="w3-sidebar w3-bar-block"></meu-espaco-camara>
         </div>
-    </section>
+    </div>
+    
 
     <!-- #################### FIM DO RESTO DO CORPO, SOMENTE PARA GUIA, VAMOS REFORMULAR, DE CERTO, TODA SUA ESTRUTURA -->
 

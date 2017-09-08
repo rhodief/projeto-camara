@@ -448,8 +448,8 @@ a.act .bt-submenu span:last-child{right: 7px;}
 
 #section-meuEspacoCamara{display: block; position: fixed; top: 0; right: -100%; width: 320px; height: 100%; max-height: 100%; overflow: auto; max-width: 100%; background: rgba(0, 148, 219, 0.3); z-index: 10; padding: 10px;  -webkit-box-sizing: border-box;  box-sizing: border-box;}
 #section-meuEspacoCamara.act{right: 0;}
-#button-meuEspacoCamara{background: #fff; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box; position: relative;}
-#button-meuEspacoCamara .close{padding: 0; margin: 0; line-height: 14px; line-height: 0.875rem;}
+#div-meuEspacoCamara{background: #fff; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box; position: relative;}
+#div-meuEspacoCamara .close{padding: 0; margin: 0; line-height: 14px; line-height: 0.875rem;}
 
 @media screen and (max-width: 767px) {
 	.section-news .box-news.mobile-invert-order{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
