@@ -7,11 +7,16 @@
                 bem como adicionar painés personalizados na página inicial para facilitar o acompamhamento do trabalho parlamentar.</p>
             <p>Funciona assim assim assado...</p>
             <a href="#" ng-click="vm.gotIt()">Iniciar o #meuEspaçoCâmara</a>
+            <a href="#" ng-click="vm.disableIt()">Agora não, obrigado!</a>
+        </div>
+        <div ng-switch-when="desabilitado">
+            <p>#MeuEspaçoCâmara está desabilitado. Seja <a href="" ng-click="vm.enableIt()">Habiliar</a>?</p>
         </div>
         <div class="actions">
             <a href="#" ng-click="vm.selectTab('favoritos')">Favoritos</a>
             <a href="#" ng-click="vm.selectTab('paineis')">Painéis</a>
             <a href="#" ng-click="vm.selectTab('preferencias')">Preferências</a>
+            <a href="#" ng-click="vm.disableIt()">Desabilitar</a>
         </div>
         <div ng-switch-when="favoritos">
             <div class="mescam-title">FAVORITOS</div>

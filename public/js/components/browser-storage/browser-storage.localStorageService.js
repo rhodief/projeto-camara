@@ -11,6 +11,9 @@
 
         var service = {
             isKnown: isKnown,
+            isEnabled: isEnabled,
+            disableMescam:disableMescam,
+            enableMescam:enableMescam,
             known: known,
             addPanel: addPanel,
             removePanel: removePanel,
@@ -33,6 +36,22 @@
             _setAttr(LOCALSTORAGE.PANELS_NAME, {});
             _setAttr(LOCALSTORAGE.SETTINGS, {});
             _setAttr(LOCALSTORAGE.FAVORITES, []);
+        }
+
+        function isEnabled(){
+            return _getAttr(LOCALSTORAGE.DISABLED).then(ok);
+            function ok(data){
+                return !data;
+            }
+        }
+
+        function disableMescam(){
+            //known(); Para apagar os dados.
+            _setAttr(LOCALSTORAGE.DISABLED, true);
+        }
+
+        function enableMescam(){
+            _setAttr(LOCALSTORAGE.DISABLED, false);
         }
 
         function addPanel(panelName, configs) {

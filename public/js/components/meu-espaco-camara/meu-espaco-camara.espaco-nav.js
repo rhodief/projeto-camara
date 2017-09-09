@@ -28,6 +28,8 @@
         //Main Settings
         vm.selectedTab = '';
         vm.gotIt = gotIt;
+        vm.disableIt = disableIt;
+        vm.enableIt = enableIt;
         vm.selectTab = selectTab;
         vm.close = closeTab
         vm.panels = {};
@@ -51,7 +53,6 @@
 
         function showFavoritesList(data){
             vm.favorites = data;
-            console.log(data);
         }
 
         function getPanelsList() {
@@ -68,7 +69,14 @@
 
             function isKnownOk(data) {
                 if(data){
-                    selectTab(TABS.STORE);
+                    localStorageService.isEnabled().then(okEnable);
+                    function okEnable(enabled){
+                        if(!enabled){
+                            selectTab(TABS.DISABLED);
+                        }else{
+                            selectTab(TABS.STORE);
+                        }
+                    }
                 }else{
                     selectTab(TABS.UNKNOWN);
                 }
@@ -98,9 +106,9 @@
         }
 
         function selectTab(tab) {
-            if (vm.selectedTab !== TABS.UNKNOWN) {
-                vm.selectedTab = tab;
-            }
+            if (vm.selectedTab !== TABS.UNKNOWN) 
+                if(vm.selectedTab !== TABS.DISABLED) vm.selectedTab = tab;
+            
         }
 
         //Botão de entendi
@@ -109,6 +117,19 @@
             localStorageService.known(true);
             //Desabilitar mensagem na home, que avisa da existência do #MEC...
         }
+
+        function disableIt(){
+            gotIt();
+            localStorageService.disableMescam();
+            vm.selectedTab = TABS.DISABLED;
+        }
+
+        function enableIt(){
+            localStorageService.enableMescam();
+            vm.selectedTab = TABS.STORE;
+        }
+
+
 
         function closeTab() {
             $scope.action();

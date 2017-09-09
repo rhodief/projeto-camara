@@ -6,6 +6,7 @@
         STORE: 'favoritos',
         PANELS: 'paineis',
         PREFERENCES: 'preferencias',
-        UNKNOWN: 'desconhecido'
+        UNKNOWN: 'desconhecido',
+        DISABLED: 'desabilitado'
     });
 })();
