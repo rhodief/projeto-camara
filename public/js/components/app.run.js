@@ -30,13 +30,16 @@
                 .then(thisKnown)
 
             function thisKnown(data) {
+                var button = angular.element(document.getElementById('button-link'));
                 if(!data){
+                    button.addClass('blinker');
                     var notificationSection = angular.element(document.getElementById('notification'));
                     var divMessage = angular.element(document.getElementById('main-messages'));
                     notificationSection.css('display', 'block');
                     divMessage.html(message);
+                }else{
+                    button.removeClass('blinker');
                 }
-                    
             }
         }
     }
