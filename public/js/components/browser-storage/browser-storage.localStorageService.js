@@ -18,7 +18,8 @@
             getFavorites: getFavorites,
             addFavorite: addFavorite,
             removeFavorite: removeFavorite,
-            isFavorite: isFavorite
+            isFavorite: isFavorite,
+            exportMescam: exportMescam
         };
 
         return service;
@@ -71,18 +72,22 @@
             return _getFavorites();
         }
 
-        function addFavorite() {
+        function addFavorite(Url, Title) {
             _getFavorites().then(okFav).catch(configError);
 
             function okFav(data) {
-                var url = _getCurrentPageUrl();
-                var title = _getCurrentTitle();
+                var url = Url || _getCurrentPageUrl();
+                var title = Title || _getCurrentTitle();
                 var index = _findValueInIndexObj(url, 'url', data);
+                var date = _getCurrentDate();
+                var category = _getCategory(url);
                 var obj = {
                     url: url,
+                    category: category,
                     title: title,
+                    date: date,
                     tag: []
-                }
+                };
                 if (index === -1) data.unshift(obj);
                 _setFavorites(data);
             }
@@ -107,6 +112,14 @@
             }
         }
 
+        function exportMescam(){
+            return _exportMescam();
+        }
+
+        function _getCategory(url){
+            return 'Notícias';
+        }
+
         function _getData() {
             var datas = localStorage.getItem(LOCALSTORAGE.ESPACO_NAME);
             if (datas) {
@@ -128,6 +141,12 @@
             return $q.resolve(false);
 
         }
+
+        function _exportMescam(){
+            var datas =  _getData();
+            return $q.resolve(JSON.stringify(datas));
+        }
+
 
         function _setAttr(attr, value) {
             var datas = _getData()
@@ -168,8 +187,30 @@
             return -1;
         }
 
-        function configError() {
+        function configError(e) {
+            console.log(e)
             throw new Error(ERROR_MESSAGE.CONFIG_NOT_FOUND)
+        }
+
+        function _getCurrentDate(){
+            var today = new Date;
+            var dd = today.getDate();
+            var mm = today.getMonth()+1; //January is 0!
+            var yyyy = today.getFullYear();
+            var hh = today.getHours();
+            var ii = today.getMinutes();
+    
+            if(dd<10) {
+                dd = '0'+dd
+            } 
+            if(mm<10) {
+                mm = '0'+mm
+            }
+            console.log('') 
+            return {
+                date: dd + '/' + mm + '/' + yyyy,
+                time: hh + ':' + ii
+            }
         }
     }
 })();

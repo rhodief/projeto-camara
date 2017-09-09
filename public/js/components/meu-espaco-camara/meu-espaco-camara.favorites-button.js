@@ -25,7 +25,6 @@
         
         function favoritesButtonController(localStorageService){
             var vm = this;
-
             vm.included;
             vm.toggleInclude = toggleInclude;
 
@@ -42,6 +41,7 @@
             }
 
             function toggleInclude(){
+                //broadCast Message to refresh Panel
                 if(vm.included){
                     _desableFavorite();
                 }else{

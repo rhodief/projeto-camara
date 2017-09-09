@@ -33,13 +33,25 @@
         vm.panels = {};
         vm.togglePanel = togglePanel
         vm.favorites = [];
+        vm.importMescam = importMescam;
+        vm.exportMescam = exportMescam;
+        vm.textMescam = '';
 
         controllersInit();
 
         function controllersInit() {
-            activatePanels()
-                .then(getPanelsList)
+            getFavorites().then(showFavoritesList);
+            activatePanels().then(getPanelsList);
             selectDefaultTab();
+        }
+
+        function getFavorites(){
+            return localStorageService.getFavorites();
+        }
+
+        function showFavoritesList(data){
+            vm.favorites = data;
+            console.log(data);
         }
 
         function getPanelsList() {
@@ -105,6 +117,17 @@
         //ATIVAÇÃO DOS PAINÉS...
         //Botão de Controle de Ativação... Vou faazer um primeiro depois vejo os demais...
 
+        function importMescam(){
+
+        }
+
+        function exportMescam(){
+            localStorageService.exportMescam().then(ok);
+            function ok(data){
+                vm.textMescam = data;
+            }
+
+        }
 
 
     }
