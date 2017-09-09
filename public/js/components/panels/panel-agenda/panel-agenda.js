@@ -50,7 +50,7 @@
         vm.loadingViewMessage = 'Carregando a View!!!';
         vm.reloadButton;
         vm.customFilter = undefined;
-
+        vm.actFilter = actFilter;
 
         $scope.$watch('vm.date', watchDate);
         
@@ -124,6 +124,14 @@
                     return v.$$hashKey;
                 }
             })
+        }
+
+        function actFilter(value){
+            var dropdown = angular.element(document.getElementById('filter-dropdown'));
+            dropdown.removeClass('act');
+            vm.customFilter = {
+                $: value
+            };
         }
 
         //Scroll - O Scroll tem que ocorrer na abertura, então o jquery controlla o relamento ou o angular a abertura....
