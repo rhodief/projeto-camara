@@ -34,11 +34,11 @@
     <noscript class="nojavscript">
         <span>Javascript não ativado - Por favor, ative para ter uma melhor experiência de navegação neste Portal!</span>
     </noscript>
-	<div id="notification" class="notification" style="display:none">
-		<a href="#" class="close" title="Fechar notificação">x</a>
-		<div id="main-messages"></div>
-	</div>
-	<!-- ################ FIM ESPAÇO PARA NOTIFICAÇOES ############ -->
+    <div id="notification" class="notification" style="display:none">
+        <a href="#" class="close" title="Fechar notificação">x</a>
+        <div id="main-messages"></div>
+    </div>
+    <!-- ################ FIM ESPAÇO PARA NOTIFICAÇOES ############ -->
     <header>
         <div class="header">
             <div class="top-header">
@@ -859,22 +859,23 @@
                             <li>
                                 <a href="#"><span class="icon"><img src="img/layout/calendar.svg" alt="Agenda" class="img-color-change color3"></span><span class="title">Agenda</span></a>
                                 <div class="subitem agenda">
-									<panels-gen section="acesso_rapido" pos="1"></panels-gen>
+                                    <panels-gen section="acesso_rapido" pos="1"></panels-gen>
                                 </div>
                             </li>
                             <li class="search-form">
                                 <a href="#"><span class="icon"><img src="img/layout/search.svg" alt="Pesquisa" class="img-color-change color3"></span><span class="title">Pesquisa</span></a>
                                 <div class="subitem">
                                     <div class="form">
-										<div class="box-search">
-											<form>
-												<input id="buscarPortal" name="buscarPortal" type="search" placeholder="Buscar no Portal">
-												<a href="#" class="search-button"><img class="img-color-change color2" src="img/layout/search.svg" alt="Buscar"></a>
-											</form>
-										</div>
+                                        <div class="box-search">
+                                            <form>
+                                                <input id="buscarPortal" name="buscarPortal" type="search" placeholder="Buscar no Portal">
+                                                <a href="#" class="search-button"><img class="img-color-change color2" src="img/layout/search.svg" alt="Buscar"></a>
+                                            </form>
+                                        </div>
                                         <div class="col size1">
                                             <label for="deputados_federais">Deputados Federais</label>
-                                            <div class="field-dropdown search" select-filter="deputadosList" name="deputados_federais" ng-placeholder="Digite o nome do Deputado" open-link="true"></div>
+                                            <div class="field-dropdown search" select-filter="deputadosList" name="deputados_federais" ng-placeholder="Digite o nome do Deputado"
+                                                open-link="true"></div>
                                         </div>
                                         <div class="col size2">
                                             <label for="proposicoes">Preposições</label>
@@ -957,42 +958,57 @@
         </div>
     </header>
     <section>
-    	<div class="section-news">
-    		<div class="center">
-    			<div class="box-news mobile-invert-order">
-					<div class="last-news shadow">
-						<h2 class="title">Últimas Notícias</h2>
-						<ul>
-							<li><a href="">Deputados mantêm em MP regras sobre concessão de uso de instalações olímpicas</a><p class="date-time">2 horas atrás</p></li>
-							<li><a href="">Plenário mantém cargos previstos em autarquia que vai administrar legado olímpico</a><p class="date-time">4 horas atrás</p></li>
-							<li><a href="">Plenário aprova MP que cria autarquia para administrar legado olímpico; falta votar destaques</a><p class="date-time">5 horas atrás</p></li>
-							<li><a href="">Deputado critica autorização para uso de instalações esportivas sem concorrência</a><p class="date-time">6 horas atrás</p></li>
-							<li><a href="">Comissão que trata de taxa de juros para contratos do BNDES vota relatório em agosto</a><p class="date-time">7 horas atrás</p></li>
-						</ul>
-						<a href="#" class="button more-news">Ver mais notícias</a>
-					</div>
-   					<div class="list-news">
-   						<ul>
-   							<li class="size1 type1 shadow">
-   								<a href="#">
+        <div class="section-news">
+            <div class="center">
+                <div class="box-news mobile-invert-order">
+                    <div class="last-news shadow">
+                        <h2 class="title">Últimas Notícias</h2>
+                        <ul>
+                            <li><a href="">Deputados mantêm em MP regras sobre concessão de uso de instalações olímpicas</a>
+                                <p
+                                    class="date-time">2 horas atrás</p>
+                            </li>
+                            <li><a href="">Plenário mantém cargos previstos em autarquia que vai administrar legado olímpico</a>
+                                <p
+                                    class="date-time">4 horas atrás</p>
+                            </li>
+                            <li><a href="">Plenário aprova MP que cria autarquia para administrar legado olímpico; falta votar destaques</a>
+                                <p
+                                    class="date-time">5 horas atrás</p>
+                            </li>
+                            <li><a href="">Deputado critica autorização para uso de instalações esportivas sem concorrência</a>
+                                <p
+                                    class="date-time">6 horas atrás</p>
+                            </li>
+                            <li><a href="">Comissão que trata de taxa de juros para contratos do BNDES vota relatório em agosto</a>
+                                <p
+                                    class="date-time">7 horas atrás</p>
+                            </li>
+                        </ul>
+                        <a href="#" class="button more-news">Ver mais notícias</a>
+                    </div>
+                    <div class="list-news">
+                        <ul>
+                            <li class="size1 type1 shadow">
+                                <a href="#">
    									<span class="img"><img src="img/uploads/img_03.jpg" alt=""></span>
    									<span class="box-text">
 										<span class="title">Parecer sobre a denúncia contra Temer deve ser lido na CCJ na próxima segunda</span>
 										<span class="date-category"><span>Política</span>05/07/2017</span>
    									</span>
    								</a>
-   							</li>
-   							<li class="size2 type2 shadow">
-   								<a href="#">
+                            </li>
+                            <li class="size2 type2 shadow">
+                                <a href="../server_simulator/pages/noticias/noticia1.html">
    									<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
    									<span class="box-text">
 										<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
 										<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
 									</span>
    								</a>
-   							</li>
-   							<li class="size1 type3 shadow">
-   								<a href="#">
+                            </li>
+                            <li class="size1 type3 shadow">
+                                <a href="../server_simulator/pages/noticias/noticia2.html">
    									<span class="img"><img src="img/uploads/img_05.jpg" alt=""></span>
    									<span class="box-text">
 										<span class="title">Projetos que estimulam enoturismo são aprovados</span>
@@ -1000,172 +1016,176 @@
 										<span class="date-category"><span>Turismo</span>04/07/2017</span>
 									</span>
    								</a>
-   							</li>
-   							<li class="size2 type2 shadow">
-   								<a href="#">
+                            </li>
+                            <li class="size2 type2 shadow">
+                                <a href="../server_simulator/pages/noticias/noticia3.html">
    									<span class="img"><img src="img/uploads/img_06.jpg" alt=""></span>
    									<span class="box-text">
 										<span class="title">Principal desafio para cumprimento das metas do PNE é o financiamento, apontam debatedores</span>
 										<span class="date-category"><span>Administração Pública</span>04/07/2017</span>
 									</span>
    								</a>
-   							</li>
-   						</ul>
-   					</div>
-    			</div>
-    		</div>
-    	</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-	<section>
-		<div class="section-about h-window background-parallax" style="background-image: url(img/uploads/img_07.jpg);">
-			<div class="vertical-align">
-				<div class="center">
-					<header>
-						<div class="text-top">
-							<h2 class="title">
-								A Câmara / Atividade Parlamentar
-							</h2>
-							<h3 class="resume">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet massa pulvinar tincidunt vulputate eu erat. Nulla facilisi.
-							</h3>
-						</div>
-					</header>
-					<div class="box-links">
-						<div class="row type-1">
-							<h4 class="title-link">Conheça</h4>
-							<div class="content-links">
-								<ul class="links">
-									<li class="h-2 shadow"><a href="#" title="O Papel da Câmara"><span class="text">O Papel da Câmara</span><span class="icon"><img class="img-color-change color4" src="img/layout/ico_camara.svg" alt="O Papel da Câmara"></span></a></li>
-									<li class="h-2 shadow"><a href="#" title="Visite a Câmara"><span class="text">Visite a Câmara</span><span class="icon"><img class="img-color-change color4" src="img/layout/location.svg" alt="Visite a Câmara"></span></a></li>
-									<li class="shadow"><a href="#" title="Estrutura"><span class="text">Estrutura</span></a></li>
-									<li class="shadow"><a href="#" title="A Presidência"><span class="text">A Presidência</span></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="row type-2">
+    <section>
+        <div class="section-about h-window background-parallax" style="background-image: url(img/uploads/img_07.jpg);">
+            <div class="vertical-align">
+                <div class="center">
+                    <header>
+                        <div class="text-top">
+                            <h2 class="title">
+                                A Câmara / Atividade Parlamentar
+                            </h2>
+                            <h3 class="resume">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet massa pulvinar tincidunt vulputate eu
+                                erat. Nulla facilisi.
+                            </h3>
+                        </div>
+                    </header>
+                    <div class="box-links">
+                        <div class="row type-1">
+                            <h4 class="title-link">Conheça</h4>
+                            <div class="content-links">
+                                <ul class="links">
+                                    <li class="h-2 shadow"><a href="#" title="O Papel da Câmara"><span class="text">O Papel da Câmara</span><span class="icon"><img class="img-color-change color4" src="img/layout/ico_camara.svg" alt="O Papel da Câmara"></span></a></li>
+                                    <li class="h-2 shadow"><a href="#" title="Visite a Câmara"><span class="text">Visite a Câmara</span><span class="icon"><img class="img-color-change color4" src="img/layout/location.svg" alt="Visite a Câmara"></span></a></li>
+                                    <li class="shadow"><a href="#" title="Estrutura"><span class="text">Estrutura</span></a></li>
+                                    <li class="shadow"><a href="#" title="A Presidência"><span class="text">A Presidência</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row type-2">
                             <h4 class="title-link">Seus Representantes</h4>
                             <panels-gen section="atividade_parlamentar" pos="1"></panels-gen>
-							<div class="content-links">
-								<ul class="links">
-									<li class="shadow"><a href="#" title="Conheça os Deputados"><span class="text">Conheça os Deputados</span></a></li>
-									<li class="shadow"><a href="#" title="Discursos"><span class="text">Discursos</span></a></li>
-									<li class="shadow"><a href="#" title="Lideranças Partidarias"><span class="text">Lideranças Partidarias</span></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="row type-3">
+                            <div class="content-links">
+                                <ul class="links">
+                                    <li class="shadow"><a href="#" title="Conheça os Deputados"><span class="text">Conheça os Deputados</span></a></li>
+                                    <li class="shadow"><a href="#" title="Discursos"><span class="text">Discursos</span></a></li>
+                                    <li class="shadow"><a href="#" title="Lideranças Partidarias"><span class="text">Lideranças Partidarias</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row type-3">
                             <h4 class="title-link">Atividade Legislativa</h4>
-							<div class="content-links">
-								<ul class="links">
-									<li class="shadow"><a href="#" title="Agenda"><span class="text">Agenda</span></a></li>
-									<li class="shadow"><a href="#" title="Plenário"><span class="text">Plenário</span></a></li>
-									<li class="h-2 shadow"><a href="#" title="Commo são feitas as leis"><span class="text">Como são feitas as leis</span><span class="icon"><img class="img-color-change color4" src="img/layout/ico_leis.svg" alt="Como são feitas as leis"></span></a></li>
-									<li class="shadow"><a href="#" title="Comissões"><span class="text">Comissões</span></a></li>
-									<li class="shadow"><a href="#" title="Proposições"><span class="text">Proposições</span></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="section-inspect">
-			<div class="center">
-				<header>
-					<div class="text-top">
-						<h2 class="title">
-							Transparência / Fiscalize
-						</h2>
-						<h3 class="resume">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet massa pulvinar tincidunt vulputate eu erat. Nulla facilisi.
-						</h3>
-						<button class="button">Saiba mais</button>
-					</div>
-				</header>
-				<div class="box-posts">
-					<div class="col shadow">
-						<a href="#">
-							<div class="box-img">
-								<img src="img/uploads/img_08.jpg" alt="Lei de acesso à informação">
-								<h3 class="title">Lei de acesso à informação</h3>
-							</div>
-							<div class="box-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet </p>
-							</div>
-						</a>
-					</div>
-					<div class="col type-2 shadow">
-						<a href="#">
-							<div class="box-img">
-								<img src="img/uploads/img_09.jpg" alt="Lei de acesso à informação">
-							</div>
-							<div class="box-text">
-								<h3 class="title">Fiscalize o orçamento</h3>
-								<p>Consulte repasses e transferências de recursos financeiros</p>
-							</div>
-						</a>
-					</div>
-					<div class="col type-2 shadow">
-						<a href="#">
-							<div class="box-img">
-								<img src="img/uploads/img_10.jpg" alt="Receitas e despesas">
-							</div>
-							<div class="box-text">
-								<h3 class="title">Receitas e despesas</h3>
-								<p>Informações e relatórios sobre receitas,  despesas e convênios</p>
-							</div>
-						</a>
-					</div>
-					<div class="col shadow">
-						<a href="#">
-							<div class="box-img">
-								<img src="img/uploads/img_11.jpg" alt="Cota Parlamentar">
-								<h3 class="title">Cota Parlamentar</h3>
-							</div>
-							<div class="box-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet </p>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="section-participate h-window background-parallax" style="background-image: url(img/uploads/img_12.jpg);">
-			<div class="vertical-align">
-				<div class="center">
-					<header>
-						<div class="text-top">
-							<h2 class="title">
-								Participe
-							</h2>
-							<h3 class="resume">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet massa pulvinar tincidunt vulputate eu erat. Nulla facilisi.
-							</h3>
-							<button class="button type-1">Saiba mais</button>
-						</div>
-					</header>
-					<div class="box-columns flex-1">
-						<div class="col shadow">
-							<div class="post">
-								<a href="#">
-									<div class="box-img">
-										<img src="img/uploads/img_13.jpg" alt="Cota Parlamentar">
-										<h3 class="title">Lorem Ipsum Dolor Sit Amet</h3>
-									</div>
-									<div class="box-text">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet </p>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col">
-							<ul class="links">
-								<li>
-									<a href="#">
+                            <div class="content-links">
+                                <ul class="links">
+                                    <li class="shadow"><a href="#" title="Agenda"><span class="text">Agenda</span></a></li>
+                                    <li class="shadow"><a href="#" title="Plenário"><span class="text">Plenário</span></a></li>
+                                    <li class="h-2 shadow"><a href="#" title="Commo são feitas as leis"><span class="text">Como são feitas as leis</span><span class="icon"><img class="img-color-change color4" src="img/layout/ico_leis.svg" alt="Como são feitas as leis"></span></a></li>
+                                    <li class="shadow"><a href="#" title="Comissões"><span class="text">Comissões</span></a></li>
+                                    <li class="shadow"><a href="#" title="Proposições"><span class="text">Proposições</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="section-inspect">
+            <div class="center">
+                <header>
+                    <div class="text-top">
+                        <h2 class="title">
+                            Transparência / Fiscalize
+                        </h2>
+                        <h3 class="resume">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet massa pulvinar tincidunt vulputate eu
+                            erat. Nulla facilisi.
+                        </h3>
+                        <button class="button">Saiba mais</button>
+                    </div>
+                </header>
+                <div class="box-posts">
+                    <div class="col shadow">
+                        <a href="#">
+                            <div class="box-img">
+                                <img src="img/uploads/img_08.jpg" alt="Lei de acesso à informação">
+                                <h3 class="title">Lei de acesso à informação</h3>
+                            </div>
+                            <div class="box-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col type-2 shadow">
+                        <a href="#">
+                            <div class="box-img">
+                                <img src="img/uploads/img_09.jpg" alt="Lei de acesso à informação">
+                            </div>
+                            <div class="box-text">
+                                <h3 class="title">Fiscalize o orçamento</h3>
+                                <p>Consulte repasses e transferências de recursos financeiros</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col type-2 shadow">
+                        <a href="#">
+                            <div class="box-img">
+                                <img src="img/uploads/img_10.jpg" alt="Receitas e despesas">
+                            </div>
+                            <div class="box-text">
+                                <h3 class="title">Receitas e despesas</h3>
+                                <p>Informações e relatórios sobre receitas, despesas e convênios</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col shadow">
+                        <a href="#">
+                            <div class="box-img">
+                                <img src="img/uploads/img_11.jpg" alt="Cota Parlamentar">
+                                <h3 class="title">Cota Parlamentar</h3>
+                            </div>
+                            <div class="box-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="section-participate h-window background-parallax" style="background-image: url(img/uploads/img_12.jpg);">
+            <div class="vertical-align">
+                <div class="center">
+                    <header>
+                        <div class="text-top">
+                            <h2 class="title">
+                                Participe
+                            </h2>
+                            <h3 class="resume">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet massa pulvinar tincidunt vulputate eu
+                                erat. Nulla facilisi.
+                            </h3>
+                            <button class="button type-1">Saiba mais</button>
+                        </div>
+                    </header>
+                    <div class="box-columns flex-1">
+                        <div class="col shadow">
+                            <div class="post">
+                                <a href="#">
+                                    <div class="box-img">
+                                        <img src="img/uploads/img_13.jpg" alt="Cota Parlamentar">
+                                        <h3 class="title">Lorem Ipsum Dolor Sit Amet</h3>
+                                    </div>
+                                    <div class="box-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet
+                                            </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <ul class="links">
+                                <li>
+                                    <a href="#">
 										<span class="icon">
 											<img src="img/layout/edem-logo.svg" alt="Logo e-Democracia" class="img-color-change">
 										</span>
@@ -1176,9 +1196,9 @@
 											</span>
 										</span>
 									</a>
-								</li>
-								<li>
-									<a href="#">
+                                </li>
+                                <li>
+                                    <a href="#">
 										<span class="icon">
 											<img src="img/layout/ico_fale_conosco.svg" alt="Fale Conosco" class="img-color-change">
 										</span>
@@ -1189,9 +1209,9 @@
 											</span>
 										</span>
 									</a>
-								</li>
-								<li>
-									<a href="#">
+                                </li>
+                                <li>
+                                    <a href="#">
 										<span class="icon">
 											<img src="img/layout/ico_conect.svg" alt="Fale Conosco" class="img-color-change">
 										</span>
@@ -1202,108 +1222,68 @@
 											</span>
 										</span>
 									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<footer>
-						<div class="social-links">
-							<ul>
-								<li>
-									<a href="#"><img src="img/layout/icon_twitter.png" alt="Twitter" class="shadow"></a>
-								</li>
-								<li>
-									<a href="#"><img src="img/layout/icon_facebook.png" alt="Facebook" class="shadow"></a>
-								</li>
-								<li>
-									<a href="#"><img src="img/layout/icon_youtube.png" alt="YouTube" class="shadow"></a>
-								</li>
-							</ul>
-						</div>
-					</footer>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="section-education">
-			<div class="center">
-				<header>
-					<div class="text-top">
-						<h2 class="title">
-							Educação para a Democracia
-						</h2>
-					</div>
-				</header>
-				<ul class="box-posts flex-1">
-					<li class="shadow">
-						<a href="#">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="social-links">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="img/layout/icon_twitter.png" alt="Twitter" class="shadow"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/layout/icon_facebook.png" alt="Facebook" class="shadow"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/layout/icon_youtube.png" alt="YouTube" class="shadow"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="section-education">
+            <div class="center">
+                <header>
+                    <div class="text-top">
+                        <h2 class="title">
+                            Educação para a Democracia
+                        </h2>
+                    </div>
+                </header>
+                <ul class="box-posts flex-1">
+                    <li class="shadow">
+                        <a href="#">
 							<img src="img/uploads/img_14.jpg" alt="Escola Virtual de Cidadania">
 							<h3 class="text">Escola Virtual de Cidadania</h3>
 						</a>
-					</li>
-					<li class="shadow">
-						<a href="#">
+                    </li>
+                    <li class="shadow">
+                        <a href="#">
 							<img src="img/uploads/img_15.jpg" alt="Plenarinho">
 							<h3 class="text">Plenarinho</h3>
 						</a>
-					</li>
-					<li class="shadow">
-						<a href="#">
+                    </li>
+                    <li class="shadow">
+                        <a href="#">
 							<img src="img/uploads/img_16.jpg" alt="Parlamento Jovem">
 							<h3 class="text">Parlamento Jovem</h3>
 						</a>
-					</li>
-					<li class="shadow">
-						<a href="#">
+                    </li>
+                    <li class="shadow">
+                        <a href="#">
 							<img src="img/uploads/img_17.jpg" alt="Educação à Distância">
 							<h3 class="text">Educação à Distância</h3>
 						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section>
-
-    <!-- ################### Início PANEL AGENDA A ideia seria inserir lá na agenda do header, mas depois veremos como encaixar.... -->
-
-    <section>
-        [Acesso Rápido]
-        
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
-
-    <!-- ################### FIM PANEL AGENDA A ideia seria inserir lá na agenda do header, mas depois veremos como encaixar.... -->
-
-    <!-- #################### INÍCIO DO RESTO DO CORPO, SOMENTE PARA GUIA, VAMOS REFORMULAR, DE CERTO, TODA SUA ESTRUTURA -->
-
-    <section>
-        <h2>[Notícias]</h2>
-        <a href="../server_simulator/pages/noticias/noticia1.html">Notícia 01</a>
-        <a href="../server_simulator/pages/noticias/noticia2.html">Notícia 02</a>
-        <a href="../server_simulator/pages/noticias/noticia3.html">Notícia 03</a>
-
-    </section>
-    <section>
-		<h2>[Atividade Parlamentar]</h2>
-                <h4>Deputados</h4>
-                <a href="../server_simulator/pages/deputados/deputado1.html">Deputados 01</a>
-                <a href="../server_simulator/pages/deputados/deputado2.html">Deputados 02</a>
-                <a href="../server_simulator/pages/deputados/deputado3.html">Deputados 03</a>
-                <h4>Projetos</h4>
-                <a href="../server_simulator/pages/proposicoes/proposicao1.html">Proposicao 01</a>
-                <a href="../server_simulator/pages/proposicoes/proposicao2.html">Proposicao 02</a>
-                <a href="../server_simulator/pages/proposicoes/proposicao3.html">Proposicao 03</a>
-                <panels-gen section="atividade_parlamentar" pos="1"></panels-gen>
-    </section>
-    <section>[Participe]
-        <panels-gen section="participe" pos="2"></panels-gen>
-    </section>
-    <section>
-        <h1>[Fiscalize]</h1>
-        <a href="../server_simulator/pages/outras/outra.html">Link Genérico</a>
-    </section>
-    <section>[Escola para Democracia]</section>
-    <footer>Rodapé!</footer>
 
     <div ng-controller="meuEspacoCamaraController as meuEspacoCamara">
         <section class="hidden" id="section-meuEspacoCamara">
@@ -1315,10 +1295,225 @@
             <a href="#" class="my-camara" id="button-link" ng-click="meuEspacoCamara.toggleMescam()">#MeuEspaçoCâmara</a>
         </div>
     </div>
-    
 
-    <!-- #################### FIM DO RESTO DO CORPO, SOMENTE PARA GUIA, VAMOS REFORMULAR, DE CERTO, TODA SUA ESTRUTURA -->
-
+    <footer>
+        <div class="footer">
+            <div class="box-menu">
+                <a class="bt-menu" title="Menu">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="text">Menu</span>
+				</a>
+            </div>
+            <div class="menu">
+                <div class="center">
+                    <nav>
+                        <ul class="main-menu">
+                            <li class="has-submenu">
+                                <a href="/a-camara">Institucional<span class="bt-submenu"><span></span><span></span></span></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="/a-camara/conheca">Papel e história da Câmara</a>
+                                        </li>
+                                        <li>
+                                            <a href="/a-camara/estruturaadm">Estrutura organizacional</a>
+                                        </li>
+                                        <li>
+                                            <a href="/a-camara/cursos">Cursos</a>
+                                        </li>
+                                        <li>
+                                            <a href="/a-camara/programas-institucionais">Programas Institucionais</a>
+                                        </li>
+                                        <li>
+                                            <a href="/a-camara/documentos-e-pesquisa">Publicações e acervos</a>
+                                        </li>
+                                        <li>
+                                            <a href="/a-camara/visiteacamara">Visite a Câmara</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="#">Deputados<span class="bt-submenu"><span></span><span></span></span></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="/deputados/pesquisa">Conheça os Deputados</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Discursos</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/liderancas-partidarias">Lideranças partidárias</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/frentes-e-grupos-parlamentares">Frente e grupos parlamentares</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="has-submenu"><a href="#">Atividade Legislativa<span class="bt-submenu"><span></span><span></span></span></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="/deputados/pesquisa">Agenda</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Plenário</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/frentes-e-grupos-parlamentares">Projetos de lei e outras proposições</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/liderancas-partidarias">Comissões</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/frentes-e-grupos-parlamentares">Legislação</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="has-submenu"><a href="#">Orçamento da União<span class="bt-submenu"><span></span><span></span></span></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="/deputados/pesquisa">Leis Orçamentárias</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Fiscalize</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="has-submenu right"><a href="#">Transparência<span class="bt-submenu"><span></span><span></span></span></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="/deputados/pesquisa">Acesso à informação</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Cota Parlamentar</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Viagens oficiais e passaportes</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Imóveis funcionais e auxílio-moradia</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Licitações e contratos</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Recursos humanos e concursos</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Receitas e despesas</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Dados abertos</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="has-submenu right"><a href="#">Comunicação<span class="bt-submenu"><span></span><span></span></span></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="/deputados/pesquisa">Câmara Notícias</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">TV Câmara</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Rádio Câmara</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Jornal da Câmara</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Assessoria de Imprensa</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Banco de Imagens</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Rede Legislativa de Rádio e TV</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Plenarinho</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="has-submenu right"><a href="#">Participação<span class="bt-submenu"><span></span><span></span></span></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="/deputados/pesquisa">Saiba como participar</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Participe dos debates</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Sugira um projeto</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Ajude a escrever a lei</a>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Fale Conosco</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-text">
+                <div class="center">
+                    <h4 class="legislatura"><strong>55ª Legislatura - 3ª Sessão Legislativa Ordinária</strong></h4>
+                    <p class="contato"><span><strong>Telefone: </strong>+55 (61) 3216-0000 </span>| <span><strong>Disque-Câmara: </strong>0800-619-619</span></p>
+                    <p>Câmara dos Deputados - Palácio do Congresso Nacional - Praça dos Três Poderes - Brasília - DF - Brasil
+                        - <span>CEP 70160-900</span><br> CNPJ: 00.530.352/0001-59 | Horário de atendimento ao público: 9h
+                        às 19h</p>
+                </div>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li>
+                        <a href="http://www2.camara.leg.br/participe/fale-conosco/perguntas-frequentes" title="Perguntas Frequentes">Perguntas Frequentes</a>
+                    </li>
+                    <li>
+                        <a href="http://www2.camara.leg.br/accessibility-info" title="Acessibilidade">Acessibilidade</a>
+                    </li>
+                    <li>
+                        <a href="http://www2.camara.leg.br/english" title="English">English</a>
+                    </li>
+                    <li>
+                        <a href="http://www2.camara.leg.br/espanol" title="Español">Español</a>
+                    </li>
+                    <li>
+                        <a href="https://camaranet.camara.gov.br" title="Extranet">Extranet</a>
+                    </li>
+                    <li>
+                        <a accesskey="9" href="http://camara.custhelp.com/" title="Fale Conosco">Fale Conosco</a>
+                    </li>
+                    <li>
+                        <a href="http://www2.camara.leg.br/glossario" title="Glossário">Glossário</a>
+                    </li>
+                    <li>
+                        <a href="http://www2.camara.leg.br/transparencia/sispush" title="Boletins eletrônicos">Boletins eletrônicos</a>
+                    </li>
+                    <li>
+                        <a href="http://www2.camara.leg.br/sobre-o-portal" title="Sobre o Portal">Sobre o Portal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <!-- Scripts Bower -->
     <script src="bower_components/angular/angular.min.js"></script>
@@ -1349,226 +1544,6 @@
     <script src="js/components/ws-request/ws-mock.js"></script>
     <!-- Panels Requisição para WS -->
     <script src="js/components/gps/gps.js"></script>
-
-
-	<footer>
-		<div class="footer">
-			<div class="box-menu">
-				<a class="bt-menu" title="Menu">
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="text">Menu</span>
-				</a>
-			</div>
-			<div class="menu">
-				<div class="center">
-					<nav>
-						<ul class="main-menu">
-							<li class="has-submenu">
-								<a href="/a-camara">Institucional<span class="bt-submenu"><span></span><span></span></span></a>
-								<div class="submenu">
-									<ul>
-										<li>
-											<a href="/a-camara/conheca">Papel e história da Câmara</a>
-										</li>
-										<li>
-											<a href="/a-camara/estruturaadm">Estrutura organizacional</a>
-										</li>
-										<li>
-											<a href="/a-camara/cursos">Cursos</a>
-										</li>
-										<li>
-											<a href="/a-camara/programas-institucionais">Programas Institucionais</a>
-										</li>
-										<li>
-											<a href="/a-camara/documentos-e-pesquisa">Publicações e acervos</a>
-										</li>
-										<li>
-											<a href="/a-camara/visiteacamara">Visite a Câmara</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li class="has-submenu">
-								<a href="#">Deputados<span class="bt-submenu"><span></span><span></span></span></a>
-								<div class="submenu">
-									<ul>
-										<li>
-											<a href="/deputados/pesquisa">Conheça os Deputados</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Discursos</a>
-										</li>
-										<li>
-											<a href="/deputados/liderancas-partidarias">Lideranças partidárias</a>
-										</li>
-										<li>
-											<a href="/deputados/frentes-e-grupos-parlamentares">Frente e grupos parlamentares</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li class="has-submenu"><a href="#">Atividade Legislativa<span class="bt-submenu"><span></span><span></span></span></a>
-								<div class="submenu">
-									<ul>
-										<li>
-											<a href="/deputados/pesquisa">Agenda</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Plenário</a>
-										</li>
-										<li>
-											<a href="/deputados/frentes-e-grupos-parlamentares">Projetos de lei e outras proposições</a>
-										</li>
-										<li>
-											<a href="/deputados/liderancas-partidarias">Comissões</a>
-										</li>
-										<li>
-											<a href="/deputados/frentes-e-grupos-parlamentares">Legislação</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li class="has-submenu"><a href="#">Orçamento da União<span class="bt-submenu"><span></span><span></span></span></a>
-								<div class="submenu">
-									<ul>
-										<li>
-											<a href="/deputados/pesquisa">Leis Orçamentárias</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Fiscalize</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li class="has-submenu right"><a href="#">Transparência<span class="bt-submenu"><span></span><span></span></span></a>
-								<div class="submenu">
-									<ul>
-										<li>
-											<a href="/deputados/pesquisa">Acesso à informação</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Cota Parlamentar</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Viagens oficiais e passaportes</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Imóveis funcionais e auxílio-moradia</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Licitações e contratos</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Recursos humanos e concursos</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Receitas e despesas</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Dados abertos</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li class="has-submenu right"><a href="#">Comunicação<span class="bt-submenu"><span></span><span></span></span></a>
-								<div class="submenu">
-									<ul>
-										<li>
-											<a href="/deputados/pesquisa">Câmara Notícias</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">TV Câmara</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Rádio Câmara</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Jornal da Câmara</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Assessoria de Imprensa</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Banco de Imagens</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Rede Legislativa de Rádio e TV</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Plenarinho</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li class="has-submenu right"><a href="#">Participação<span class="bt-submenu"><span></span><span></span></span></a>
-								<div class="submenu">
-									<ul>
-										<li>
-											<a href="/deputados/pesquisa">Saiba como participar</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Participe dos debates</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Sugira um projeto</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Ajude a escrever a lei</a>
-										</li>
-										<li>
-											<a href="/deputados/discursos-e-notas-taquigraficas">Fale Conosco</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-			<div class="footer-text">
-				<div class="center">
-					<h4 class="legislatura"><strong>55ª Legislatura - 3ª Sessão Legislativa Ordinária</strong></h4>
-					<p class="contato"><span><strong>Telefone: </strong>+55 (61) 3216-0000 </span>| <span><strong>Disque-Câmara: </strong>0800-619-619</span></p>
-					<p>Câmara dos Deputados - Palácio do Congresso Nacional - Praça dos Três Poderes - Brasília - DF - Brasil - <span>CEP 70160-900</span><br>
-CNPJ: 00.530.352/0001-59 | Horário de atendimento ao público: 9h às 19h</p>
-				</div>
-			</div>
-			<div class="footer-links">
-				<ul>
-					<li>
-						<a href="http://www2.camara.leg.br/participe/fale-conosco/perguntas-frequentes" title="Perguntas Frequentes">Perguntas Frequentes</a>
-					</li>
-					<li>
-						<a href="http://www2.camara.leg.br/accessibility-info" title="Acessibilidade">Acessibilidade</a>
-					</li>
-					<li>
-						<a href="http://www2.camara.leg.br/english" title="English">English</a>
-					</li>
-					<li>
-						<a href="http://www2.camara.leg.br/espanol" title="Español">Español</a>
-					</li>
-					<li>
-						<a href="https://camaranet.camara.gov.br" title="Extranet">Extranet</a>
-					</li>
-					<li>
-						<a accesskey="9" href="http://camara.custhelp.com/" title="Fale Conosco">Fale Conosco</a>
-					</li>
-					<li>
-						<a href="http://www2.camara.leg.br/glossario" title="Glossário">Glossário</a>
-					</li>
-					<li>
-						<a href="http://www2.camara.leg.br/transparencia/sispush" title="Boletins eletrônicos">Boletins eletrônicos</a>
-					</li>
-					<li>
-						<a href="http://www2.camara.leg.br/sobre-o-portal" title="Sobre o Portal">Sobre o Portal</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</footer>
-
 </body>
 
 </html>
