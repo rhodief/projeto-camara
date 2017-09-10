@@ -112,11 +112,11 @@
             }
         }
 
-        function removeFavorite() {
+        function removeFavorite(Url) {
             _getFavorites().then(okDFav).catch(configError);
 
             function okDFav(data) {
-                var url = _getCurrentPageUrl();
+                var url = Url || _getCurrentPageUrl();
                 var index = _findValueInIndexObj(url, 'url', data);
                 if (index !== -1) data.splice(index, 1);
                 _setFavorites(data);

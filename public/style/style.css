@@ -467,6 +467,17 @@ a.act .bt-submenu span:last-child{right: 7px;}
 #div-meuEspacoCamara .content .actions li a.act{background-color:#fff;color:#276c4d;}
 #div-meuEspacoCamara .content .rows li a.ok:hover{background-color:#5DA987;color:#1E1E20;}
 #div-meuEspacoCamara .content .tabs{background: #fff;min-height: 450px}
+#div-meuEspacoCamara .content .tabs .filters{display: inline-flex}
+#div-meuEspacoCamara .content .tabs .filters li{margin: 0.5em;}
+#div-meuEspacoCamara .content .tabs .list{margin:1em; overflow: auto}
+#div-meuEspacoCamara .content .tabs .list ul {max-height: 270px; overflow: auto; margin-bottom: 10px;}
+#div-meuEspacoCamara .content .tabs .list li{padding: 8px 0; display: block;}
+#div-meuEspacoCamara .content .tabs .list li .delete{font-size: 0.875rem;line-height: 15px;line-height: 0.9375rem;color: #fff;text-decoration: none;background: red;border-radius: 50%;width: 18px;height: 18px;text-align: center;}
+#div-meuEspacoCamara .content .tabs .list li:hover{background-color: #E8E6E6}
+#div-meuEspacoCamara .content .tabs .list li + li{border-top:1px solid #ebebeb;}
+#div-meuEspacoCamara .content .tabs .list a{font-size: 14px; font-size: 0.875rem; line-height: 16px; line-height: 1rem; color: #333333; text-decoration: none; display: block; margin-bottom: 5px;}
+#div-meuEspacoCamara .content .tabs .list .date-time{font-size: 12px; font-size: 0.75rem; color: #767676;}
+
 @media screen and (max-width: 767px) {
 	.section-news .box-news.mobile-invert-order{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
 	.mobile-invert-order .last-news{-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2; -ms-flex-preferred-size:100%; flex-basis:100%;}

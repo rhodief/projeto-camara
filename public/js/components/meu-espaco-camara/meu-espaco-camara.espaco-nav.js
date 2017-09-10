@@ -35,6 +35,7 @@
         vm.panels = {};
         vm.togglePanel = togglePanel
         vm.favorites = [];
+        vm.removeFavorite = removeFavorite
         vm.importMescam = importMescam;
         vm.exportMescam = exportMescam;
         vm.textMescam = '';
@@ -87,6 +88,11 @@
 
         function isActive(tab){
             return vm.selectedTab === tab;
+        }
+
+        function removeFavorite(url, index){
+            vm.favorites.splice(index, 1);
+            localStorageService.removeFavorite(url);
         }
 
         function activatePanels() {
