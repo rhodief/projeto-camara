@@ -219,13 +219,11 @@
             var hh = today.getHours();
             var ii = today.getMinutes();
     
-            if(dd<10) {
-                dd = '0'+dd
-            } 
-            if(mm<10) {
-                mm = '0'+mm
-            }
-            console.log('') 
+            if(dd<10) dd = '0'+dd;
+            if(mm<10) mm = '0'+mm;
+            if(hh<10)hh = '0'+hh;
+            if(ii<10)ii = '0'+ii;
+            
             return {
                 date: dd + '/' + mm + '/' + yyyy,
                 time: hh + ':' + ii
