@@ -38,6 +38,7 @@
         vm.importMescam = importMescam;
         vm.exportMescam = exportMescam;
         vm.textMescam = '';
+        vm.isActive = isActive;
 
         controllersInit();
 
@@ -75,12 +76,17 @@
                             selectTab(TABS.DISABLED);
                         }else{
                             selectTab(TABS.STORE);
+                            _showActions();
                         }
                     }
                 }else{
                     selectTab(TABS.UNKNOWN);
                 }
             }
+        }
+
+        function isActive(tab){
+            return vm.selectedTab === tab;
         }
 
         function activatePanels() {
@@ -116,17 +122,21 @@
             vm.selectedTab = TABS.STORE; //Ativa diretamente. Isso é para desativar os botões de navação.. ver outra coisa.. 
             localStorageService.known(true);
             //Desabilitar mensagem na home, que avisa da existência do #MEC...
+            _showActions();
         }
 
         function disableIt(){
             gotIt();
             localStorageService.disableMescam();
             vm.selectedTab = TABS.DISABLED;
+            _hideActions();
+
         }
 
         function enableIt(){
             localStorageService.enableMescam();
             vm.selectedTab = TABS.STORE;
+            _showActions();
         }
 
 
@@ -148,6 +158,14 @@
                 vm.textMescam = data;
             }
 
+        }
+
+        function _hideActions(){
+            angular.element(document.getElementById('mescam-actions')).css('display', 'none');
+        }
+
+        function _showActions(){
+            angular.element(document.getElementById('mescam-actions')).css('display', 'block');
         }
 
 

@@ -448,9 +448,25 @@ a.act .bt-submenu span:last-child{right: 7px;}
 
 #section-meuEspacoCamara{display: block; position: fixed; top: 0; right: -100%; width: 320px; height: 100%; max-height: 100%; overflow: auto; max-width: 100%; background: rgba(0, 148, 219, 0.3); z-index: 10; padding: 10px;  -webkit-box-sizing: border-box;  box-sizing: border-box;}
 #section-meuEspacoCamara.act{right: 0;}
-#div-meuEspacoCamara{background: #fff; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box; position: relative;}
+#div-meuEspacoCamara{background: #E1DFDF;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #E1DFDF), color-stop(100%, rgba(234,234,234,1)));
+    background: -webkit-gradient(linear, left top, left bottom, from(#E1DFDF), to(rgba(234,234,234,1)));
+    background: linear-gradient(to bottom, #E1DFDF 0%, rgba(234,234,234,1) 100%);min-height: 400px;overflow: auto; -webkit-box-sizing: border-box; box-sizing: border-box; position: relative; min-height: 600px}
 #div-meuEspacoCamara .close{padding: 0; margin: 0; line-height: 14px; line-height: 0.875rem;}
-
+#div-meuEspacoCamara .title{background-color: #276c4d; height: 60px; color:#fff; text-align: center;vertical-align: middle;line-height: 60px;}
+#div-meuEspacoCamara .content{margin: 10px}
+#div-meuEspacoCamara .content p{text-align: left;color:#2d2e2e;padding: 0.5em}
+#div-meuEspacoCamara .content .actions{margin: 1em 0 .5em 0}
+#div-meuEspacoCamara .content .actions li{display: inline;}
+#div-meuEspacoCamara .content .rows li{margin: 2em}
+#div-meuEspacoCamara .content .rows li a, {padding: 0.5em;text-decoration: none;background-color: #d4d0d0; color:#276c4d}
+#div-meuEspacoCamara .content .actions li a{padding: 0.5em;text-decoration: none;background-color: #276c4d; color:#fff}
+#div-meuEspacoCamara .content .rows li a:hover{background-color: #949090}
+#div-meuEspacoCamara .content .actions li a:hover{background-color: #54AA84}
+#div-meuEspacoCamara .content .rows li a.ok{background-color:#276c4d;color:#fff;}
+#div-meuEspacoCamara .content .actions li a.act{background-color:#fff;color:#276c4d;}
+#div-meuEspacoCamara .content .rows li a.ok:hover{background-color:#5DA987;color:#1E1E20;}
+#div-meuEspacoCamara .content .tabs{background: #fff;min-height: 450px}
 @media screen and (max-width: 767px) {
 	.section-news .box-news.mobile-invert-order{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
 	.mobile-invert-order .last-news{-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2; -ms-flex-preferred-size:100%; flex-basis:100%;}

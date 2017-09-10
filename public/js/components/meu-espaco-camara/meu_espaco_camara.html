@@ -1,24 +1,39 @@
 <button ng-click="vm.close()" class="close">x</button>
-<div class="title">[#MeuEspaçoCâmara]</div>
+<div class="title">#MeuEspaçoCâmara</div>
 <div class="content">
     <div ng-switch="vm.selectedTab">
         <div ng-switch-when="desconhecido">
-            <p>Este é um espaço para Configuraçao personalizada. Aqui você pode salvar partes do sites que desejar acessar rapidamente,
-                bem como adicionar painés personalizados na página inicial para facilitar o acompamhamento do trabalho parlamentar.</p>
-            <p>Funciona assim assim assado...</p>
-            <a href="#" ng-click="vm.gotIt()">Iniciar o #meuEspaçoCâmara</a>
-            <a href="#" ng-click="vm.disableIt()">Agora não, obrigado!</a>
+            <div class="text">
+                <p>Este é um espaço para configuraçao personalizada que permite a você guardar qualquer página do site que desejar
+                    acessar rapidamente em outro momento, bem como adicionar painéis personalizados à página inicial para
+                    acesso rápido de informações do seu interesse.</p>
+                <p>As informações que você guardar neste espaço ficam armazenadas no seu computador e elas não serão enviadas
+                    à Câmara dos Deputados. Você pode, se desejar, compartilhar essas informações com outras pessoas para
+                    que elas tenham um ambiente personalizado como o seu e também personalizar o seu ambiente de acordo com
+                    o configurado por outras pessoas.</p>
+            </div>
+            <ul class="rows">
+                <li><a href="#" class="ok" ng-click="vm.gotIt()">Quero Conhecer</a></li>
+                <li><a href="#" ng-click="vm.disableIt()">Agora não, obrigado(a)!</a></li>
+            </ul>
+
         </div>
         <div ng-switch-when="desabilitado">
-            <p>#MeuEspaçoCâmara está desabilitado. Seja <a href="" ng-click="vm.enableIt()">Habiliar</a>?</p>
+            <div class="text">
+                <p>#MeuEspaçoCâmara está desligado.</p>
+
+            </div>
+            <ul class="rows">
+                <li><a href="#" class="ok" ng-click="vm.enableIt()">Quero Ligá-lo</a></li>
+                <li><a href="#" ng-click="vm.close()">Agora não, obrigado(a)!</a></li>
+            </ul>
         </div>
-        <div class="actions">
-            <a href="#" ng-click="vm.selectTab('favoritos')">Favoritos</a>
-            <a href="#" ng-click="vm.selectTab('paineis')">Painéis</a>
-            <a href="#" ng-click="vm.selectTab('preferencias')">Preferências</a>
-            <a href="#" ng-click="vm.disableIt()">Desabilitar</a>
-        </div>
-        <div ng-switch-when="favoritos">
+        <ul class="actions" id="mescam-actions" style="display:none">
+            <li><a href="#" ng-click="vm.selectTab('favoritos')" ng-class="{act:vm.isActive('favoritos')}">Favoritos</a></li>
+            <li><a href="#" ng-click="vm.selectTab('paineis')" ng-class="{act:vm.isActive('paineis')}">Painéis</a></li>
+            <li><a href="#" ng-click="vm.selectTab('preferencias')" ng-class="{act:vm.isActive('preferencias')}">Preferências</a></li>
+        </ul>
+        <div ng-switch-when="favoritos" class="tabs">
             <div class="mescam-title">FAVORITOS</div>
             <div class="mescam-content">
                 <div class="filters">
@@ -34,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <div ng-switch-when="paineis">
+        <div ng-switch-when="paineis" class="tabs">
             <div class="mescam-title">PAINÉIS</div>
             <div class="mescam-content">
                 <div ng-repeat="section in vm.panels">
@@ -48,12 +63,16 @@
                 </div>
             </div>
         </div>
-        <div ng-switch-when="preferencias">
+        <div ng-switch-when="preferencias" class="tabs">
             <div class="mescam-title">PREFERÊNCIAS</div>
             <div class="mescam-content">
                 <div>
                     <p><strong><a href="" ng-click="vm.exportMescam()">Exportar</a> </strong> - <a href="" ng-click="vm.importMescam()">Importar</a></p>
                     <p><textarea ng-model="vm.textMescam"></textarea></p>
+                </div>
+                <div>
+
+            <li><a href="#" ng-click="vm.disableIt()">Desabilitar</a></li>
                 </div>
             </div>
         </div>
