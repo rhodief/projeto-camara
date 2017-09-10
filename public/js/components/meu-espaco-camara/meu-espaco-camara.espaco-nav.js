@@ -40,8 +40,7 @@
         vm.exportMescam = exportMescam;
         vm.textMescam = '';
         vm.isActive = isActive;
-
-        controllersInit();
+        vm.controllersInit = controllersInit;
 
         function controllersInit() {
             getFavorites().then(showFavoritesList);
