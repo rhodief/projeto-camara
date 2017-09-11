@@ -7,6 +7,7 @@
         {
             "section": "acesso_rapido",
             "label": "Acesso Rápido",
+            "invisible": true,
             "panels": [
                 {
                     "name": "agenda",

@@ -42,7 +42,14 @@
         vm.isActive = isActive;
         vm.controllersInit = controllersInit;
 
+        $scope.$on('initMescamController', function(ev, data){
+            if(data){
+                controllersInit();
+            }
+        })
+
         function controllersInit() {
+            console.log('iniciou controller');
             getFavorites().then(showFavoritesList);
             activatePanels().then(getPanelsList);
             selectDefaultTab();

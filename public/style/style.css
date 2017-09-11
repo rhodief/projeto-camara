@@ -318,7 +318,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .box-news .news-highlight img{max-width: 100%; width:300px; height: 184px; -o-object-fit: cover; object-fit: cover; display: block;}
 .box-news .news-highlight .title{display: block; position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(0,48,30,0.75); color:#fff; font-size: 14px; font-size: 0.875rem; font-weight: 600; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: left; text-transform:none;}
 
-.my-camara{position: fixed; right: 2%; bottom: 2%; width: 56px; height: 56px; background: url(../img/layout/espaco_camara.png) no-repeat center center; background-size: 100%; border-radius: 50%; text-indent: -5000em;opacity: 0.8; border-style: solid; border-width: 1px; border-color: cornflowerblue; z-index: 10;}
+.my-camara{position: fixed; right: 2%; bottom: 2%; width: 56px; height: 56px; background: url(../img/layout/espaco_camara.png) no-repeat center center; background-size: 100%; border-radius: 50%; text-indent: -5000em;opacity: 0.8; border-style: solid; border-width: 1px; border-color: cornflowerblue; z-index: 10;text-align: center}
 .my-camara.blinker{
 	-webkit-animation-name: animate-shadow;
     -webkit-animation-duration: 2s;
@@ -459,20 +459,22 @@ a.act .bt-submenu span:last-child{right: 7px;}
 #div-meuEspacoCamara .content .actions{margin: 1em 0 .5em 0}
 #div-meuEspacoCamara .content .actions li{display: inline;}
 #div-meuEspacoCamara .content .rows li{margin: 2em}
-#div-meuEspacoCamara .content .rows li a, {padding: 0.5em;text-decoration: none;background-color: #d4d0d0; color:#276c4d}
-#div-meuEspacoCamara .content .actions li a{padding: 0.5em;text-decoration: none;background-color: #276c4d; color:#fff}
-#div-meuEspacoCamara .content .rows li a:hover{background-color: #949090}
+#div-meuEspacoCamara .content .tabs .rows li a {padding: 0.5em;text-decoration: none;background-color: #EAE6E6; color:#276c4d}
+#div-meuEspacoCamara .content .actions li a{padding: 0.5em;text-decoration: none;background-color: #276C4C; color:#fff}
+#div-meuEspacoCamara .content .tabs .rows li a:hover{background-color: #949090; color:#fff}
 #div-meuEspacoCamara .content .actions li a:hover{background-color: #54AA84}
-#div-meuEspacoCamara .content .rows li a.ok{background-color:#276c4d;color:#fff;}
+#div-meuEspacoCamara .content .rows li a.ok{background-color:#276c4d;color:#fff;padding: 0.5em;text-decoration: none;}
 #div-meuEspacoCamara .content .actions li a.act{background-color:#fff;color:#276c4d;}
-#div-meuEspacoCamara .content .rows li a.ok:hover{background-color:#5DA987;color:#1E1E20;}
+#div-meuEspacoCamara .content .rows li a.ok:hover{background-color:#5DA987;}
 #div-meuEspacoCamara .content .tabs{background: #fff;min-height: 450px}
 #div-meuEspacoCamara .content .tabs .filters{display: inline-flex}
 #div-meuEspacoCamara .content .tabs .filters li{margin: 0.5em;}
+#div-meuEspacoCamara .content .tabs .section{padding: 0.5em 0 0 0}
+#div-meuEspacoCamara .content .tabs ul.panels{padding-left: 1em}
 #div-meuEspacoCamara .content .tabs .list{margin:1em; overflow: auto}
 #div-meuEspacoCamara .content .tabs .list ul {max-height: 270px; overflow: auto; margin-bottom: 10px;}
-#div-meuEspacoCamara .content .tabs .list li{padding: 8px 0; display: block; position:relative}
-#div-meuEspacoCamara .content .tabs .list li .delete{font-size: 0.875rem;line-height: 15px;line-height: 0.9375rem;color: #fff;text-decoration: none;background: red;border-radius: 50%;width: 18px;height: 18px;text-align: center;position: absolute;top:1em;right:0;cursor: pointer}
+#div-meuEspacoCamara .content .tabs .list li{padding: 8px 0; display: flex; position:relative}
+#div-meuEspacoCamara .content .tabs .list li .delete{font-size: 0.875rem;line-height: 15px;line-height: 0.9375rem;color: #fff;text-decoration: none;background: red;border-radius: 50%;width: 18px;height: 18px;text-align: center;}
 #div-meuEspacoCamara .content .tabs .list li:hover{background-color: #E8E6E6}
 #div-meuEspacoCamara .content .tabs .list li + li{border-top:1px solid #ebebeb;}
 #div-meuEspacoCamara .content .tabs .list a{font-size: 14px; font-size: 0.875rem; line-height: 16px; line-height: 1rem; color: #333333; text-decoration: none; display: block; margin-bottom: 5px;}
@@ -489,6 +491,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 	.field-dropdown-mobile .dropdown button.act{position: absolute; top:0; left: 0;}
 }
 @media screen and (min-width: 768px) {
+	.my-camara{text-align: justify}
 	.menu-easy-access > li .icon{margin-right: 10px;}
 	.menu-easy-access > li .icon,
 	.menu-easy-access > li > a > .title{display: inline-block; vertical-align: middle;}

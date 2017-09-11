@@ -71,7 +71,7 @@
                     .then(ok)
 
                 function ok(data) {
-                    angular.forEach(list, function (section) {
+                    angular.forEach(list, function (section, index) {
                         angular.forEach(section.panels, function (panel, v) {
                             if(panel.activated){
                                 enable(panel.name, section.section, panel.pos);
@@ -81,6 +81,9 @@
                                     panel.activated = true;
                                     enable(panel.name, section.section, panel.pos);
                                 }
+                            }
+                            if(section.invisible){
+                                list.splice(index, 1);
                             }
                         });
                     })

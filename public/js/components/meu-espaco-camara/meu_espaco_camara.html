@@ -1,86 +1,90 @@
 <div ng-init="vm.controllersInit()">
-        <button ng-click="vm.close()" class="close">x</button>
-        <div class="title">#MeuEspaçoCâmara</div>
-        <div class="content">
-            <div ng-switch="vm.selectedTab">
-                <div ng-switch-when="desconhecido">
-                    <div class="text">
-                        <p>Este é um espaço para configuraçao personalizada que permite a você guardar qualquer página do site que desejar
-                            acessar rapidamente em outro momento, bem como adicionar painéis personalizados à página inicial para
-                            acesso rápido de informações do seu interesse.</p>
-                        <p>As informações que você guardar neste espaço ficam armazenadas no seu computador e elas não serão enviadas
-                            à Câmara dos Deputados. Você pode, se desejar, compartilhar essas informações com outras pessoas para
-                            que elas tenham um ambiente personalizado como o seu e também personalizar o seu ambiente de acordo com
-                            o configurado por outras pessoas.</p>
-                    </div>
-                    <ul class="rows">
-                        <li><a href="#" class="ok" ng-click="vm.gotIt()">Quero Conhecer</a></li>
-                        <li><a href="#" ng-click="vm.disableIt()">Agora não, obrigado(a)!</a></li>
-                    </ul>
-        
+    <button ng-click="vm.close()" class="close">x</button>
+    <div class="title">#MeuEspaçoCâmara</div>
+    <div class="content">
+        <div ng-switch="vm.selectedTab">
+            <div ng-switch-when="desconhecido" class="tabs">
+                <div class="text">
+                    <p>Este é um espaço para configuraçao personalizada que permite a você guardar qualquer página do site que
+                        desejar acessar rapidamente em outro momento, bem como adicionar painéis personalizados à página
+                        inicial para acesso rápido de informações do seu interesse.</p>
+                    <p>As informações que você guardar neste espaço ficam armazenadas no seu computador e elas não serão enviadas
+                        à Câmara dos Deputados. Você pode, se desejar, compartilhar essas informações com outras pessoas
+                        para que elas tenham um ambiente personalizado como o seu e também personalizar o seu ambiente de
+                        acordo com o configurado por outras pessoas.</p>
                 </div>
-                <div ng-switch-when="desabilitado">
-                    <div class="text">
-                        <p>#MeuEspaçoCâmara está desligado.</p>
-        
-                    </div>
-                    <ul class="rows">
-                        <li><a href="#" class="ok" ng-click="vm.enableIt()">Quero Ligá-lo</a></li>
-                        <li><a href="#" ng-click="vm.close()">Agora não, obrigado(a)!</a></li>
-                    </ul>
-                </div>
-                <ul class="actions" id="mescam-actions" style="display:none">
-                    <li><a href="#" ng-click="vm.selectTab('favoritos')" ng-class="{act:vm.isActive('favoritos')}">Favoritos</a></li>
-                    <li><a href="#" ng-click="vm.selectTab('paineis')" ng-class="{act:vm.isActive('paineis')}">Painéis</a></li>
-                    <li><a href="#" ng-click="vm.selectTab('preferencias')" ng-class="{act:vm.isActive('preferencias')}">Preferências</a></li>
+                <ul class="rows">
+                    <li><a href="#" class="ok" ng-click="vm.gotIt()">Quero Conhecer</a></li>
+                    <li><a href="#" ng-click="vm.disableIt()">Agora não, obrigado(a)!</a></li>
                 </ul>
-                <div ng-switch-when="favoritos" class="tabs">
-                    <div class="mescam-title">Ordenar por:</div>
-                    <div class="mescam-content">
-                        <ul class="filters">
-                            <li><a href="#" ng-click="vm.orderFavorites = 'title'">Título</a></li>
-                            <li><a href="#" ng-click="vm.orderFavorites = '-date'">Data</a></li>
-                            <li><a href="#" ng-click="vm.orderFavorites = 'category'">Categoria</a></li>
-                            <li><a href="#" ng-click="vm.orderFavorites = 'tags'">Etiquetas</a></li>
-                        </ul>
-                        <div class="list">
-                            <ul>
-                                <li ng-repeat="fav in vm.favorites | orderBy:vm.orderFavorites">
-                                    <button class="delete" ng-click="vm.removeFavorite(fav.url, $index)">x</button>
-                                    <div><strong><a href="{{fav.url}}">{{fav.title}}</strong></div>
+
+            </div>
+            <div ng-switch-when="desabilitado" class="tabs">
+                <div class="text">
+                    <p>#MeuEspaçoCâmara está desligado.</p>
+
+                </div>
+                <ul class="rows">
+                    <li><a href="#" class="ok" ng-click="vm.enableIt()">Quero Ligá-lo</a></li>
+                    <li><a href="#" ng-click="vm.close()">Agora não, obrigado(a)!</a></li>
+                </ul>
+            </div>
+            <ul class="actions" id="mescam-actions" style="display:none">
+                <li><a href="#" ng-click="vm.selectTab('favoritos')" ng-class="{act:vm.isActive('favoritos')}">Favoritos</a></li>
+                <li><a href="#" ng-click="vm.selectTab('paineis')" ng-class="{act:vm.isActive('paineis')}">Painéis</a></li>
+                <li><a href="#" ng-click="vm.selectTab('preferencias')" ng-class="{act:vm.isActive('preferencias')}">Preferências</a></li>
+            </ul>
+            <div ng-switch-when="favoritos" class="tabs">
+                <div class="mescam-title">Ordenar por:</div>
+                <div class="mescam-content">
+                    <ul class="filters">
+                        <li><a href="#" ng-click="vm.orderFavorites = 'title'">Título</a></li>
+                        <li><a href="#" ng-click="vm.orderFavorites = '-date'">Data</a></li>
+                        <li><a href="#" ng-click="vm.orderFavorites = 'category'">Categoria</a></li>
+                        <li><a href="#" ng-click="vm.orderFavorites = 'tags'">Etiquetas</a></li>
+                    </ul>
+                    <div class="list">
+                        <ul>
+                            <li ng-if="!vm.favorites[0]"><strong>Nada foi salvo. Navegue pelas páginas e grave aqui o que for do seu interesse</strong></li>
+                            <li ng-repeat="fav in vm.favorites | orderBy:vm.orderFavorites">
+                                <div class="right"><input type="checkbox" id="" class="select"></div>
+                                <div class="center">
+                                    <div><strong><a href="{{fav.url}}">{{fav.title}}</a></strong></div>
                                     <div class="date-time">{{fav.category}} - Salvo em {{fav.date.date}}, {{fav.date.time}}</div>
+                                </div class="right">
+                                <div><button class="delete" ng-click="vm.removeFavorite(fav.url, $index)">x</button></div>
+
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div ng-switch-when="paineis" class="tabs">
+                <div class="mescam-content">
+                    <div ng-repeat="section in vm.panels">
+                        <div class="section">
+                            <strong>{{section.label}}</strong>
+                            <ul class="panels">
+                                <li ng-repeat="panel in section.panels">
+                                    {{panel.activated ? "[" : ""}}{{panel.label}}{{panel.activated ? "]" : ""}} <button ng-click="vm.togglePanel(panel, $parent.section)">{{panel.activated ? "Desativar" : "Ativar"}}</button>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div ng-switch-when="paineis" class="tabs">
-                    <div class="mescam-title">PAINÉIS</div>
-                    <div class="mescam-content">
-                        <div ng-repeat="section in vm.panels">
-                            <p>
-                                <strong>{{section.label}}</strong>
-                                <br>
-                                <span ng-repeat="panel in section.panels">
-                                    {{panel.activated ? "[" : ""}}{{panel.label}}{{panel.activated ? "]" : ""}} <button ng-click="vm.togglePanel(panel, $parent.section)">{{panel.activated ? "Desativar" : "Ativar"}}</button>
-                                </span>
-                            </p>
-                        </div>
+            </div>
+            <div ng-switch-when="preferencias" class="tabs">
+                <div class="mescam-content">
+                    <div>
+                        <p><strong><a href="" ng-click="vm.exportMescam()">Exportar</a> </strong> - <a href="" ng-click="vm.importMescam()">Importar</a></p>
+                        <p><textarea ng-model="vm.textMescam" rows="5" cols="30"></textarea></p>
                     </div>
-                </div>
-                <div ng-switch-when="preferencias" class="tabs">
-                    <div class="mescam-title">PREFERÊNCIAS</div>
-                    <div class="mescam-content">
-                        <div>
-                            <p><strong><a href="" ng-click="vm.exportMescam()">Exportar</a> </strong> - <a href="" ng-click="vm.importMescam()">Importar</a></p>
-                            <p><textarea ng-model="vm.textMescam"></textarea></p>
-                        </div>
-                        <div>
-        
-                            <li><a href="#" ng-click="vm.disableIt()">Desabilitar</a></li>
-                        </div>
-                    </div>
+                    <ul class="rows">
+                            <li><a href="" class="ok" ng-click="vm.disableIt()">Desabilitar</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </div>
 </div>
