@@ -13,7 +13,8 @@
                     "name": "agenda",
                     "label": "Agenda",
                     "pos": 1,
-                    "activated": true
+                    "activated": true,
+                    "invisible":true
                 }
             ]
         },

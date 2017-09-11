@@ -75,12 +75,14 @@
                         angular.forEach(section.panels, function (panel, v) {
                             if(panel.activated){
                                 enable(panel.name, section.section, panel.pos);
-                                section.panels.splice(v, 1);
                             }else{
                                 if (compare(panel.name, data)) {
                                     panel.activated = true;
                                     enable(panel.name, section.section, panel.pos);
                                 }
+                            }
+                            if(panel.invisible){
+                                section.panels.splice(v, 1);
                             }
                             if(section.invisible){
                                 list.splice(index, 1);
