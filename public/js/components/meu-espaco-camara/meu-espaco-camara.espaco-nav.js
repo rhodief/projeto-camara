@@ -147,7 +147,6 @@
             localStorageService.disableMescam();
             vm.selectedTab = TABS.DISABLED;
             _hideActions();
-
         }
 
         function enableIt(){

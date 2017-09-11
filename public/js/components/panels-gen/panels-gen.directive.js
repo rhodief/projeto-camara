@@ -15,12 +15,13 @@
         return directive;
 
         function link(scope, element, attrs) {
-            var newElement, section, pos;
+            var newElement, section, pos, replace, panelParams;
 
             attrs.$set('class', 'panel-wrapper');
 
             function active() {
-                verifyCatAndPosAttr()
+                verifyCatAndPosAttr();
+                verifyReplaceAndPanelParams();
             }
 
             active();
@@ -44,8 +45,12 @@
                     if (data.activate) {
                         newElement = $compile(params.element)(scope);
                         element.append(newElement);
+                        _replace();
                     } else {
-                        if (newElement) newElement.remove();
+                        if (newElement){
+                            newElement.remove();
+                            _restore();
+                        } 
                     }
                     destroyLoad(element, loading);
                 }
@@ -70,7 +75,7 @@
                 var name = 'panel-' + data.panelName;
                 var fullLocal = local + name + '/' + name + '.js';
                 var directiveName = buildNameDirective(data.panelName);
-                var element = '<' + name + ' section="' + data.sectionName + '" pos="' + data.pos + '"' + ' ></' + name + '>';
+                var element = '<' + name + ' section="' + data.sectionName + '" pos="' + data.pos + '"' + ' params="' + panelParams + '"></' + name + '>';
                 return {
                     url: fullLocal,
                     element: element
@@ -93,6 +98,11 @@
                 pos = attrs.pos;
             }
 
+            function verifyReplaceAndPanelParams(){
+                replace = attrs.replace || '',
+                panelParams = attrs.params || '';
+            }
+
             function initLoad(el){
                 var span = '<span class="loading">Carregando Painél</span>';
                 var loading = $compile(span)(scope);
@@ -102,6 +112,18 @@
 
             function destroyLoad(el, loading){
                 if(loading) loading.remove();
+            }
+
+            function _replace(){
+                if(replace){
+                    angular.element(document.getElementById(replace)).css('display', 'none');
+                }
+            }
+
+            function _restore(){
+                if(replace){
+                    angular.element(document.getElementById(replace)).css('display', 'block');
+                }
             }
 
             function capitalizeFirstLetter(string) {

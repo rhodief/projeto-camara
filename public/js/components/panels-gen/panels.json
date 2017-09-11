@@ -21,7 +21,14 @@
         {
             "section": "noticias",
             "label": "Notícias",
-            "panels": []
+            "panels": [
+                {
+                    "name": "tv_camara",
+                    "label": "TV Câmara (Ao Vivo)",
+                    "pos": 1,
+                    "activated": false
+                }
+            ]
         },
         {
             "section": "atividade_parlamentar",
@@ -36,6 +43,11 @@
             ]
         },
         {
+            "section": "fiscalize",
+            "label": "Fiscalize",
+            "panels": []
+        },
+        {
             "section": "participe",
             "label": "Participe",
             "panels":[
@@ -46,11 +58,6 @@
                     "activated": false
                 }
             ]
-        },
-        {
-            "section": "fiscalize",
-            "label": "Fiscalize",
-            "panels": []
         },
         {
             "section": "educacao",
