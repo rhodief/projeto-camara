@@ -81,12 +81,6 @@
                                     enable(panel.name, section.section, panel.pos);
                                 }
                             }
-                            if(panel.invisible){
-                                section.panels.splice(v, 1);
-                            }
-                            if(section.invisible){
-                                list.splice(index, 1);
-                            }
                         });
                     })
                     defered.resolve();

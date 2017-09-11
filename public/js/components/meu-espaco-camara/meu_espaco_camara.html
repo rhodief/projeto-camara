@@ -62,7 +62,7 @@
         <div ng-switch-when="paineis" class="tabs">
             <div class="mescam-content">
                 <div ng-repeat="section in vm.panels">
-                    <div class="section">
+                    <div class="section" ng-if="!section.invisible">
                         <strong>{{section.label}}</strong>
                         <ul class="panels">
                             <li ng-repeat="panel in section.panels">
