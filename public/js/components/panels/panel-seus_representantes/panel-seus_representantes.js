@@ -21,7 +21,7 @@
             controller:panelSeusRepresentantesController,
             controllerAs:'vm'
         };
-        return directive;
+        
 
         panelSeusRepresentantesController.$inject = ['gpsService', 'wsRequestService'];
 
@@ -122,6 +122,7 @@
                 console.log(e);
             }
         }
+        return directive;
 
         
     }

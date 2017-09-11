@@ -2,7 +2,7 @@
     [
         {
             "id": 48895,
-            "titulo": "Reunião Deliberativa Ordinária (Simulado)",
+            "titulo": "Reunião Deliberativa Ordinária",
             "uri": "https://dadosabertos.camara.leg.br/api/v2/eventos/48895",
             "dataInicio": "2017-09-05",
             "horaInicio": "09:00",
@@ -19,7 +19,7 @@
                 {
                     "id": 2018,
                     "idTipoOrgao": 2,
-                    "nome": "Comissão de Relações Exteriores e de Defesa Nacional (SIMULADO)",
+                    "nome": "Comissão de Relações Exteriores e de Defesa Nacional (Simulado - Somente para fins de visualização)",
                     "sigla": "CREDN",
                     "tipoOrgao": "Comissão Permanente",
                     "uri": "https://dadosabertos.camara.leg.br/api/v2/orgaos/2018"
@@ -437,7 +437,7 @@
                 {
                     "id": 2008,
                     "idTipoOrgao": 2,
-                    "nome": "Comissão de Desenvolvimento Econômico, Indústria, Comércio e Serviços",
+                    "nome": "Comissão de Desenvolvimento Econômico, Indústria, Comércio e Serviços (Simulado - Somente para fins de visualização)",
                     "sigla": "CDEICS",
                     "tipoOrgao": "Comissão Permanente",
                     "uri": "https://dadosabertos.camara.leg.br/api/v2/orgaos/2008"

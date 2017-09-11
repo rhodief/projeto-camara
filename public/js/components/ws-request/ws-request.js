@@ -136,7 +136,8 @@
             agendaView: {
                 name: 'agenda-view',
                 url: function(params){
-                    return 'https://dadosabertos.camara.leg.br/api/v2/eventos/'+params.id;
+                    //eventoss -> erro proposital para disparar os dados simulados.
+                    return 'https://dadosabertos.camara.leg.br/api/v2/eventoss/'+params.id;
                 },
                 path: 'data.dados',
                 list: false,

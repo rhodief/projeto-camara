@@ -19,51 +19,50 @@
             controller: favoritesButtonController,
             controllerAs:'vm'
         };
-        return directive;
-
-        favoritesButtonController.$inject = ['localStorageService'];
         
-        function favoritesButtonController(localStorageService){
-            var vm = this;
-            vm.included;
-            vm.toggleInclude = toggleInclude;
+        return directive;
+    }
+    favoritesButtonController.$inject = ['localStorageService'];
+    
+    function favoritesButtonController(localStorageService){
+        var vm = this;
+        vm.included;
+        vm.toggleInclude = toggleInclude;
 
-            active();
+        active();
 
-            function active(){
-                _isIncluded()
-                    .then(function(data){
-                        vm.included = data;
-                    })
-                    .catch(function(e){
-                        console.log(e)
-                    });
-            }
+        function active(){
+            _isIncluded()
+                .then(function(data){
+                    vm.included = data;
+                })
+                .catch(function(e){
+                    console.log(e)
+                });
+        }
 
-            function toggleInclude(){
-                //broadCast Message to refresh Panel
-                if(vm.included){
-                    _desableFavorite();
-                }else{
-                    _enableFavorite();
-                }
-            }
-
-            function _isIncluded(){
-                return localStorageService.isFavorite();
-            }
-           
-            function _desableFavorite(){
-                localStorageService.removeFavorite();
-                vm.included = false;
-            }
-
-            function _enableFavorite(){
-                localStorageService.addFavorite();
-                vm.included = true;
+        function toggleInclude(){
+            //broadCast Message to refresh Panel
+            if(vm.included){
+                _desableFavorite();
+            }else{
+                _enableFavorite();
             }
         }
 
+        function _isIncluded(){
+            return localStorageService.isFavorite();
+        }
+       
+        function _desableFavorite(){
+            localStorageService.removeFavorite();
+            vm.included = false;
+        }
+
+        function _enableFavorite(){
+            localStorageService.addFavorite();
+            vm.included = true;
+        }
     }
 
 })();

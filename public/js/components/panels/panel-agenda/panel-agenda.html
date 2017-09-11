@@ -53,7 +53,7 @@
 						<div ng-if="vm.reloadButton"><a href="" onClick="location.reload()">Recarregue a Página</a></div>
 					</div>
 					<div ng-if="!vm.loadingView">
-						<div ng-if="vm.detail.titulo===undefined">
+						<div ng-if="vm.detail.comissao===undefined">
 							<div class="inact">
 								<div class="img">
 									<img src="img/layout/calendar.svg" alt="Avatar">
@@ -63,11 +63,22 @@
 								</div>
 							</div>
 						</div>
-						<div ng-if="vm.detail.titulo">
+						<div ng-if="vm.detail.comissao">
 							<div class="text">
-								<p>{{vm.detail.titulo}}</p>
-								<p>{{vm.detail.descricaoSituacao}}</p>
-								<p>Formatar - Ver colocar pauta aqui, pois essas informações já constam da lista...</p>
+								<div class="list">
+										<p>{{vm.detail.comissao}}</p>
+										<p>{{vm.detail.data}}, {{vm.detail.horario}}</p>
+										<p>{{vm.detail.estado}}</p>
+										<p>{{vm.detail.local}}</p>
+										<p>{{vm.detail.tituloReuniao}}</p>
+										<p>{{vm.detail.tipo}}</p>
+										<div ng-repeat="prop in vm.detail.proposicoes.proposicao">
+											<p>{{prop.sigla}}</p>
+											<p>{{prop.ementa}}</p>
+											<p>{{prop.numOrdemApreciacao}}</p>
+											<p>{{prop.resultado}}</p>
+										</div>
+								</div>
 							</div>
 						</div>
 					</div>

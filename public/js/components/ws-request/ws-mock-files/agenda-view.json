@@ -1,6 +1,6 @@
-{
-    "comissao-1":{
-        "comissao": "CDC - DEFESA DO CONSUMIDOR (Simulado)",
+[
+    {
+        "comissao": "CDC - DEFESA DO CONSUMIDOR (Simulado - Somente para fins de visualização)",
         "codReuniao": "28742",
         "data": "25/4/2012",
         "horario": "10:00",
@@ -75,8 +75,8 @@
             ]
         }
     },
-    "comissao-2":{
-        "comissao": "CCJC - COMISSÃO DE CONSTITUIÇÃO DE JUSTIÇA E DE CIDADANIA (Simulado)",
+    {
+        "comissao": "CCJC - COMISSÃO DE CONSTITUIÇÃO DE JUSTIÇA E DE CIDADANIA (Simulado - Somente para fins de visualização)",
         "codReuniao": "28654",
         "data": "18/4/2012",
         "horario": "10:00",
@@ -86,7 +86,7 @@
         "tituloReuniao": "Audiência Pública Extraordinária",
         "objeto": "Debater o Projeto de Decreto Legislativo nº10, de2011, que susta os efeitos do ato da diretoria da ANEEL que negou o direito dos consumidores brasileiros de serem ressarcidos por erro da metodologia de cálculo que elevou ilegalmente as tarifas de energia elétrica e obrigar as concessionárias do serviço público de distribuição de energia elétrica a restituir o que receberam indevidamente dos consumidores no período de2002 a 2009. Requerimento nº24/2011 - Dep. Chico Lopes Edison Lobão Ministro das Minas e Energia Benjamim Zymler Presidente do Tribunal de Contas da União - TCU Nelson José Hübner Moreira Diretor Geral da Agência Nacional de Energia Elétrica - (ANEEL) Antônio Carlos da Fonseca Subprocurador Geral da República e Coordenador da3ª Câmara Federal-MPF Juliana Pereira da Silva Diretora do Departamento de Proteção e Defesa do Consumidor - DPDC/MJ Gisela Simona Viana de Souza Presidente da Associação Nacional dos Procons - PROCON BRASIL Rosana Grinberg Presidente do Fórum Nacional das Entidades Civis de Defesa do Consumidor Lisa Gunn Coordenadora-Executiva do Instituto Brasileiro de Defesa do Consumidor - Idec."
     },
-    "comissao-3":{
+    {
         "comissao": "CCJC - COMISSÃO DE CONSTITUIÇÃO DE JUSTIÇA E DE CIDADANIA (Simulado)",
         "codReuniao": "28484",
         "data": "11/4/2012",
@@ -172,8 +172,8 @@
             ]
         }
     },
-    "comissao-4":{
-        "comissao": "CDC - DEFESA DO CONSUMIDOR (Simulado)",
+    {
+        "comissao": "CDC - DEFESA DO CONSUMIDOR (Simulado - Somente para fins de visualização)",
         "codReuniao": "28257",
         "data": "14/3/2012",
         "horario": "10:00",
@@ -233,4 +233,4 @@
             ]
         }
     }
-}
+]

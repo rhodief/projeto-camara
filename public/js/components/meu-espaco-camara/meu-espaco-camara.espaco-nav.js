@@ -185,7 +185,7 @@
             angular.element(document.getElementById('mescam-actions')).css('display', 'block');
         }
 
-
+       
     }
 
 })();
