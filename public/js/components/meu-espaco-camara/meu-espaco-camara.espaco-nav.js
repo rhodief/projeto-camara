@@ -66,6 +66,7 @@
         function getPanelsList() {
             panelsGenService.getPanelsList().then(function (data) {
                 vm.panels = data;
+                console.log(data);
             }).catch(function (e) {
                 console.log('Não foi possível recuperar lista');
             });
