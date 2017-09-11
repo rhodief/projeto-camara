@@ -24,7 +24,7 @@
             } else {
                 var css = angular.element(document.getElementById('button-link')).css('text-align');
                 if(css == 'center'){
-                    $rootScope.$broadcast('initMescamController', true);
+                    $rootScope.$broadcast('initMescamFavorites', true);
                 }
                 angular.element(document.getElementById('section-meuEspacoCamara')).addClass('act');
             }

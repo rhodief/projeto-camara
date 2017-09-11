@@ -40,18 +40,24 @@
         vm.exportMescam = exportMescam;
         vm.textMescam = '';
         vm.isActive = isActive;
-        vm.controllersInit = controllersInit;
-
-        $scope.$on('initMescamController', function(ev, data){
+        
+        //Necessário para mobile
+        $scope.$on('initMescamFavorites', function(ev, data){
             if(data){
-                controllersInit();
+                favoritesInit();
             }
         })
+
+        controllersInit();
 
         function controllersInit() {
             getFavorites().then(showFavoritesList);
             activatePanels().then(getPanelsList);
             selectDefaultTab();
+        }
+
+        function favoritesInit(){
+            getFavorites().then(showFavoritesList);
         }
 
         function getFavorites(){
