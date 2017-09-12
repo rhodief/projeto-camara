@@ -19,6 +19,8 @@
     <script type="text/javascript" src="js/commons/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/commons/scripts.js"></script>
     <script type="text/javascript" src="js/commons/svg.js"></script>
+    <script type="text/javascript" src="js/commons/jquery.flexslider-min.js"></script>
+    <link rel="stylesheet" href="style/flexslider.css">
 </head>
 
 
@@ -54,7 +56,6 @@
                         </div>
                     </div>
                     <div class="bg-search"></div>
-                    <a href="#" class="bt-search"><img class="img-color-change" src="img/layout/search.svg" alt="Buscar"></a>
                 </div>
             </div>
             <div class="bg-menu"></div>
@@ -647,6 +648,19 @@
                 <div class="center">
                     <nav>
                         <ul class="menu-easy-access">
+                            <li class="search-form">
+                                <a href="#"><span class="icon"><img src="img/layout/search.svg" alt="Pesquisa" class="img-color-change color3"></span><span class="title">Pesquisa</span></a>
+                                <div class="subitem">
+                                    <div class="form">
+										<div class="box-search">
+											<form>
+												<input id="buscarPortal" name="buscarPortal" type="search" placeholder="Buscar no Portal">
+												<a href="#" class="search-button"><img class="img-color-change color2" src="img/layout/search.svg" alt="Buscar"></a>
+											</form>
+										</div>
+                                    </div>
+                                </div>
+                            </li>
                             <li>
                                 <a href="#"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span><span class="title">Transmissões</span></a>
                                 <div class="subitem transmissoes">
@@ -855,57 +869,6 @@
 									<panels-gen section="acesso_rapido" pos="1"></panels-gen>
                                 </div>
                             </li>
-                            <li class="search-form">
-                                <a href="#"><span class="icon"><img src="img/layout/search.svg" alt="Pesquisa" class="img-color-change color3"></span><span class="title">Pesquisa</span></a>
-                                <div class="subitem">
-                                    <div class="form">
-										<div class="box-search">
-											<form>
-												<input id="buscarPortal" name="buscarPortal" type="search" placeholder="Buscar no Portal">
-												<a href="#" class="search-button"><img class="img-color-change color2" src="img/layout/search.svg" alt="Buscar"></a>
-											</form>
-										</div>
-                                        <div class="col size1">
-                                            <label for="deputados_federais">Deputados Federais</label>
-                                            <div class="field-dropdown search" select-filter="deputadosList" name="deputados_federais" ng-placeholder="Digite o nome do Deputado" open-link="true"></div>
-                                        </div>
-                                        <div class="col size2">
-                                            <label for="proposicoes">Preposições</label>
-                                            <select name="proposicoes" id="proposicoes">
-            									<option value="">Selecione a Proposição</option>
-            								</select>
-                                            <div class="row">
-                                                <div class="col size3">
-                                                    <input type="tel" placeholder="Número">
-                                                </div>
-                                                <div class="col size4">
-                                                    <input type="tel" placeholder="Ano">
-                                                </div>
-                                                <div class="col size5">
-                                                    <a href="#" class="button search"><span class="icon"><img src="img/layout/search.svg" alt="Pesquisa" class="img-color-change"></span>Pesquisar</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col size2">
-                                            <label for="legislacao">Legislação</label>
-                                            <select name="legislacao" id="legislacao">
-            									<option value="">Toda a Legislação</option>
-            								</select>
-                                            <div class="row">
-                                                <div class="col size3">
-                                                    <input type="tel" placeholder="Número">
-                                                </div>
-                                                <div class="col size4">
-                                                    <input type="tel" placeholder="Ano">
-                                                </div>
-                                                <div class="col size5">
-                                                    <a href="#" class="button search"><span class="icon"><img src="img/layout/search.svg" alt="Pesquisa" class="img-color-change"></span>Pesquisar</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
                             <li>
                                 <a href="#"><span class="icon"><img src="img/layout/newspaper.svg" alt="Notícias" class="img-color-change color3"></span><span class="title">Notícias</span></a>
                                 <div class="subitem">
@@ -1045,52 +1008,39 @@
 						</li>
 					</ul>
 				</div>
-    		</div>
-    	</div>
-    </section>
-    <section>
-        <div class="section-news">
-            <div class="center">
                 <div class="box-news mobile-invert-order">
                     <div class="list-news">
                         <ul>
-                            <li class="size1 type1 shadow">
+                            <li class="size4 type1 show-text shadow">
                                 <a href="#">
    									<span class="img"><img src="img/uploads/img_03.jpg" alt=""></span>
    									<span class="box-text">
 										<span class="title">Parecer sobre a denúncia contra Temer deve ser lido na CCJ na próxima segunda</span>
+										<span class="text">Os dois projetos tramitam em caráter conclusivo e devem ser transformados em um texto único, que segue para o Senado, a não ser que haja recurso</span>
 										<span class="date-category"><span>Política</span>05/07/2017</span>
    									</span>
    								</a>
                             </li>
-                            <li class="size2 type2 shadow">
-                                <a href="../server_simulator/pages/noticias/noticia1.html">
-   									<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
-   									<span class="box-text">
-										<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
-										<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
-									</span>
-   								</a>
-                            </li>
-                            <li class="size1 type3 shadow">
-                                <a href="../server_simulator/pages/noticias/noticia2.html">
-   									<span class="img"><img src="img/uploads/img_05.jpg" alt=""></span>
-   									<span class="box-text">
-										<span class="title">Projetos que estimulam enoturismo são aprovados</span>
-										<span class="text">Os dois projetos tramitam em caráter conclusivo e devem ser transformados em um texto único, que segue para o Senado, a não ser que haja recurso</span>
-										<span class="date-category"><span>Turismo</span>04/07/2017</span>
-									</span>
-   								</a>
-                            </li>
-                            <li class="size2 type2 shadow">
-                                <a href="../server_simulator/pages/noticias/noticia3.html">
-   									<span class="img"><img src="img/uploads/img_06.jpg" alt=""></span>
-   									<span class="box-text">
+							<li class="size3 type4 show-text shadow">
+								<a href="#">
+									<span class="img"><img src="img/uploads/img_20.jpg" alt=""></span>
+									<span class="box-text">
 										<span class="title">Principal desafio para cumprimento das metas do PNE é o financiamento, apontam debatedores</span>
+										<span class="text">Os dois projetos tramitam em caráter conclusivo e devem ser transformados em um texto único, que segue para o Senado, a não ser que haja recurso</span>
 										<span class="date-category"><span>Administração Pública</span>04/07/2017</span>
 									</span>
-   								</a>
-                            </li>
+								</a>
+							</li>
+							<li class="size3 type4 show-text shadow">
+								<a href="#">
+									<span class="img"><img src="img/uploads/img_06.jpg" alt=""></span>
+									<span class="box-text">
+										<span class="title">Principal desafio para cumprimento das metas do PNE é o financiamento, apontam debatedores</span>
+										<span class="text">Os dois projetos tramitam em caráter conclusivo e devem ser transformados em um texto único, que segue para o Senado, a não ser que haja recurso</span>
+										<span class="date-category"><span>Administração Pública</span>04/07/2017</span>
+									</span>
+								</a>
+							</li>
                         </ul>
                     </div>
                     <div class="last-news tab-filter shadow">
@@ -1100,278 +1050,537 @@
                         	<li><a href="#">+ Lidas</a></li>
                         	<li><a href="#">+ Comentadas</a></li>
                         </ul>
-                        <ul class="list">
-                            <li><a href="">Deputados mantêm em MP regras sobre concessão de uso de instalações olímpicas</a>
-                                <p class="date-time">2 horas atrás</p>
-                            </li>
-                            <li><a href="">Plenário mantém cargos previstos em autarquia que vai administrar legado olímpico</a>
-                                <p class="date-time">4 horas atrás</p>
-                            </li>
-                            <li><a href="">Plenário aprova MP que cria autarquia para administrar legado olímpico; falta votar destaques</a>
-                                <p class="date-time">5 horas atrás</p>
-                            </li>
-                            <li><a href="">Deputado critica autorização para uso de instalações esportivas sem concorrência</a>
-                                <p class="date-time">6 horas atrás</p>
-                            </li>
-                            <li><a href="">Comissão que trata de taxa de juros para contratos do BNDES vota relatório em agosto</a>
-                                <p class="date-time">7 horas atrás</p>
-                            </li>
-                        </ul>
-                        <a href="#" class="button more-news">Ver mais notícias</a>
+                        <div class="box-show-hide ultimas act">
+							<ul class="list">
+								<li><a href="#"><strong>10h17</strong> Deputados mantêm em MP regras sobre concessão de uso de instalações olímpicas</a>
+								</li>
+								<li><a href="#"><strong>10h17</strong> Plenário mantém cargos previstos em autarquia que vai administrar legado olímpico</a>
+								</li>
+								<li><a href="#"><strong>10h17</strong> Plenário aprova MP que cria autarquia para administrar legado olímpico; falta votar destaques</a>
+								</li>
+								<li><a href="#"><strong>10h17</strong> Deputado critica autorização para uso de instalações esportivas sem concorrência</a>
+								</li>
+								<li><a href="#"><strong>10h17</strong> Comissão que trata de taxa de juros para contratos do BNDES vota relatório em agosto</a>
+								</li>
+								<li><a href="#"><strong>10h17</strong> Deputados mantêm em MP regras sobre concessão de uso de instalações olímpicas</a>
+								</li>
+								<li><a href="#"><strong>10h17</strong> Plenário mantém cargos previstos em autarquia que vai administrar legado olímpico</a>
+								</li>
+								<li><a href="#"><strong>10h17</strong> Plenário aprova MP que cria autarquia para administrar legado olímpico; falta votar destaques</a>
+								</li>
+								<li><a href="#"><strong>10h17</strong> Deputado critica autorização para uso de instalações esportivas sem concorrência</a>
+								</li>
+								<li><a href="#"><strong>10h17</strong> Comissão que trata de taxa de juros para contratos do BNDES vota relatório em agosto</a>
+								</li>
+							</ul>
+							<a href="#" class="button more-news">Ver mais</a>
+                        </div>
+                        <div class="box-show-hide lidas">
+							<ul class="list">
+								<li><a href="#">Deputados mantêm em MP regras sobre concessão de uso de instalações olímpicas</a>
+								</li>
+								<li><a href="#">Plenário mantém cargos previstos em autarquia que vai administrar legado olímpico</a>
+								</li>
+								<li><a href="#">Plenário aprova MP que cria autarquia para administrar legado olímpico; falta votar destaques</a>
+								</li>
+								<li><a href="#">Deputado critica autorização para uso de instalações esportivas sem concorrência</a>
+								</li>
+								<li><a href="#">Comissão que trata de taxa de juros para contratos do BNDES vota relatório em agosto</a>
+								</li>
+							</ul>
+							<a href="#" class="button more-news">Ver mais</a>
+                        </div>
+                        <div class="box-show-hide comentadas">
+							<ul class="list">
+								<li><a href="#">Deputados mantêm em MP regras sobre concessão de uso de instalações olímpicas</a>
+								</li>
+								<li><a href="#">Plenário mantém cargos previstos em autarquia que vai administrar legado olímpico</a>
+								</li>
+								<li><a href="#">Plenário aprova MP que cria autarquia para administrar legado olímpico; falta votar destaques</a>
+								</li>
+								<li><a href="#">Deputado critica autorização para uso de instalações esportivas sem concorrência</a>
+								</li>
+								<li><a href="#">Comissão que trata de taxa de juros para contratos do BNDES vota relatório em agosto</a>
+								</li>
+							</ul>
+							<a href="#" class="button more-news">Ver mais</a>
+                        </div>
                     </div>
+                </div>
+                <div class="list-news">
+                	<ul>
+						<li class="size5 type2 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size5 type2 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size5 type2 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size5 type2 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+                	</ul>
                 </div>
             </div>
         </div>
     </section>
-	<section>
-		<div class="section-about h-window background-parallax" style="background-image: url(img/uploads/img_07.jpg);">
-			<div class="vertical-align">
-				<div class="center">
-					<header>
-						<div class="text-top">
-							<h2 class="title">
-								A Câmara / Atividade Parlamentar
-							</h2>
-							<h3 class="resume">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet massa pulvinar tincidunt vulputate eu erat. Nulla facilisi.
-							</h3>
-						</div>
-					</header>
-					<div class="box-links">
-						<div class="row type-1">
-							<h4 class="title-link">Conheça</h4>
-							<div class="content-links">
-								<ul class="links">
-									<li class="h-2 shadow"><a href="#" title="O Papel da Câmara"><span class="text">O Papel da Câmara</span><span class="icon"><img class="img-color-change color4" src="img/layout/ico_camara.svg" alt="O Papel da Câmara"></span></a></li>
-									<li class="h-2 shadow"><a href="#" title="Visite a Câmara"><span class="text">Visite a Câmara</span><span class="icon"><img class="img-color-change color4" src="img/layout/location.svg" alt="Visite a Câmara"></span></a></li>
-									<li class="shadow"><a href="#" title="Estrutura"><span class="text">Estrutura</span></a></li>
-									<li class="shadow"><a href="#" title="A Presidência"><span class="text">A Presidência</span></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="row type-2">
-                            <h4 class="title-link">Seus Representantes</h4>
-                            <panels-gen section="atividade_parlamentar" pos="1"></panels-gen>
-							<div class="content-links">
-								<ul class="links">
-									<li class="shadow"><a href="#" title="Conheça os Deputados"><span class="text">Conheça os Deputados</span></a></li>
-									<li class="shadow"><a href="#" title="Discursos"><span class="text">Discursos</span></a></li>
-									<li class="shadow"><a href="#" title="Lideranças Partidarias"><span class="text">Lideranças Partidarias</span></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="row type-3">
-                            <h4 class="title-link">Atividade Legislativa</h4>
-							<div class="content-links">
-								<ul class="links">
-									<li class="shadow"><a href="#" title="Agenda"><span class="text">Agenda</span></a></li>
-									<li class="shadow"><a href="#" title="Plenário"><span class="text">Plenário</span></a></li>
-									<li class="h-2 shadow"><a href="#" title="Commo são feitas as leis"><span class="text">Como são feitas as leis</span><span class="icon"><img class="img-color-change color4" src="img/layout/ico_leis.svg" alt="Como são feitas as leis"></span></a></li>
-									<li class="shadow"><a href="#" title="Comissões"><span class="text">Comissões</span></a></li>
-									<li class="shadow"><a href="#" title="Proposições"><span class="text">Proposições</span></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
+    <section>
+    	<div class="section-carousel">
+    		<div class="center">
+    			<div class="gallery flexslider">
+    				<div class="top">
+    					<h2 class="title"><a href="#">Banco de Imagens</a></h2>
+    				</div>
+    				<ul class="slides">
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img20170911116323999255.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Homenagem ao Dia do Administrador. Dep. Hildo Rocha (PMDB - BA)</span>
+												<span class="picture">Luis Macedo/Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img20170911117114003164.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Homenagem ao Dia do Administrador</span>
+												<span class="picture">Luis Macedo/Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img20170911115543995461.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Homenagem ao Dia do Administrador. Dep. Izalci (PSDB-DF)</span>
+												<span class="picture">Luis Macedo/Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img2017091111704002066.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Homenagem ao Dia do Administrador. Dep. Izalci (PSDB-DF)</span>
+												<span class="picture">Luis Macedo/Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img201709061145344233484.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Audiência Pública sobre a situação dos produtores de Vinho Colonial e as medidas para viabilizar a sua produção e comercialização no contexto produtivo da agricultura familiar . Dep. Onyx Lorenzoni (DEM/RS)</span>
+												<span class="picture">Cleia Viana/Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img201709061510365463673.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Audiência Pública sobre a situação dos produtores de Vinho Colonial e as medidas para viabilizar a sua produção e comercialização no contexto produtivo da agricultura familiar.Chefe Adjunto de Transparência de Tecnologia da Embrapa Uva e Vinho - Bento Gonçalves ,Alexandre Hofmman </span>
+												<span class="picture">Gilmar Félix/Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img201709061559235756362.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Grande expediente - Dep. Alessandro Molon (REDE-RJ)</span>
+												<span class="picture">Luis Macedo / Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img201709061150314263191.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Audiência Pública sobre a situação dos produtores de Vinho Colonial e as medidas para viabilizar a sua produção e comercialização no contexto produtivo da agricultura familiar </span>
+												<span class="picture">Cleia Viana/Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<span class="box-text show-text">
+											<span class="text">
+												<span class="title">Ver Mais</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    				</ul>
+    			</div>
+				<div class="slider">
+					<ul class="slides">
+						<li>
+							<img src="img/uploads/img20170911116323999255PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<img src="img/uploads/img20170911117114003164PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<img src="img/uploads/img20170911115543995461PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<img src="img/uploads/img2017091111704002066PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<img src="img/uploads/img201709061145344233484PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<img src="img/uploads/img201709061510365463673PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<img src="img/uploads/img201709061559235756362PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<img src="img/uploads/img201709061150314263191PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<a href="#">Ver mais</a>
+						</li>
+					</ul>
 				</div>
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="section-inspect">
-			<div class="center">
-				<header>
-					<div class="text-top">
+    		</div>
+    	</div>
+    </section>
+    <section>
+    	<div class="section-news">
+    		<div class="center">
+                <header>
+                    <div class="text-top">
+                        <h2 class="title">
+                            Comissões Aprovam
+                        </h2>
+                        <h3 class="resume">
+                            Conheça as informações que a Câmara dos Deputados disponibiliza para que você possa conhecer e fiscalizar a atividade parlamentar
+                            e administrativa da Casa, bem como o Orçamento da União.
+                        </h3>
+                        <button class="button">Saiba mais</button>
+                    </div>
+                </header>
+				<div class="list-news">
+					<ul>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+                	</ul>
+				</div>
+   				<div class="flex-1">
+					<div class="box-gallery shadow">
 						<h2 class="title">
-							Transparência / Fiscalize
+							Programas
 						</h2>
-						<h3 class="resume">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet massa pulvinar tincidunt vulputate eu erat. Nulla facilisi.
-						</h3>
-						<button class="button">Saiba mais</button>
-					</div>
-				</header>
-				<div class="box-posts">
-					<div class="col shadow">
-						<a href="#">
-							<div class="box-img">
-								<img src="img/uploads/img_08.jpg" alt="Lei de acesso à informação">
-								<h3 class="title">Lei de acesso à informação</h3>
-							</div>
-							<div class="box-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet </p>
-							</div>
-						</a>
-					</div>
-					<div class="col type-2 shadow">
-						<a href="#">
-							<div class="box-img">
-								<img src="img/uploads/img_09.jpg" alt="Lei de acesso à informação">
-							</div>
-							<div class="box-text">
-								<h3 class="title">Fiscalize o orçamento</h3>
-								<p>Consulte repasses e transferências de recursos financeiros</p>
-							</div>
-						</a>
-					</div>
-					<div class="col type-2 shadow">
-						<a href="#">
-							<div class="box-img">
-								<img src="img/uploads/img_10.jpg" alt="Receitas e despesas">
-							</div>
-							<div class="box-text">
-								<h3 class="title">Receitas e despesas</h3>
-								<p>Informações e relatórios sobre receitas,  despesas e convênios</p>
-							</div>
-						</a>
-					</div>
-					<div class="col shadow">
-						<a href="#">
-							<div class="box-img">
-								<img src="img/uploads/img_11.jpg" alt="Cota Parlamentar">
-								<h3 class="title">Cota Parlamentar</h3>
-							</div>
-							<div class="box-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet </p>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="section-participate h-window background-parallax" style="background-image: url(img/uploads/img_12.jpg);">
-			<div class="vertical-align">
-				<div class="center">
-					<header>
-						<div class="text-top">
-							<h2 class="title">
-								Participe
-							</h2>
-							<h3 class="resume">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet massa pulvinar tincidunt vulputate eu erat. Nulla facilisi.
-							</h3>
-							<button class="button type-1">Saiba mais</button>
-						</div>
-					</header>
-					<div class="box-columns flex-1">
-						<div class="col shadow">
-							<div class="post">
-								<a href="#">
-									<div class="box-img">
-										<img src="img/uploads/img_13.jpg" alt="Cota Parlamentar">
-										<h3 class="title">Lorem Ipsum Dolor Sit Amet</h3>
-									</div>
-									<div class="box-text">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac sapien sit amet </p>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col">
-							<ul class="links">
+						<div class="gallery-2 flexslider">
+							<ul class="slides">
 								<li>
-									<a href="#">
-										<span class="icon">
-											<img src="img/layout/edem-logo.svg" alt="Logo e-Democracia" class="img-color-change">
-										</span>
-										<span class="box-text">
-											<span class="title">e-Democracia</span>
-											<span class="text">
-												O portal e-Democracia é uma iniciativa da Câmara dos Deputados que visa ampliar a participação social no processo legislativo e aproximar cidadãos e seus representantes por meio da interação digital.
-											</span>
-										</span>
-									</a>
+									<div class="align-h">
+										<div class="align-v">
+											<a href="#">
+												<img src="img/uploads/imgNoticiaBloco_2-5663445-1505221708055.jpg" alt="Lorem Ipsum">
+												<span class="box-text">
+													<span class="text">
+														<span class="description">CÂMARA DEBATE</span>
+														<span class="picture">Subtenente Gonzaga (PDT-MG) e Lincoln Portela (PRB-MG) conversam sobre a proposta que torna ainda mais rigoroso o Regime Disciplinar Diferenciado</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</div>
 								</li>
 								<li>
-									<a href="#">
-										<span class="icon">
-											<img src="img/layout/ico_fale_conosco.svg" alt="Fale Conosco" class="img-color-change">
-										</span>
-										<span class="box-text">
-											<span class="title">Fale Conosco</span>
-											<span class="text">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu pulvinar libero, et varius tortor. Sed sagittis tellus non justo rutrum, in rhoncus massa lacinia. Sed volutpat commodo diam, at pulvinar 
-											</span>
-										</span>
-									</a>
+									<div class="align-h">
+										<div class="align-v">
+											<a href="#">
+												<img src="img/uploads/imgNoticiaBloco_2-5661759-1505131616748.jpg" alt="Lorem Ipsum">
+												<span class="box-text">
+													<span class="text">
+														<span class="description">MELANINA SIM</span>
+														<span class="picture">Neste episódio, atriz relata que criou grupo de teatro para enfrentar racismo</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</div>
 								</li>
 								<li>
-									<a href="#">
-										<span class="icon">
-											<img src="img/layout/ico_conect.svg" alt="Fale Conosco" class="img-color-change">
-										</span>
-										<span class="box-text">
-											<span class="title">Canais</span>
-											<span class="text">
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu pulvinar libero, et varius tortor. Sed sagittis tellus non justo rutrum, in rhoncus massa lacinia. Sed volutpat commodo diam, at pulvinar 
-											</span>
-										</span>
-									</a>
+									<div class="align-h">
+										<div class="align-v">
+											<a href="#">
+												<img src="img/uploads/imgNoticiaBloco_2-5661809-1505132406301.jpg" alt="Lorem Ipsum">
+												<span class="box-text">
+													<span class="text">
+														<span class="description">SALÃO VERDE</span>
+														<span class="picture">ICMS Ecológico: instrumento de incentivo ambiental em vigor em 18 estados</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="align-h">
+										<div class="align-v">
+											<a href="#">
+												<img src="img/uploads/imgNoticiaBloco_2-5661784-1505131907772.jpg" alt="Lorem Ipsum">
+												<span class="box-text">
+													<span class="text">
+														<span class="description">FATOR DE RISCO</span>
+														<span class="picture">Os danos causados ao bebê pelo consumo de álcool por parte da mãe</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="slider-2">
+							<ul class="slides">
+								<li>
+									<img src="img/uploads/imgNoticiaBloco_2-5663445-1505221708055.jpg" alt="Lorem Ipsum">
+								</li>
+								<li>
+									<img src="img/uploads/imgNoticiaBloco_2-5661759-1505131616748.jpg" alt="Lorem Ipsum">
+								</li>
+								<li>
+									<img src="img/uploads/imgNoticiaBloco_2-5661809-1505132406301.jpg" alt="Lorem Ipsum">
+								</li>
+								<li>
+									<img src="img/uploads/imgNoticiaBloco_2-5661784-1505131907772.jpg" alt="Lorem Ipsum">
 								</li>
 							</ul>
 						</div>
 					</div>
-					<footer>
-						<div class="social-links">
-							<ul>
-								<li>
-									<a href="#"><img src="img/layout/icon_twitter.png" alt="Twitter" class="shadow"></a>
+					<div class="box-other-links size3 shadow">
+						<div class="links flex-links flex-1">
+							<a href="#" class="button">Notícias Institucionais</a>
+							<a href="#" class="button">Agenda</a>
+							<a href="#" class="button">TV Câmara</a>
+							<a href="#" class="button">Jornal da Câmara</a>
+							<a href="#" class="button">Rádio Câmara</a>
+							<a href="#" class="button">A Voz do Brasil</a>
+						</div>
+						<div class="last-news">
+							<h2 class="title">Discursos no Plenário</h2>
+							<ul class="list">
+								<li><a href="">Deputados mantêm em MP regras sobre concessão de uso de instalações olímpicas</a>
 								</li>
-								<li>
-									<a href="#"><img src="img/layout/icon_facebook.png" alt="Facebook" class="shadow"></a>
+								<li><a href="">Plenário mantém cargos previstos em autarquia que vai administrar legado olímpico</a>
 								</li>
-								<li>
-									<a href="#"><img src="img/layout/icon_youtube.png" alt="YouTube" class="shadow"></a>
+								<li><a href="">Plenário aprova MP que cria autarquia para administrar legado olímpico; falta votar destaques</a>
+								</li>
+								<li><a href="">Deputado critica autorização para uso de instalações esportivas sem concorrência</a>
+								</li>
+								<li><a href="">Comissão que trata de taxa de juros para contratos do BNDES vota relatório em agosto</a>
 								</li>
 							</ul>
+							<a href="camaranoticias.html" class="button more-news">Ver mais discursos</a>
 						</div>
-					</footer>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section>
-		<div class="section-education">
-			<div class="center">
-				<header>
-					<div class="text-top">
-						<h2 class="title">
-							Educação para a Democracia
-						</h2>
 					</div>
-				</header>
-				<ul class="box-posts flex-1">
-					<li class="shadow">
-						<a href="#">
-							<img src="img/uploads/img_14.jpg" alt="Escola Virtual de Cidadania">
-							<h3 class="text">Escola Virtual de Cidadania</h3>
-						</a>
-					</li>
-					<li class="shadow">
-						<a href="#">
-							<img src="img/uploads/img_15.jpg" alt="Plenarinho">
-							<h3 class="text">Plenarinho</h3>
-						</a>
-					</li>
-					<li class="shadow">
-						<a href="#">
-							<img src="img/uploads/img_16.jpg" alt="Parlamento Jovem">
-							<h3 class="text">Parlamento Jovem</h3>
-						</a>
-					</li>
-					<li class="shadow">
-						<a href="#">
-							<img src="img/uploads/img_17.jpg" alt="Educação à Distância">
-							<h3 class="text">Educação à Distância</h3>
-						</a>
-					</li>
-				</ul>
+   				</div>
 			</div>
 		</div>
-	</section>
-
+    </section>
+    <section>
+    	<div class="section-links-footer">
+    		<div class="center">
+    			<div class="flex-1">
+    				<div class="col">
+    					<ul class="links">
+    						<li><a href="#">RSS</a></li>
+    						<li><a href="#">Widgets</a></li>
+    					</ul>
+    				</div>
+    				<div class="col">
+                        <div class="social-links">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="img/layout/icon_twitter.png" alt="Twitter" class="shadow"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/layout/icon_facebook.png" alt="Facebook" class="shadow"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/layout/icon_youtube.png" alt="YouTube" class="shadow"></a>
+                                </li>
+                            </ul>
+                        </div>
+    				</div>
+    				<div class="col boletins">
+    					<h2 class="title">Boletins Informativos</h2>
+    					<div class="form">
+    						<div class="row">
+								<label><span>E-mail*</span><input type="email" placeholder="Digite seu E-mail" required></label>
+    						</div>
+    						<div class="row">
+    							<label><span>Senha*</span><input type="password" placeholder="Digite sua Senha" required></label>
+    						</div>
+    						<p>*Campos obrigatórios</p>
+    						<a href="#" class="link">Lembrar Senha</a>
+    						<div class="buttons">
+    							<a href="#" class="button">Quero me cadastrar</a>
+    							<a href="#" class="button">Entrar</a>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    
     <!-- ################### Início PANEL AGENDA A ideia seria inserir lá na agenda do header, mas depois veremos como encaixar.... -->
 
     <section>
@@ -1674,7 +1883,48 @@ CNPJ: 00.530.352/0001-59 | Horário de atendimento ao público: 9h às 19h</p>
 			</div>
 		</div>
 	</footer>
+<script>
+	$(document).ready(function(){
+		  $('.slider').flexslider({
+			animation: "slide",
+			controlNav: false,
+			directionNav: false,
+			animationLoop: false,
+			slideshow: false,
+			itemWidth: 120,
+			itemMargin: 20,
+			asNavFor: '.gallery'
+		  });
 
+		  $('.gallery').flexslider({
+			animation: "slide",
+			controlNav: false,
+			animationLoop: false,
+			slideshow: false,
+			sync: ".slider"
+		  });
+		
+		  $('.slider-2').flexslider({
+			animation: "slide",
+			controlNav: false,
+			directionNav: true,
+			animationLoop: true,
+			slideshow: false,
+			itemWidth: 120,
+			itemMargin: 20,
+			asNavFor: '.gallery-2'
+		  });
+
+		  $('.gallery-2').flexslider({
+			animation: "slide",
+			controlNav: false,
+			directionNav: false,
+			animationLoop: true,
+			slideshow: true,
+			sync: ".slider-2"
+		  });
+	});
+</script>
 </body>
 
 </html>
