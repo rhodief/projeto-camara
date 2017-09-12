@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#004a2f">
     <meta name="msapplication-navbutton-color" content="#004a2f">
+    <!-- meta name = "apple-mobile-web-app-able" content = "yes" -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#004a2f">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portal da Câmara dos Deputados">
@@ -60,8 +61,6 @@
                             <a href="http://www.tcu.gov.br/" class="tcu"><img src="img/layout/icones-home-tcu.svg" alt="TCU"></a>
                         </div>
                     </div>
-                    <div class="bg-search"></div>
-                    <a href="#" class="bt-search"><img class="img-color-change" src="img/layout/search.svg" alt="Buscar"></a>
                 </div>
             </div>
             <div class="bg-menu"></div>
@@ -654,6 +653,19 @@
                 <div class="center">
                     <nav>
                         <ul class="menu-easy-access">
+                            <li class="search-form">
+                                <a href="#"><span class="icon"><img src="img/layout/search.svg" alt="Pesquisa" class="img-color-change color3"></span><span class="title">Pesquisa</span></a>
+                                <div class="subitem">
+                                    <div class="form">
+                                        <div class="box-search">
+                                            <form>
+                                                <input id="buscarPortal" name="buscarPortal" type="search" placeholder="Buscar no Portal">
+                                                <a href="#" class="search-button"><img class="img-color-change color2" src="img/layout/search.svg" alt="Buscar"></a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                             <li>
                                 <a href="#"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span><span class="title">Transmissões</span></a>
                                 <div class="subitem transmissoes">
@@ -860,58 +872,6 @@
                                 <a href="#"><span class="icon"><img src="img/layout/calendar.svg" alt="Agenda" class="img-color-change color3"></span><span class="title">Agenda</span></a>
                                 <div class="subitem agenda">
                                     <panels-gen section="acesso_rapido" pos="1"></panels-gen>
-                                </div>
-                            </li>
-                            <li class="search-form">
-                                <a href="#"><span class="icon"><img src="img/layout/search.svg" alt="Pesquisa" class="img-color-change color3"></span><span class="title">Pesquisa</span></a>
-                                <div class="subitem">
-                                    <div class="form">
-                                        <div class="box-search">
-                                            <form>
-                                                <input id="buscarPortal" name="buscarPortal" type="search" placeholder="Buscar no Portal">
-                                                <a href="#" class="search-button"><img class="img-color-change color2" src="img/layout/search.svg" alt="Buscar"></a>
-                                            </form>
-                                        </div>
-                                        <div class="col size1">
-                                            <label for="deputados_federais">Deputados Federais</label>
-                                            <div class="field-dropdown search" select-filter="deputadosList" name="deputados_federais" ng-placeholder="Digite o nome do Deputado"
-                                                open-link="true"></div>
-                                        </div>
-                                        <div class="col size2">
-                                            <label for="proposicoes">Preposições</label>
-                                            <select name="proposicoes" id="proposicoes">
-            									<option value="">Selecione a Proposição</option>
-            								</select>
-                                            <div class="row">
-                                                <div class="col size3">
-                                                    <input type="tel" placeholder="Número">
-                                                </div>
-                                                <div class="col size4">
-                                                    <input type="tel" placeholder="Ano">
-                                                </div>
-                                                <div class="col size5">
-                                                    <a href="#" class="button search"><span class="icon"><img src="img/layout/search.svg" alt="Pesquisa" class="img-color-change"></span>Pesquisar</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col size2">
-                                            <label for="legislacao">Legislação</label>
-                                            <select name="legislacao" id="legislacao">
-            									<option value="">Toda a Legislação</option>
-            								</select>
-                                            <div class="row">
-                                                <div class="col size3">
-                                                    <input type="tel" placeholder="Número">
-                                                </div>
-                                                <div class="col size4">
-                                                    <input type="tel" placeholder="Ano">
-                                                </div>
-                                                <div class="col size5">
-                                                    <a href="#" class="button search"><span class="icon"><img src="img/layout/search.svg" alt="Pesquisa" class="img-color-change"></span>Pesquisar</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </li>
                             <li>

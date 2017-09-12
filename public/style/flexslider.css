@@ -55,13 +55,13 @@ html[xmlns] .slides {display: block;}
 .flex-direction-nav {*height: 0;}
 .flex-direction-nav a{text-decoration:none; display: block; width: 31px; height: 60px; margin: -20px 0 0; position: absolute; top: 50%; z-index: 2; overflow: hidden; cursor: pointer; color: #fff; text-shadow: 1px 1px 0 rgba(255,255,255,0.3); -webkit-transition: all .3s ease; transition: all .3s ease; text-indent: -5000em;}
 .flex-direction-nav a:before,
-.flex-direction-nav a:after{content: ''; width:3px; height: 39px; background: #fd474e; display: block; position: absolute;left: 14px;}
-.flex-direction-nav .flex-prev {left: 0;}
-.flex-direction-nav .flex-prev:before{top:-3px;-ms-transform: rotate(45deg) scale(1) skew(1deg) translate(0px);-webkit-transform: rotate(45deg) scale(1) skew(1deg) translate(0px);transform: rotate(45deg) scale(1) skew(1deg) translate(0px);}
-.flex-direction-nav .flex-prev:after{bottom:-3px;-ms-transform: rotate(-45deg) scale(1) skew(1deg) translate(0px);-webkit-transform: rotate(-45deg) scale(1) skew(1deg) translate(0px);transform: rotate(-45deg) scale(1) skew(1deg) translate(0px);}
-.flex-direction-nav .flex-next {right: 0;}
-.flex-direction-nav .flex-next:before{bottom:-3px;-ms-transform: rotate(45deg) scale(1) skew(1deg) translate(0px);-webkit-transform: rotate(45deg) scale(1) skew(1deg) translate(0px);transform: rotate(45deg) scale(1) skew(1deg) translate(0px);}
-.flex-direction-nav .flex-next:after{top:-3px;-ms-transform: rotate(-45deg) scale(1) skew(1deg) translate(0px);-webkit-transform: rotate(-45deg) scale(1) skew(1deg) translate(0px);transform: rotate(-45deg) scale(1) skew(1deg) translate(0px);}
+.flex-direction-nav a:after{content: ''; width:5px; height: 39px; background: #fff; display: block; position: absolute;left: 14px;}
+.flex-direction-nav .flex-prev {left: 10px;}
+.flex-direction-nav .flex-prev:before{top:-3px;-webkit-transform: rotate(45deg) scale(1) skew(1deg) translate(0px);transform: rotate(45deg) scale(1) skew(1deg) translate(0px);}
+.flex-direction-nav .flex-prev:after{bottom:-1px;-webkit-transform: rotate(-45deg) scale(1) skew(1deg) translate(0px);transform: rotate(-45deg) scale(1) skew(1deg) translate(0px);}
+.flex-direction-nav .flex-next {right: 10px;}
+.flex-direction-nav .flex-next:before{bottom:-1px;-webkit-transform: rotate(45deg) scale(1) skew(1deg) translate(0px);transform: rotate(45deg) scale(1) skew(1deg) translate(0px);}
+.flex-direction-nav .flex-next:after{top:-3px;-webkit-transform: rotate(-45deg) scale(1) skew(1deg) translate(0px);transform: rotate(-45deg) scale(1) skew(1deg) translate(0px);}
 .flex-direction-nav .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
 .flex-direction-nav a:before { font-family: "flexslider-icon"; font-size: 40px; line-height:1; display: inline-block; }
 .flex-direction-nav a.flex-next:before  { content: '\f002'; }
@@ -99,6 +99,6 @@ html[xmlns] .slides {display: block;}
 	.flex-direction-nav .flex-next:after{top:-3px;}
 }
 @media screen and (max-width: 425px) {
-  	.flex-direction-nav .flex-prev {opacity: 1;left: -31px;}
-  	.flex-direction-nav .flex-next {opacity: 1;right: -31px;}
+  	.flex-direction-nav .flex-prev {opacity: 1;left: 5px;}
+  	.flex-direction-nav .flex-next {opacity: 1;right: 5px;}
 }
