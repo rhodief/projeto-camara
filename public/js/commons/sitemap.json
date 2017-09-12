@@ -7,7 +7,25 @@
                     "name": "Centro de Estudos e Debates Estratégicos"
                 },
                 {
-                    "name": "Conheça a Câmara"
+                    "name": "Conheça a Câmara",
+                    "children": [
+                        {
+                            "name":"A Câmara",
+                            "description": "Conhece a estrutura organizacional da Câmara dos Deputados"
+                        },
+                        {
+                            "name": "A História da Câmara dos Deputados",
+                            "description": "Antecedentes Históricos da consolidação do legislativo Brasileiro até à Câmara dos Deputados dos dias atuais."
+                        },
+                        {
+                            "name": "Quantos são e como são escolhidos os Deputados",
+                            "description": "Conheça as regras do sistema eleitoral brasileiro no que diz respeito à alocação das vagas no legislativo"
+                        },
+                        {
+                            "name": "Como são Feitas as Leis",
+                            "description": "Assista vídeos explicativos sobre o processo legislativo e conheça fluxogramas relativas as etapas que uma proposição deve passar até se tornar lei."
+                        }
+                    ]
                 },
                 {
                     "name": "Conselho de Ética e Decoro Parlamentar"
@@ -28,7 +46,13 @@
                     "name": "Ouvidoria Parlamentar"
                 },
                 {
-                    "name": "Presidência"
+                    "name": "Presidência",
+                    "children":[
+                        {
+                            "name":"Conheça o Presidente",
+                            "description": "Conheça a biografia do Presidente da Câmara dos Deputados, bem como seu papel institucional"
+                        }
+                    ]
                 },
                 {
                     "name": "Procuradoria Parlamentar"

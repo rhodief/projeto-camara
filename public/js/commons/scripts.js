@@ -54,6 +54,25 @@ $(document).ready(function(){
 		$(this).parent().slideUp();
 		return false;
 	});
+
+	var timeout;
+	$('#buscarPortal').keyup(function(e){
+		var delay = 500;
+		var results;
+		var value = this.value;
+
+		if(value.length > 3){
+			_waitAndSearch(_showResults);
+		}
+
+		function _waitAndSearch(callBack){
+			setTimeout(function(){ alert("Hello") }, 3000);
+		}
+
+		function _showResults(results){
+
+		}
+	})
 	
 	menu_max_height();
 	atualizaMinHeight();
