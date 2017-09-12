@@ -104,7 +104,7 @@
             }
 
             function initLoad(el){
-                var span = '<span class="loading">Carregando Painél</span>';
+                var span = '<span class="loading">Carregando Painel</span>';
                 var loading = $compile(span)(scope);
                 el.append(loading);
                 return loading;

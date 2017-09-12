@@ -234,6 +234,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 
 .appointment{padding: 10px 0; position: relative; width: 100%; overflow: hidden;z-index: 10000}
 .appointment .center{max-width: 1240px;}
+.appointment .centered{display: inline-block}
 .subitem .appointment h5{display: none;}
 .appointment .pickadate{background: #fff; padding: 10px;}
 .appointment .pickadate .pickadate-prev{float: left; content: '\u2039'; text-indent: -5000em;}
@@ -707,6 +708,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea', GradientType=0 )!important;}
 	.step-2 .list{height: 218px;}
 	.panel-container-3.step-3{height: calc(100% - 20px);}
+	.panel-container-3.step-3.size-2{min-width: 550px}
 	.field-dropdown-mobile .dropdown{display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin: 0 5px;}
 	.field-dropdown-mobile .dropdown button{font-size: 12px; font-size: 0.75rem; padding: 10px 5px; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; margin: 0 5px;}
 	.footer .main-menu{display: block;-webkit-column-width: 200px;column-width: 200px;-webkit-column-gap: 30px;column-gap: 40px;-webkit-column-rule: 1px solid rgba(255,255,255,0.2);column-rule: 1px solid rgba(255,255,255,0.2); padding: 30px 0; margin: 0 auto;}

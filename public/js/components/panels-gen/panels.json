@@ -10,9 +10,16 @@
             "invisible": true,
             "panels": [
                 {
+                    "name": "transmissoes",
+                    "label": "Transmissões",
+                    "pos": 1,
+                    "activated": true,
+                    "invisible":true
+                },
+                {
                     "name": "agenda",
                     "label": "Agenda",
-                    "pos": 1,
+                    "pos": 2,
                     "activated": true,
                     "invisible":true
                 }

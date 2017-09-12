@@ -1,54 +1,3 @@
-<!-- 
-<div class="w3-card-4" style="max-width:700px;">
-    <header class="w3-container w3-teal">
-        <h5>Seus Representantes</h5>
-    </header>
-    <div class="panel-general-actions">
-
-        <button ng-class="gps ? 'w3-green' : 'w3-grey'">GPS ON</button>
-        <select name="option" ng-model="vm.uf" ng-change="vm.changeUf(vm.uf)">
-            <option ng-repeat="uf in vm.ufsList" ng-model-options="uf.sigla">{{uf.sigla}}</option>
-        </select>
-
-
-    </div>
-    <div class="w3-container">
-        <div class="panel-container">
-            <div>
-                <input class="w3-input" type="text" placeholder="procurar..."></p>
-            </div>
-            <ul class="w3-ul w3-card-4 panel-list">
-                <li class="w3-padding-16 panel-list-item" ng-class="{'w3-hover-teal w3-teal': vm.isSelected(deputado.id), 'w3-hover-light-grey': !vm.isSelected(deputado.id)}"
-                    ng-repeat="deputado in vm.deputados" ng-click="vm.getDetail(deputado.id)">
-                    <img ng-src="{{deputado.foto}}" class="w3-left w3-circle w3-margin-right" style="max-width:40px">
-                    <span class="w3-large">{{deputado.nome}}</span><br>
-                    <span>{{deputado.partido_sig}}/{{deputado.uf_sig}}</span>
-                </li>
-            </ul>
-        </div>
-        <div class="panel-container panel-view">
-            <div class="w3-container w3-center">
-                <div ng-if="vm.view.ultimoStatus_nome===undefined">
-                    <img src="img/img_avatar2.png" alt="Avatar" style="width:80%">
-                    <h4>Selecione</h4>
-                    <h6>Um parlamentar</h6>
-                </div>
-                <div ng-if="vm.view.ultimoStatus_nome">
-                    <img ng-src="{{vm.view.ultimoStatus_foto}}" alt="Avatar" style="max-width:80%">
-                    <h4>{{vm.view.ultimoStatus_nome}}</h4>
-                    <h6>{{vm.view.ultimoStatus_partido_sig}}/{{vm.view.ultimoStatus_uf_sig}}</h6>
-
-                    <div class="w3-section">
-                        <button class="w3-button w3-green">Accept</button>
-                        <button class="w3-button w3-red">Decline</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
- -->
-
 <div class="appointment">
     <div class="center">
         <div>
@@ -100,15 +49,15 @@
                                     <img src="img/img_avatar2.png" alt="Avatar">
                                 </div>
                                 <div class="text">
-                                    <p>Selecione um<br><span>Paralemntar</span></p>
+                                    <p>Selecione um<br><span>Parlamentar</span></p>
                                 </div>
                             </div>
                         </div>
                         <div ng-if="vm.view.ultimoStatus_nome">
                             <div class="text">
-                                    <img ng-src="{{vm.view.ultimoStatus_foto}}" alt="Avatar" style="max-width:60%">
-                                    <h4>{{vm.view.ultimoStatus_nome}}</h4>
-                                    <h6>{{vm.view.ultimoStatus_partido_sig}}/{{vm.view.ultimoStatus_uf_sig}}</h6>
+                                <img ng-src="{{vm.view.ultimoStatus_foto}}" alt="Avatar" style="max-width:60%">
+                                <h4>{{vm.view.ultimoStatus_nome}}</h4>
+                                <h6>{{vm.view.ultimoStatus_partido_sig}}/{{vm.view.ultimoStatus_uf_sig}}</h6>
                             </div>
                         </div>
                     </div>

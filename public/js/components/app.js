@@ -5,7 +5,8 @@ if (typeof (Storage) === "undefined") {
         'use strict';
         angular.module('app', ['meuEspacoCamara', 'browserStorage', 'panelsGen', 'search', 'selectFilter'])
         .constant('APP', {
-            url: 'js/components/'
+            url: 'js/components/',
+            mockServer: '../server_simulator/'
         });
     })();
 }
