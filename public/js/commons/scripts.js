@@ -63,7 +63,11 @@ $(document).ready(function () {
 		var urlSiteMap = 'js/commons/sitemap.json';
 		var input = this.value; var results = [];
 
-		if (input.length >= minLength) _waitAndSearch(_showResults);
+		if (input.length >= minLength){
+			_waitAndSearch(_showResults);
+		}else{
+			_showResults(true);
+		} 
 
 		function _waitAndSearch(callBack) {
 			timeout = setTimeout(function () {
@@ -72,7 +76,6 @@ $(document).ready(function () {
 		}
 
 		function _showResults(error, data) {
-			console.log(data);
 			var html = '<ul>';
 			if(!error){
 				for(let i=0;i<data.length;i++){

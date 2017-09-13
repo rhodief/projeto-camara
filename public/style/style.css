@@ -304,6 +304,40 @@ a.act .bt-submenu span:last-child{right: 7px;}
     width: 100%;
     height: 100%;
 }
+.facebookWrapper{
+	float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+.facebookWrapper iframe{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.twitterwrapper{
+	float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+.twitterwrapper div{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .field select,
 .field input[type=tel],
 .field input[type=text],

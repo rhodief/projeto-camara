@@ -59,8 +59,14 @@
             "label": "Participe",
             "panels":[
                 {
-                    "name": "meu_teste",
-                    "label": "Meu Teste!!",
+                    "name": "twitter_timeline",
+                    "label": "Publicações do Twitter",
+                    "pos": 1,
+                    "activated": false
+                },
+                {
+                    "name": "publicacoes_facebook",
+                    "label": "Publicações do Facebook",
                     "pos": 2,
                     "activated": false
                 }
