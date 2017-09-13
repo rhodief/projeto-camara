@@ -1,7 +1,7 @@
 {
     "root": [
         {
-            "name": "A Câmara",
+            "name": "Institucional",
             "children": [
                 {
                     "name": "Centro de Estudos e Debates Estratégicos"
@@ -10,8 +10,8 @@
                     "name": "Conheça a Câmara",
                     "children": [
                         {
-                            "name":"A Câmara",
-                            "description": "Conhece a estrutura organizacional da Câmara dos Deputados"
+                            "name": "A Câmara",
+                            "description": "Conheça a estrutura organizacional da Câmara dos Deputados"
                         },
                         {
                             "name": "A História da Câmara dos Deputados",
@@ -47,9 +47,9 @@
                 },
                 {
                     "name": "Presidência",
-                    "children":[
+                    "children": [
                         {
-                            "name":"Conheça o Presidente",
+                            "name": "Conheça o Presidente",
                             "description": "Conheça a biografia do Presidente da Câmara dos Deputados, bem como seu papel institucional"
                         }
                     ]
@@ -90,6 +90,7 @@
         },
         {
             "name": "Atividade Legislativa",
+            "description": "Informações sobre a Agenda da Câmara, Comissões, processo legislativos e Estudos",
             "children": [
                 {
                     "name": "Agenda"

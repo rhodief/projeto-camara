@@ -195,6 +195,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .menu-easy-access .icon img{max-width: 26px; max-height: 22px; display: block;}
 .menu-easy-access > li > a > .title{display:none;}
 .menu-easy-access > li .subitem{display:none; position: absolute; top:calc(100% - 1px); left: 0; background: #eaeaea;z-index: 1; width: 100%; border-top: 1px solid #acacac; -webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.11); box-shadow: 0 3px 3px 0 rgba(0,0,0,0.11); overflow: auto;}
+.menu-easy-access > li .subitem .form{margin:1em};
 .menu-subitem > li{border-bottom: 1px solid #acacac; font-size: 0;}
 .menu-subitem > li > a{font-size:16px; font-size:1rem; text-transform: uppercase; padding: 5px; display: block;}
 .menu-subitem > li.act > a{text-decoration: underline;}
