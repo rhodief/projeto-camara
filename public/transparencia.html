@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#004a2f">
+    <meta name="msapplication-navbutton-color" content="#004a2f">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#004a2f">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portal da Câmara dos Deputados">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Portal da Câmara dos Deputados</title>
+
+    <link rel="icon" href="img/layout/favicon.ico">
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/app.css">
+
+    <script type="text/javascript" src="js/commons/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/commons/scripts.js"></script>
+    <script type="text/javascript" src="js/commons/svg.js"></script>
+    <script type="text/javascript" src="js/commons/jquery.flexslider-min.js"></script>
+    <link rel="stylesheet" href="style/flexslider.css">
+</head>
+
+
+<body ng-app="app">
+    <!-- ################ INÍCIO ESPAÇO PARA NOTIFICAÇOES ########## -->
+    <noscript class="nojavscript">
+        <span>Javascript não ativado - Por favor, ative para ter uma melhor experiência de navegação neste Portal!</span>
+    </noscript>
+	<div id="notification" class="notification" style="display:none">
+		<a href="#" class="close" title="Fechar notificação">x</a>
+		<div id="main-messages"></div>
+	</div>
+	<!-- ################ FIM ESPAÇO PARA NOTIFICAÇOES ############ -->
+    <header>
+        <div class="header">
+            <div class="top-header">
+                <div class="center">
+                    <a class="bt-menu" title="Menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="text">Menu</span>
+                    </a>
+                    <h1 class="logo"><a href="#" title="Portal da Câmara dos Deputados"><img src="img/layout/logo.svg" alt="Portal da Câmara dos Deputados"></a></h1>
+                    <div class="external-links">
+                        <div class="box-links">
+                            <div class="box-libras"><span class="icon"><img src="img/layout/icones-home-vlibras.svg" alt="Libras"></span></div>
+                            <a href="http://camara.custhelp.com/">Fale Conosco</a>
+                            <a href="http://www2.camara.leg.br/transparencia/acesso-a-informacao">Acesso à Informação</a>
+                            <a href="http://www.congressonacional.leg.br/" class="congresso"><img src="img/layout/icones-home-congresso.svg" alt="Congresso"></a>
+                            <a href="http://www.senado.gov.br/" class="senado"><img src="img/layout/icones-home-senado.svg" alt="Senado"></a>
+                            <a href="http://www.tcu.gov.br/" class="tcu"><img src="img/layout/icones-home-tcu.svg" alt="TCU"></a>
+                        </div>
+                    </div>
+                    <div class="bg-search"></div>
+                </div>
+            </div>
+            <div class="bg-menu"></div>
+            <div class="menu">
+                <div class="center">
+                    <nav>
+                        <ul class="main-menu">
+                            <li class="has-submenu">
+                                <a href="/a-camara">Institucional<span class="bt-submenu"><span></span><span></span></span></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="/a-camara/conheca">Papel e história da Câmara</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/a-camara/conheca">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+															<span class="title">Papel e história da Câmara</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/a-camara/estruturaadm">Estrutura organizacional</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/a-camara/estruturaadm">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Estrutura organizacional</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/a-camara/cursos">Cursos</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/a-camara/cursos">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Cursos</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/a-camara/programas-institucionais">Programas Institucionais</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/a-camara/programas-institucionais">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Programas Institucionais</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/a-camara/documentos-e-pesquisa">Publicações e acervos</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/a-camara/documentos-e-pesquisa">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Publicações e acervos</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/a-camara/visiteacamara">Visite a Câmara</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/a-camara/visiteacamara">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Visite a Câmara</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="#">Deputados<span class="bt-submenu"><span></span><span></span></span></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="/deputados/pesquisa">Conheça os Deputados</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/pesquisa">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Conheça os Deputados</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Discursos</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/discursos-e-notas-taquigraficas">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Discursos</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/liderancas-partidarias">Lideranças partidárias</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/liderancas-partidarias">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Lideranças partidárias</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/frentes-e-grupos-parlamentares">Frente e grupos parlamentares</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/frentes-e-grupos-parlamentares">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Frente e grupos parlamentares</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="has-submenu"><a href="#">Atividade Legislativa<span class="bt-submenu"><span></span><span></span></span></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="/deputados/pesquisa">Agenda</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/pesquisa">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Agenda</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Plenário</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/Plenário-e-notas-taquigraficas">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Plenário</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/frentes-e-grupos-parlamentares">Projetos de lei e outras proposições</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/frentes-e-grupos-parlamentares">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Projetos de lei e outras proposições</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/liderancas-partidarias">Comissões</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/liderancas-partidarias">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Comissões</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/frentes-e-grupos-parlamentares">Legislação</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/frentes-e-grupos-parlamentares">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Legislação</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="has-submenu"><a href="#">Orçamento da União<span class="bt-submenu"><span></span><span></span></span></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="/deputados/pesquisa">Leis Orçamentárias</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/pesquisa">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Leis Orçamentárias</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Fiscalize</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/Fiscalize-e-notas-taquigraficas">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Fiscalize</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="has-submenu right"><a href="#">Transparência<span class="bt-submenu"><span></span><span></span></span></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="/deputados/pesquisa">Acesso à informação</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/pesquisa">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Acesso à informação</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Cota Parlamentar</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Cota Parlamentar</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Viagens oficiais e passaportes</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Viagens oficiais e passaportes</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Imóveis funcionais e auxílio-moradia</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Imóveis funcionais e auxílio-moradia</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Licitações e contratos</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Licitações e contratos</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Recursos humanos e concursos</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Recursos humanos e concursos</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Receitas e despesas</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Receitas e despesas</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Dados abertos</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Dados abertos</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="has-submenu right"><a href="#">Comunicação<span class="bt-submenu"><span></span><span></span></span></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="/deputados/pesquisa">Câmara Notícias</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/pesquisa">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Câmara Notícias</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">TV Câmara</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">TV Câmara</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Rádio Câmara</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Rádio Câmara</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Jornal da Câmara</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Jornal da Câmara</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Assessoria de Imprensa</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Assessoria de Imprensa</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Banco de Imagens</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Banco de Imagens</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Rede Legislativa de Rádio e TV</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Rede Legislativa de Rádio e TV</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Plenarinho</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">                                                        Plenarinho</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="has-submenu right"><a href="#">Participação<span class="bt-submenu"><span></span><span></span></span></a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="/deputados/pesquisa">Saiba como participar</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/pesquisa">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title"> como participar</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Participe dos debates</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title"> dos debates</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Sugira um projeto</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title"> um projeto</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Ajude a escrever a lei</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title"> a lei</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="/deputados/discursos-e-notas-taquigraficas">Fale Conosco</a>
+                                            <div class="thumb-resume">
+                                                <div class="box-thumb">
+                                                    <a href="/deputados/">
+                                                        <span class="thumb"><img src="img/uploads/img_01.jpg" alt="Foto da Câmara dos Deputados"></span>
+														<span class="resume">
+                                                        	<span class="title">Fale Conosco</span>
+                                                        	<span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque convallis eros quis metus iaculis mattis. Proin rutrum leo quis sem mattis, eget finibus mauris consectetur. Praesent porta ultricies est, et luctus felis gravida et. Aliquam</span>
+                                                   		</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="bg-easy-access"></div>
+            <div class="easy-access">
+                <div class="center">
+                    <nav>
+                        <ul class="menu-easy-access">
+                            <li class="search-form">
+                                <a href="#"><span class="icon"><img src="img/layout/search.svg" alt="Pesquisa" class="img-color-change color3"></span><span class="title">Pesquisa</span></a>
+                                <div class="subitem">
+                                    <div class="form">
+										<div class="box-search">
+											<form>
+												<input id="buscarPortal" name="buscarPortal" type="search" placeholder="Buscar no Portal">
+												<a href="#" class="search-button"><img class="img-color-change color2" src="img/layout/search.svg" alt="Buscar"></a>
+											</form>
+										</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span><span class="title">Transmissões</span></a>
+                                <div class="subitem transmissoes">
+                                    <ul class="menu-subitem">
+                                        <li>
+                                            <a href="#">Ao Vivo</a>
+                                            <div class="subitems-list">
+                                                <div class="scroll">
+                                                    <ul class="list slides">
+                                                        <li>
+                                                            <a href="#">
+																<span class="category">Transmissões Encerradas</span>
+																<span class="title">Câmara dos deputados</span>
+																<span class="text">Sessão Deliberativa Estraordinária</span>
+																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+															</a>
+                                                            <div class="links">
+                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+																<span class="category">Transmissões Encerradas</span>
+																<span class="title">Câmara dos deputados</span>
+																<span class="text">Sessão Deliberativa Estraordinária</span>
+																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+															</a>
+                                                            <div class="links">
+                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+																<span class="category">Transmissões Encerradas</span>
+																<span class="title">Câmara dos deputados</span>
+																<span class="text">Sessão Deliberativa Estraordinária</span>
+																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+															</a>
+                                                            <div class="links">
+                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+																<span class="category">Transmissões Encerradas</span>
+																<span class="title">Câmara dos deputados</span>
+																<span class="text">Sessão Deliberativa Estraordinária</span>
+																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+															</a>
+                                                            <div class="links">
+                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+																<span class="category">Transmissões Encerradas</span>
+																<span class="title">Câmara dos deputados</span>
+																<span class="text">Sessão Deliberativa Estraordinária</span>
+																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+															</a>
+                                                            <div class="links">
+                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+																<span class="category">Transmissões Encerradas</span>
+																<span class="title">Câmara dos deputados</span>
+																<span class="text">Sessão Deliberativa Estraordinária</span>
+																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+															</a>
+                                                            <div class="links">
+                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">Eventos Previstos</a>
+                                            <div class="subitems-list">
+                                                <div class="scroll">
+                                                    <ul class="list slides">
+                                                        <li>
+                                                            <a href="#">
+																<span class="category">Transmissões Encerradas</span>
+																<span class="title">Câmara dos deputados</span>
+																<span class="text">Sessão Deliberativa Estraordinária</span>
+																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+															</a>
+                                                            <div class="links">
+                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+																<span class="category">Transmissões Encerradas</span>
+																<span class="title">Câmara dos deputados</span>
+																<span class="text">Sessão Deliberativa Estraordinária</span>
+																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+															</a>
+                                                            <div class="links">
+                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+																<span class="category">Transmissões Encerradas</span>
+																<span class="title">Câmara dos deputados</span>
+																<span class="text">Sessão Deliberativa Estraordinária</span>
+																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+															</a>
+                                                            <div class="links">
+                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+																<span class="category">Transmissões Encerradas</span>
+																<span class="title">Câmara dos deputados</span>
+																<span class="text">Sessão Deliberativa Estraordinária</span>
+																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+															</a>
+                                                            <div class="links">
+                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">Transmissões Encerradas</a>
+                                            <div class="subitems-list">
+                                                <div class="scroll">
+                                                    <ul class="list slides">
+                                                        <li>
+                                                            <a href="#">
+																<span class="category">Transmissões Encerradas</span>
+																<span class="title">Câmara dos deputados</span>
+																<span class="text">Sessão Deliberativa Estraordinária</span>
+																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+															</a>
+                                                            <div class="links">
+                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+																<span class="category">Transmissões Encerradas</span>
+																<span class="title">Câmara dos deputados</span>
+																<span class="text">Sessão Deliberativa Estraordinária</span>
+																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+															</a>
+                                                            <div class="links">
+                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+																<span class="category">Transmissões Encerradas</span>
+																<span class="title">Câmara dos deputados</span>
+																<span class="text">Sessão Deliberativa Estraordinária</span>
+																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+															</a>
+                                                            <div class="links">
+                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+																<span class="category">Transmissões Encerradas</span>
+																<span class="title">Câmara dos deputados</span>
+																<span class="text">Sessão Deliberativa Estraordinária</span>
+																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+															</a>
+                                                            <div class="links">
+                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon"><img src="img/layout/calendar.svg" alt="Agenda" class="img-color-change color3"></span><span class="title">Agenda</span></a>
+                                <div class="subitem agenda">
+									<panels-gen section="acesso_rapido" pos="1"></panels-gen>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#"><span class="icon"><img src="img/layout/newspaper.svg" alt="Notícias" class="img-color-change color3"></span><span class="title">Notícias</span></a>
+                                <div class="subitem">
+                                    <div class="box-news">
+                                        <ul class="news-list">
+                                            <li><a href="#">ADMINISTRAÇÃO PÚBLICA</a></li>
+                                            <li><a href="#">AGROPECUÁRIA</a></li>
+                                            <li><a href="#">ASSISTÊNCIA SOCIAL</a></li>
+                                            <li><a href="#">CIDADES</a></li>
+                                            <li><a href="#">CIÊNCIA E TECNOLOGIA</a></li>
+                                            <li><a href="#">COMUNICAÇÃO</a></li>
+                                            <li><a href="#">CONSUMIDOR</a></li>
+                                            <li><a href="#">DIREITO E JUSTIÇA</a></li>
+                                            <li><a href="#">DIREITOS HUMANOS</a></li>
+                                            <li><a href="#">ECONOMIA</a></li>
+                                            <li><a href="#">EDUCAÇÃO E CULTURA</a></li>
+                                            <li><a href="#">ESPORTES</a></li>
+                                            <li><a href="#">INDÚSTRIA E COMÉRCIO</a></li>
+                                            <li><a href="#">INSTITUCIONAL</a></li>
+                                            <li><a href="#">MEIO AMBIENTE</a></li>
+                                            <li><a href="#">POLÍTICA</a></li>
+                                            <li><a href="#">RELAÇÕES EXTERIORES</a></li>
+                                            <li><a href="#">SAÚDE</a></li>
+                                            <li><a href="#">SEGURANÇA</a></li>
+                                            <li><a href="#">TRABALHO E PREVIDÊNCIA</a></li>
+                                            <li><a href="#">TRANSPORTE E TRÂNSITO</a></li>
+                                            <li><a href="#">TURISMO</a></li>
+                                        </ul>
+                                        <div class="news-highlight">
+                                            <a href="#">
+												<img src="img/uploads/img_02.jpg" alt="Sergio Zveiter será relator na CCJ da denúncia contra Michel Temer">
+												<span class="title">Sergio Zveiter será relator na CCJ da denúncia contra Michel Temer</span>
+											</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+    	<div class="section-header background-parallax" style="background-image: url(img/uploads/img_22.jpg);">
+    		<div class="center">
+    			<ul class="breadcrumb">
+    				<li><a href="#">Página Inicial</a></li>
+    				<li>Transparência</li>
+    			</ul>
+    			<h1 class="title">Transparência</h1>
+    			<h2 class="subtitle">Conheça as informações que a Câmara dos Deputados disponibiliza para que você possa <span>conhecer</span> e <span>fiscalizar</span> a atividade parlamentar e administrativa da Casa, bem como o Orçamento da União.</h2>
+    		</div>
+    	</div>
+    </section>
+    <section>
+		<div class="section-news">
+			<div class="center">
+                <header>
+                    <div class="text-top">
+                        <h2 class="title">
+                            Acesso à Informação
+                        </h2>
+                        <h3 class="resume">
+                            Com a edição Lei 12.527/11, conhecida como a Lei de Acesso à Informação, a divulgação de informações ganha procedimentos para facilitar e agilizar o acesso, além de fomentar o desenvolvimento de uma cultura de transparência e controle social na administração pública.
+                        </h3>
+                        <button class="button">Saiba mais</button>
+                    </div>
+                </header>
+                
+   				<div class="flex-1">
+					<div class="box-gallery shadow size4">
+						<h2 class="title">
+							Cartilha
+						</h2>
+						<div class="gallery-2 flexslider">
+							<ul class="slides">
+								<li>
+									<div class="align-h">
+										<div class="align-v">
+											<a href="#">
+												<img src="img/uploads/imgNoticiaBloco_2-5663445-1505221708055.jpg" alt="Lorem Ipsum">
+												<span class="box-text">
+													<span class="text">
+														<span class="description">CÂMARA DEBATE</span>
+														<span class="picture">Subtenente Gonzaga (PDT-MG) e Lincoln Portela (PRB-MG) conversam sobre a proposta que torna ainda mais rigoroso o Regime Disciplinar Diferenciado</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="align-h">
+										<div class="align-v">
+											<a href="#">
+												<img src="img/uploads/imgNoticiaBloco_2-5661759-1505131616748.jpg" alt="Lorem Ipsum">
+												<span class="box-text">
+													<span class="text">
+														<span class="description">MELANINA SIM</span>
+														<span class="picture">Neste episódio, atriz relata que criou grupo de teatro para enfrentar racismo</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="align-h">
+										<div class="align-v">
+											<a href="#">
+												<img src="img/uploads/imgNoticiaBloco_2-5661809-1505132406301.jpg" alt="Lorem Ipsum">
+												<span class="box-text">
+													<span class="text">
+														<span class="description">SALÃO VERDE</span>
+														<span class="picture">ICMS Ecológico: instrumento de incentivo ambiental em vigor em 18 estados</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="align-h">
+										<div class="align-v">
+											<a href="#">
+												<img src="img/uploads/imgNoticiaBloco_2-5661784-1505131907772.jpg" alt="Lorem Ipsum">
+												<span class="box-text">
+													<span class="text">
+														<span class="description">FATOR DE RISCO</span>
+														<span class="picture">Os danos causados ao bebê pelo consumo de álcool por parte da mãe</span>
+													</span>
+												</span>
+											</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="slider-2">
+							<ul class="slides">
+								<li>
+									<img src="img/uploads/imgNoticiaBloco_2-5663445-1505221708055.jpg" alt="Lorem Ipsum">
+								</li>
+								<li>
+									<img src="img/uploads/imgNoticiaBloco_2-5661759-1505131616748.jpg" alt="Lorem Ipsum">
+								</li>
+								<li>
+									<img src="img/uploads/imgNoticiaBloco_2-5661809-1505132406301.jpg" alt="Lorem Ipsum">
+								</li>
+								<li>
+									<img src="img/uploads/imgNoticiaBloco_2-5661784-1505131907772.jpg" alt="Lorem Ipsum">
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="box-other-links size3 type-1 shadow">
+						<div class="box-links">
+							<ul class="links">
+								<li class="h-2 shadow"><a href="#" title="Legislação"><span class="text">Legislação</span><span class="icon"><img class="img-color-change color4" src="img/layout/legislacao.svg" alt="Legislação"></span></a></li>
+								<li class="h-2 shadow"><a href="#" title="Relatórios"><span class="text">Relatórios</span><span class="icon"><img class="img-color-change color4" src="img/layout/relatorios.svg" alt="Relatórios"></span></a></li>
+								<li class="h-2 shadow"><a href="#" title="Perguntas Frequentes"><span class="text">Perguntas Frequentes</span><span class="icon"><img class="img-color-change color4" src="img/layout/duvidas.svg" alt="Perguntas Frequentes"></span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="box-other-links size3 type-1 shadow">
+						<div class="box-links">
+							<ul class="links">
+								<li class="h-2 shadow"><a href="#" title="Fale Conosco"><span class="text">Fale Conosco</span><span class="icon"><img class="img-color-change color4" src="img/layout/ico_fale_conosco.svg" alt="Fale Conosco"></span></a></li>
+								<li class="h-2 shadow"><a href="#" title="Atendimento Presencial"><span class="text">Atendimento Presencial</span><span class="icon"><img class="img-color-change color4" src="img/layout/contato.svg" alt="Atendimento Presencial"></span></a></li>
+								<li class="h-2 shadow"><a href="#" title="Disque Câmara"><span class="text">Disque Câmara</span><span class="icon"><img class="img-color-change color4" src="img/layout/phone.svg" alt="Disque Câmara"></span></a></li>
+							</ul>
+						</div>
+					</div>
+   				</div>
+			</div>
+		</div>
+    </section>
+    <section>
+    	<div class="section-carousel">
+    		<div class="center">
+    			<div class="gallery flexslider">
+    				<div class="top">
+    					<h2 class="title"><a href="#">Banco de Imagens</a></h2>
+    				</div>
+    				<ul class="slides">
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img20170911116323999255.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Homenagem ao Dia do Administrador. Dep. Hildo Rocha (PMDB - BA)</span>
+												<span class="picture">Luis Macedo/Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img20170911117114003164.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Homenagem ao Dia do Administrador</span>
+												<span class="picture">Luis Macedo/Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img20170911115543995461.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Homenagem ao Dia do Administrador. Dep. Izalci (PSDB-DF)</span>
+												<span class="picture">Luis Macedo/Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img2017091111704002066.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Homenagem ao Dia do Administrador. Dep. Izalci (PSDB-DF)</span>
+												<span class="picture">Luis Macedo/Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img201709061145344233484.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Audiência Pública sobre a situação dos produtores de Vinho Colonial e as medidas para viabilizar a sua produção e comercialização no contexto produtivo da agricultura familiar . Dep. Onyx Lorenzoni (DEM/RS)</span>
+												<span class="picture">Cleia Viana/Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img201709061510365463673.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Audiência Pública sobre a situação dos produtores de Vinho Colonial e as medidas para viabilizar a sua produção e comercialização no contexto produtivo da agricultura familiar.Chefe Adjunto de Transparência de Tecnologia da Embrapa Uva e Vinho - Bento Gonçalves ,Alexandre Hofmman </span>
+												<span class="picture">Gilmar Félix/Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img201709061559235756362.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Grande expediente - Dep. Alessandro Molon (REDE-RJ)</span>
+												<span class="picture">Luis Macedo / Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<img src="img/uploads/img201709061150314263191.jpg" alt="Lorem Ipsum">
+										<span class="box-text">
+											<span class="text">
+												<span class="description">Audiência Pública sobre a situação dos produtores de Vinho Colonial e as medidas para viabilizar a sua produção e comercialização no contexto produtivo da agricultura familiar </span>
+												<span class="picture">Cleia Viana/Câmara dos Deputados</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    					<li>
+    						<div class="align-h">
+    							<div class="align-v">
+									<a href="#">
+										<span class="box-text show-text">
+											<span class="text">
+												<span class="title">Ver Mais</span>
+											</span>
+										</span>
+									</a>
+    							</div>
+    						</div>
+    					</li>
+    				</ul>
+    			</div>
+				<div class="slider">
+					<ul class="slides">
+						<li>
+							<img src="img/uploads/img20170911116323999255PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<img src="img/uploads/img20170911117114003164PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<img src="img/uploads/img20170911115543995461PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<img src="img/uploads/img2017091111704002066PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<img src="img/uploads/img201709061145344233484PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<img src="img/uploads/img201709061510365463673PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<img src="img/uploads/img201709061559235756362PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<img src="img/uploads/img201709061150314263191PEQ.jpg" alt="Lorem Ipsum">
+						</li>
+						<li>
+							<a href="#">Ver mais</a>
+						</li>
+					</ul>
+				</div>
+    		</div>
+    	</div>
+    </section>
+    <section>
+    	<div class="section-news">
+    		<div class="center">
+                <header>
+                    <div class="text-top">
+                        <h2 class="title">
+                            Comissões Aprovam
+                        </h2>
+                        <h3 class="resume">
+                            Conheça as informações que a Câmara dos Deputados disponibiliza para que você possa conhecer e fiscalizar a atividade parlamentar
+                            e administrativa da Casa, bem como o Orçamento da União.
+                        </h3>
+                        <button class="button">Saiba mais</button>
+                    </div>
+                </header>
+				<div class="list-news">
+					<ul>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+						<li class="size6 type5 shadow">
+							<a href="../server_simulator/pages/noticias/noticia1.html">
+								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
+									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
+								</span>
+							</a>
+						</li>
+                	</ul>
+				</div>
+			</div>
+		</div>
+    </section>
+    <section>
+    	<div class="section-links-footer">
+    		<div class="center">
+    			<div class="flex-1">
+    				<div class="col">
+    					<ul class="links">
+    						<li><a href="#">RSS</a></li>
+    						<li><a href="#">Widgets</a></li>
+    					</ul>
+    				</div>
+    				<div class="col">
+                        <div class="social-links">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="img/layout/icon_twitter.png" alt="Twitter" class="shadow"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/layout/icon_facebook.png" alt="Facebook" class="shadow"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="img/layout/icon_youtube.png" alt="YouTube" class="shadow"></a>
+                                </li>
+                            </ul>
+                        </div>
+    				</div>
+    				<div class="col boletins">
+    					<h2 class="title">Boletins Informativos</h2>
+    					<div class="form">
+    						<div class="row">
+								<label><span>E-mail*</span><input type="email" placeholder="Digite seu E-mail" required></label>
+    						</div>
+    						<div class="row">
+    							<label><span>Senha*</span><input type="password" placeholder="Digite sua Senha" required></label>
+    						</div>
+    						<p>*Campos obrigatórios</p>
+    						<a href="#" class="link">Lembrar Senha</a>
+    						<div class="buttons">
+    							<a href="#" class="button">Quero me cadastrar</a>
+    							<a href="#" class="button">Entrar</a>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    
+    <!-- ################### Início PANEL AGENDA A ideia seria inserir lá na agenda do header, mas depois veremos como encaixar.... -->
+
+    <section>
+        [Acesso Rápido]
+        
+    </section>
+
+    <!-- ################### FIM PANEL AGENDA A ideia seria inserir lá na agenda do header, mas depois veremos como encaixar.... -->
+
+    <!-- #################### INÍCIO DO RESTO DO CORPO, SOMENTE PARA GUIA, VAMOS REFORMULAR, DE CERTO, TODA SUA ESTRUTURA -->
+
+    <section>
+        <h2>[Notícias]</h2>
+        <a href="../server_simulator/pages/noticias/noticia1.html">Notícia 01</a>
+        <a href="../server_simulator/pages/noticias/noticia2.html">Notícia 02</a>
+        <a href="../server_simulator/pages/noticias/noticia3.html">Notícia 03</a>
+
+    </section>
+    <section>
+		<h2>[Atividade Parlamentar]</h2>
+                <h4>Deputados</h4>
+                <a href="../server_simulator/pages/deputados/deputado1.html">Deputados 01</a>
+                <a href="../server_simulator/pages/deputados/deputado2.html">Deputados 02</a>
+                <a href="../server_simulator/pages/deputados/deputado3.html">Deputados 03</a>
+                <h4>Projetos</h4>
+                <a href="../server_simulator/pages/proposicoes/proposicao1.html">Proposicao 01</a>
+                <a href="../server_simulator/pages/proposicoes/proposicao2.html">Proposicao 02</a>
+                <a href="../server_simulator/pages/proposicoes/proposicao3.html">Proposicao 03</a>
+                <panels-gen section="atividade_parlamentar" pos="1"></panels-gen>
+    </section>
+    <section>[Participe]
+        <panels-gen section="participe" pos="2"></panels-gen>
+    </section>
+    <section>
+        <h1>[Fiscalize]</h1>
+        <a href="../server_simulator/pages/outras/outra.html">Link Genérico</a>
+    </section>
+    <section>[Escola para Democracia]</section>
+    <footer>Rodapé!</footer>
+
+    <div ng-controller="meuEspacoCamaraController as meuEspacoCamara">
+			<section class="hidden" id="section-meuEspacoCamara">
+				<div id="div-meuEspacoCamara">
+					<meu-espaco-camara id="meuEspacoCamara" action="meuEspacoCamara.toggleMescam()"></meu-espaco-camara>
+				</div>
+			</section>
+			<div id="button-meuEspacoCamara" style="display:none">
+				<a href="#" class="my-camara" id="button-link" ng-click="meuEspacoCamara.toggleMescam()">#MeuEspaçoCâmara</a>
+			</div>
+		</div>
+
+    <!-- #################### FIM DO RESTO DO CORPO, SOMENTE PARA GUIA, VAMOS REFORMULAR, DE CERTO, TODA SUA ESTRUTURA -->
+
+
+    <!-- Scripts Bower -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <!-- lazyLoad -->
+    <script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+    <!-- Main App -->
+    <script src="js/components/app.js"></script>
+    <script src="js/components/app.run.js"></script>
+    <!-- Search -->
+    <script src="js/components/search/search.js"></script>
+    <!-- SelectFilter -->
+    <script src="js/components/select-filter/select-filter.js"></script>
+    <!-- Meu Espaço Câmara -->
+    <script src="js/components/meu-espaco-camara/meu-espaco-camara.js"></script>
+    <script src="js/components/meu-espaco-camara/meu-espaco-camara.controller.js"></script>
+    <script src="js/components/meu-espaco-camara/meu-espaco-camara.espaco-nav.js"></script>
+    <!-- Browser Storage -->
+    <script src="js/components/browser-storage/browser-storage.js"></script>
+    <script src="js/components/browser-storage/browser-storage.localStorageService.js"></script>
+    <!-- Panels Gen -->
+    <script src="js/components/panels-gen/panels-gen.js"></script>
+    <script src="js/components/panels-gen/panels-gen.directive.js"></script>
+    <script src="js/components/panels-gen/panels-gen.service.js"></script>
+    <script src="js/components/panels-gen/locale_pt-br.js"></script>
+    <!-- Panels Requisição para WS -->
+    <script src="js/components/ws-request/ws-request.js"></script>
+    <!-- Simulador de Requisições WS -->
+    <script src="js/components/ws-request/ws-mock.js"></script>
+    <!-- Panels Requisição para WS -->
+    <script src="js/components/gps/gps.js"></script>
+
+
+	<footer>
+		<div class="footer">
+			<div class="box-menu">
+				<a class="bt-menu" title="Menu">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="text">Menu</span>
+				</a>
+			</div>
+			<div class="menu">
+				<div class="center">
+					<nav>
+						<ul class="main-menu">
+							<li class="has-submenu">
+								<a href="/a-camara">Institucional<span class="bt-submenu"><span></span><span></span></span></a>
+								<div class="submenu">
+									<ul>
+										<li>
+											<a href="/a-camara/conheca">Papel e história da Câmara</a>
+										</li>
+										<li>
+											<a href="/a-camara/estruturaadm">Estrutura organizacional</a>
+										</li>
+										<li>
+											<a href="/a-camara/cursos">Cursos</a>
+										</li>
+										<li>
+											<a href="/a-camara/programas-institucionais">Programas Institucionais</a>
+										</li>
+										<li>
+											<a href="/a-camara/documentos-e-pesquisa">Publicações e acervos</a>
+										</li>
+										<li>
+											<a href="/a-camara/visiteacamara">Visite a Câmara</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="has-submenu">
+								<a href="#">Deputados<span class="bt-submenu"><span></span><span></span></span></a>
+								<div class="submenu">
+									<ul>
+										<li>
+											<a href="/deputados/pesquisa">Conheça os Deputados</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Discursos</a>
+										</li>
+										<li>
+											<a href="/deputados/liderancas-partidarias">Lideranças partidárias</a>
+										</li>
+										<li>
+											<a href="/deputados/frentes-e-grupos-parlamentares">Frente e grupos parlamentares</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="has-submenu"><a href="#">Atividade Legislativa<span class="bt-submenu"><span></span><span></span></span></a>
+								<div class="submenu">
+									<ul>
+										<li>
+											<a href="/deputados/pesquisa">Agenda</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Plenário</a>
+										</li>
+										<li>
+											<a href="/deputados/frentes-e-grupos-parlamentares">Projetos de lei e outras proposições</a>
+										</li>
+										<li>
+											<a href="/deputados/liderancas-partidarias">Comissões</a>
+										</li>
+										<li>
+											<a href="/deputados/frentes-e-grupos-parlamentares">Legislação</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="has-submenu"><a href="#">Orçamento da União<span class="bt-submenu"><span></span><span></span></span></a>
+								<div class="submenu">
+									<ul>
+										<li>
+											<a href="/deputados/pesquisa">Leis Orçamentárias</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Fiscalize</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="has-submenu right"><a href="#">Transparência<span class="bt-submenu"><span></span><span></span></span></a>
+								<div class="submenu">
+									<ul>
+										<li>
+											<a href="/deputados/pesquisa">Acesso à informação</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Cota Parlamentar</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Viagens oficiais e passaportes</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Imóveis funcionais e auxílio-moradia</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Licitações e contratos</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Recursos humanos e concursos</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Receitas e despesas</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Dados abertos</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="has-submenu right"><a href="#">Comunicação<span class="bt-submenu"><span></span><span></span></span></a>
+								<div class="submenu">
+									<ul>
+										<li>
+											<a href="/deputados/pesquisa">Câmara Notícias</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">TV Câmara</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Rádio Câmara</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Jornal da Câmara</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Assessoria de Imprensa</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Banco de Imagens</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Rede Legislativa de Rádio e TV</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Plenarinho</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="has-submenu right"><a href="#">Participação<span class="bt-submenu"><span></span><span></span></span></a>
+								<div class="submenu">
+									<ul>
+										<li>
+											<a href="/deputados/pesquisa">Saiba como participar</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Participe dos debates</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Sugira um projeto</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Ajude a escrever a lei</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Fale Conosco</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="footer-text">
+				<div class="center">
+					<h4 class="legislatura"><strong>55ª Legislatura - 3ª Sessão Legislativa Ordinária</strong></h4>
+					<p class="contato"><span><strong>Telefone: </strong>+55 (61) 3216-0000 </span>| <span><strong>Disque-Câmara: </strong>0800-619-619</span></p>
+					<p>Câmara dos Deputados - Palácio do Congresso Nacional - Praça dos Três Poderes - Brasília - DF - Brasil - <span>CEP 70160-900</span><br>
+CNPJ: 00.530.352/0001-59 | Horário de atendimento ao público: 9h às 19h</p>
+				</div>
+			</div>
+			<div class="footer-links">
+				<ul>
+					<li>
+						<a href="http://www2.camara.leg.br/participe/fale-conosco/perguntas-frequentes" title="Perguntas Frequentes">Perguntas Frequentes</a>
+					</li>
+					<li>
+						<a href="http://www2.camara.leg.br/accessibility-info" title="Acessibilidade">Acessibilidade</a>
+					</li>
+					<li>
+						<a href="http://www2.camara.leg.br/english" title="English">English</a>
+					</li>
+					<li>
+						<a href="http://www2.camara.leg.br/espanol" title="Español">Español</a>
+					</li>
+					<li>
+						<a href="https://camaranet.camara.gov.br" title="Extranet">Extranet</a>
+					</li>
+					<li>
+						<a accesskey="9" href="http://camara.custhelp.com/" title="Fale Conosco">Fale Conosco</a>
+					</li>
+					<li>
+						<a href="http://www2.camara.leg.br/glossario" title="Glossário">Glossário</a>
+					</li>
+					<li>
+						<a href="http://www2.camara.leg.br/transparencia/sispush" title="Boletins eletrônicos">Boletins eletrônicos</a>
+					</li>
+					<li>
+						<a href="http://www2.camara.leg.br/sobre-o-portal" title="Sobre o Portal">Sobre o Portal</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+<script>
+	$(document).ready(function(){
+		  $('.slider').flexslider({
+			animation: "slide",
+			controlNav: false,
+			directionNav: false,
+			animationLoop: false,
+			slideshow: false,
+			itemWidth: 120,
+			itemMargin: 20,
+			asNavFor: '.gallery'
+		  });
+
+		  $('.gallery').flexslider({
+			animation: "slide",
+			controlNav: false,
+			animationLoop: false,
+			slideshow: false,
+			sync: ".slider"
+		  });
+		
+		  $('.slider-2').flexslider({
+			animation: "slide",
+			controlNav: false,
+			directionNav: true,
+			animationLoop: true,
+			slideshow: false,
+			itemWidth: 120,
+			itemMargin: 20,
+			asNavFor: '.gallery-2'
+		  });
+
+		  $('.gallery-2').flexslider({
+			animation: "slide",
+			controlNav: false,
+			directionNav: false,
+			animationLoop: true,
+			slideshow: true,
+			sync: ".slider-2"
+		  });
+	});
+</script>
+</body>
+
+</html>
