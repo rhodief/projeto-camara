@@ -626,7 +626,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .flex-links{padding: 10px 5px;}
 .flex-links > a{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto; text-align: center; margin: 5px; display: inline-block; text-decoration: none; min-width: inherit;}
 
-.section-links-footer{border-top:5px solid #0094d9; padding: 30px 0;}
+.section-links-footer{border-top:5px solid #0094d9; padding: 30px 0;background-color: rgb(222, 221, 221)}
 .section-links-footer .center{padding: 0; max-width: 1220px;}
 .section-links-footer .col{margin: 10px;}
 .section-links-footer .col.boletins{-ms-flex-preferred-size: 327px;flex-basis: 327px;}
