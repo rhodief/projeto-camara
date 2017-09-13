@@ -521,7 +521,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .links .box-text span{display: block;}
 .section-participate .links .box-text{display: block; padding: 0; text-align: center;}
 .section-participate .links .title{font-size: 20px; font-size: 1.25rem;}
-.section-participate .links .text{font-size: 14px; font-size: 0.875rem;}
+.section-participate .links .text{font-size: 14px; font-size: 0.9rem;}
 .section-participate .social-links ul{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-pack: distribute; justify-content: space-around;}
 .section-participate .social-links li{display: block;}
 .section-participate .social-links a{display: block;}
