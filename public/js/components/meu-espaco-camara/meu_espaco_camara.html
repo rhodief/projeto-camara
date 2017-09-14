@@ -63,10 +63,11 @@
             <div class="mescam-content">
                 <div ng-repeat="section in vm.panels">
                     <div class="section" ng-if="!section.invisible">
-                        <strong>{{section.label}}</strong>
+                        <span stype="color:#276c4d"><strong>{{section.label}}</strong></span>
                         <ul class="panels">
                             <li ng-repeat="panel in section.panels">
-                                {{panel.activated ? "[" : ""}}{{panel.label}}{{panel.activated ? "]" : ""}} <button ng-click="vm.togglePanel(panel, $parent.section)">{{panel.activated ? "Desativar" : "Ativar"}}</button>
+                                {{panel.activated ? "[" : ""}}{{panel.label}}{{panel.activated ? "]" : ""}} <button ng-click="vm.togglePanel(panel, $parent.section)"
+                                    ng-class="{act:panel.activated}">{{panel.activated ? "Ligado" : "Desligado"}}</button>
                             </li>
                         </ul>
                     </div>
@@ -76,9 +77,14 @@
         <div ng-switch-when="preferencias" class="tabs">
             <div class="mescam-content">
                 <div>
+                    <a href="#" title="Fale Conosco"><span class="icon"><img class="img-color-change color3" src="img/layout/ico_fale_conosco.svg" alt="Fale Conosco"></span><span class="text">Fale Conosco</span></a>
+                </div>
+                <div>
                     <p><strong><a href="" ng-click="vm.exportMescam()">Exportar</a> </strong> - <a href="" ng-click="vm.importMescam()">Importar</a></p>
                     <p><textarea ng-model="vm.textMescam" rows="5" cols="30"></textarea></p>
                 </div>
+
+                <div></div>
                 <ul class="rows">
                     <li><a href="" class="ok" ng-click="vm.disableIt()">Desabilitar</a></li>
                 </ul>
