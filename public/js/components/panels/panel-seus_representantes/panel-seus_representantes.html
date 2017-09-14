@@ -4,13 +4,13 @@
             <div class="panel-container-3 step-2 list act">
                 <div class="filter">
                     <div>
-                        <button ng-class="gps ? 'w3-green' : 'w3-grey'">GPS ON</button>
+                        <button ng-class="gps ? 'w3-green' : 'w3-grey'">GPS</button>
                         <select name="option" ng-model="vm.uf" ng-change="vm.changeUf(vm.uf)">
                             <option ng-repeat="uf in vm.ufsList" ng-model-options="uf.sigla">{{uf.sigla}}</option>
                         </select>
                     </div>
                     <div class="field">
-                        <input class="w3-input" type="text" placeholder="Filtrar..." ng-model="vm.agendaFilter">
+                        <input class="w3-input" type="text" placeholder="Filtrar..." ng-model="vm.deputadosFilter">
                     </div>
                 </div>
                 <ul class="panel-list list" id="container-list">
@@ -23,8 +23,8 @@
                             <li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(deputado.id)}" ng-repeat="deputado in vm.deputados | filter:vm.deputadosFilter"
                                 ng-click="vm.getDetail(deputado.id)" id="anchor-{{$index}}">
                                 <div>
-                                    <img ng-src="{{deputado.foto}}" class="w3-left w3-circle w3-margin-right" style="max-width:40px">
-                                    <span class="w3-large">{{deputado.nome}}</span><br>
+                                    <img ng-src="{{deputado.foto}}" class="img-round">
+                                    <div class="title">{{deputado.nome}}</div>
                                     <span>{{deputado.partido_sig}}/{{deputado.uf_sig}}</span>
                                 </div>
                             </li>
@@ -49,15 +49,33 @@
                                     <img src="img/img_avatar2.png" alt="Avatar">
                                 </div>
                                 <div class="text">
-                                    <p>Selecione um<br><span>Parlamentar</span></p>
+                                    <p>Selecione um<br><span>Deputado</span></p>
                                 </div>
                             </div>
                         </div>
                         <div ng-if="vm.view.ultimoStatus_nome">
                             <div class="text">
-                                <img ng-src="{{vm.view.ultimoStatus_foto}}" alt="Avatar" style="max-width:60%">
-                                <h4>{{vm.view.ultimoStatus_nome}}</h4>
-                                <h6>{{vm.view.ultimoStatus_partido_sig}}/{{vm.view.ultimoStatus_uf_sig}}</h6>
+                                <div class="list">
+                                    <img ng-src="{{vm.view.ultimoStatus_foto}}" alt="Avatar" style="max-width:60%">
+                                    <div class="title">{{vm.view.ultimoStatus_nome}}</div>
+                                    <div class="item">{{vm.view.ultimoStatus_partido_sig}}/{{vm.view.ultimoStatus_uf_sig}}</div>
+                                    <dl class="tabela">
+                                        <dt>Nome Civil</dt>
+                                        <dd>{{vm.view.nome_civil}}</dd>
+                                        <dt>Nascimento</dt>
+                                        <dd>{{vm.view.dataNascimento}}</dd>
+                                        <dt>Escolaridade</dt>
+                                        <dd>{{vm.view.escolaridade}}</dd>
+                                        <dt>Naturalidade</dt>
+                                        <dd>{{vm.view.municipioNascimento}}, {{vm.view.ufNascimento}}</dd>
+                                        <dt>Gabinete</dt>
+                                        <dd>Anexo {{vm.view.ultimoStatus_gabinete_predio}}, gab. {{vm.view.ultimoStatus_gabinete_sala}}</dd>
+                                        <dt>Email</dt>
+                                        <dd>{{vm.view.ultimoStatus_gabinete_email}}</dd>
+                                        <dt>Telefone</dt>
+                                        <dd>{{vm.view.ultimoStatus_gabinete_telefone}}</dd>
+                                    </dl>
+                                </div>
                             </div>
                         </div>
                     </div>
