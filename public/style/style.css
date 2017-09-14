@@ -593,11 +593,12 @@ a.act .bt-submenu span:last-child{right: 7px;}
 #div-meuEspacoCamara .content .rows li a.ok{background-color:#276c4d;color:#fff;padding: 0.5em;text-decoration: none;}
 #div-meuEspacoCamara .content .actions li a.act{background-color:#fff;color:#276c4d;}
 #div-meuEspacoCamara .content .rows li a.ok:hover{background-color:#5DA987;}
-#div-meuEspacoCamara .content .tabs{background: #fff;min-height: 450px}
+#div-meuEspacoCamara .content .tabs{background: #fff;min-height: 450px;padding:0.5em}
 #div-meuEspacoCamara .content .tabs .filters{display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex}
 #div-meuEspacoCamara .content .tabs .filters li{margin: 0.5em;}
 #div-meuEspacoCamara .content .tabs .section{padding: 0.5em 0 0 0}
 #div-meuEspacoCamara .content .tabs ul.panels{padding-left: 1em}
+#div-meuEspacoCamara .content .tabs ul.panels button.act{background-color:#276C4C; color:#fff}
 #div-meuEspacoCamara .content .tabs .list{margin:1em; overflow: auto}
 #div-meuEspacoCamara .content .tabs .list ul {max-height: 270px; overflow: auto; margin-bottom: 10px;}
 #div-meuEspacoCamara .content .tabs .list li{padding: 8px 0; display: -webkit-box; display: -ms-flexbox; display: flex; position:relative}
