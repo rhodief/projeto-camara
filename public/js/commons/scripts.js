@@ -84,13 +84,13 @@ $(document).ready(function () {
 					var breadCrumbs = '';
 					if(data[i].breadCrumbs){
 						for(let j=0; j<data[i].breadCrumbs.length;j++){
-							breadCrumbs+= data[i].breadCrumbs[j].name + ' > ';
+							breadCrumbs+= data[i].breadCrumbs[j].name + ' / ';
 						}
 					} 
 					html+= '<li>';
-					html+= '<div>' + breadCrumbs + '</div>';
-					html+= '<div>' + name + '</div>';
-					html+= '<div>' + description + '</div>';
+					html+= '<p class="directory">' + breadCrumbs + '</p>';
+					html+= '<p class="name">' + name + '</p>';
+					html+= '<p class="description">' + description + '</p>';
 					html+= '</li>'
 				}
 			}

@@ -129,12 +129,22 @@ dt { clear: both; }
 .header .bt-search{-webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1; width:20px; height: 20px;}
 .header .bt-search img,
 .header .bt-search svg{width:20px; height: 20px;}
-.header .box-search{position: relative; width: 100%; overflow: hidden; padding: 20px 0;}
+.header .box-search{position: relative; width: 100%; overflow: hidden; padding: 20px 10px; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.field-relative{position: relative;}
 .header .box-search input[type=text],
 .header .box-search input[type=search]{width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 50px 0 10px;}
-.header .box-search .search-button{position: absolute; top:0; right: 0; padding: 10px; margin: 20px 0;}
+.header .box-search .search-button{position: absolute; top:0; right: 0; padding: 10px; margin: 0;}
 .box-search .search-button svg,
 .box-search .search-button img{width:20px; height: 20px; display: block;}
+.ResultadoBusca{padding: 10px; background: #fff; width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: left;}
+.ResultadoBusca:empty{padding: 0;}
+.ResultadoBusca li{ display: block; font-size: 14px; font-size: 0.875rem; color: #333333; padding-bottom: 8px;}
+.ResultadoBusca li + li{border-top: 1px solid #ebebeb; padding: 8px 0;}
+.ResultadoBusca li p{display: block; margin: 0;}
+.ResultadoBusca li strong{font-size: 14px; font-size: 0.875rem;color: #004a2f; font-weight: 700;}
+.ResultadoBusca .description,
+.ResultadoBusca .directory{font-size: 12px; font-size: 0.75rem; color: #333333;}
+.ResultadoBusca .name{color: #004a2f; font-weight: 600;}
 .footer .menu,
 .header .menu{display: none; position: absolute; top:100%; left: 0; z-index: 3; background: rgba(0,48,30,0.95); width: 100%; overflow: auto; border-top: 5px solid #fff200; -webkit-box-sizing: border-box; box-sizing: border-box; padding-bottom: 10px;}
 .menu .main-menu li{display: block; position: relative;}
