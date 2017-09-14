@@ -66,18 +66,24 @@
 						<div ng-if="vm.detail.comissao">
 							<div class="text">
 								<div class="list">
-										<p>{{vm.detail.comissao}}</p>
-										<p>{{vm.detail.data}}, {{vm.detail.horario}}</p>
-										<p>{{vm.detail.estado}}</p>
-										<p>{{vm.detail.local}}</p>
-										<p>{{vm.detail.tituloReuniao}}</p>
-										<p>{{vm.detail.tipo}}</p>
-										<div ng-repeat="prop in vm.detail.proposicoes.proposicao">
-											<p>{{prop.sigla}}</p>
-											<p>{{prop.ementa}}</p>
-											<p>{{prop.numOrdemApreciacao}}</p>
-											<p>{{prop.resultado}}</p>
-										</div>
+									<div class="title">{{vm.detail.comissao}}</div>
+									<div class="date-time">{{vm.detail.data}}, {{vm.detail.horario}}</div>
+									<div>{{vm.detail.estado}}</div>
+									<div>{{vm.detail.local}}</div>
+									<div>{{vm.detail.tituloReuniao}}</div>
+									<div>{{vm.detail.tipo}}</div>
+									<div class="title">Pauta</div>
+									<div ng-if="vm.detail.proposicoes.proposicao" class="field"><input class="form" type="text" placeholder="Buscar nesta Pauta" ng-model="vm.filter.$"></div>
+									<ul>
+										<li class="listpadding" ng-repeat="prop in vm.detail.proposicoes.proposicao | filter:vm.filter | orderBy:'numOrdemApreciacao'">
+											<div>
+												<span>{{prop.numOrdemApreciacao}}. </span>
+												<span class="subtitle">{{prop.sigla}}</span>
+											</div>
+											<div class="item">{{prop.ementa}}</div>
+											<div class="status">Resultado: {{prop.resultado}}</div>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
