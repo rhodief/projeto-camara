@@ -195,7 +195,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .menu-easy-access .icon img{max-width: 26px; max-height: 22px; display: block;}
 .menu-easy-access > li > a > .title{display:none;}
 .menu-easy-access > li .subitem{display:none; position: absolute; top:calc(100% - 1px); left: 0; background: #eaeaea;z-index: 1; width: 100%; border-top: 1px solid #acacac; -webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.11); box-shadow: 0 3px 3px 0 rgba(0,0,0,0.11); overflow: auto;}
-.menu-easy-access > li .subitem .form{margin:1em};
+
 .menu-subitem > li{border-bottom: 1px solid #acacac; font-size: 0;}
 .menu-subitem > li > a{font-size:16px; font-size:1rem; text-transform: uppercase; padding: 5px; display: block;}
 .menu-subitem > li.act > a{text-decoration: underline;}
@@ -261,10 +261,22 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .panel-container-3.step-3{position: absolute; z-index: 2; left:100%; top:10px; background: #fff; min-height:calc(100% - 10px);-webkit-box-sizing:border-box;box-sizing:border-box;}
 .panel-container-3.step-2.act{left: 10%; width: 90%;}
 .panel-container-3.step-3.act{left: 15%; width: 85%;}
+
 .panel-view .detail{background: #fff; padding: 10px 0;}
 .panel-view .detail img{width: 200px; height: 200px; -o-object-fit: cover; object-fit: cover; display: block; margin: 0 auto; border-radius: 50%;}
-.detail .text{position: absolute; bottom:0; left: 0; text-align: center; width: 100%; margin-top:-30px; background: rgba(255,255,255,0.5); padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.detail .text{text-align: center; width: 100%; margin-top:-30px; background: rgba(255,255,255,0.5); padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box;}
 .detail .text .list{overflow: auto;max-height: 330px}
+.detail .text .list .listpadding {padding:1em}
+.detail .text .list .title{color:#004a2f;font-weight: 600;margin-top: 1em; margin-bottom: .5em}
+.detail .text .list .subtitle{color:#004a2f;font-weight: 500;margin-top: 1em;}
+.detail .text .list .item{font-size: 0.9rem;color: #535151;}
+.detail .text .list .status{font-size: 0.9rem;color: 004a2f}
+.detail .text .list ul {margin-bottom: 10px;}
+.detail .text .list li{padding: 8px 0}
+.detail .text .list ul li:hover{background-color: #E8E6E6}
+.detail .text .list li + li{border-top:1px solid #ebebeb;}
+.detail .list a{font-size: 14px; font-size: 0.875rem; line-height: 16px; line-height: 1rem; color: #333333; text-decoration: none; display: block; margin-bottom: 5px;}
+.detail .list .date-time{font-size: 0.9rem; color: #767676;}
 .panel-view .detail .inact{position: relative;}
 .detail .inact img{-webkit-filter: blur(5px) grayscale(1);filter: blur(5px) grayscale(1);opacity: 0.5;}
 .detail .inact .text{position: absolute; top: 50%; left: 0; text-align: center; width: 100%; margin-top:-30px; background: none;}
