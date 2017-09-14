@@ -474,6 +474,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .list-news li.size5{-webkit-box-flex: 1;-ms-flex: 1 0 170px;flex: 1 0 170px;}
 .list-news li.size6{-webkit-box-flex: 1;-ms-flex: 1 0 210px;flex: 1 0 210px;}
 .list-news a{text-decoration: none;}
+.list-news li > .title{margin: 10px; font-size: 18px; font-size: 1.125rem; text-align: center; font-weight: 600; color: #276c4d;}
 .list-news .img img{display: block; width: 100%; height: 210px; -o-object-fit: cover; object-fit: cover;}
 .list-news .box-text{padding: 10px; display: block;}
 .list-news .box-text .title{font-size: 14px; font-size: 0.875rem; line-height: 16px; line-height: 1rem; color: #004a2f; font-weight: 500; display: block; margin-bottom: 15px;}
@@ -518,6 +519,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .type-2 .links li{background-color: #116ab5;}
 .section-about .box-links .type-3{background: rgba(224,193,13,0.3);}
 .type-3 .links li{background-color: #a78f04;}
+.type-4 .links li{background-color: #004a2f;}
 
 .section-inspect{padding: 40px 0;}
 .section-inspect .center{max-width: 1200px; padding: 0 5px;}
@@ -740,6 +742,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.list-news .type1 .box-text .date-category{color: #fff;}
 	.list-news .show-text .box-text .text{display: block; margin-bottom: 30px;}
 	.list-news .type1 .box-text .text{margin-bottom:20px;}
+	.list-news .box-text .text.no-margin-bottom{margin-bottom: 0;}
 	.list-news .type1 .box-text .date-category{text-align: left;}
 	.list-news .type1 .box-text .date-category span{display: inline; margin-right: 10px;}
 	.list-news .type2{position: relative; padding-bottom: 50px;}
