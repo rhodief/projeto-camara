@@ -310,7 +310,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 
 .step-2 .list .item-selected{background: rgba(3, 49, 30, 0.85);}
 .step-2 .list .item-selected:hover{background:rgba(3, 49, 30, 0.75);}
-.step-2 .list .img-round{background-color: red;max-width:50px;border-radius: 50%;object-fit: cover;display: block;margin: 0 auto;border-style: none}
+.step-2 .list .img-round{background-color: red;max-width:50px;border-radius: 50%;-o-object-fit: cover;object-fit: cover;display: block;margin: 0 auto;border-style: none}
 .step-2 .list .item-selected .title, .step-2 .list .item-selected .date-time, .step-2 .list .item-selected div, .step-2 .list .item-selected .title p{ color: #fff};
 
 .field{margin: 5px 10px;}
@@ -554,7 +554,8 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .section-participate .box-text p{font-size: 14px; font-size: 0.875rem; color: #636363;}
 .section-participate .links{margin: 10px 0;}
 .section-participate .links li{margin: 10px 0 30px;}
-.section-participate .links a{color: #fff; text-decoration: none; }
+.section-participate .links a{text-decoration: none;}
+.section-participate.background-parallax .links a{color: #fff;}
 .section-participate .links .icon{display: block; margin-bottom: 10px;}
 .links .icon svg,
 .links .icon img{display: block; margin: 0 auto; max-width: 74px; max-height: 70px;}
