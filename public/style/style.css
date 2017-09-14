@@ -310,7 +310,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 
 .step-2 .list .item-selected{background: rgba(3, 49, 30, 0.85);}
 .step-2 .list .item-selected:hover{background:rgba(3, 49, 30, 0.75);}
-.step-2 .list .img-round{background-color: red;max-width:50px;border-radius: 50%;object-fit: cover;display: block;margin: 0 auto;border-style: none}
+.step-2 .list .img-round{background-color: red;max-width:50px;border-radius: 50%;-o-object-fit: cover;object-fit: cover;display: block;margin: 0 auto;border-style: none}
 .step-2 .list .item-selected .title, .step-2 .list .item-selected .date-time, .step-2 .list .item-selected div, .step-2 .list .item-selected .title p{ color: #fff};
 
 .field{margin: 5px 10px;}
@@ -474,6 +474,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .list-news li.size5{-webkit-box-flex: 1;-ms-flex: 1 0 170px;flex: 1 0 170px;}
 .list-news li.size6{-webkit-box-flex: 1;-ms-flex: 1 0 210px;flex: 1 0 210px;}
 .list-news a{text-decoration: none;}
+.list-news li > .title{margin: 10px; font-size: 18px; font-size: 1.125rem; text-align: center; font-weight: 600; color: #276c4d;}
 .list-news .img img{display: block; width: 100%; height: 210px; -o-object-fit: cover; object-fit: cover;}
 .list-news .box-text{padding: 10px; display: block;}
 .list-news .box-text .title{font-size: 14px; font-size: 0.875rem; line-height: 16px; line-height: 1rem; color: #004a2f; font-weight: 500; display: block; margin-bottom: 15px;}
@@ -518,6 +519,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .type-2 .links li{background-color: #116ab5;}
 .section-about .box-links .type-3{background: rgba(224,193,13,0.3);}
 .type-3 .links li{background-color: #a78f04;}
+.type-4 .links li{background-color: #004a2f;}
 
 .section-inspect{padding: 40px 0;}
 .section-inspect .center{max-width: 1200px; padding: 0 5px;}
@@ -552,7 +554,8 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .section-participate .box-text p{font-size: 14px; font-size: 0.875rem; color: #636363;}
 .section-participate .links{margin: 10px 0;}
 .section-participate .links li{margin: 10px 0 30px;}
-.section-participate .links a{color: #fff; text-decoration: none; }
+.section-participate .links a{text-decoration: none;}
+.section-participate.background-parallax .links a{color: #fff;}
 .section-participate .links .icon{display: block; margin-bottom: 10px;}
 .links .icon svg,
 .links .icon img{display: block; margin: 0 auto; max-width: 74px; max-height: 70px;}
@@ -741,6 +744,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.list-news .type1 .box-text .date-category{color: #fff;}
 	.list-news .show-text .box-text .text{display: block; margin-bottom: 30px;}
 	.list-news .type1 .box-text .text{margin-bottom:20px;}
+	.list-news .box-text .text.no-margin-bottom{margin-bottom: 0;}
 	.list-news .type1 .box-text .date-category{text-align: left;}
 	.list-news .type1 .box-text .date-category span{display: inline; margin-right: 10px;}
 	.list-news .type2{position: relative; padding-bottom: 50px;}
@@ -775,6 +779,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.box-links .icon svg,
 	.box-links .icon img{display: block; max-width: 120px; max-height: 80px; height: 80px; width: auto;}
 	.section-inspect .box-posts{display:block;-webkit-column-count: 3;column-count: 3;-webkit-column-gap: 20px;column-gap: 20px;}
+	.col.type-2 .box-text{padding: 20px 10px;}
 	.section-inspect .box-img img{height: 141px;}
 	.section-inspect .col{	-webkit-column-break-inside: avoid;	break-inside: avoid; margin: 20px 0;}
 	.section-inspect .col:first-child{margin-top: 0;}
@@ -970,7 +975,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.box-links .links a:hover:after{opacity:0.2;}
 	.box-links .links li.h-2{height: 130px;}
 	.row .box-img img{height: 100%;}
-	.section-participate .text-top{margin-bottom: 80px;}
+	.section-participate .text-top{margin-bottom: 40px;}
 	.section-participate .links .icon{width: 74px;}
 	.links .icon svg,
 	.links .icon img{max-width: 74px; max-height: 70px;}
@@ -1023,4 +1028,5 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.flexslider.gallery-2 .slides img{max-height: 435px;}
 	.box-other-links .last-news ul.list{max-height: 327px;}
 	.section-links-footer .social-links img{width: 45px; height: 45px;}
+	.col.type-2 .box-text{padding: 15px 10px;}
 }
