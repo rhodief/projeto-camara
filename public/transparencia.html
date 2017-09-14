@@ -1175,92 +1175,17 @@
             </div>
         </div>
     </section>
-    
-    <!-- ################### Início PANEL AGENDA A ideia seria inserir lá na agenda do header, mas depois veremos como encaixar.... -->
-
-    <section>
-        [Acesso Rápido]
-        
-    </section>
-
-    <!-- ################### FIM PANEL AGENDA A ideia seria inserir lá na agenda do header, mas depois veremos como encaixar.... -->
-
-    <!-- #################### INÍCIO DO RESTO DO CORPO, SOMENTE PARA GUIA, VAMOS REFORMULAR, DE CERTO, TODA SUA ESTRUTURA -->
-
-    <section>
-        <h2>[Notícias]</h2>
-        <a href="../server_simulator/pages/noticias/noticia1.html">Notícia 01</a>
-        <a href="../server_simulator/pages/noticias/noticia2.html">Notícia 02</a>
-        <a href="../server_simulator/pages/noticias/noticia3.html">Notícia 03</a>
-
-    </section>
-    <section>
-		<h2>[Atividade Parlamentar]</h2>
-                <h4>Deputados</h4>
-                <a href="../server_simulator/pages/deputados/deputado1.html">Deputados 01</a>
-                <a href="../server_simulator/pages/deputados/deputado2.html">Deputados 02</a>
-                <a href="../server_simulator/pages/deputados/deputado3.html">Deputados 03</a>
-                <h4>Projetos</h4>
-                <a href="../server_simulator/pages/proposicoes/proposicao1.html">Proposicao 01</a>
-                <a href="../server_simulator/pages/proposicoes/proposicao2.html">Proposicao 02</a>
-                <a href="../server_simulator/pages/proposicoes/proposicao3.html">Proposicao 03</a>
-                <panels-gen section="atividade_parlamentar" pos="1"></panels-gen>
-    </section>
-    <section>[Participe]
-        <panels-gen section="participe" pos="2"></panels-gen>
-    </section>
-    <section>
-        <h1>[Fiscalize]</h1>
-        <a href="../server_simulator/pages/outras/outra.html">Link Genérico</a>
-    </section>
-    <section>[Escola para Democracia]</section>
-    <footer>Rodapé!</footer>
-
     <div ng-controller="meuEspacoCamaraController as meuEspacoCamara">
-			<section class="hidden" id="section-meuEspacoCamara">
-				<div id="div-meuEspacoCamara">
-					<meu-espaco-camara id="meuEspacoCamara" action="meuEspacoCamara.toggleMescam()"></meu-espaco-camara>
-				</div>
-			</section>
-			<div id="button-meuEspacoCamara" style="display:none">
-				<a href="#" class="my-camara" id="button-link" ng-click="meuEspacoCamara.toggleMescam()">#MeuEspaçoCâmara</a>
-			</div>
-		</div>
-
-    <!-- #################### FIM DO RESTO DO CORPO, SOMENTE PARA GUIA, VAMOS REFORMULAR, DE CERTO, TODA SUA ESTRUTURA -->
-
-
-    <!-- Scripts Bower -->
-    <script src="bower_components/angular/angular.min.js"></script>
-    <!-- lazyLoad -->
-    <script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
-    <!-- Main App -->
-    <script src="js/components/app.js"></script>
-    <script src="js/components/app.run.js"></script>
-    <!-- Search -->
-    <script src="js/components/search/search.js"></script>
-    <!-- SelectFilter -->
-    <script src="js/components/select-filter/select-filter.js"></script>
-    <!-- Meu Espaço Câmara -->
-    <script src="js/components/meu-espaco-camara/meu-espaco-camara.js"></script>
-    <script src="js/components/meu-espaco-camara/meu-espaco-camara.controller.js"></script>
-    <script src="js/components/meu-espaco-camara/meu-espaco-camara.espaco-nav.js"></script>
-    <!-- Browser Storage -->
-    <script src="js/components/browser-storage/browser-storage.js"></script>
-    <script src="js/components/browser-storage/browser-storage.localStorageService.js"></script>
-    <!-- Panels Gen -->
-    <script src="js/components/panels-gen/panels-gen.js"></script>
-    <script src="js/components/panels-gen/panels-gen.directive.js"></script>
-    <script src="js/components/panels-gen/panels-gen.service.js"></script>
-    <script src="js/components/panels-gen/locale_pt-br.js"></script>
-    <!-- Panels Requisição para WS -->
-    <script src="js/components/ws-request/ws-request.js"></script>
-    <!-- Simulador de Requisições WS -->
-    <script src="js/components/ws-request/ws-mock.js"></script>
-    <!-- Panels Requisição para WS -->
-    <script src="js/components/gps/gps.js"></script>
-
-
+            <section class="hidden" id="section-meuEspacoCamara">
+                <div id="div-meuEspacoCamara">
+                    <meu-espaco-camara id="meuEspacoCamara" action="meuEspacoCamara.toggleMescam()"></meu-espaco-camara>
+                </div>
+            </section>
+            <div id="button-meuEspacoCamara" style="display:none">
+                <a href="#" class="my-camara" id="button-link" ng-click="meuEspacoCamara.toggleMescam()">#MeuEspaçoCâmara</a>
+            </div>
+        </div>
+    
 	<footer>
 		<div class="footer">
 			<div class="box-menu">
@@ -1520,6 +1445,54 @@ CNPJ: 00.530.352/0001-59 | Horário de atendimento ao público: 9h às 19h</p>
 		  });
 	});
 </script>
+
+
+
+<div ng-controller="meuEspacoCamaraController as meuEspacoCamara">
+        <section class="hidden" id="section-meuEspacoCamara">
+            <div id="div-meuEspacoCamara">
+                <meu-espaco-camara id="meuEspacoCamara" action="meuEspacoCamara.toggleMescam()"></meu-espaco-camara>
+            </div>
+        </section>
+        <div id="button-meuEspacoCamara" style="display:none">
+            <a href="#" class="my-camara" id="button-link" ng-click="meuEspacoCamara.toggleMescam()">#MeuEspaçoCâmara</a>
+        </div>
+    </div>
+
+<!-- #################### FIM DO RESTO DO CORPO, SOMENTE PARA GUIA, VAMOS REFORMULAR, DE CERTO, TODA SUA ESTRUTURA -->
+
+
+<!-- Scripts Bower -->
+<script src="bower_components/angular/angular.min.js"></script>
+<!-- lazyLoad -->
+<script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+<!-- Main App -->
+<script src="js/components/app.js"></script>
+<script src="js/components/app.run.js"></script>
+<!-- Search -->
+<script src="js/components/search/search.js"></script>
+<!-- SelectFilter -->
+<script src="js/components/select-filter/select-filter.js"></script>
+<!-- Meu Espaço Câmara -->
+<script src="js/components/meu-espaco-camara/meu-espaco-camara.js"></script>
+<script src="js/components/meu-espaco-camara/meu-espaco-camara.controller.js"></script>
+<script src="js/components/meu-espaco-camara/meu-espaco-camara.espaco-nav.js"></script>
+<!-- Browser Storage -->
+<script src="js/components/browser-storage/browser-storage.js"></script>
+<script src="js/components/browser-storage/browser-storage.localStorageService.js"></script>
+<!-- Panels Gen -->
+<script src="js/components/panels-gen/panels-gen.js"></script>
+<script src="js/components/panels-gen/panels-gen.directive.js"></script>
+<script src="js/components/panels-gen/panels-gen.service.js"></script>
+<script src="js/components/panels-gen/locale_pt-br.js"></script>
+<!-- Panels Requisição para WS -->
+<script src="js/components/ws-request/ws-request.js"></script>
+<!-- Simulador de Requisições WS -->
+<script src="js/components/ws-request/ws-mock.js"></script>
+<!-- Panels Requisição para WS -->
+<script src="js/components/gps/gps.js"></script>
+
+
 </body>
 
 </html>
