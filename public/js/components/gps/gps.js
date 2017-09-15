@@ -82,8 +82,9 @@
                     var state = addressComponent[componentLength - 2];
                     var output = {
                         estado: state.long_name,
-                        estado_sig: 'DF'
+                        estado_sig: state.short_name
                     }
+                    console.log(output)
                     return $q.resolve(output);
                 }
 
