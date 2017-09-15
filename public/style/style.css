@@ -353,37 +353,12 @@ a.act .bt-submenu span:last-child{right: 7px;}
     height: 100%;
 }
 .facebookWrapper{
-	float: none;
-    clear: both;
-    width: 100%;
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 25px;
-    height: 0;
 }
 .facebookWrapper iframe{
-	position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
-
-.twitterwrapper{
-	float: none;
-    clear: both;
-    width: 100%;
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 25px;
-    height: 0;
-}
+.facebookWrapper,
+.twitterwrapper{max-width: 100%;position: relative; max-height: 250px; overflow: auto; margin-top: 20px; background: #fff;}
 .twitterwrapper div{
-	position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
 
 .field select,
@@ -573,10 +548,10 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .section-participate .links .box-text{display: block; padding: 0; text-align: center;}
 .section-participate .links .title{font-size: 20px; font-size: 1.25rem;}
 .section-participate .links .text{font-size: 14px; font-size: 0.9rem;}
-.section-participate .social-links ul{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-pack: distribute; justify-content: space-around;}
-.section-participate .social-links li{display: block;}
+.section-participate .social-links ul{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-pack: distribute; justify-content: space-around; -ms-flex-wrap: wrap; flex-wrap: wrap;}
+.section-participate .social-links li{display: block; margin: 20px 0;}
 .section-participate .social-links a{display: block;}
-.section-participate .social-links img{width: 60px; height: 60px; display: block; border-radius: 50%;}
+.section-participate .social-links img{width: 60px; height: 60px; display: block; border-radius: 50%; margin: auto;}
 
 .section-education{padding: 40px 0; background: #ebebeb;}
 .section-education .center{padding: 0; max-width: 1200px;}
@@ -994,7 +969,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.section-participate .links .box-text{width: calc(100% - 104px); text-align: left; margin-left: 20px;}
 	.section-participate .social-links{margin-top: 40px;}
 	.section-participate .social-links ul{display: inline-block; text-align: center; width: 100%;}
-	.section-participate .social-links li{display: inline-block;vertical-align: middle; margin: 0 50px;}
+	.section-participate .social-links li{display: inline-block;vertical-align: top; margin: 0 50px;}
 	.section-participate .social-links img{width: 80px; height: 80px;}
 	.flexslider .align-h{height: 768px;}
 	.flexslider .slides img{max-height: 768px;}

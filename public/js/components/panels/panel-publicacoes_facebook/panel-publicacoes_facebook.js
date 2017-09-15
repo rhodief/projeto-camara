@@ -34,7 +34,7 @@
                     text = parse.text;
                 }
             }
-            var template = '<div class="facebookWrapper"><iframe width="500" height="665" ng-src="' + url + '" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div><span class="box-text"><span class="title">' + text + '</span><span class="date-category"><span>TV Câmara</span></span></span>';
+            var template = '<div class="facebookWrapper"><iframe width="300" height="350" ng-src="' + url + '" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div>';
             var newElement = $compile(template)(scope);
             element.append(newElement);
         }
