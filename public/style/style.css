@@ -279,12 +279,11 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .subitems-list .list .place span{display: inline;}
 .subitems-list .list .date-time-status{display: inline-block; width: 100%;}
 .subitems-list .list .date-time-status .right{float: right;}
-.subitems-list .links {text-align: left; position: absolute; bottom: 10px; left: 20px;}
-.subitems-list .list li:first-child .links{left: 10px;}
-.subitems-list .links a{display: inline-block; font-size: 12px; font-size: 0.75rem; color: #004a2f; margin-right: 20px}
-.subitems-list .links .icon{display: inline-block; margin-right: 5px; vertical-align: bottom;}
-.subitems-list .links svg,
-.subitems-list .links img{display: block; width: 16px; height: 16px;}
+.list .links {text-align: left; margin-top: 10px;}
+.list .links a{display: inline-block; font-size: 12px; font-size: 0.75rem; color: #004a2f; margin-right: 20px}
+.list .links .icon{display: inline-block; margin-right: 5px; vertical-align: bottom;}
+.list .links svg,
+.list .links img{display: block; width: 16px; height: 16px;}
 
 .appointment{padding: 10px 0; position: relative; width: 100%; overflow: hidden;z-index: 10000}
 .appointment .center{max-width: 1240px;}
@@ -685,6 +684,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .favorite-button{width: 31px; height: 31px; position: absolute; top: 10px; right: 10px; z-index: 3; background: url(../img/layout/star_favorite.png) no-repeat 0 0; text-indent: -5000em; cursor: pointer;}
 .favorite-button:hover{background-position: 0 -31px;}
 .favorite-button.act{background-position: 0 bottom;}
+.mescam-content .icon {display: inline-block; vertical-align: middle;}
+.mescam-content .icon svg,
+.mescam-content .icon img{max-width: 40px; max-height: 40px;}
 
 @media screen and (max-width: 767px) {
 	.section-news .box-news.mobile-invert-order{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
@@ -893,7 +895,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), to(rgba(234,234,234,1)))!important;
 	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(234,234,234,1) 100%)!important;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea', GradientType=0 )!important;}
-	.step-2 .list{height: 218px;}
+	.step-2 .list{height: 268px;}
 	.panel-container-3.step-3{height: calc(100% - 20px);}
 	.panel-container-3.step-3.size-2{min-width: 550px}
 	.field-dropdown-mobile .dropdown{display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin: 0 5px;}
@@ -932,16 +934,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.subitems-list .list li:hover .category,
 	.subitems-list .list li:hover .title,
 	.subitems-list .list li:hover a{color: #fff;}
-	.list li:hover .img-color-change svg,
-	.list li:hover .img-color-change path,
-	.list li:hover .img-color-change rect,
-	.list li:hover .img-color-change line,
-	.list li:hover .img-color-change circle,
-	.list li:hover .img-color-change polygon{fill:#fff!important;}
-	.list li:hover .img-color-change line{stroke:#fff!important;}
+	.list li.item-selected .img-color-change svg,
+	.list li.item-selected .img-color-change path,
+	.list li.item-selected .img-color-change rect,
+	.list li.item-selected .img-color-change line,
+	.list li.item-selected .img-color-change circle,
+	.list li.item-selected .img-color-change polygon{fill:#fff!important;}
+	.list li.item-selected .img-color-change line{stroke:#fff!important;}
 	.subitems-list .list li + li:hover:before{opacity: 0;}
-	.subitems-list .links a{position: relative;}
-	.subitems-list .links a:hover{top:-3px;}
+	.list li.item-selected a{color:#fff;}
 	.section-header .center{padding: 106px 10px;}
 	.section-header .title{font-size: 70px; font-size: 4.375rem;}
 	.section-news .box-news .last-news{max-width: 271px;}
