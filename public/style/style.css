@@ -340,7 +340,8 @@ a.act .bt-submenu span:last-child{right: 7px;}
 
 .field{margin: 5px 10px;}
 
-.step-2 .list{background: #eee;margin: 10px 10px 0;padding: 0 10px;display: block;height: 223px;overflow: auto;}
+.step-2 .list{background: #eee;margin: 10px 10px 0;padding: 0 10px;display: block;height: 283px;overflow: auto;}
+.step-2 .filter + .list{height: 223px;}
 .step-2 .list li{background: #fff; margin: 10px 0; padding: 10px; display: block; text-align: left; cursor: pointer;}
 .step-2 .list li:hover{background:#F8F6F6;}
 
@@ -709,7 +710,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.menu-subitem > li > a{padding:10px 20px;}
 	.menu-subitem > li.act{border-bottom-color:#004a2f;}
 	.menu-subitem > li.act a{text-decoration: none;}
-	.step-2 .list{height: 226px;}
+	.step-2 .list{height: 286px;}
+	.step-2 .filter + .list{height: 226px;}
 	.subitem .subitems-list{position: absolute; top:100%; left: 0; width: 100%; border-top:1px solid rgba(0, 74, 47, 0.21);}
 	.subitem .subitems-list .scroll{margin: 20px;}
 	.subitem .subitems-list:after{right: 20px;}
@@ -896,6 +898,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(234,234,234,1) 100%)!important;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea', GradientType=0 )!important;}
 	.step-2 .list{height: 268px;}
+	.step-2 .filter + .list{height: 219px;}
 	.panel-container-3.step-3{height: calc(100% - 20px);}
 	.panel-container-3.step-3.size-2{min-width: 550px}
 	.field-dropdown-mobile .dropdown{display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin: 0 5px;}
