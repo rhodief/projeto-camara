@@ -14,7 +14,7 @@
             </div>
             <ul class="rows">
                 <li><a href="#" class="ok" ng-click="vm.gotIt()">Quero Conhecer</a></li>
-                <li><a href="#" ng-click="vm.disableIt()">Agora não, obrigado(a)!</a></li>
+                <li><a href="#" ng-click="vm.disableIt()">Agora não!</a></li>
             </ul>
 
         </div>
@@ -40,15 +40,13 @@
                     <li><a href="#" ng-click="vm.orderFavorites = 'title'">Título</a></li>
                     <li><a href="#" ng-click="vm.orderFavorites = '-date'">Data</a></li>
                     <li><a href="#" ng-click="vm.orderFavorites = 'category'">Categoria</a></li>
-                    <li><a href="#" ng-click="vm.orderFavorites = 'tags'">Etiquetas</a></li>
                 </ul>
                 <div class="list">
                     <ul>
                         <li ng-if="!vm.favorites[0]"><strong>Nada foi salvo. Navegue pelas páginas e grave aqui o que for do seu interesse</strong></li>
                         <li ng-repeat="fav in vm.favorites | orderBy:vm.orderFavorites">
-                            <div class="right"><input type="checkbox" id="" class="select"></div>
                             <div class="center">
-                                <div><strong><a href="{{fav.url}}">{{fav.title}}</a></strong></div>
+                                <div class="text"><strong><a href="{{fav.url}}">{{fav.title}}</a></strong></div>
                                 <div class="date-time">{{fav.category}} - Salvo em {{fav.date.date}}, {{fav.date.time}}</div>
                             </div>
                             <div class="right"><button class="delete" ng-click="vm.removeFavorite(fav.url, $index)">x</button></div>
@@ -63,11 +61,13 @@
             <div class="mescam-content">
                 <div ng-repeat="section in vm.panels">
                     <div class="section" ng-if="!section.invisible">
-                        <span stype="color:#276c4d"><strong>{{section.label}}</strong></span>
+                        <span class="text"><strong>{{section.label}}</strong></span>
                         <ul class="panels">
                             <li ng-repeat="panel in section.panels">
-                                {{panel.activated ? "[" : ""}}{{panel.label}}{{panel.activated ? "]" : ""}} <button ng-click="vm.togglePanel(panel, $parent.section)"
+                                <div class="margin">
+                                    <span class="subtext">{{panel.activated ? "[" : ""}}{{panel.label}}{{panel.activated ? "]" : ""}}</span>   <button ng-click="vm.togglePanel(panel, $parent.section)"
                                     ng-class="{act:panel.activated}">{{panel.activated ? "Ligado" : "Desligado"}}</button>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -76,15 +76,19 @@
         </div>
         <div ng-switch-when="preferencias" class="tabs">
             <div class="mescam-content">
-                <div>
+                <div class="margin">
                     <a href="#" title="Fale Conosco"><span class="icon"><img class="img-color-change color3" src="img/layout/ico_fale_conosco.svg" alt="Fale Conosco"></span><span class="text">Fale Conosco</span></a>
+                    <br><span class="subtext">Espaço que a Câmara dos Deputados disponibiliza a você diversas opções de contato, incluíndo pedido de informações, dúvidas, reclamações, denúncias, etc. Para acessar, é necessário entrar com suas credenciais de cadastro. Caso não tenha, cadastre-se, é rápido e simples.</span>
                 </div>
-                <div>
+                <div class="margin">
+                    <a href="#" title="E-Democracia"><span class="icon"><img class="img-color-change color3" src="img/layout/edem-logo.svg" alt="E-Democracia"></span><span class="text">E-Democracia</span></a>
+                    <br><span class="subtext">O portal e-Democracia é uma iniciativa da Câmara dos Deputados que visa ampliar a participação social no processo legislativo e aproximar cidadãos e seus representantes por meio da interação digital.</span>
+                </div>
+                <div class="margin">
                     <p><strong><a href="" ng-click="vm.exportMescam()">Exportar</a> </strong> - <a href="" ng-click="vm.importMescam()">Importar</a></p>
                     <p><textarea ng-model="vm.textMescam" rows="5" cols="30"></textarea></p>
                 </div>
 
-                <div></div>
                 <ul class="rows">
                     <li><a href="" class="ok" ng-click="vm.disableIt()">Desabilitar</a></li>
                 </ul>

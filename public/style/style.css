@@ -591,6 +591,8 @@ a.act .bt-submenu span:last-child{right: 7px;}
 #div-meuEspacoCamara .content .actions li{display: inline;}
 #div-meuEspacoCamara .content .rows li{margin: 2em}
 #div-meuEspacoCamara .content .tabs .rows li a {padding: 0.5em;text-decoration: none;background-color: #EAE6E6; color:#276c4d}
+#div-meuEspacoCamara .content .tabs .subtext{font-size: 0.8rem;color: #767676;margin-left: 1rem}
+#div-meuEspacoCamara .content .tabs .mescam-content .margin{margin:0.5rem}
 #div-meuEspacoCamara .content .actions li a{padding: 0.5em;text-decoration: none;background-color: #276C4C; color:#fff}
 #div-meuEspacoCamara .content .tabs .rows li a:hover{background-color: #949090; color:#fff}
 #div-meuEspacoCamara .content .actions li a:hover{background-color: #54AA84}
@@ -606,7 +608,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 #div-meuEspacoCamara .content .tabs .list{margin:1em; overflow: auto}
 #div-meuEspacoCamara .content .tabs .list ul {max-height: 270px; overflow: auto; margin-bottom: 10px;}
 #div-meuEspacoCamara .content .tabs .list li{padding: 8px 0; display: -webkit-box; display: -ms-flexbox; display: flex; position:relative}
-#div-meuEspacoCamara .content .tabs .list li .delete{font-size: 0.875rem;line-height: 15px;line-height: 0.9375rem;color: #fff;text-decoration: none;background: red;border-radius: 50%;width: 18px;height: 18px;text-align: center;}
+#div-meuEspacoCamara .content .tabs .list li .delete{font-size: 0.875rem;line-height: 15px;line-height: 0.9375rem;color: #fff;text-decoration: none;background: red;border-radius: 50%;width: 18px;height: 18px;text-align: center;cursor: pointer}
 #div-meuEspacoCamara .content .tabs .list li:hover{background-color: #E8E6E6}
 #div-meuEspacoCamara .content .tabs .list li + li{border-top:1px solid #ebebeb;}
 #div-meuEspacoCamara .content .tabs .list a{font-size: 14px; font-size: 0.875rem; line-height: 16px; line-height: 1rem; color: #333333; text-decoration: none; display: block; margin-bottom: 5px;}

@@ -52,7 +52,8 @@
         {
             "section": "fiscalize",
             "label": "Fiscalize",
-            "panels": []
+            "panels": [],
+            "invisible": true
         },
         {
             "section": "participe",
@@ -60,13 +61,13 @@
             "panels":[
                 {
                     "name": "twitter_timeline",
-                    "label": "Publicações do Twitter",
+                    "label": "Twitter",
                     "pos": 1,
                     "activated": false
                 },
                 {
                     "name": "publicacoes_facebook",
-                    "label": "Publicações do Facebook",
+                    "label": "Facebook",
                     "pos": 2,
                     "activated": false
                 }
@@ -75,7 +76,8 @@
         {
             "section": "educacao",
             "label": "Educação para Democracia",
-            "panels": []
+            "panels": [],
+            "invisible": true
         }
     ]
 }
