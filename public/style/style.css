@@ -618,7 +618,7 @@ background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,48,30,0.
 background: -webkit-gradient(linear, left top, right top, from(rgba(0,48,30,0.75)), to(rgba(255,255,255,0)));
 background: linear-gradient(to right, rgba(0,48,30,0.75) 0%, rgba(255,255,255,0) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', endColorstr='#ffffff', GradientType=1 );}
-.section-header .center{position: relative;padding: 70px 10px; z-index: 1;}
+.section-header .center{position: relative;padding: 70px 10px; z-index: 1; max-width: 1220px;}
 .section-header .breadcrumb{position: absolute; top: 0; left: 10px;}
 .section-header .breadcrumb li{color: #fff; display: inline-block; font-size: 14px; font-size: 0.875rem;}
 .section-header .breadcrumb li + li:before{content: ' / '}
