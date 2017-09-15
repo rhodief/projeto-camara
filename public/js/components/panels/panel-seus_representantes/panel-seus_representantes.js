@@ -45,7 +45,6 @@
 
             function active() {
                 vm.loadingList = true;
-                getLocation().then(getDeputadosGps).catch(_error)
                 getUfsList().then(setUfsList).catch(_error)
             }
 
@@ -75,6 +74,7 @@
 
             function setUfsList(list) {
                 vm.ufsList = list;
+                getLocation().then(getDeputadosGps).catch(_error);
             }
 
             function getDeputados(params){
