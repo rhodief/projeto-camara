@@ -462,6 +462,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .section-news .last-news .tabs li a.act{background: #004a2f;}
 .section-news .last-news .list{max-height: 270px; overflow: auto; margin-bottom: 10px;}
 .section-news .last-news .list li{padding: 8px 0; display: block;}
+.section-news .last-news .list li:hover{background-color: #E8E6E6}
 .section-news .last-news .list li + li{border-top:1px solid #ebebeb;}
 .section-news .last-news a{font-size: 14px; font-size: 0.875rem; line-height: 16px; line-height: 1rem; color: #333333; text-decoration: none; display: block; margin-bottom: 5px;}
 .section-news .last-news .date-time{font-size: 12px; font-size: 0.75rem; color: #767676;}
@@ -685,10 +686,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .section-links-footer .col{margin: 10px;}
 .section-links-footer .col.boletins{-ms-flex-preferred-size: 327px;flex-basis: 327px;}
 .section-links-footer .links a{font-size: 14px; font-size: 0.875rem; font-weight: 600; color:#004a2f; text-decoration: none; }
-.section-links-footer .social-links ul{display: inline-block; width: 100%; text-align: center;}
-.section-links-footer .social-links li{display: inline-block;margin: 5px;}
-.section-links-footer .social-links a{display: block;}
-.section-links-footer .social-links img{display: block; width: 35px; height: 35px; border-radius: 50%;}
+.section-links-footer .social-links ul, .mescam-content .social-links ul{display: inline-block; width: 100%; text-align: center;}
+.section-links-footer .social-links li, .mescam-content .social-links li{display: inline-block;margin: 5px;}
+.section-links-footer .social-links a, .mescam-content .social-links a{display: block;}
+.section-links-footer .social-links img, .mescam-content .social-links img{display: block; width: 35px; height: 35px; border-radius: 50%;}
 .section-links-footer .title{font-size: 18px; font-size: 1.125rem; color: #004a2f; font-weight: 600;}
 .section-links-footer .col .buttons{display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between;}
 .section-links-footer .buttons .button{min-width: auto; padding-left: 30px; padding-right: 30px;}
