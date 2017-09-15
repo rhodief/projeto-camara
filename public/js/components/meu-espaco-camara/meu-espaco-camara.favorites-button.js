@@ -15,7 +15,7 @@
         var directive = {
             restrict: 'E',
             scope: {},
-            template: '<button class="favorite-button" ng-click="vm.toggleInclude()">{{vm.included ? "Favoritado" : "Não Favoritado. Favoritar?"}}</button>',
+            template: '<button class="favorite-button" ng-class="{act: vm.included}" ng-click="vm.toggleInclude()">{{vm.included ? "Favoritado" : "Não Favoritado. Favoritar?"}}</button>',
             controller: favoritesButtonController,
             controllerAs:'vm'
         };
