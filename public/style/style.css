@@ -776,6 +776,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.list-news li.size6{-webkit-box-flex: 1;-ms-flex: 1 0 40%;flex: 1 0 40%;}
 	.list-news .player img{height: 100%;}
 	.section-news .last-news.tab-filter .list{max-height: 515px;}
+	.section-news .last-news.tab-filter .list.margin-adjust{max-height: 445px;}
 	.section-about{padding: 40px 0;}
 	.text-top{margin-bottom: 40px;}
 	.text-top .title{font-size: 30px; font-size: 1.875rem;}
@@ -943,6 +944,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.box-news .news-highlight img{-webkit-transform: scale(1.1);transform: scale(1.1);}
 	.box-news .news-highlight a:hover img{-webkit-transform: scale(1);transform: scale(1);}
 	.section-news .last-news.tab-filter .list{max-height: 585px;}
+	.section-news .last-news.tab-filter .list.margin-adjust{max-height: 520px;}
 	.subitems-list .list li:hover{background: rgba(3, 49, 30, 0.75);}
 	.subitems-list .list li:hover .text, 
 	.subitems-list .list li:hover .place, 
@@ -1046,6 +1048,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.list-news .type2 .box-text .date-category,
 	.list-news .type3 .box-text .date-category{margin-bottom: 20px;}
 	.section-news .last-news.tab-filter .list{max-height: 708px;}
+	.section-news .last-news.tab-filter .list.margin-adjust{max-height: 647px;}
 	.section-about .box-links .title-link{width: 280px;}
 	.box-links .content-links{width: calc(100% - 290px);}
 	.flexslider.gallery-2 .align-h{height: 435px;}
