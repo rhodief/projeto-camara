@@ -1,5 +1,4 @@
 html,body,header,footer,p,a,h1,h2,h3,h4,figure,form{margin: 0; padding: 0;}
-/*figure{-webkit-margin-before: 0; -webkit-margin-after: 0; -webkit-margin-start:0; -webkit-margin-end:0;}*/
 ul, li, ol{list-style: none; margin: 0; padding: 0;}
 body,
 .appointment .pickadate{font:normal 100% 'Open Sans', sans-serif;}
@@ -61,11 +60,21 @@ a,
     50% {-webkit-box-shadow: 0 0 40px #0094db;box-shadow: 0 0 40px #0094db;}
     100% {-webkit-box-shadow: 0 0 0 #0094db;box-shadow: 0 0 0 #0094db;}
 }
-
 @keyframes animate-shadow {  
     0% {-webkit-box-shadow: 0 0 0 #0094db;box-shadow: 0 0 0 #0094db;}
     50% {-webkit-box-shadow: 0 0 50px #0094db;box-shadow: 0 0 50px #0094db;}
     100% {-webkit-box-shadow: 0 0 0 #0094db;box-shadow: 0 0 0 #0094db;}
+}
+
+@-webkit-keyframes animate-fade-toggle {  
+    0% {opacity:0.3;}
+    50% {opacity:1;}
+    100% {opacity:0.3;}
+}
+@keyframes animate-fade-toggle {  
+    0% {opacity:0.3;}
+    50% {opacity:1;}
+    100% {opacity:0.3;}
 }
 
 dl.tabela {
@@ -187,6 +196,13 @@ dt { clear: both; }
 .img-color-change.color4 circle,
 .img-color-change.color4 polygon{fill:#000!important;}
 .img-color-change.color4 line{stroke:#000!important;}
+.live .img-color-change.color3 svg,
+.live .img-color-change.color3 path,
+.live .img-color-change.color3 rect,
+.live .img-color-change.color3 line,
+.live .img-color-change.color3 circle,
+.live .img-color-change.color3 polygon{-webkit-animation: animate-fade-toggle 2s linear infinite;animation: animate-fade-toggle 2s linear infinite;}
+.live .img-color-change.color3 line{-webkit-animation: animate-fade-toggle 2s linear infinite;animation: animate-fade-toggle 2s linear infinite;}
 .bg-easy-access,
 .header .bg-search,
 .header .bg-menu{position: fixed; top:0; left:0; width:100%; height: 100%; background: #000; opacity: 0.5; z-index: 1; display: none;}
