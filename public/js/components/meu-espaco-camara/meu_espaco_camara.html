@@ -50,8 +50,8 @@
                             <div class="center">
                                 <div><strong><a href="{{fav.url}}">{{fav.title}}</a></strong></div>
                                 <div class="date-time">{{fav.category}} - Salvo em {{fav.date.date}}, {{fav.date.time}}</div>
-                            </div class="right">
-                            <div><button class="delete" ng-click="vm.removeFavorite(fav.url, $index)">x</button></div>
+                            </div>
+                            <div class="right"><button class="delete" ng-click="vm.removeFavorite(fav.url, $index)">x</button></div>
 
 
                         </li>
@@ -92,3 +92,6 @@
         </div>
     </div>
 </div>
+<script>
+imgColorChange();
+</script>

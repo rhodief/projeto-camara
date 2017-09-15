@@ -1,7 +1,8 @@
 /*
  * Replace all SVG images with inline SVG
  */
-jQuery(document).ready(function(){
+
+function imgColorChange(){
 	jQuery('.img-color-change').each(function(){
 		var $img = jQuery(this);
 		var imgID = $img.attr('id');
@@ -68,4 +69,5 @@ jQuery(document).ready(function(){
 		}, 'xml');
 
 	});
-})
+}
+imgColorChange();

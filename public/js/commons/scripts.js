@@ -159,6 +159,7 @@ $(document).ready(function () {
 	menu_max_height();
 	atualizaMinHeight();
 	subItemHeight();
+	imgColorChange();
 });
 $(window).resize(function (e) {
 	menu_max_height();
