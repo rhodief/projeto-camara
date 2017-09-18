@@ -24,15 +24,13 @@
 
 
 <body ng-app="app">
-    <!-- ################ INÍCIO ESPAÇO PARA NOTIFICAÇOES ########## -->
     <noscript class="nojavscript">
         <span>Javascript não ativado - Por favor, ative para ter uma melhor experiência de navegação neste Portal!</span>
     </noscript>
-	<div id="notification" class="notification" style="display:none">
-		<a href="#" class="close" title="Fechar notificação">x</a>
-		<div id="main-messages"></div>
-	</div>
-	<!-- ################ FIM ESPAÇO PARA NOTIFICAÇOES ############ -->
+    <div id="notification" class="notification" style="display:none">
+        <a href="#" class="close" title="Fechar notificação">x</a>
+        <div id="main-messages"></div>
+    </div>
     <header>
         <div class="header">
             <div class="top-header">
@@ -54,7 +52,6 @@
                             <a href="http://www.tcu.gov.br/" class="tcu"><img src="img/layout/icones-home-tcu.svg" alt="TCU"></a>
                         </div>
                     </div>
-                    <div class="bg-search"></div>
                 </div>
             </div>
             <div class="bg-menu"></div>
@@ -233,221 +230,28 @@
                                 <a href="#"><span class="icon"><img src="img/layout/search.svg" alt="Pesquisa" class="img-color-change color3"></span><span class="title">Pesquisa</span></a>
                                 <div class="subitem">
                                     <div class="form">
-										<div class="box-search">
-											<form>
-												<input id="buscarPortal" name="buscarPortal" type="search" placeholder="Buscar no Portal">
-												<a href="#" class="search-button"><img class="img-color-change color2" src="img/layout/search.svg" alt="Buscar"></a>
-											</form>
-										</div>
+                                        <div class="box-search">
+                                           <div class="field-relative">
+												<form>
+													<input id="buscarPortal" name="buscarPortal" type="search" placeholder="Buscar no Portal">
+													<a href="#" class="search-button"><img class="img-color-change color2" src="img/layout/search.svg" alt="Buscar"></a>
+												</form>
+												<div class="shadow ResultadoBusca" id="ResultadoBusca"></div>
+                                           </div>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <a href="#"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span><span class="title">Transmissões</span></a>
+                                <a href="#" class=""><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span><span class="title">Transmissões</span></a>
                                 <div class="subitem transmissoes">
-                                    <ul class="menu-subitem">
-                                        <li>
-                                            <a href="#">Ao Vivo</a>
-                                            <div class="subitems-list">
-                                                <div class="scroll">
-                                                    <ul class="list slides">
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#">Eventos Previstos</a>
-                                            <div class="subitems-list">
-                                                <div class="scroll">
-                                                    <ul class="list slides">
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#">Transmissões Encerradas</a>
-                                            <div class="subitems-list">
-                                                <div class="scroll">
-                                                    <ul class="list slides">
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <panels-gen section="acesso_rapido" pos="1"></panels-gen>
                                 </div>
                             </li>
                             <li>
                                 <a href="#"><span class="icon"><img src="img/layout/calendar.svg" alt="Agenda" class="img-color-change color3"></span><span class="title">Agenda</span></a>
                                 <div class="subitem agenda">
-									<panels-gen section="acesso_rapido" pos="1"></panels-gen>
+                                    <panels-gen section="acesso_rapido" pos="2"></panels-gen>
                                 </div>
                             </li>
                             <li>
