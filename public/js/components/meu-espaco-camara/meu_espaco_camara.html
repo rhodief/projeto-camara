@@ -46,8 +46,10 @@
                         <li ng-if="!vm.favorites[0]"><strong>Nada foi salvo. Navegue pelas páginas e grave aqui o que for do seu interesse</strong></li>
                         <li ng-repeat="fav in vm.favorites | orderBy:vm.orderFavorites">
                             <div class="center">
-                                <div class="text"><strong><a href="{{fav.url}}">{{fav.title}}</a></strong></div>
-                                <div class="date-time">{{fav.category}} - Salvo em {{fav.date.date}}, {{fav.date.time}}</div>
+                                <a href="{{fav.url}}">
+                                    <div class="text"><strong>{{fav.title}}</strong></div>
+                                    <div class="date-time">{{fav.category}} - Salvo em {{fav.date.date}}, {{fav.date.time}}</div>
+                                </a>
                             </div>
                             <div class="right"><button class="delete" ng-click="vm.removeFavorite(fav.url, $index)">x</button></div>
 
@@ -65,8 +67,7 @@
                         <ul class="panels">
                             <li ng-repeat="panel in section.panels">
                                 <div class="margin">
-                                    <span class="subtext">{{panel.activated ? "[" : ""}}{{panel.label}}{{panel.activated ? "]" : ""}}</span>   <button ng-click="vm.togglePanel(panel, $parent.section)"
-                                    ng-class="{act:panel.activated}">{{panel.activated ? "Ligado" : "Desligado"}}</button>
+                                    <span class="subtext">{{panel.activated ? "[" : ""}}{{panel.label}}{{panel.activated ? "]" : ""}}</span>                                    <button ng-click="vm.togglePanel(panel, $parent.section)" ng-class="{act:panel.activated}">{{panel.activated ? "Ligado" : "Desligado"}}</button>
                                 </div>
                             </li>
                         </ul>
@@ -107,5 +108,6 @@
     </div>
 </div>
 <script>
-imgColorChange();
+    imgColorChange();
+
 </script>

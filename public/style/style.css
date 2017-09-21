@@ -371,7 +371,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
     height: 100%;
 }
 .facebookWrapper,
-.twitterwrapper{max-width: 100%;position: relative; max-height: 250px; overflow: auto; margin-top: 20px; background: #fff;}
+.twitterwrapper{max-width: 100%;position: relative; max-height: 300px; overflow: auto; margin-top: 20px; background: #fff;}
 .field select,
 .field input[type=tel],
 .field input[type=text],
