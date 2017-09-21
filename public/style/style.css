@@ -112,6 +112,7 @@ dt { clear: both; }
 
 .flex-1{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
 .flex-1 > div{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;}
+.flex-1 > .size2{-ms-flex-preferred-size: 290px;flex-basis: 290px;}
 .flex-1 > .size3{-ms-flex-preferred-size: 300px;flex-basis: 300px;}
 .flex-1 > .size4{-ms-flex-preferred-size: 390px;flex-basis: 390px;}
 
@@ -371,7 +372,11 @@ a.act .bt-submenu span:last-child{right: 7px;}
     height: 100%;
 }
 .facebookWrapper,
+<<<<<<< HEAD
 .twitterwrapper{max-width: 100%;position: relative; max-height: 300px; overflow: auto; margin-top: 20px; background: #fff;}
+=======
+.twitterwrapper{max-width: 100%;position: relative; max-height: 250px; overflow: auto; margin-top: 20px; background: #fff;}
+>>>>>>> Html
 .field select,
 .field input[type=tel],
 .field input[type=text],
@@ -488,9 +493,10 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .list-news .vertical.scroll{max-width: 100%; overflow: auto;max-height: 109px;}
 .list-news .vertical.scroll .media-tabs{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: 5px 5px 0;}
 .vertical.scroll .media-tabs li{width: auto; text-align: center; margin: 5px; -webkit-box-flex:1; -ms-flex:1 1 auto; flex:1 1 auto;}
-.vertical.scroll .media-tabs a{font-size: 14px; font-size: 0.875rem; padding: 10px; background: #686868; color: #fff; display: block;}
+.vertical.scroll .media-tabs a{font-size: 14px; font-size: 0.875rem; padding: 10px; background: #686868; color: #fff; display: block; position: relative;}
 .vertical.scroll .media-tabs a:hover,
 .vertical.scroll .media-tabs a.act{background: #004a2f;}
+.vertical.scroll .media-tabs .live .icon{display: inline-block; vertical-align: middle; margin-left: 10px; position: relative; left: -10px; text-indent: -5000em; width:12px; height: 12px; background: #c30f16; border-radius: 50%; -webkit-animation: animate-fade-toggle 2s linear infinite;animation: animate-fade-toggle 2s linear infinite;}
 .list-news .player{position: relative; display: block;}
 .list-news .player:before{content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background:rgba(0,0,0,0.5); z-index: 1;}
 .list-news .player:after{content: ''; position: absolute; top: 50%; left: 50%; width: 80px; height: 80px; margin-left: -40px; margin-top: -40px; background:url(../img/layout/player.png) no-repeat center center; background-size:100%; z-index: 2; opacity: 0.75;}
