@@ -79,12 +79,12 @@ $(document).ready(function () {
 		function _showResults(error, data) {
 			var html = '<ul>';
 			if (!error) {
-				for (let i = 0; i < data.length; i++) {
+				for (var i = 0; i < data.length; i++) {
 					var name = data[i].name;
 					var description = data[i].description || '';
 					var breadCrumbs = '';
 					if (data[i].breadCrumbs) {
-						for (let j = 0; j < data[i].breadCrumbs.length; j++) {
+						for (var j = 0; j < data[i].breadCrumbs.length; j++) {
 							breadCrumbs += data[i].breadCrumbs[j].name + ' / ';
 						}
 					}
@@ -98,7 +98,7 @@ $(document).ready(function () {
 			html += '</ul>';
 			$('#ResultadoBusca').html(html);
 		}
-
+		
 		function _search(callBack) {
 			$.get(urlSiteMap, function () { }, 'json').done(function (data) {
 				var error = false;
@@ -119,7 +119,7 @@ $(document).ready(function () {
 
 		function _findRecursive(data, breadCrumbs) {
 
-			for (let i = 0; i < data.length; i++) {
+			for (var i = 0; i < data.length; i++) {
 				var index = i; var value = data[i]; var name = value.name; var desc = value.description || '';
 				var nameSearch = _getMatch(input, name);
 				if (nameSearch) {
@@ -145,7 +145,7 @@ $(document).ready(function () {
 		}
 		function _applyHighlight(value, matchArray) {
 			var ret = '';
-			for (let i = 0; i < matchArray.length; i++) {
+			for (var i = 0; i < matchArray.length; i++) {
 				ret = value.split(matchArray[i]).join('<strong>' + matchArray[i] + '</strong>')
 			}
 			return ret;

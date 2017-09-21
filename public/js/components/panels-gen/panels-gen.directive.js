@@ -85,7 +85,7 @@
             function buildNameDirective(name) {
                 var splt = name.split('_');
                 var directive = 'panel' + capitalizeFirstLetter(splt[0]);
-                for (let i = 1; i < splt.length; i++) {
+                for (var i = 1; i < splt.length; i++) {
                     directive += capitalizeFirstLetter(splt[i]);
                 }
                 directive += 'Controller';

@@ -258,7 +258,7 @@
         function _getDataFromList(list, schema) {
             var output = [];
             var listToRun = (list instanceof Array ? list : new Array(list));
-            for (let i = 0; i < listToRun.length; i++) {
+            for (var i = 0; i < listToRun.length; i++) {
                 output[i] = _getDataFromSingle(listToRun[i], schema);
             }
             return output;
@@ -268,7 +268,7 @@
             var explode = script.split('.');
             var out = context;
             var len = explode.length;
-            for (let i = 0; i < len; i++) {
+            for (var i = 0; i < len; i++) {
                 var index = explode[i];
                 var item = out[index];
                 if (item === undefined) {
@@ -278,7 +278,7 @@
                     } else {
                         //Tentar como expressão regular...
                         var exps = index.split('|-|');
-                        for (let j = 0; j < exps.length; j++) {
+                        for (var j = 0; j < exps.length; j++) {
                             var vl = out[exps[j]];
                             if (vl) item = vl;
                         }

@@ -198,7 +198,7 @@
         }
 
         function _findValueInIndexObj(value, index, array){
-            for(let i=0;i<array.length;i++){
+            for(var i=0;i<array.length;i++){
                 if(index && array[i][index] && array[i][index] === value){
                     return i;
                 }
