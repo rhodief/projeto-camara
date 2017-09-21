@@ -74,17 +74,12 @@
                 function successCallback(data){
                     var fullAddress = data.data.results[0];
                     var formated = fullAddress.formatted_address;
-                    
-                    //var regex = /\s-[\w]{2}/
-
-                    var addressComponent = fullAddress.address_components
-                    var componentLength = addressComponent.length;
-                    var state = addressComponent[componentLength - 2];
+                    var regex = /\s([^BR \d]{2}),/
+                    var sigla = formated.match(regex);
+                    var out = sigla[1] || '';
                     var output = {
-                        estado: state.long_name,
-                        estado_sig: state.short_name
+                        estado_sig: out
                     }
-                    console.log(output)
                     return $q.resolve(output);
                 }
 

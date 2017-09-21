@@ -103,7 +103,6 @@
             function _renderDeputado(data){
                 vm.view = data;
                 vm.loadingView = false;
-                console.log(data);
             }
 
             function getUfsList() {
