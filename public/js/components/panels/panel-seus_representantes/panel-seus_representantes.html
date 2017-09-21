@@ -1,4 +1,8 @@
 <div class="appointment">
+    <script>
+        $('#meus_representantes-list').bind('mousewheel DOMMouseScroll', blockScroll);
+        
+    </script>
     <div class="center">
         <div>
             <div class="panel-container-3 step-2 list act">
@@ -13,7 +17,7 @@
                         <input class="w3-input" type="text" placeholder="Filtrar..." ng-model="vm.deputadosFilter">
                     </div>
                 </div>
-                <ul class="panel-list list" id="container-list">
+                <ul class="panel-list list" id="meus_representantes-list">
                     <div ng-if="vm.loadingList">
                         <span class="loading">{{vm.loadingListMessage}}</span>
                         <div ng-if="vm.reloadButton"><a href="" onClick="location.reload()">Recarregue a Página</a></div>
@@ -54,8 +58,11 @@
                             </div>
                         </div>
                         <div ng-if="vm.view.ultimoStatus_nome">
+                            <script>
+                                $('#meus_representantes-view').bind('mousewheel DOMMouseScroll', blockScroll);
+                            </script>
                             <div class="text">
-                                <div class="list">
+                                <div class="list" id="meus_representantes-view">
                                     <img ng-src="{{vm.view.ultimoStatus_foto}}" alt="Avatar" style="max-width:60%">
                                     <div class="title">{{vm.view.ultimoStatus_nome}}</div>
                                     <div class="item">{{vm.view.ultimoStatus_partido_sig}}/{{vm.view.ultimoStatus_uf_sig}}</div>

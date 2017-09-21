@@ -55,6 +55,7 @@ $(document).ready(function () {
 		return false;
 	});
 
+
 	var timeout;
 	$('#buscarPortal').keyup(function (e) {
 		clearTimeout(timeout);
@@ -63,11 +64,11 @@ $(document).ready(function () {
 		var urlSiteMap = 'js/commons/sitemap.json';
 		var input = this.value; var results = [];
 
-		if (input.length >= minLength){
+		if (input.length >= minLength) {
 			_waitAndSearch(_showResults);
-		}else{
+		} else {
 			_showResults(true);
-		} 
+		}
 
 		function _waitAndSearch(callBack) {
 			timeout = setTimeout(function () {
@@ -77,80 +78,80 @@ $(document).ready(function () {
 
 		function _showResults(error, data) {
 			var html = '<ul>';
-			if(!error){
-				for(let i=0;i<data.length;i++){
+			if (!error) {
+				for (let i = 0; i < data.length; i++) {
 					var name = data[i].name;
 					var description = data[i].description || '';
 					var breadCrumbs = '';
-					if(data[i].breadCrumbs){
-						for(let j=0; j<data[i].breadCrumbs.length;j++){
-							breadCrumbs+= data[i].breadCrumbs[j].name + ' / ';
+					if (data[i].breadCrumbs) {
+						for (let j = 0; j < data[i].breadCrumbs.length; j++) {
+							breadCrumbs += data[i].breadCrumbs[j].name + ' / ';
 						}
-					} 
-					html+= '<li>';
-					html+= '<p class="directory">' + breadCrumbs + '</p>';
-					html+= '<p class="name">' + name + '</p>';
-					html+= '<p class="description">' + description + '</p>';
-					html+= '</li>'
+					}
+					html += '<li>';
+					html += '<p class="directory">' + breadCrumbs + '</p>';
+					html += '<p class="name">' + name + '</p>';
+					html += '<p class="description">' + description + '</p>';
+					html += '</li>'
 				}
 			}
-			html+= '</ul>';
+			html += '</ul>';
 			$('#ResultadoBusca').html(html);
 		}
 
-		function _search(callBack){
-			$.get(urlSiteMap, function(){}, 'json').done(function(data){
+		function _search(callBack) {
+			$.get(urlSiteMap, function () { }, 'json').done(function (data) {
 				var error = false;
 				//O Back-end que fará o trabalho de seleção. A função a seguir simulará o algoritmo do Back-end.
 				_backendSearch(error, data, callBack);
-			}).fail(function(error){
+			}).fail(function (error) {
 				var data = null;
 				error.customError = 'Ocorreu um erro. Recarregue a página e tente novamente';
 				callBack(error, data);
 			});
 		}
 
-		function _backendSearch(error, data, callBack){
-			_findRecursive(data.root, [{name:'HOME', url:''}]);
+		function _backendSearch(error, data, callBack) {
+			_findRecursive(data.root, [{ name: 'HOME', url: '' }]);
 			callBack(error, results);
 		}
 
-		
-		function _findRecursive(data, breadCrumbs){
 
-			for(let i=0; i<data.length;i++){
+		function _findRecursive(data, breadCrumbs) {
+
+			for (let i = 0; i < data.length; i++) {
 				var index = i; var value = data[i]; var name = value.name; var desc = value.description || '';
 				var nameSearch = _getMatch(input, name);
-				if(nameSearch){
+				if (nameSearch) {
 					value.name = _applyHighlight(name, nameSearch);
 				}
 				var descSearch;
-				if(desc){
+				if (desc) {
 					descSearch = _getMatch(input, desc);
-					if(descSearch){
+					if (descSearch) {
 						value.description = _applyHighlight(desc, descSearch);
 					}
 				}
-				if(nameSearch || descSearch){
+				if (nameSearch || descSearch) {
 					value.breadCrumbs = breadCrumbs
 					results.push(value);
 				}
-				if(Array.isArray(value.children)){
+				if (Array.isArray(value.children)) {
 					var newBread = breadCrumbs.slice();
-					newBread.push({name:name, url:''});
+					newBread.push({ name: name, url: '' });
 					_findRecursive(value.children, newBread);
 				}
 			}
 		}
-		function _applyHighlight(value, matchArray){
+		function _applyHighlight(value, matchArray) {
 			var ret = '';
-			for(let i = 0; i<matchArray.length;i++){
+			for (let i = 0; i < matchArray.length; i++) {
 				ret = value.split(matchArray[i]).join('<strong>' + matchArray[i] + '</strong>')
 			}
 			return ret;
 		}
 
-		function _getMatch(search, target){
+		function _getMatch(search, target) {
 			var nameRegex = new RegExp(search, 'gi');
 			return target.match(nameRegex);
 		}
@@ -244,3 +245,18 @@ function toggleDropdown(e) {
 	$(e).parent().children('.dropdown').toggleClass('act');
 	return false;
 };
+
+function blockScroll(e) {
+	var scrollTo = null;
+	if (e.type == 'mousewheel') {
+		scrollTo = (e.originalEvent.wheelDelta * -1);
+	}
+	else if (e.type == 'DOMMouseScroll') {
+		scrollTo = 40 * e.originalEvent.detail;
+	}
+
+	if (scrollTo) {
+		e.preventDefault();
+		$(this).scrollTop(scrollTo + $(this).scrollTop());
+	}
+}
