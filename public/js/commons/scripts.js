@@ -98,7 +98,7 @@ $(document).ready(function () {
 			html += '</ul>';
 			$('#ResultadoBusca').html(html);
 		}
-		
+
 		function _search(callBack) {
 			$.get(urlSiteMap, function () { }, 'json').done(function (data) {
 				var error = false;
@@ -157,7 +157,7 @@ $(document).ready(function () {
 		}
 	});
 
-	$('.side-menu .bt-menu').click(function(){
+	$('.side-menu .bt-menu').click(function () {
 		$(this).toggleClass('act');
 		$('.corner-menu').toggleClass('act').slideToggle();
 	});
@@ -166,9 +166,19 @@ $(document).ready(function () {
 		sideSubmenu($(this));
 		return false;
 	});
-	$('.corner-menu > li.has-submenu.act > a').each(function(){
+	$('.corner-menu > li.has-submenu.act > a').each(function () {
 		sideSubmenu($(this));
 	});
+
+	// ATALHOS DO TECLADO!!!
+	$('html').keydown(function (e) {
+		if (e.shiftKey && e.which == 48) {
+			scrollToElement('html', '#header');
+			$('#logo').focus();
+		}
+
+	});
+
 	moverRecomendados();
 	menu_max_height();
 	atualizaMinHeight();
@@ -274,7 +284,7 @@ function blockScroll(e) {
 		$(this).scrollTop(scrollTo + $(this).scrollTop());
 	}
 }
-function sideSubmenu(e){
+function sideSubmenu(e) {
 	if ($(e).hasClass('act')) {
 		$('.corner-menu > li.has-submenu > a').removeClass('act').parent().removeClass('act').children('.submenu').slideUp();
 	} else {
@@ -282,10 +292,28 @@ function sideSubmenu(e){
 		$(e).addClass('act').parent().addClass('act').children('.submenu').slideDown();
 	}
 }
-function moverRecomendados(){
-	if ($(window).width() > 1023){
+function moverRecomendados() {
+	if ($(window).width() > 1023) {
 		$('.box-see-too').appendTo('.box-side');
-	}else{
+	} else {
 		$('.box-see-too').appendTo('.article-sidebar > .center');
 	}
+}
+
+function scrollToElement(containerId, scrollToId) {
+	var container = $('html, body'),
+		scrollTo = $(scrollToId);
+
+	container.animate({
+		scrollTop: $(scrollToId).offset().top
+	});
+}
+
+function scrollToDivPoint(containerEl, pointEl) {
+	var container = $(container),
+		scrollTo = $(pointEl);
+
+	container.animate({
+		scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
+	});
 }

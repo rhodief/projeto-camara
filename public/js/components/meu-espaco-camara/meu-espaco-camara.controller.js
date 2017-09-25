@@ -14,20 +14,36 @@
         vm.opened = false;
         vm.toggleMescam = toggleMescam;
 
-        function toggleMescam() {
-            //Fazer aparecer
-            //REVERF ISSO AQUI... É A DIRETIVA Q CONTROLA>... ############
-            //Ver se trabalho com remove add e remove class... 
+        var page = angular.element(document.querySelector('html'));
+        page.bind('keyup',pressKey);
 
+
+        function toggleMescam() {
+            
             if (vm.opened) {
-                angular.element(document.getElementById('section-meuEspacoCamara')).removeClass('act');
+                close();
             } else {
-                var css = angular.element(document.getElementById('button-link')).css('text-align');
-                $rootScope.$broadcast('initMescamFavorites', true);
-                angular.element(document.getElementById('section-meuEspacoCamara')).addClass('act');
+                open();
             }
-            vm.opened = !vm.opened;
-            //Leitura de Configurações ao abrir.. se houver
+        }
+
+        function open(){
+            var css = angular.element(document.getElementById('button-link')).css('text-align');
+            $rootScope.$broadcast('initMescamFavorites', true);
+            angular.element(document.getElementById('section-meuEspacoCamara')).addClass('act');
+            vm.opened = true;
+        }
+
+        function close(){
+            angular.element(document.getElementById('section-meuEspacoCamara')).removeClass('act');
+            vm.opened = false;
+        }
+
+        function pressKey(e){
+            if(e.shiftKey && e.which == '57'){
+                toggleMescam();
+                angular.element(document.getElementById('favinput')).focus();
+            }
         }
     }
 })();
