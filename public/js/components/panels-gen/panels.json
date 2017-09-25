@@ -60,8 +60,8 @@
             "label": "Participe",
             "panels":[
                 {
-                    "name": "audiencias_interativas",
-                    "label": "Audiências Interativas",
+                    "name": "e_democracia",
+                    "label": "E-Democracia",
                     "pos": 3,
                     "activated": false
                 },
