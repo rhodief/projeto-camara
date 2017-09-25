@@ -39,13 +39,12 @@
             vm.loadingListMessage = 'Carregando Lista de Deputados';
             vm.loadingView;
             vm.loadingViewMessage = 'Carregando Deputado(a)';
-
             vm.reloadButton;
             
 
             function active() {
                 vm.loadingList = true;
-                getUfsList().then(setUfsList).catch(_error)
+                getUfsList().then(setUfsList).catch(_errorList)
             }
 
             active();
@@ -74,17 +73,17 @@
 
             function setUfsList(list) {
                 vm.ufsList = list;
-                getLocation().then(getDeputadosGps).catch(_error);
+                getLocation().then(getDeputadosGps).catch(_errorList);
             }
 
             function getDeputados(params){
                 vm.loadingList = true;
-                return _getDeputados(params).then(_renderDeputados).catch(_error);
+                return _getDeputados(params).then(_renderDeputados).catch(_errorList);
             }
 
             function getDeputado(id) {
                 vm.loadingView = true;
-                return _getDeputado(id).then(_renderDeputado).catch(_error);
+                return _getDeputado(id).then(_renderDeputado).catch(_errorView);
             }
 
             function _getDeputados(params) {
@@ -117,8 +116,15 @@
                 return id === vm.viewId;
             }
 
-            function _error(e) {
+            function _errorList(e){
+                vm.deputados = [{error: 'Não foi possível carregar Lista de Deputados. Selecione um Estado'}];
+                vm.loadingList = false;
                 console.log(e);
+            }
+
+            function _errorView(e) {
+                vm.view = [{error:'Não foi possível carregar dados do Deputado.'}];
+                vm.loadingView = false;
             }
         }
         return directive;

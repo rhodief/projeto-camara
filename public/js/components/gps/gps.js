@@ -72,9 +72,15 @@
                 .catch(errorCallback);
 
                 function successCallback(data){
+                    if(data.data.error_message){
+                        return $q.reject({
+                            error: 'Erro ao tentar conseguir a localização do Usuário',
+                            data: data.data
+                        });
+                    }
                     var fullAddress = data.data.results[0];
                     var formated = fullAddress.formatted_address;
-                    var regex = /\s([^BR \d]{2}),/
+                    var regex = /\s(?!BR)(?!\d)(\w{2}),/
                     var sigla = formated.match(regex);
                     var out = sigla[1] || '';
                     var output = {

@@ -23,7 +23,7 @@
                         <div ng-if="vm.reloadButton"><a href="" onClick="location.reload()">Recarregue a Página</a></div>
                     </div>
                     <div ng-if="!vm.loadingList">
-                        <div ng-if="vm.deputados[0]">
+                        <div ng-if="vm.deputados[0] && !vm.deputados[0].error">
                             <li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(deputado.id)}" ng-repeat="deputado in vm.deputados | filter:vm.deputadosFilter"
                                 ng-click="vm.getDetail(deputado.id)" id="anchor-{{$index}}">
                                 <div>
@@ -35,6 +35,9 @@
                         </div>
                         <div ng-if="!vm.deputados[0]">
                             <span class="no-event">Não há ocorrências para esta busca.</span>
+                        </div>
+                        <div ng-if"vm.deputados[0] && vm.deputados[0].error ">
+                            <span class="no-event">{{vm.deputados[0].error}}</span>
                         </div>
                     </div>
                 </ul>
@@ -84,6 +87,9 @@
                                     </dl>
                                 </div>
                             </div>
+                        </div>
+                        <div ng-if="vm.view[0] && vm.view[0].error">
+                            <span class="no-event">{{vm.view[0].error}}</span>
                         </div>
                     </div>
                 </div>
