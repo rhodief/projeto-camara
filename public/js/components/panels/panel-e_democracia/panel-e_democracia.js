@@ -74,3 +74,46 @@
     }
 
 })();
+
+(function () {
+    'use strict';
+
+    angular
+        .module ('panelEDemocracia')
+        .directive ('imgLogo', imgLogo);
+
+    imgLogo.$inject = ['$window'];
+
+    function imgLogo($window) {
+        var directive = {
+            link: link,
+            scope:{ngModel:"="},
+            restrict: 'EA',
+            template: '<img class="icon" style="width:57px" ng-src="img/layout/logo-{{logo}}.svg" alt="{{alt}}" class="img-color-change">'
+        };
+        return directive;
+
+        function link(scope, element, attrs) {
+            var type = scope.ngModel;
+            switch(type){
+                case 'audiencias_interativas':
+                scope.logo = 'audiencias-publicas';
+                scope.alt = 'Audiências Interativas';
+                break;
+                case 'wikilegis':
+                scope.logo = 'wikilegis';
+                scope.alt = 'Wikilegis';
+                break;
+                case 'expressao':
+                scope.logo = 'expressao';
+                scope.alt = 'Expressão';
+                break;
+                case 'pauta_participativa':
+                scope.logo = 'pauta-participativa';
+                scope.alt = 'Pauta Participativa';
+                break;
+            }
+        }
+    }
+
+})();
