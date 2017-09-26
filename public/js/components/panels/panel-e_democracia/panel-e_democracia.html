@@ -1,98 +1,45 @@
 <div class="appointment">
     <script>
-        $('#meus_representantes-list').bind('mousewheel DOMMouseScroll', blockScroll);
-        
+        $('#e_democracia-list').bind('mousewheel DOMMouseScroll', blockScroll);
     </script>
     <div class="center">
         <div>
-            <div class="panel-container-3 step-2 list act">
+            <div class="panel-container-3 step-2 list act large">
                 <div class="filter">
-                    <div>
-                        <button ng-class="gps ? 'w3-green' : 'w3-grey'">GPS</button>
-                        <select name="option" ng-model="vm.uf" ng-change="vm.changeUf(vm.uf)">
-                            <option ng-repeat="uf in vm.ufsList" ng-model-options="uf.sigla">{{uf.sigla}}</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <input class="w3-input" type="text" placeholder="Filtrar..." ng-model="vm.deputadosFilter">
+                    <div class="field-dropdown-mobile">
+                        <div id="filter-dropdown-edemo" class="dropdown shadow">
+                            <button ng-click="vm.actFilter('audiencias_interativas')" ng-class="{act:vm.customFilter.categoria == 'audiencias_interativas'}">Audiências Interativas</button>
+                            <button ng-click="vm.actFilter('wikilegis')" ng-class="{act:vm.customFilter.categoria == 'wikilegis'}">Wikilegis</button>
+                            <button ng-click="vm.actFilter('expressao')" ng-class="{act:vm.customFilter.categoria == 'expressao'}">Expressão</button>
+                            <button ng-click="vm.actFilter('pauta_participativa')" ng-class="{act:vm.customFilter.categoria == 'pauta_participativa'}">Pauta Participativa</button>
+                        </div>
+                        <button class="toggle-dropdown filter" type="button" onclick="toggleDropdown(this)">&#9660;</button>
                     </div>
                 </div>
-                <ul class="panel-list list" id="meus_representantes-list">
+                <ul class="panel-list list" id="e_democracia-list">
                     <div ng-if="vm.loadingList">
                         <span class="loading">{{vm.loadingListMessage}}</span>
                         <div ng-if="vm.reloadButton"><a href="" onClick="location.reload()">Recarregue a Página</a></div>
                     </div>
                     <div ng-if="!vm.loadingList">
-                        <div ng-if="vm.deputados[0] && !vm.deputados[0].error">
-                            <li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(deputado.id)}" ng-repeat="deputado in vm.deputados | filter:vm.deputadosFilter"
-                                ng-click="vm.getDetail(deputado.id)" id="anchor-{{$index}}">
+                        <div ng-if="vm.list[0] && !vm.list[0].error">
+                            <li class="panel-list-item" ng-repeat="item in vm.list | filter:vm.customFilter"
+                                ng-click="vm.goTo(item.url)">
                                 <div>
-                                    <img ng-src="{{deputado.foto}}" class="img-round">
-                                    <div class="title">{{deputado.nome}}</div>
-                                    <span>{{deputado.partido_sig}}/{{deputado.uf_sig}}</span>
+                                    <div class="title">{{item.titulo}}</div>
+                                    <div>{{item.titulo}}</div>
+                                    <div>{{item.tipo}}</div>
                                 </div>
                             </li>
                         </div>
-                        <div ng-if="!vm.deputados[0]">
+                        <div ng-if="!vm.list[0]">
                             <span class="no-event">Não há ocorrências para esta busca.</span>
                         </div>
-                        <div ng-if"vm.deputados[0] && vm.deputados[0].error ">
+                        <div ng-if "vm.list[0] && vm.list[0].error ">
                             <span class="no-event">{{vm.deputados[0].error}}</span>
                         </div>
                     </div>
                 </ul>
-            </div>
-            <div class="panel-container-3 panel-view step-3" ng-class="{act: vm.viewId}">
-                <a href="#" class="back" ng-click="vm.viewId = null">Voltar</a>
-                <div class="detail">
-                    <div ng-if="vm.loadingView">
-                        <span class="loading">{{vm.loadingViewMessage}}</span>
-                        <div ng-if="vm.reloadButton"><a href="" onClick="location.reload()">Recarregue a Página</a></div>
-                    </div>
-                    <div ng-if="!vm.loadingView">
-                        <div ng-if="vm.view.ultimoStatus_nome===undefined">
-                            <div class="inact">
-                                <div class="img">
-                                    <img src="img/img_avatar2.png" alt="Avatar">
-                                </div>
-                                <div class="text">
-                                    <p>Selecione um<br><span>Deputado</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div ng-if="vm.view.ultimoStatus_nome">
-                            <script>
-                                $('#meus_representantes-view').bind('mousewheel DOMMouseScroll', blockScroll);
-                            </script>
-                            <div class="text">
-                                <div class="list" id="meus_representantes-view">
-                                    <img ng-src="{{vm.view.ultimoStatus_foto}}" alt="Avatar" style="max-width:60%">
-                                    <div class="title">{{vm.view.ultimoStatus_nome}}</div>
-                                    <div class="item">{{vm.view.ultimoStatus_partido_sig}}/{{vm.view.ultimoStatus_uf_sig}}</div>
-                                    <dl class="tabela">
-                                        <dt>Nome Civil</dt>
-                                        <dd>{{vm.view.nome_civil}}</dd>
-                                        <dt>Nascimento</dt>
-                                        <dd>{{vm.view.dataNascimento}}</dd>
-                                        <dt>Escolaridade</dt>
-                                        <dd>{{vm.view.escolaridade}}</dd>
-                                        <dt>Naturalidade</dt>
-                                        <dd>{{vm.view.municipioNascimento}}, {{vm.view.ufNascimento}}</dd>
-                                        <dt>Gabinete</dt>
-                                        <dd>Anexo {{vm.view.ultimoStatus_gabinete_predio}}, gab. {{vm.view.ultimoStatus_gabinete_sala}}</dd>
-                                        <dt>Email</dt>
-                                        <dd>{{vm.view.ultimoStatus_gabinete_email}}</dd>
-                                        <dt>Telefone</dt>
-                                        <dd>{{vm.view.ultimoStatus_gabinete_telefone}}</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                        <div ng-if="vm.view[0] && vm.view[0].error">
-                            <span class="no-event">{{vm.view[0].error}}</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

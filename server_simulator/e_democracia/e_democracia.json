@@ -1,0 +1,191 @@
+{
+    "descricao": "Simulação da Requisição para o panel e-democracia",
+    "dados":[
+        {
+            "categoria": "audiencias_interativas",
+            "img": "",
+            "url": "https://edemocracia.camara.leg.br/audiencias/sala/435",
+            "titulo": "Impacto do uso de agrotóxicos na saúde humana",
+            "detalhes": "Audiência Pública",
+            "tipo": "Ao Vivo",
+            "itens":[
+                {
+                    "valor": 18,
+                    "rotulo": "Perguntas"
+                },
+                {
+                    "valor": "CSSF",
+                    "rotulo": "Organizador"
+                },
+                {
+                    "valor": "26/09/2017 10:00",
+                    "rotulo": "Data"
+                }
+            ]
+        },
+        {
+            "categoria": "audiencias_interativas",
+            "img": "",
+            "url": "https://edemocracia.camara.leg.br/audiencias/sala/459",
+            "titulo": "Desenvolvimento Urbano",
+            "detalhes": "Audiência Pública",
+            "tipo": "Prevista",
+            "itens":[
+                {
+                    "valor": 9,
+                    "rotulo": "Perguntas"
+                },
+                {
+                    "valor": "CDU",
+                    "rotulo": "Organizador"
+                },
+                {
+                    "valor": "26/09/2017 11:00",
+                    "rotulo": "Data"
+                }
+            ]
+        },
+        {
+            "categoria": "audiencias_interativas",
+            "img": "",
+            "url": "https://edemocracia.camara.leg.br/audiencias/sala/407",
+            "titulo": "Defesa do Consumidor",
+            "detalhes": "Audiência Pública",
+            "tipo": "Prevista",
+            "itens":[
+                {
+                    "valor":159,
+                    "rotulo": "Perguntas"
+                },
+                {
+                    "valor": "CDC",
+                    "rotulo": "Organizador"
+                },
+                {
+                    "valor": "27/09/2017 14:30",
+                    "rotulo": "Data"
+                }
+            ]
+        },
+        {
+            "categoria": "wikilegis",
+            "img": "",
+            "url":"https://edemocracia.camara.leg.br/wikilegis/bill/76",
+            "titulo": "Aperfeiçoamento do SIMPLES Nacional",
+            "detalhes": "Altera a Lei Complementar n. 123 de 2006",
+            "tipo": "",
+            "itens":[
+                {
+                    "valor":41,
+                    "rotulo": "Respostas"
+                },
+                {
+                    "valor": "29/07/2017",
+                    "rotulo": "Participar até"
+                }
+            ]
+        },
+        {
+            "categoria": "wikilegis",
+            "img": "",
+            "url": "https://edemocracia.camara.leg.br/wikilegis/bill/78",
+            "titulo": "Garantia de assistência psicológica contínua a atletas",
+            "detalhes": "Altera a Lei do Desporto",
+            "tipo": "",
+            "itens":[
+                {
+                    "valor":14,
+                    "rotulo": "Respostas"
+                },
+                {
+                    "valor": "30/07/2017",
+                    "rotulo": "Participar até"
+                }
+            ]
+        },
+        {
+            "categoria": "expressao",
+            "img": "",
+            "url": "https://edemocracia.camara.leg.br/expressao/t/revogacao-do-estatuto-do-desarmamento-e-aprovacao-do-pl3722-12/41605",
+            "titulo": "Revogação do Estatuto do Desarmamento",
+            "detalhes": "",
+            "tipo": "Segurança",
+            "itens":[
+                {
+                    "valor":286,
+                    "rotulo": "Respostas"
+                },
+                {
+                    "valor": 4339,
+                    "rotulo": "Visualizações"
+                },
+                {
+                    "valor":"Set/2017",
+                    "rotulo":"Atualização"
+                }
+            ]
+        },
+        {
+            "categoria": "expressao",
+            "img": "",
+            "url": "https://edemocracia.camara.leg.br/expressao/t/cursos-gratuitos-senac-rs-2018/44700",
+            "titulo": "Cursos Gratuitos SENAC RS 2018",
+            "detalhes": "",
+            "tipo": "Educação",
+            "itens":[
+                {
+                    "valor":2,
+                    "rotulo": "Respostas"
+                },
+                {
+                    "valor": 379,
+                    "rotulo": "Visualizações"
+                },
+                {
+                    "valor":"Set/2017",
+                    "rotulo":"Atualização"
+                }
+            ]
+        },
+        {
+            "categoria": "expressao",
+            "img": "",
+            "url": "https://edemocracia.camara.leg.br/expressao/t/gasolina-muito-cara/41407",
+            "titulo": "Gasolina Muito Cara",
+            "detalhes": "",
+            "tipo": "Consumidor",
+            "itens":[
+                {
+                    "valor":10,
+                    "rotulo": "Respostas"
+                },
+                {
+                    "valor": 681,
+                    "rotulo": "Visualizações"
+                },
+                {
+                    "valor":"Set/2017",
+                    "rotulo":"Atualização"
+                }
+            ]
+        },
+        {
+            "categoria": "pauta_participativa",
+            "img": "",
+            "url": "https://edemocracia.camara.leg.br/pautaparticipativa/",
+            "titulo": "Pauta Participativa",
+            "detalhes": "Nesta edição, consulta sobre projetos dos temas Política, Seguança e Saúde",
+            "tipo": "Aberto para Votação",
+            "itens":[
+                {
+                    "valor":"27/09/2017",
+                    "rotulo": "Participe até"
+                },
+                {
+                    "valor": 7241,
+                    "rotulo": "Participantes"
+                }
+            ]
+        }
+    ]
+}
