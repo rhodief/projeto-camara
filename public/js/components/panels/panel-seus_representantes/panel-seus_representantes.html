@@ -7,7 +7,7 @@
             <div class="panel-container-3 step-2 list act">
                 <div class="filter">
                     <div>
-                        <button ng-class="gps ? 'w3-green' : 'w3-grey'">GPS</button>
+                        <span class="icon"><img class="img-color-change switch-on inline-icon" src="img/layout/position.svg" alt="Ao Vivo"></span>
                         <select name="option" ng-model="vm.uf" ng-change="vm.changeUf(vm.uf)">
                             <option ng-repeat="uf in vm.ufsList" ng-model-options="uf.sigla">{{uf.sigla}}</option>
                         </select>
@@ -35,7 +35,7 @@
                         <div ng-if="!vm.deputados[0]">
                             <span class="no-event">Não há ocorrências para esta busca.</span>
                         </div>
-                        <div ng-if"vm.deputados[0] && vm.deputados[0].error ">
+                        <div ng-if "vm.deputados[0] && vm.deputados[0].error ">
                             <span class="no-event">{{vm.deputados[0].error}}</span>
                         </div>
                     </div>
