@@ -77,6 +77,15 @@ a,
     100% {opacity:0.3;}
 }
 
+@keyframes blink-record {  
+	from { opacity: 1; }
+	to { opacity: 0; }
+  }
+
+.icon.record{
+	animation: blink-record ease-in-out 1.2s infinite both alternate;
+}
+
 dl.tabela {
 	margin: 2em 0;
 	padding: 0;
@@ -199,6 +208,16 @@ dt { clear: both; }
 .img-color-change.color4 circle,
 .img-color-change.color4 polygon{fill:#000!important;}
 .img-color-change.color4 line{stroke:#000!important;}
+.img-color-change.color5 svg,
+.img-color-change.color5 path,
+.img-color-change.color5 rect,
+.img-color-change.color5 line,
+.img-color-change.color5 circle,
+.img-color-change.color5 polygon{fill:#A01111!important;viewbox: 30px !important;}
+.img-color-change.color5 line{stroke:#A01111!important;}
+
+svg.img-color-change.color5.live {max-width: 20px;margin: 0; max-height: 20px;}
+
 .live .img-color-change.color3 svg,
 .live .img-color-change.color3 path,
 .live .img-color-change.color3 rect,

@@ -29,9 +29,10 @@
                                         <img-logo ng-model="item.categoria"></img-logo>
                                     </div>
                                     <div>
+                                        <div><span ng-if="item.tipo == 'Ao Vivo'" class="icon record"><img class="img-color-change color5 live" src="img/layout/record.svg" alt="Ao Vivo"></span><span class="title">{{item.tipo}}</span></div>
                                         <div class="title">{{item.titulo}}</div>
                                         <div>{{item.titulo}}</div>
-                                        <div>{{item.tipo}}</div>
+
                                     </div>
                                 </div>
                             </li>
@@ -48,3 +49,6 @@
         </div>
     </div>
 </div>
+<script>
+    imgColorChange();
+</script>
