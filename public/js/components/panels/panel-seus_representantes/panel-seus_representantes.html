@@ -8,6 +8,10 @@
                 <div class="filter">
                     <div>
                         <span class="icon"><img class="img-color-change switch-on inline-icon" src="img/layout/position.svg" alt="Ao Vivo"></span>
+                        <span>
+                            <button ng-click="vm.toggleGps()">GPS {{vm.gpsStatus()}}</button>
+                            <button ng-click="vm.recordUf(vm.uf)">Gravar meu Estado(UF) {{vm.isRecordUf}}</button>
+                        </span>
                         <select name="option" ng-model="vm.uf" ng-change="vm.changeUf(vm.uf)">
                             <option ng-repeat="uf in vm.ufsList" ng-model-options="uf.sigla">{{uf.sigla}}</option>
                         </select>
