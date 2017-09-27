@@ -381,7 +381,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 
 .step-2 .list .item-selected{background: rgba(3, 49, 30, 0.85);}
 .step-2 .list .item-selected:hover{background:rgba(3, 49, 30, 0.75);}
-.step-2 .list .img-round{background-color: red;max-width:60px;max-height: 60px;border-radius: 50%;-o-object-fit: cover;object-fit: cover;display: block;margin: 0.5em;border-style: none}
+.step-2 .list .img-round{max-width:60px;max-height: 60px;border-radius: 50%;-o-object-fit: cover;object-fit: cover;display: block;margin: 0.5em;border-style: none}
 .step-2 .list .item-selected .title, .step-2 .list .item-selected .date-time, .step-2 .list .item-selected div, .step-2 .list .item-selected .title p{ color: #fff};
 
 .field{margin: 5px 10px;}
@@ -1087,7 +1087,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.panel-container-3.step-2,
 	.panel-container-3.step-3{position:static; width:calc(33.333333% - 20px)!important; min-width: 300px; margin:10px; float:left;}
 	.panel-container-3.step-2.large{min-width: 80%}
-	.panel-container-3.step-3{min-height:355px; position: relative; left: 0!important; top:0;}
+	.panel-container-3.step-3{min-height:365px; position: relative; left: 0!important; top:0;}
 	.appointment .pickadate{padding: 20px;}
 	.panel-container-3.step-2{padding: 20px 10px;}
 	.section-about .box-links .row{padding: 10px 10px 5px;}
