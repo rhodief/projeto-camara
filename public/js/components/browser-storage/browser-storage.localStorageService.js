@@ -202,6 +202,7 @@
             function okPanels(panels){
                 if(!panels[panelName] || !panels[panelName].configs) $q.reject('Panel não Encontrado');
                 panels[panelName].configs[index] = value;
+                console.log(panels);
                 _setPanels(panels);
             }
             function notFound(e){

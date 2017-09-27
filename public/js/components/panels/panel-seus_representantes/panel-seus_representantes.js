@@ -59,6 +59,7 @@
 
             function afterLoadConfigs(settings){
                 configs = settings;
+                console.log(configs);
                 vm.isRecordUf = configs.uf || false;
                 getUfsList().then(setUfsList).catch(_errorList);
             }
@@ -192,8 +193,7 @@
             }
 
             function _recordUf(uf){
-                localStorageService.setPanelSettings(PANELNAME, 'uf', uf);
-                _unactiveGPS();
+                localStorageService.setPanelSettings(PANELNAME, 'uf', uf).then(_unactiveGPS);
                 vm.isRecordUf = uf;
             }
 
