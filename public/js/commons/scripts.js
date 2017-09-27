@@ -172,7 +172,7 @@ $(document).ready(function () {
 
 	// ATALHOS DO TECLADO!!!
 	$('html').keydown(function (e) {
-		if (e.shiftKey && e.which == 48) {
+		if (e.altKey && e.shiftKey && e.which == 48) {
 			scrollToElement('html', '#header');
 			$('#logo').focus();
 		}

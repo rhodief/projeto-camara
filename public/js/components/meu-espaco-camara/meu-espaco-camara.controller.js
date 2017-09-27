@@ -40,7 +40,8 @@
         }
 
         function pressKey(e){
-            if(e.shiftKey && e.which == '57'){
+            e.preventDefault();
+            if(e.altKey && e.shiftKey && e.which == '57'){
                 toggleMescam();
                 angular.element(document.getElementById('favinput')).focus();
             }
