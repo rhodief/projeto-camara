@@ -84,6 +84,9 @@ a,
 
 .icon.record{
 	animation: blink-record ease-in-out 1.2s infinite both alternate;
+	max-width: 20px;
+    max-height: 20px;
+    display: inline-block !important;
 }
 
 dl.tabela {
@@ -215,6 +218,14 @@ dt { clear: both; }
 .img-color-change.color5 circle,
 .img-color-change.color5 polygon{fill:#A01111!important;viewbox: 30px !important;}
 .img-color-change.color5 line{stroke:#A01111!important;}
+
+.img-color-change.switch-on svg,
+.img-color-change.switch-on path,
+.img-color-change.switch-on rect,
+.img-color-change.switch-on line,
+.img-color-change.switch-on circle,
+.img-color-change.switch-on polygon{fill:#15F74E!important;viewbox: 30px !important;}
+.img-color-change.switch-on line{stroke:#A01111!important;}
 
 svg.img-color-change.color5.live {max-width: 20px;margin: 0; max-height: 20px;}
 
