@@ -216,30 +216,44 @@ dt { clear: both; }
 .img-color-change.color5 rect,
 .img-color-change.color5 line,
 .img-color-change.color5 circle,
-.img-color-change.color5 polygon{fill:#A01111!important;viewbox: 30px !important;}
+.img-color-change.color5 polygon{fill:#A01111!important;}
 .img-color-change.color5 line{stroke:#A01111!important;}
 
-.img-color-change.switch-on svg,
-.img-color-change.switch-on path,
-.img-color-change.switch-on rect,
-.img-color-change.switch-on line,
-.img-color-change.switch-on circle,
-.img-color-change.switch-on polygon{fill:#119432!important;viewbox: 30px !important;}
-.img-color-change.switch-on line{stroke:#119432!important;}
-/* Não estou conseguindo por hover....
-.img-color-change.switch-on path:hover{fill: #fce57e;}
-*/
 
-.img-color-change.switch-off svg,
-.img-color-change.switch-off path,
-.img-color-change.switch-off rect,
-.img-color-change.switch-off line,
-.img-color-change.switch-off circle,
-.img-color-change.switch-off polygon{fill:#858484!important;viewbox: 30px !important;}
-.img-color-change.switch-off line{stroke:#858484!important;}
+.img-color-change.switch svg,
+.img-color-change.switch path,
+.img-color-change.switch rect,
+.img-color-change.switch line,
+.img-color-change.switch circle,
+.img-color-change.switch polygon{fill:#13CC41!important;}
+.img-color-change.switch line{stroke:#13CC41!important;}
+
+.img-color-change.switch:hover svg,
+.img-color-change.switch:hover path,
+.img-color-change.switch:hover rect,
+.img-color-change.switch:hover line,
+.img-color-change.switch:hover circle,
+.img-color-change.switch:hover polygon,
+.img-color-change.switch.off:hover svg,
+.img-color-change.switch.off:hover path,
+.img-color-change.switch.off:hover rect,
+.img-color-change.switch.off:hover line,
+.img-color-change.switch.off:hover circle,
+.img-color-change.switch.off:hover polygon{fill:#0BF044!important;}
+.img-color-change.switch.off:hover line,
+.img-color-change.switch:hover line{stroke:#0BF044!important;}
+
+.img-color-change.switch.off svg,
+.img-color-change.switch.off path,
+.img-color-change.switch.off rect,
+.img-color-change.switch.off line,
+.img-color-change.switch.off circle,
+.img-color-change.switch.off polygon{fill:#858484!important;}
+.img-color-change.switch.off line{stroke:#858484!important;}
 
 svg.img-color-change.color5.live {max-width: 20px;margin: 0; max-height: 20px;}
-svg.img-color-change.switch-on.inline-icon {display: inline-block;max-width: 30px;max-height: 30px;cursor: pointer}
+svg.img-color-change.switch.inline-icon {display: inline-block;max-width: 30px;max-height: 30px;cursor: pointer}
+
 
 
 .live .img-color-change.color3 svg,

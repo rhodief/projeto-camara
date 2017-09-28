@@ -7,17 +7,16 @@
             <div class="panel-container-3 step-2 list act">
                 <div class="filter">
                     <div>
-                        <span class="icon"><img class="img-color-change switch-on inline-icon" src="img/layout/position.svg" alt="Ao Vivo"></span>
-                        <span>
-                            <button ng-click="vm.toggleGps()">GPS {{vm.gpsStatus()}}</button>
-                            <button ng-click="vm.recordUf(vm.uf)">Gravar meu Estado(UF) {{vm.isRecordUf}}</button>
-                        </span>
+                        <span class="icon"><a href="" ng-click="vm.toggleGps()"><img id="gpsSwitch" class="img-color-change switch inline-icon" src="img/layout/position.svg" alt="Ao Vivo"></a></span>
                         <select name="option" ng-model="vm.uf" ng-change="vm.changeUf(vm.uf)">
                             <option ng-repeat="uf in vm.ufsList" ng-model-options="uf.sigla">{{uf.sigla}}</option>
                         </select>
+                        <span>
+                            <button ng-click="vm.recordUf(vm.uf)">Gravar meu Estado: {{vm.isRecordUf}}</button>
+                        </span>
                     </div>
                     <div class="field">
-                        <input class="w3-input" type="text" placeholder="Filtrar..." ng-model="vm.deputadosFilter">
+                        <input type="text" placeholder="Filtrar..." ng-model="vm.deputadosFilter">
                     </div>
                 </div>
                 <ul class="panel-list list" id="meus_representantes-list">
@@ -39,7 +38,7 @@
                         <div ng-if="!vm.deputados[0]">
                             <span class="no-event">Não há ocorrências para esta busca.</span>
                         </div>
-                        <div ng-if "vm.deputados[0] && vm.deputados[0].error ">
+                        <div ng-if="vm.deputados[0] && vm.deputados[0].error ">
                             <span class="no-event">{{vm.deputados[0].error}}</span>
                         </div>
                     </div>

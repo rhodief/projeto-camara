@@ -23,9 +23,9 @@
         };
         
 
-        panelSeusRepresentantesController.$inject = ['gpsService', 'wsRequestService', 'localStorageService'];
+        panelSeusRepresentantesController.$inject = ['gpsService', 'wsRequestService', 'localStorageService', '$scope', '$timeout'];
 
-        function panelSeusRepresentantesController(gpsService, wsRequestService, localStorageService){
+        function panelSeusRepresentantesController(gpsService, wsRequestService, localStorageService, $scope, $timeout){
             var vm = this;
             const PANELNAME = 'seus_representantes'
             var defaultListMessage = 'Carregando Lista de Deputados'; 
@@ -44,11 +44,25 @@
             vm.loadingViewMessage = defaultViewMessage
             vm.reloadButton;
             vm.toggleGps = toggleGps;
-            vm.gpsStatus = gpsStatus;
             vm.recordUf = recordUf;
             vm.isRecordUf = isRecordUf;
             var configs;
-            
+
+            $scope.gpsStatus = function(){
+                return configs.gpsActive;
+            }
+            $scope.$watch('gpsStatus()', function(term){
+                //Necessário para esperar o svg 'abrir'...
+                $timeout(function(){
+                    var el = angular.element(document.getElementById('gpsSwitch'));
+                    if(term){
+                        el.removeClass('off');
+                    }else{
+                        el.addClass('off');
+                    }
+                },100)
+                
+            });
 
             function active() {
                 _setMessage('list', 'Carregando Configurações');
@@ -59,7 +73,6 @@
 
             function afterLoadConfigs(settings){
                 configs = settings;
-                console.log(configs);
                 vm.isRecordUf = configs.uf || false;
                 getUfsList().then(setUfsList).catch(_errorList);
             }
@@ -81,8 +94,8 @@
             function changeUf(uf) {
                 vm.uf = uf;
                 var params = {
-                    siglaUf: vm.uf
-                }
+                    siglaUf:vm.uf
+                };
                 getDeputados(params);
             }
 
@@ -162,10 +175,7 @@
                 }
             }
 
-            function gpsStatus(){
-                return configs.gpsActive;
-            }
-
+            
             function _activeGPS(){
                 localStorageService.setPanelSettings(PANELNAME, 'gpsActive', true);
                 configs.gpsActive = true;
