@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div class="bg-menu"></div>
-            <div class="menu">
+            <div class="menu" id="menu">
                 <div class="center">
                     <nav>
                         <ul class="main-menu">
@@ -224,7 +224,7 @@
                 </div>
             </div>
             <div class="bg-easy-access"></div>
-            <div class="easy-access">
+            <div class="easy-access" id="easy-access">
                 <div class="center">
                     <nav>
                         <ul class="menu-easy-access">
@@ -299,7 +299,7 @@
             </div>
         </div>
     </header>
-    <section>
+    <section id="section-1">
         <div class="section-news">
             <div class="center">
                 <div class="box-news mobile-invert-order">
@@ -372,7 +372,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section  id="section-2">
         <div class="section-about h-window background-parallax" style="background-image: url(img/uploads/img_07.jpg);">
             <div class="vertical-align">
                 <div class="center">
@@ -426,7 +426,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section  id="section-3">
         <div class="section-inspect">
             <div class="center">
                 <header>
@@ -490,7 +490,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section  id="section-4">
         <div class="section-participate h-window background-parallax" style="background-image: url(img/uploads/img_12.jpg);">
             <div class="vertical-align">
                 <div class="center">
@@ -588,7 +588,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section  id="section-5">
         <div class="section-education">
             <div class="center">
                 <header>
@@ -629,11 +629,11 @@
     </section>
 
     <div ng-controller="meuEspacoCamaraController as meuEspacoCamara">
-        <section class="hidden" id="section-meuEspacoCamara">
+        <div class="hidden" id="section-meuEspacoCamara">
             <div id="div-meuEspacoCamara">
                 <meu-espaco-camara id="meuEspacoCamara" action="meuEspacoCamara.toggleMescam()"></meu-espaco-camara>
             </div>
-        </section>
+        </div>
         <div id="button-meuEspacoCamara" style="display:none">
             <a href="#" class="my-camara" id="button-link" ng-click="meuEspacoCamara.toggleMescam()">#MeuEspaçoCâmara</a>
         </div>
