@@ -122,7 +122,7 @@
             panel.activated = true;
             panelsGenService.enable(panel.name, parentPanel.section, panel.pos);
             $timeout(function(){
-                scrollToElement('html', 'panel-'+panel.name);
+                scrollToElement('panel-'+panel.name);
             }, 500)
 
         }
