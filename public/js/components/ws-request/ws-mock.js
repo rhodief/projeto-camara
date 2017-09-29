@@ -44,7 +44,7 @@
                 var random = getRandomNumber(0, max-1);
                 return values[random];
             }
-            console.log('Houve um Erro');
+            console.log('Houve um Erro ao tentar selecionar dado aleatório');
         }
 
         function getRandomNumber(min, max){
