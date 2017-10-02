@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('panelSeusRepresentantes', ['wsRequest', 'gps'])
+    angular.module('panelSeusRepresentantes', ['wsRequest', 'gps', 'browserStorage'])
 })();
 
 (function () {
@@ -23,10 +23,13 @@
         };
         
 
-        panelSeusRepresentantesController.$inject = ['gpsService', 'wsRequestService'];
+        panelSeusRepresentantesController.$inject = ['gpsService', 'wsRequestService', 'localStorageService', '$scope', '$timeout'];
 
-        function panelSeusRepresentantesController(gpsService, wsRequestService){
+        function panelSeusRepresentantesController(gpsService, wsRequestService, localStorageService, $scope, $timeout){
             var vm = this;
+            const PANELNAME = 'seus_representantes'
+            var defaultListMessage = 'Carregando Lista de Deputados'; 
+            var defaultViewMessage = 'Carregando Deputado(a)';
             vm.deputados = [];
             vm.view = {};
             vm.viewId;
@@ -36,19 +39,43 @@
             vm.uf = 'AC';
             vm.changeUf = changeUf;
             vm.loadingList;
-            vm.loadingListMessage = 'Carregando Lista de Deputados';
+            vm.loadingListMessage = defaultListMessage;
             vm.loadingView;
-            vm.loadingViewMessage = 'Carregando Deputado(a)';
-
+            vm.loadingViewMessage = defaultViewMessage
             vm.reloadButton;
-            
+            vm.toggleGps = toggleGps;
+            vm.recordUf = recordUf;
+            vm.isRecordUf = isRecordUf;
+            var configs;
+
+            $scope.gpsStatus = function(){
+                return configs.gpsActive;
+            }
+            $scope.$watch('gpsStatus()', function(term){
+                //Necessário para esperar o svg 'abrir'...
+                $timeout(function(){
+                    var el = angular.element(document.getElementById('gpsSwitch'));
+                    if(term){
+                        el.removeClass('off');
+                    }else{
+                        el.addClass('off');
+                    }
+                },100)
+                
+            });
 
             function active() {
-                vm.loadingList = true;
-                getUfsList().then(setUfsList).catch(_error)
+                _setMessage('list', 'Carregando Configurações');
+                localStorageService.getPanelSettings(PANELNAME).then(afterLoadConfigs);
             }
 
             active();
+
+            function afterLoadConfigs(settings){
+                configs = settings;
+                vm.isRecordUf = configs.uf || false;
+                getUfsList().then(setUfsList).catch(_errorList);
+            }
 
             function getDeputadosGps(location) {
                 vm.uf = location.estado_sig;
@@ -67,31 +94,52 @@
             function changeUf(uf) {
                 vm.uf = uf;
                 var params = {
-                    siglaUf: vm.uf
-                }
+                    siglaUf:vm.uf
+                };
                 getDeputados(params);
             }
 
             function setUfsList(list) {
                 vm.ufsList = list;
-                getLocation().then(getDeputadosGps).catch(_error);
+                if(configs.uf){
+                    changeUf(configs.uf);
+                }else
+                if(configs.gpsActive !== false){
+                    configs.gpsActive = true;
+                    getDeputadosByGPS();
+                }else{
+                    changeUf('AC');
+                }
+            }
+
+            function getDeputadosByGPS(){
+                _setMessage('list', 'Ativando GPS...');
+                return getLocation().then(getDeputadosGps).catch(_errorList);
             }
 
             function getDeputados(params){
-                vm.loadingList = true;
-                return _getDeputados(params).then(_renderDeputados).catch(_error);
+                return _getDeputados(params).then(_renderDeputados).catch(_errorList);
             }
 
             function getDeputado(id) {
-                vm.loadingView = true;
-                return _getDeputado(id).then(_renderDeputado).catch(_error);
+                return _getDeputado(id).then(_renderDeputado).catch(_errorView);
+            }
+
+            function recordUf(uf){
+                _recordUf(uf);
+            }
+
+            function isRecordUf(){
+
             }
 
             function _getDeputados(params) {
+                _setMessage('list');
                 return wsRequestService.getDeputados(params);
             }
 
             function _getDeputado(id){
+                _setMessage('view');
                 return wsRequestService.getDeputado(id);
             }
 
@@ -117,8 +165,57 @@
                 return id === vm.viewId;
             }
 
-            function _error(e) {
+            function toggleGps(){
+                if(configs){
+                    if(configs.gpsActive){
+                        _unactiveGPS();
+                    }else{
+                        _activeGPS();
+                    }
+                }
+            }
+
+            
+            function _activeGPS(){
+                localStorageService.setPanelSettings(PANELNAME, 'gpsActive', true);
+                configs.gpsActive = true;
+                getDeputadosByGPS();
+            }
+
+            function _unactiveGPS(){
+                localStorageService.setPanelSettings(PANELNAME, 'gpsActive', false);
+                configs.gpsActive = false;
+            }
+
+            function _setMessage(where, message){
+                switch(where){
+                    case 'list':
+                    vm.loadingListMessage = message || defaultListMessage;
+                    vm.loadingList = true;
+                    break;
+                    case 'view':
+                    vm.loadingViewMessage = message || defaultViewMessage;
+                    vm.loadingView = true;
+                    break;
+                    default:
+                    console.log('Local não passado para exibir mensagem');
+                }
+            }
+
+            function _recordUf(uf){
+                localStorageService.setPanelSettings(PANELNAME, 'uf', uf).then(_unactiveGPS);
+                vm.isRecordUf = uf;
+            }
+
+            function _errorList(e){
+                vm.deputados = [{error: 'Não foi possível carregar Lista de Deputados. Selecione um Estado'}];
+                vm.loadingList = false;
                 console.log(e);
+            }
+
+            function _errorView(e) {
+                vm.view = [{error:'Não foi possível carregar dados do Deputado.'}];
+                vm.loadingView = false;
             }
         }
         return directive;

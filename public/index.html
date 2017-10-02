@@ -34,7 +34,7 @@
         <div id="main-messages"></div>
     </div>
     <header>
-        <div class="header">
+        <div class="header" id="header">
             <div class="top-header">
                 <div class="center">
                     <a class="bt-menu" title="Menu">
@@ -43,7 +43,7 @@
                         <span class="bar"></span>
                         <span class="text">Menu</span>
                     </a>
-                    <h1 class="logo"><a href="#" title="Portal da Câmara dos Deputados"><img src="img/layout/logo.svg" alt="Portal da Câmara dos Deputados"></a></h1>
+                    <h1 class="logo"><a id="logo" href="#" title="Portal da Câmara dos Deputados"><img src="img/layout/logo.svg" alt="Portal da Câmara dos Deputados"></a></h1>
                     <div class="external-links">
                         <div class="box-links">
                             <div class="box-libras"><span class="icon"><img src="img/layout/icones-home-vlibras.svg" alt="Libras"></span></div>
@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div class="bg-menu"></div>
-            <div class="menu">
+            <div class="menu" id="menu">
                 <div class="center">
                     <nav>
                         <ul class="main-menu">
@@ -224,7 +224,7 @@
                 </div>
             </div>
             <div class="bg-easy-access"></div>
-            <div class="easy-access">
+            <div class="easy-access" id="easy-access">
                 <div class="center">
                     <nav>
                         <ul class="menu-easy-access">
@@ -299,7 +299,7 @@
             </div>
         </div>
     </header>
-    <section>
+    <section id="section-1">
         <div class="section-news">
             <div class="center">
                 <div class="box-news mobile-invert-order">
@@ -372,7 +372,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section  id="section-2">
         <div class="section-about h-window background-parallax" style="background-image: url(img/uploads/img_07.jpg);">
             <div class="vertical-align">
                 <div class="center">
@@ -426,7 +426,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section  id="section-3">
         <div class="section-inspect">
             <div class="center">
                 <header>
@@ -490,7 +490,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section  id="section-4">
         <div class="section-participate h-window background-parallax" style="background-image: url(img/uploads/img_12.jpg);">
             <div class="vertical-align">
                 <div class="center">
@@ -531,12 +531,12 @@
 										</span>
 										<span class="box-text">
                                             <span class="title">e-Democracia</span>
-                                            <panels-gen section="participe" pos="3" replace="audiencias-interativas"></panels-gen>
-											<span class="text" id="audiencias-interativas">
+                                            <span class="text" id="audiencias-interativas">
 												O portal e-Democracia é uma iniciativa da Câmara dos Deputados que visa ampliar a participação social no processo legislativo e aproximar cidadãos e seus representantes por meio da interação digital.
 											</span>
 										</span>
-									</a>
+                                    </a>
+                                    <panels-gen section="participe" pos="3" replace="audiencias-interativas"></panels-gen>
                                 </li>
                                 <li>
                                     <a href="#">
@@ -588,7 +588,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section  id="section-5">
         <div class="section-education">
             <div class="center">
                 <header>
@@ -629,11 +629,11 @@
     </section>
 
     <div ng-controller="meuEspacoCamaraController as meuEspacoCamara">
-        <section class="hidden" id="section-meuEspacoCamara">
+        <div class="hidden" id="section-meuEspacoCamara">
             <div id="div-meuEspacoCamara">
                 <meu-espaco-camara id="meuEspacoCamara" action="meuEspacoCamara.toggleMescam()"></meu-espaco-camara>
             </div>
-        </section>
+        </div>
         <div id="button-meuEspacoCamara" style="display:none">
             <a href="#" class="my-camara" id="button-link" ng-click="meuEspacoCamara.toggleMescam()">#MeuEspaçoCâmara</a>
         </div>

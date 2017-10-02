@@ -1,0 +1,18 @@
+[
+    {
+        "id": 5,
+        "ultimoStatus_nome":"Deputado Exemplo",
+        "ultimoStatus_foto":"img/img_avatar2.png",
+        "ultimoStatus_partido_sig":"PEXMPL",
+        "ultimoStatus_uf_sig":"DF",
+        "nome_civi":"Fulano Exemplo",
+        "dataNascimento":"25/02/1956",
+        "escolaridade":"Superior",
+        "municipioNascimento":"Crateús",
+        "ufNascimento":"CE",
+        "ultimoStatus_gabinete_predio":"Anexo IV",
+        "ultimoStatus_gabinete_sala":"521",
+        "ultimoStatus_gabinete_email":"dep.exemplo@camara.leg.br",
+        "ultimoStatus_gabinete_telefone":"(61) 3546-654"
+    }
+]

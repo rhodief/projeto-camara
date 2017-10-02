@@ -1,0 +1,166 @@
+[
+    [
+        {
+          "id": "6",
+          "sigla": "AC",
+          "nome": "ACRE",
+          "descricao": ""
+        },
+        {
+          "id": "14",
+          "sigla": "AL",
+          "nome": "ALAGOAS",
+          "descricao": ""
+        },
+        {
+          "id": "4",
+          "sigla": "AM",
+          "nome": "AMAZONAS",
+          "descricao": ""
+        },
+        {
+          "id": "2",
+          "sigla": "AP",
+          "nome": "AMAPÁ",
+          "descricao": ""
+        },
+        {
+          "id": "16",
+          "sigla": "BA",
+          "nome": "BAHIA",
+          "descricao": ""
+        },
+        {
+          "id": "9",
+          "sigla": "CE",
+          "nome": "CEARÁ",
+          "descricao": ""
+        },
+        {
+          "id": "22",
+          "sigla": "DF",
+          "nome": "DISTRITO FEDERAL",
+          "descricao": ""
+        },
+        {
+          "id": "18",
+          "sigla": "ES",
+          "nome": "ESPÍRITO SANTO",
+          "descricao": ""
+        },
+        {
+          "id": "23",
+          "sigla": "GO",
+          "nome": "GOIÁS",
+          "descricao": ""
+        },
+        {
+          "id": "8",
+          "sigla": "MA",
+          "nome": "MARANHÃO",
+          "descricao": ""
+        },
+        {
+          "id": "17",
+          "sigla": "MG",
+          "nome": "MINAS GERAIS",
+          "descricao": ""
+        },
+        {
+          "id": "24",
+          "sigla": "MS",
+          "nome": "MATO GROSSO DO SUL",
+          "descricao": ""
+        },
+        {
+          "id": "21",
+          "sigla": "MT",
+          "nome": "MATO GROSSO",
+          "descricao": ""
+        },
+        {
+          "id": "3",
+          "sigla": "PA",
+          "nome": "PARÁ",
+          "descricao": ""
+        },
+        {
+          "id": "12",
+          "sigla": "PB",
+          "nome": "PARAÍBA",
+          "descricao": ""
+        },
+        {
+          "id": "13",
+          "sigla": "PE",
+          "nome": "PERNAMBUCO",
+          "descricao": ""
+        },
+        {
+          "id": "10",
+          "sigla": "PI",
+          "nome": "PIAUÍ",
+          "descricao": ""
+        },
+        {
+          "id": "25",
+          "sigla": "PR",
+          "nome": "PARANÁ",
+          "descricao": ""
+        },
+        {
+          "id": "19",
+          "sigla": "RJ",
+          "nome": "RIO DE JANEIRO",
+          "descricao": ""
+        },
+        {
+          "id": "11",
+          "sigla": "RN",
+          "nome": "RIO GRANDE DO NORTE",
+          "descricao": ""
+        },
+        {
+          "id": "5",
+          "sigla": "RO",
+          "nome": "RONDÔNIA",
+          "descricao": ""
+        },
+        {
+          "id": "1",
+          "sigla": "RR",
+          "nome": "RORAIMA",
+          "descricao": ""
+        },
+        {
+          "id": "27",
+          "sigla": "RS",
+          "nome": "RIO GRANDE DO SUL",
+          "descricao": ""
+        },
+        {
+          "id": "26",
+          "sigla": "SC",
+          "nome": "SANTA CATARINA",
+          "descricao": ""
+        },
+        {
+          "id": "15",
+          "sigla": "SE",
+          "nome": "SERGIPE",
+          "descricao": ""
+        },
+        {
+          "id": "20",
+          "sigla": "SP",
+          "nome": "SÃO PAULO",
+          "descricao": ""
+        },
+        {
+          "id": "7",
+          "sigla": "TO",
+          "nome": "TOCANTINS",
+          "descricao": ""
+        }
+      ]
+]

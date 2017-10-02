@@ -41,10 +41,13 @@
                     <li><a href="#" ng-click="vm.orderFavorites = '-date'">Data</a></li>
                     <li><a href="#" ng-click="vm.orderFavorites = 'category'">Categoria</a></li>
                 </ul>
+                <div class="form">
+                    <input type="text" placeholder="Encontrar um Favorito" id="favinput" ng-model="favinput.$">
+                </div>
                 <div class="list">
                     <ul>
                         <li ng-if="!vm.favorites[0]"><strong>Nada foi salvo. Navegue pelas páginas e grave aqui o que for do seu interesse</strong></li>
-                        <li ng-repeat="fav in vm.favorites | orderBy:vm.orderFavorites">
+                        <li ng-repeat="fav in vm.favorites | orderBy:vm.orderFavorites | filter:favinput">
                             <div class="center">
                                 <a href="{{fav.url}}">
                                     <div class="text"><strong>{{fav.title}}</strong></div>
@@ -52,8 +55,6 @@
                                 </a>
                             </div>
                             <div class="right"><button class="delete" ng-click="vm.removeFavorite(fav.url, $index)">x</button></div>
-
-
                         </li>
                     </ul>
                 </div>
@@ -109,5 +110,4 @@
 </div>
 <script>
     imgColorChange();
-
 </script>

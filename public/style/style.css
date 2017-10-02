@@ -85,6 +85,18 @@ a,
     to {-webkit-transform:rotate(360deg);transform:rotate(360deg);}
 }
 
+@keyframes blink-record {  
+	from { opacity: 1; }
+	to { opacity: 0; }
+  }
+
+.icon.record{
+	animation: blink-record ease-in-out 1.2s infinite both alternate;
+	max-width: 20px;
+    max-height: 20px;
+    display: inline-block !important;
+}
+
 dl.tabela {
 	margin: 2em 0;
 	padding: 0;
@@ -207,6 +219,51 @@ dt { clear: both; }
 .img-color-change.color4 circle,
 .img-color-change.color4 polygon{fill:#000!important;}
 .img-color-change.color4 line{stroke:#000!important;}
+.img-color-change.color5 svg,
+.img-color-change.color5 path,
+.img-color-change.color5 rect,
+.img-color-change.color5 line,
+.img-color-change.color5 circle,
+.img-color-change.color5 polygon{fill:#A01111!important;}
+.img-color-change.color5 line{stroke:#A01111!important;}
+
+
+.img-color-change.switch svg,
+.img-color-change.switch path,
+.img-color-change.switch rect,
+.img-color-change.switch line,
+.img-color-change.switch circle,
+.img-color-change.switch polygon{fill:#13CC41!important;}
+.img-color-change.switch line{stroke:#13CC41!important;}
+
+.img-color-change.switch:hover svg,
+.img-color-change.switch:hover path,
+.img-color-change.switch:hover rect,
+.img-color-change.switch:hover line,
+.img-color-change.switch:hover circle,
+.img-color-change.switch:hover polygon,
+.img-color-change.switch.off:hover svg,
+.img-color-change.switch.off:hover path,
+.img-color-change.switch.off:hover rect,
+.img-color-change.switch.off:hover line,
+.img-color-change.switch.off:hover circle,
+.img-color-change.switch.off:hover polygon{fill:#0BF044!important;}
+.img-color-change.switch.off:hover line,
+.img-color-change.switch:hover line{stroke:#0BF044!important;}
+
+.img-color-change.switch.off svg,
+.img-color-change.switch.off path,
+.img-color-change.switch.off rect,
+.img-color-change.switch.off line,
+.img-color-change.switch.off circle,
+.img-color-change.switch.off polygon{fill:#858484!important;}
+.img-color-change.switch.off line{stroke:#858484!important;}
+
+svg.img-color-change.color5.live {max-width: 20px;margin: 0; max-height: 20px;}
+svg.img-color-change.switch.inline-icon {display: inline-block;max-width: 30px;max-height: 30px;cursor: pointer}
+
+
+
 .live .img-color-change.color3 svg,
 .live .img-color-change.color3 path,
 .live .img-color-change.color3 rect,
@@ -315,7 +372,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .panel-container-3{width: 100%;}
 .panel-container-3.step-1{position: relative; z-index: 1; max-width:600px}
 
-.panel-container-3.step-2.list.act{position:static; height:100%; min-height:355px; width:100%}
+.panel-container-3.step-2.list.act {position:static; height:100%; min-height:355px; width:100%}
 
 .panel-container-3.step-2{padding: 10px 0; background: #fff;position: absolute; z-index: 2; left:100%; top:10px; min-height:calc(100% - 20px);-webkit-box-sizing:border-box;box-sizing:border-box;max-width: 600px}
 
@@ -346,7 +403,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 
 .step-2 .list .item-selected{background: rgba(3, 49, 30, 0.85);}
 .step-2 .list .item-selected:hover{background:rgba(3, 49, 30, 0.75);}
-.step-2 .list .img-round{background-color: red;max-width:50px;border-radius: 50%;-o-object-fit: cover;object-fit: cover;display: block;margin: 0 auto;border-style: none}
+.step-2 .list .img-round{max-width:60px;max-height: 60px;border-radius: 50%;-o-object-fit: cover;object-fit: cover;display: block;margin: 0.5em;border-style: none}
 .step-2 .list .item-selected .title, .step-2 .list .item-selected .date-time, .step-2 .list .item-selected div, .step-2 .list .item-selected .title p{ color: #fff};
 
 .field{margin: 5px 10px;}
@@ -355,7 +412,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .loading:before{content: ''; background: url(../img/layout/loading.png) no-repeat center center; width: 20px; height: 20px; display: block; background-size:100%; margin: 10px auto;-webkit-animation: spin 1s linear infinite;animation: spin 1s linear infinite;}
 .step-2 .list{background: #eee;margin: 10px 10px 0;padding: 0 10px;display: block;height: 283px;overflow: auto; position: relative;}
 .step-2 .filter + .list{height: 223px;}
-.step-2 .list li{background: #fff; margin: 10px 0; padding: 10px; display: block; text-align: left; cursor: pointer;}
+.step-2 .list li{background: #fff; margin: 10px 0 !important; padding: 10px; display: block; text-align: left; cursor: pointer;}
 .step-2 .list li:hover{background:#F8F6F6;}
 
 .step-2 .list li div{font-size: 12px; font-size: 0.75rem; color: #686868; text-align: center}
@@ -365,6 +422,10 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .step-2.act .back{left: -10%; width: 10%;}
 .step-3.act .back{left: -16%; width: 16%;}
 .back:before{content: '\2039';position: absolute; top:50%; left: 50%; margin-left: -8px; margin-top: -20px; text-indent: 0; font-size: 50px;font-size: 3.125rem; line-height: 12px; line-height: 0.75rem; color: #fff;}
+
+li.panel-list-item.flex {display: flex;}
+div.panel-det{margin:1em}
+
 .videowrapper {
     float: none;
     clear: both;
@@ -997,6 +1058,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.step-2 .filter + .list{height: 219px;}
 	.panel-container-3.step-3{height: calc(100% - 20px);}
 	.panel-container-3.step-3.size-2{min-width: 550px}
+
 	.field-dropdown-mobile .dropdown{display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin: 0 5px;}
 	.field-dropdown-mobile .dropdown button{font-size: 12px; font-size: 0.75rem; padding: 10px 5px; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; margin: 0 5px;}
 	.footer .main-menu{display: block;-webkit-column-width: 200px;column-width: 200px;-webkit-column-gap: 30px;column-gap: 40px;-webkit-column-rule: 1px solid rgba(255,255,255,0.2);column-rule: 1px solid rgba(255,255,255,0.2); padding: 30px 0; margin: 0 auto;}
@@ -1069,7 +1131,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.panel-container-3.step-1,
 	.panel-container-3.step-2,
 	.panel-container-3.step-3{position:static; width:calc(33.333333% - 20px)!important; min-width: 300px; margin:10px; float:left;}
-	.panel-container-3.step-3{min-height:355px; position: relative; left: 0!important; top:0;}
+	.panel-container-3.step-2.large{min-width: 80%}
+	.panel-container-3.step-3{min-height:365px; position: relative; left: 0!important; top:0;}
 	.appointment .pickadate{padding: 20px;}
 	.panel-container-3.step-2{padding: 20px 10px;}
 	.section-about .box-links .row{padding: 10px 10px 5px;}

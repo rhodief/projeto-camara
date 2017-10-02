@@ -1,0 +1,84 @@
+[
+    [
+        {
+          "id": 73579,
+          "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/73579",
+          "nome": "ALBERTO FRAGA",
+          "partido_sig": "DEM",
+          "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36769",
+          "uf_sig": "DF",
+          "idLegislatura": 55,
+          "foto": "img/img_avatar2.png"
+        },
+        {
+          "id": 73655,
+          "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/73655",
+          "nome": "AUGUSTO CARVALHO",
+          "partido_sig": "SD",
+          "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36765",
+          "uf_sig": "DF",
+          "idLegislatura": 55,
+          "foto": "img/img_avatar2.png"
+        },
+        {
+          "id": 160575,
+          "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/160575",
+          "nome": "ERIKA KOKAY",
+          "partido_sig": "PT",
+          "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36844",
+          "uf_sig": "DF",
+          "idLegislatura": 55,
+          "foto": "img/img_avatar2.png"
+        },
+        {
+          "id": 4931,
+          "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/4931",
+          "nome": "IZALCI LUCAS",
+          "partido_sig": "PSDB",
+          "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36835",
+          "uf_sig": "DF",
+          "idLegislatura": 55,
+          "foto": "img/img_avatar2.png"
+        },
+        {
+          "id": 141478,
+          "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/141478",
+          "nome": "LAERTE BESSA",
+          "partido_sig": "PR",
+          "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36814",
+          "uf_sig": "DF",
+          "idLegislatura": 55,
+          "foto": "img/img_avatar2.png"
+        },
+        {
+          "id": 160426,
+          "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/160426",
+          "nome": "ROGÉRIO ROSSO",
+          "partido_sig": "PSD",
+          "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36834",
+          "uf_sig": "DF",
+          "idLegislatura": 55,
+          "foto": "img/img_avatar2.png"
+        },
+        {
+          "id": 160637,
+          "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/160637",
+          "nome": "RONALDO FONSECA",
+          "partido_sig": "PROS",
+          "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36763",
+          "uf_sig": "DF",
+          "idLegislatura": 55,
+          "foto": "img/img_avatar2.png"
+        },
+        {
+          "id": 178870,
+          "uri": "https://dadosabertos.camara.leg.br/api/v2/deputados/178870",
+          "nome": "RÔNEY NEMER",
+          "partido_sig": "PP",
+          "uriPartido": "https://dadosabertos.camara.leg.br/api/v2/partidos/36809",
+          "uf_sig": "DF",
+          "idLegislatura": 55,
+          "foto": "img/img_avatar2.png"
+        }
+      ]
+]

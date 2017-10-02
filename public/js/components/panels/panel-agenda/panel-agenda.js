@@ -137,8 +137,6 @@
         //Scroll - O Scroll tem que ocorrer na abertura, então o jquery controlla o relamento ou o angular a abertura....
         function gotTo(x){
             var newHash = 'anchor-' + x;
-            console.log($location.hash());
-            console.log(newHash);
             $timeout(function(){
                 $location.hash(newHash);
                 $anchorScroll();

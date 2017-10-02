@@ -20,9 +20,9 @@
         return espaconav;
     }
 
-    espacoNavController.$inject = ['localStorageService', 'TABS', '$scope', 'panelsGenService']
+    espacoNavController.$inject = ['localStorageService', 'TABS', '$scope', 'panelsGenService', '$timeout']
 
-    function espacoNavController(localStorageService, TABS, $scope, panelsGenService) {
+    function espacoNavController(localStorageService, TABS, $scope, panelsGenService, $timeout) {
 
         var vm = this;
         //Main Settings
@@ -121,6 +121,10 @@
         function turnPanelOn(panel, parentPanel) {
             panel.activated = true;
             panelsGenService.enable(panel.name, parentPanel.section, panel.pos);
+            $timeout(function(){
+                scrollToElement('panel-'+panel.name);
+            }, 500)
+
         }
 
         function turnPanelOff(panel, parentPanel) {

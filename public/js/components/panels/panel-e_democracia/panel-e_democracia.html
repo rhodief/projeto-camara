@@ -1,0 +1,54 @@
+<div class="appointment">
+    <script>
+        $('#e_democracia-list').bind('mousewheel DOMMouseScroll', blockScroll);
+    </script>
+    <div class="center">
+        <div>
+            <div class="panel-container-3 step-2 list act large">
+                <div class="filter">
+                    <div class="field-dropdown-mobile">
+                        <div id="filter-dropdown-edemo" class="dropdown shadow">
+                            <button ng-click="vm.actFilter('audiencias_interativas')" ng-class="{act:vm.customFilter.categoria == 'audiencias_interativas'}">Audiências Interativas</button>
+                            <button ng-click="vm.actFilter('wikilegis')" ng-class="{act:vm.customFilter.categoria == 'wikilegis'}">Wikilegis</button>
+                            <button ng-click="vm.actFilter('expressao')" ng-class="{act:vm.customFilter.categoria == 'expressao'}">Expressão</button>
+                            <button ng-click="vm.actFilter('pauta_participativa')" ng-class="{act:vm.customFilter.categoria == 'pauta_participativa'}">Pauta Participativa</button>
+                        </div>
+                        <button class="toggle-dropdown filter" type="button" onclick="toggleDropdown(this)">&#9660;</button>
+                    </div>
+                </div>
+                <ul class="panel-list list" id="e_democracia-list">
+                    <div ng-if="vm.loadingList">
+                        <span class="loading">{{vm.loadingListMessage}}</span>
+                        <div ng-if="vm.reloadButton"><a href="" onClick="location.reload()">Recarregue a Página</a></div>
+                    </div>
+                    <div ng-if="!vm.loadingList">
+                        <div ng-if="vm.list[0] && !vm.list[0].error">
+                            <li class="panel-list-item" ng-repeat="item in vm.list | filter:vm.customFilter" ng-click="vm.goTo(item.url)">
+                                <div style="display:flex;margin:5px">
+                                    <div style="margin:5px">
+                                        <img-logo ng-model="item.categoria"></img-logo>
+                                    </div>
+                                    <div>
+                                        <div><span ng-if="item.tipo == 'Ao Vivo'" class="icon record"><img class="img-color-change color5 live" src="img/layout/record.svg" alt="Ao Vivo"></span><span class="title">{{item.tipo}}</span></div>
+                                        <div class="title">{{item.titulo}}</div>
+                                        <div>{{item.titulo}}</div>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div ng-if="!vm.list[0]">
+                            <span class="no-event">Não há ocorrências para esta busca.</span>
+                        </div>
+                        <div ng-if "vm.list[0] && vm.list[0].error ">
+                            <span class="no-event">{{vm.deputados[0].error}}</span>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    imgColorChange();
+</script>

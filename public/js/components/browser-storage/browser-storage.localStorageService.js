@@ -18,6 +18,8 @@
             addPanel: addPanel,
             removePanel: removePanel,
             getPanels: getPanels,
+            getPanelSettings: getPanelSettings,
+            setPanelSettings: setPanelSettings,
             getFavorites: getFavorites,
             addFavorite: addFavorite,
             removeFavorite: removeFavorite,
@@ -59,8 +61,10 @@
             _getPanels().then(found).catch(notFound);
 
             function found(data) {
-                data[panelName] = { name: panelName, configs: configs }
-                _setPanels(data);
+                if(!data[panelName]){
+                    data[panelName] = { name: panelName, configs: configs }
+                    _setPanels(data);
+                }
             }
 
             function notFound(e) {
@@ -85,6 +89,14 @@
 
         function getPanels() {
             return _getPanels();
+        }
+
+        function getPanelSettings(panelName, index){
+            return _getPanelSettings(panelName, index);
+        }
+
+        function setPanelSettings(panelName, index, value){
+            return _setPanelSettings(panelName, index, value);
         }
 
         function getFavorites() {
@@ -172,6 +184,33 @@
             datas[attr] = value;
             return $q.resolve(_setData(datas));
         }
+
+        function _getPanelSettings(panelName, index){
+            return _getPanels().then(panelsList).catch(notFound);
+            function panelsList(panels){
+                if(!panels[panelName] || !panels[panelName].configs) $q.reject('Panel não Encontrado');
+                if(index && !panels[panelName].configs.index) return false;
+                return index ? panels[panelName].configs.index : panels[panelName].configs; 
+            }
+            function notFound(e) {
+                configError();
+            }
+        }
+
+        function _setPanelSettings(panelName, index, value){
+            return _getPanels().then(okPanels).catch(notFound);
+            function okPanels(panels){
+                if(!panels[panelName] || !panels[panelName].configs) $q.reject('Panel não Encontrado');
+                panels[panelName].configs[index] = value;
+                console.log(panels);
+                _setPanels(panels);
+            }
+            function notFound(e){
+                console.log(e);
+            }
+        }
+
+        
 
         function _getPanels() {
             return _getAttr(LOCALSTORAGE.PANELS_NAME);

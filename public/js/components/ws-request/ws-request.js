@@ -22,7 +22,8 @@
             getDeputado: getDeputado,
             getUfsList: getUfsList,
             getAgenda: getAgenda,
-            getAgendaDetail: getAgendaDetail
+            getAgendaDetail: getAgendaDetail,
+            getEDemocraciaList: getEDemocraciaList
         };
 
         const SCHEMA = {
@@ -182,6 +183,29 @@
                     nome: 'nome',
                     descricao: 'descricao'
                 }
+            },
+            eDemocracia:{
+                name: "e-democracia",
+                url: function(){
+                    return "../server_simulator/e_democracia/e_democracia.json"
+                },
+                path:"data.dados",
+                list: true,
+                schema:{
+                    categoria: "categoria",
+                    img: "img",
+                    url: "url",
+                    titulo: "titulo",
+                    detalhes: "detalhes",
+                    tipo: "tipo",
+                    itens:{
+                        path: "itens",
+                        schema:{
+                            valor: 'valor',
+                            rotulo: 'rotulo'
+                        }
+                    }
+                }
             }
         };
 
@@ -210,7 +234,9 @@
             return _getDataWs(SCHEMA.agendaView, params);
         }
 
-
+        function getEDemocraciaList(){
+            return _getDataWs(SCHEMA.eDemocracia);
+        }
 
         function _getDataWs(schemaObj, params) {
             return _getData(schemaObj.url(params)).then(_formatData.bind(null, schemaObj)).catch(_getMockData.bind(null, schemaObj));

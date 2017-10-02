@@ -98,7 +98,7 @@ $(document).ready(function () {
 			html += '</ul>';
 			$('#ResultadoBusca').html(html);
 		}
-		
+
 		function _search(callBack) {
 			$.get(urlSiteMap, function () { }, 'json').done(function (data) {
 				var error = false;
@@ -157,7 +157,7 @@ $(document).ready(function () {
 		}
 	});
 
-	$('.side-menu .bt-menu').click(function(){
+	$('.side-menu .bt-menu').click(function () {
 		$(this).toggleClass('act');
 		$('.corner-menu').toggleClass('act').slideToggle();
 	});
@@ -166,9 +166,34 @@ $(document).ready(function () {
 		sideSubmenu($(this));
 		return false;
 	});
-	$('.corner-menu > li.has-submenu.act > a').each(function(){
+	$('.corner-menu > li.has-submenu.act > a').each(function () {
 		sideSubmenu($(this));
 	});
+
+	// ATALHOS DO TECLADO!!!
+	var sectionIndex = 0;
+	$('html').keydown(function (e) {
+		//Alt + Shift + 
+		var control = e.altKey && e.shiftKey;
+		if (control && e.which == 48) {
+			goToTop();
+		}
+		if (control && e.which == 49) {
+			goToMenu();
+		}
+		if (control && e.which == 50) {
+			goToEasyAccess();
+		}
+		if (control && e.which == 51) {
+			goToSection(sectionIndex);
+			(sectionIndex >= 4 ? sectionIndex = 0 : sectionIndex++);
+		}
+		if(control && e.which == 52){
+			goToFooter();
+		}
+
+	});
+
 	moverRecomendados();
 	menu_max_height();
 	atualizaMinHeight();
@@ -274,7 +299,7 @@ function blockScroll(e) {
 		$(this).scrollTop(scrollTo + $(this).scrollTop());
 	}
 }
-function sideSubmenu(e){
+function sideSubmenu(e) {
 	if ($(e).hasClass('act')) {
 		$('.corner-menu > li.has-submenu > a').removeClass('act').parent().removeClass('act').children('.submenu').slideUp();
 	} else {
@@ -282,10 +307,58 @@ function sideSubmenu(e){
 		$(e).addClass('act').parent().addClass('act').children('.submenu').slideDown();
 	}
 }
-function moverRecomendados(){
-	if ($(window).width() > 1023){
+function moverRecomendados() {
+	if ($(window).width() > 1023) {
 		$('.box-see-too').appendTo('.box-side');
-	}else{
+	} else {
 		$('.box-see-too').appendTo('.article-sidebar > .center');
 	}
+}
+
+function goToTop() {
+	scrollToElement('#header');
+	$('#logo').focus();
+}
+
+function goToMenu() {
+	scrollToElement('#menu');
+	$('#menu li a').first().focus()
+}
+
+function goToEasyAccess() {
+	scrollToElement('#easy-access');
+	$('#easy-access li a').first().focus();
+}
+
+function goToSection(index){
+	var selector = '#section-' + (index + 1);
+	scrollToElement(selector);
+	$(selector + ' li a, ' + selector + ' button').first().focus();
+}
+
+function goToFooter(){
+	scrollToElement('footer');
+	$('footer .footer-links a').first().focus();
+}
+
+function scrollToElement(scrollToId) {
+	var container = $('html, body'),
+		scrollTo = $(scrollToId);
+	animateScroll(container, scrollTo);
+}
+
+
+function scrollToDivPoint(containerEl, pointEl) {
+	var container = $(container),
+		scrollTo = $(pointEl);
+
+	container.animate({
+		scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()
+	});
+}
+
+function animateScroll(container, scrollTo){
+	container.animate({
+		scrollTop: scrollTo.offset().top
+	});
 }
