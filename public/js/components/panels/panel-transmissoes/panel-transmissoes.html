@@ -4,7 +4,7 @@
             <div class="panel-container-3 step-2 list act">
                 <div class="filter">
                     <div class="field-dropdown-mobile">
-                        <div id="filter-dropdown" class="dropdown shadow">
+                        <div id="transmissoes-dropdown" class="dropdown shadow">
                             <button ng-click="vm.actFilter(undefinded)" ng-class="{act:vm.customFilter.$ == undefined}">Todos</button>
                             <button ng-click="vm.actFilter('Plenário da Câmara dos Deputados')" ng-class="{act:vm.customFilter.$ == 'Plenário da Câmara dos Deputados'}">Plenário</button>
                             <button ng-click="vm.actFilter('Comissão de')" ng-class="{act:vm.customFilter.$ == 'Comissão de'}">Comissões</button>
@@ -21,7 +21,7 @@
                     <div ng-if="!vm.loadingList">
                         <div ng-if="vm.transmissoes[0]">
                             <li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(transmissao.url)}" ng-repeat="transmissao in vm.transmissoes"
-                                ng-click="vm.getMedia(transmissao.url)" id="anchor-{{$index}}">
+                                ng-click="vm.getMedia(transmissao.url)">
                                 <div>
                                     <div class="date-time">{{transmissao.data}} - {{transmissao.horario}}</div>
                                     <div class="title">{{transmissao.title}}</div>

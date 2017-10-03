@@ -127,7 +127,7 @@
         }
 
         function actFilter(value){
-            var dropdown = angular.element(document.getElementById('filter-dropdown'));
+            var dropdown = angular.element(document.getElementById('agenda-dropdown'));
             dropdown.removeClass('act');
             vm.customFilter = {
                 $: value
