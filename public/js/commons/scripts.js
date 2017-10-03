@@ -170,6 +170,41 @@ $(document).ready(function () {
 		sideSubmenu($(this));
 	});
 
+	$('.settings-icon').click(function(){
+		$(this).toggleClass('act').next('.site-settings').toggleClass('act');
+		$('.toogle-show').fadeToggle();
+		return false;
+	});
+	$('.font-size.less').click(function(){
+		var size = $("html").css('font-size').replace('px', '');
+		if (size > 12){
+			$("html").css('font-size', (--size)+'px');
+		}
+		return false;
+	});
+	$('.font-size.more').click(function(){
+		var size = $("html").css('font-size').replace('px', '');
+		if (size < 20){
+			$("html").css('font-size', (++size)+'px');
+		}
+		return false;
+	});
+	$('.font-size.reset').click(function(){
+		var size = $("html").css('font-size').replace('px', '');
+		$("html").css('font-size', '100%');
+		return false;
+	});
+	$('.hight-contrast').click(function(){
+		$("html").addClass('hight-contrast');
+		$(this).addClass('act');
+		return false;
+	});
+	$('.normal-contrast').click(function(){
+		$("html").removeClass('hight-contrast');
+		$('.box-contrast a').removeClass('act');
+		return false;
+	});
+	
 	// ATALHOS DO TECLADO!!!
 	var sectionIndex = 0;
 	$('html').keydown(function (e) {

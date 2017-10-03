@@ -30,7 +30,7 @@
         <span>Javascript não ativado - Por favor, ative para ter uma melhor experiência de navegação neste Portal!</span>
     </noscript>
     <div id="notification" class="notification" style="display:none">
-        <a href="#" class="close" title="Fechar notificação">x</a>
+        <a href="#" class="close invert-contrast" title="Fechar notificação">x</a>
         <div id="main-messages"></div>
     </div>
     <header>
@@ -46,12 +46,34 @@
                     <h1 class="logo"><a id="logo" href="#" title="Portal da Câmara dos Deputados"><img src="img/layout/logo.svg" alt="Portal da Câmara dos Deputados"></a></h1>
                     <div class="external-links">
                         <div class="box-links">
-                            <div class="box-libras"><span class="icon"><img src="img/layout/icones-home-vlibras.svg" alt="Libras"></span></div>
-                            <a href="http://camara.custhelp.com/">Fale Conosco</a>
-                            <a href="http://www2.camara.leg.br/transparencia/acesso-a-informacao">Acesso à Informação</a>
-                            <a href="http://www.congressonacional.leg.br/" class="congresso"><img src="img/layout/icones-home-congresso.svg" alt="Congresso"></a>
-                            <a href="http://www.senado.gov.br/" class="senado"><img src="img/layout/icones-home-senado.svg" alt="Senado"></a>
-                            <a href="http://www.tcu.gov.br/" class="tcu"><img src="img/layout/icones-home-tcu.svg" alt="TCU"></a>
+                            <div class="box-libras toogle-show"><span class="icon"><img src="img/layout/icones-home-vlibras.svg" alt="Libras"></span></div>
+                            <a class="toogle-show" href="http://camara.custhelp.com/">Fale Conosco</a>
+                            <a class="toogle-show" href="http://www2.camara.leg.br/transparencia/acesso-a-informacao">Acesso à Informação</a>
+                            <a class="toogle-show" href="http://www.congressonacional.leg.br/" class="congresso"><img src="img/layout/icones-home-congresso.svg" alt="Congresso"></a>
+                            <a class="toogle-show" href="http://www.senado.gov.br/" class="senado"><img src="img/layout/icones-home-senado.svg" alt="Senado"></a>
+                            <a class="toogle-show" href="http://www.tcu.gov.br/" class="tcu"><img src="img/layout/icones-home-tcu.svg" alt="TCU"></a>
+							<a href="#" class="settings-icon">
+								<img class="img-color-change" src="img/layout/cog.svg" alt="Tamanho da fonte e contraste do site">
+							</a>
+                            <div class="site-settings">
+                            	<ul class="settings-list">
+                            		<li class="box-font-size">
+                            			<span class="title">Tamanho da fonte</span>
+                            			<ul>
+											<li><a href="#" class="font-size less">-Aa</a></li>
+											<li><a href="#" class="font-size reset">Aa</a></li>
+											<li><a href="#" class="font-size more">+Aa</a></li>
+										</ul>
+                            		</li>
+                            		<li class="box-contrast">
+                            			<span class="title">Alterar estilo</span>
+                            			<ul>
+                            				<li><a href="#" class="normal-contrast">Normal</a></li>
+                            				<li><a href="#" class="hight-contrast">Contraste</a></li>
+										</ul>
+									</li>
+                            	</ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -62,7 +84,7 @@
                     <nav>
                         <ul class="main-menu">
                             <li class="has-submenu">
-                                <a href="/a-camara">Institucional<span class="bt-submenu"><span></span><span></span></span></a>
+                                <a href="/a-camara" class="invert-contrast">Institucional<span class="bt-submenu"><span></span><span></span></span></a>
                                 <div class="submenu">
                                     <ul>
                                         <li>
@@ -87,7 +109,7 @@
                                 </div>
                             </li>
                             <li class="has-submenu">
-                                <a href="#">Deputados<span class="bt-submenu"><span></span><span></span></span></a>
+                                <a href="#" class="invert-contrast">Deputados<span class="bt-submenu"><span></span><span></span></span></a>
                                 <div class="submenu">
                                     <ul>
                                         <li>
@@ -105,7 +127,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="has-submenu"><a href="#">Atividade Legislativa<span class="bt-submenu"><span></span><span></span></span></a>
+                            <li class="has-submenu"><a href="#" class="invert-contrast">Atividade Legislativa<span class="bt-submenu"><span></span><span></span></span></a>
                                 <div class="submenu">
                                     <ul>
                                         <li>
@@ -126,7 +148,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="has-submenu"><a href="#">Orçamento da União<span class="bt-submenu"><span></span><span></span></span></a>
+                            <li class="has-submenu"><a href="#" class="invert-contrast">Orçamento da União<span class="bt-submenu"><span></span><span></span></span></a>
                                 <div class="submenu">
                                     <ul>
                                         <li>
@@ -138,7 +160,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="has-submenu right"><a href="#">Transparência<span class="bt-submenu"><span></span><span></span></span></a>
+                            <li class="has-submenu right"><a href="#" class="invert-contrast">Transparência<span class="bt-submenu"><span></span><span></span></span></a>
                                 <div class="submenu">
                                     <ul>
                                         <li>
@@ -168,7 +190,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="has-submenu right"><a href="#">Comunicação<span class="bt-submenu"><span></span><span></span></span></a>
+                            <li class="has-submenu right"><a href="#" class="invert-contrast">Comunicação<span class="bt-submenu"><span></span><span></span></span></a>
                                 <div class="submenu">
                                     <ul>
                                         <li>
@@ -198,7 +220,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="has-submenu right"><a href="#">Participação<span class="bt-submenu"><span></span><span></span></span></a>
+                            <li class="has-submenu right"><a href="#" class="invert-contrast">Participação<span class="bt-submenu"><span></span><span></span></span></a>
                                 <div class="submenu">
                                     <ul>
                                         <li>
@@ -322,7 +344,7 @@
                                 <p class="date-time">7 horas atrás</p>
                             </li>
                         </ul>
-                        <a href="camaranoticias.html" class="button more-news">Ver mais notícias</a>
+                        <a href="camaranoticias.html" class="button more-news invert-contrast">Ver mais notícias</a>
                     </div>
                     <div class="list-news">
                         <ul>
@@ -391,10 +413,10 @@
                             <h4 class="title-link">Conheça</h4>
                             <div class="content-links">
                                 <ul class="links">
-                                    <li class="h-2 shadow"><a href="#" title="O Papel da Câmara"><span class="text">O Papel da Câmara</span><span class="icon"><img class="img-color-change color4" src="img/layout/ico_camara.svg" alt="O Papel da Câmara"></span></a></li>
-                                    <li class="h-2 shadow"><a href="#" title="Visite a Câmara"><span class="text">Visite a Câmara</span><span class="icon"><img class="img-color-change color4" src="img/layout/location.svg" alt="Visite a Câmara"></span></a></li>
-                                    <li class="shadow"><a href="#" title="Estrutura"><span class="text">Estrutura</span></a></li>
-                                    <li class="shadow"><a href="#" title="A Presidência"><span class="text">A Presidência</span></a></li>
+                                    <li class="h-2 shadow "><a href="#" title="O Papel da Câmara" class="invert-contrast"><span class="text">O Papel da Câmara</span><span class="icon"><img class="img-color-change color4" src="img/layout/ico_camara.svg" alt="O Papel da Câmara"></span></a></li>
+                                    <li class="h-2 shadow"><a href="#" class="invert-contrast" title="Visite a Câmara"><span class="text">Visite a Câmara</span><span class="icon"><img class="img-color-change color4" src="img/layout/location.svg" alt="Visite a Câmara"></span></a></li>
+                                    <li class="shadow"><a href="#" class="invert-contrast" title="Estrutura"><span class="text">Estrutura</span></a></li>
+                                    <li class="shadow"><a href="#" class="invert-contrast" title="A Presidência"><span class="text">A Presidência</span></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -403,9 +425,9 @@
                             <div class="content-links">
                                 <panels-gen section="atividade_parlamentar" pos="1"></panels-gen>
                                 <ul class="links">
-                                    <li class="shadow"><a href="#" title="Conheça os Deputados"><span class="text">Conheça os Deputados</span></a></li>
-                                    <li class="shadow"><a href="#" title="Discursos"><span class="text">Discursos</span></a></li>
-                                    <li class="shadow"><a href="#" title="Lideranças Partidarias"><span class="text">Lideranças Partidarias</span></a></li>
+                                    <li class="shadow"><a href="#" class="invert-contrast" title="Conheça os Deputados"><span class="text">Conheça os Deputados</span></a></li>
+                                    <li class="shadow"><a href="#" class="invert-contrast" title="Discursos"><span class="text">Discursos</span></a></li>
+                                    <li class="shadow"><a href="#" class="invert-contrast" title="Lideranças Partidarias"><span class="text">Lideranças Partidarias</span></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -413,11 +435,11 @@
                             <h4 class="title-link">Atividade Legislativa</h4>
                             <div class="content-links">
                                 <ul class="links">
-                                    <li class="shadow"><a href="#" title="Agenda"><span class="text">Agenda</span></a></li>
-                                    <li class="shadow"><a href="#" title="Plenário"><span class="text">Plenário</span></a></li>
-                                    <li class="h-2 shadow"><a href="#" title="Commo são feitas as leis"><span class="text">Como são feitas as leis</span><span class="icon"><img class="img-color-change color4" src="img/layout/ico_leis.svg" alt="Como são feitas as leis"></span></a></li>
-                                    <li class="shadow"><a href="#" title="Comissões"><span class="text">Comissões</span></a></li>
-                                    <li class="shadow"><a href="#" title="Proposições"><span class="text">Proposições</span></a></li>
+                                    <li class="shadow"><a href="#" class="invert-contrast" title="Agenda"><span class="text">Agenda</span></a></li>
+                                    <li class="shadow"><a href="#" class="invert-contrast" title="Plenário"><span class="text">Plenário</span></a></li>
+                                    <li class="h-2 shadow"><a href="#" class="invert-contrast" title="Commo são feitas as leis"><span class="text">Como são feitas as leis</span><span class="icon"><img class="img-color-change color4" src="img/layout/ico_leis.svg" alt="Como são feitas as leis"></span></a></li>
+                                    <li class="shadow"><a href="#" class="invert-contrast" title="Comissões"><span class="text">Comissões</span></a></li>
+                                    <li class="shadow"><a href="#" class="invert-contrast" title="Proposições"><span class="text">Proposições</span></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -438,7 +460,7 @@
                             Conheça as informações que a Câmara dos Deputados disponibiliza para que você possa conhecer e fiscalizar a atividade parlamentar
                             e administrativa da Casa, bem como o Orçamento da União.
                         </h3>
-                        <button class="button">Saiba mais</button>
+                        <button class="button invert-contrast">Saiba mais</button>
                     </div>
                 </header>
                 <div class="box-posts">
@@ -505,7 +527,7 @@
                                 que você possam interagir diretamente com ela e, assim, participar do processo democrático
                                 de forma mais efetiva.
                             </h3>
-                            <button class="button type-1">Saiba mais</button>
+                            <button class="button type-1 invert-contrast">Saiba mais</button>
                         </div>
                     </header>
                     <div class="box-columns flex-1">
@@ -602,25 +624,25 @@
                     <li class="shadow">
                         <a href="#">
 							<img src="img/uploads/img_14.jpg" alt="Escola Virtual de Cidadania">
-							<h3 class="text">Escola Virtual de Cidadania</h3>
+							<h3 class="text invert-contrast">Escola Virtual de Cidadania</h3>
 						</a>
                     </li>
                     <li class="shadow">
-                        <a href="#">
+                        <a href="#" class="">
 							<img src="img/uploads/img_15.jpg" alt="Plenarinho">
-							<h3 class="text">Plenarinho</h3>
+							<h3 class="text invert-contrast">Plenarinho</h3>
 						</a>
                     </li>
                     <li class="shadow">
                         <a href="#">
 							<img src="img/uploads/img_16.jpg" alt="Parlamento Jovem">
-							<h3 class="text">Parlamento Jovem</h3>
+							<h3 class="text invert-contrast">Parlamento Jovem</h3>
 						</a>
                     </li>
                     <li class="shadow">
                         <a href="#">
 							<img src="img/uploads/img_17.jpg" alt="Educação à Distância">
-							<h3 class="text">Educação à Distância</h3>
+							<h3 class="text invert-contrast">Educação à Distância</h3>
 						</a>
                     </li>
                 </ul>
@@ -643,10 +665,10 @@
         <div class="footer">
             <div class="box-menu">
                 <a class="bt-menu" title="Menu">
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="text">Menu</span>
+					<span class="bar invert-contrast"></span>
+					<span class="bar invert-contrast"></span>
+					<span class="bar invert-contrast"></span>
+					<span class="text invert-contrast">Menu</span>
 				</a>
             </div>
             <div class="menu">

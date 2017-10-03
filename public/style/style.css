@@ -4,6 +4,9 @@ body,
 .appointment .pickadate{font:normal 100% 'Open Sans', sans-serif;}
 .no-scroll{overflow: hidden;}
 
+html.hight-contrast *{color: #ffd600 !important;border-color: #ffd600 !important; text-shadow: none !important; -webkit-box-shadow: none !important; box-shadow: none !important; background-color: #000 !important; background-image: none !important;}
+html.hight-contrast * .invert-contrast{color: #000 !important;border-color: #000 !important; text-shadow: none !important; -webkit-box-shadow: none !important; box-shadow: none !important; background-color: #ffd600 !important; background-image: none !important;}
+
 button,
 textarea,
 input[type=tel],
@@ -38,6 +41,7 @@ a,
 .img-color-change polygon,
 .main-menu > li > a:before,
 .subitems-list .list li span,
+.site-settings .settings-list,
 .box-news .news-highlight img,
 .header .submenu li > a:after,
 .subitems-list .list li:before,
@@ -85,12 +89,18 @@ a,
     to {-webkit-transform:rotate(360deg);transform:rotate(360deg);}
 }
 
+@-webkit-keyframes blink-record {  
+	from { opacity: 1; }
+	to { opacity: 0; }
+  }
+
 @keyframes blink-record {  
 	from { opacity: 1; }
 	to { opacity: 0; }
   }
 
 .icon.record{
+	-webkit-animation: blink-record ease-in-out 1.2s infinite both alternate;
 	animation: blink-record ease-in-out 1.2s infinite both alternate;
 	max-width: 20px;
     max-height: 20px;
@@ -138,6 +148,7 @@ dt { clear: both; }
 
 .center{display: block; width: 100%; max-width: 1900px; padding: 0 10px; -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0 auto;}
 .header{background: #004a2f; padding:10px 0 0; position: relative; z-index: 4;}
+.header .top-header{position: relative; z-index: 4;}
 .header .top-header .center{display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center;}
 .header .logo{width:226px; -webkit-box-ordinal-group:3; -ms-flex-order:2; order:2; position: relative; z-index: 2;}
 .header .logo a{display: block;}
@@ -423,7 +434,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .step-3.act .back{left: -16%; width: 16%;}
 .back:before{content: '\2039';position: absolute; top:50%; left: 50%; margin-left: -8px; margin-top: -20px; text-indent: 0; font-size: 50px;font-size: 3.125rem; line-height: 12px; line-height: 0.75rem; color: #fff;}
 
-li.panel-list-item.flex {display: flex;}
+li.panel-list-item.flex {display: -webkit-box;display: -ms-flexbox;display: flex;}
 div.panel-det{margin:1em}
 
 .videowrapper {
@@ -827,6 +838,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .see-too a img{display: inline-block; width: 30px; height: 30px; -o-object-fit: cover; object-fit: cover; display: inline-block; vertical-align: middle; margin-right: 10px; border-radius: 50%;}
 .column-group{-webkit-column-gap:10px;column-gap:10px; -webkit-column-width: 170px; column-width: 170px;}
 
+.site-settings{position: relative; display: inline-block; height: 22px; vertical-align: top; width: 0; margin: 0;}
+.site-settings .settings-list{position: absolute;top: -13px; right: 42px; background: #fff; width: 0; overflow: hidden; opacity: 0; text-align: center;}
+.site-settings.act .settings-list{width: 445px; opacity: 1;}
+.site-settings .settings-list li{display: inline-block; padding: 0 3px;}
+.site-settings .settings-list > li{padding: 0 14px; background: #eee; width: 190px}
+.site-settings .settings-list a{display: block; line-height:20px; font-size: 1rem; padding: 3px 5px; font-weight: 600;}
+.site-settings .settings-list .font-size.less{font-size: 0.9375rem;}
+.site-settings .settings-list .font-size.reset{font-size: 1rem;}
+.site-settings .settings-list .font-size.more{font-size: 1.125rem;}
+
 @media screen and (max-width: 767px) {
 	.section-news .box-news.mobile-invert-order{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
 	.mobile-invert-order > div:first-child{-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2; -ms-flex-preferred-size:100%; flex-basis:100%;}
@@ -1037,6 +1058,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.header .box-search input[type=search]{position: static;}
 	.header .external-links{display: block; -webkit-box-ordinal-group:3; -ms-flex-order:2; order:2; margin-left: auto; margin-right: 30px}
 	.header .box-links > a{color: #fff; font-size: 14px; font-size: 0.875rem; margin-left: 15px; display: inline-block; vertical-align: middle; text-decoration: none;}
+	.header .box-links > a img,
+	.header .box-links > a svg{height: 22px; display: block;}
 	.header .box-links > a:hover{text-decoration: underline;}
 	.header .box-links > a img{width:auto; height: 22px; display: block;}
 	.header .box-links .box-libras{display: inline-block; vertical-align: middle;}
