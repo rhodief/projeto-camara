@@ -2,512 +2,675 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="theme-color" content="#004a2f">
-    <meta name="msapplication-navbutton-color" content="#004a2f">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#004a2f">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portal da Câmara dos Deputados">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="utf-8" />
+	<meta name="theme-color" content="#004a2f">
+	<meta name="msapplication-navbutton-color" content="#004a2f">
+	<meta name="apple-mobile-web-app-able" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#004a2f">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Portal da Câmara dos Deputados">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Portal da Câmara dos Deputados</title>
+	<title>Portal da Câmara dos Deputados</title>
 
-    <link rel="icon" href="img/layout/favicon.ico">
-    <link rel="stylesheet" href="style/style.css" />
+	<link rel="icon" href="img/layout/favicon.ico">
+	<link rel="stylesheet" href="style/style.css" />
 
-    <script type="text/javascript" src="js/commons/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript" src="js/commons/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/commons/scripts.js"></script>
     <script type="text/javascript" src="js/commons/svg.js"></script>
     <script type="text/javascript" src="js/commons/jquery.flexslider-min.js"></script>
     <link rel="stylesheet" href="style/flexslider.css">
+
 </head>
 
 
 <body ng-app="app">
-    <!-- ################ INÍCIO ESPAÇO PARA NOTIFICAÇOES ########## -->
-    <noscript class="nojavscript">
-        <span>Javascript não ativado - Por favor, ative para ter uma melhor experiência de navegação neste Portal!</span>
-    </noscript>
+	<noscript class="nojavscript">
+		<span>Javascript não ativado - Por favor, ative para ter uma melhor experiência de navegação neste Portal!</span>
+	</noscript>
 	<div id="notification" class="notification" style="display:none">
-		<a href="#" class="close" title="Fechar notificação">x</a>
+		<a href="#" class="close invert-contrast" title="Fechar notificação">x</a>
 		<div id="main-messages"></div>
 	</div>
-	<!-- ################ FIM ESPAÇO PARA NOTIFICAÇOES ############ -->
-    <header>
-        <div class="header">
-            <div class="top-header">
-                <div class="center">
-                    <a class="bt-menu" title="Menu">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="text">Menu</span>
-                    </a>
-                    <h1 class="logo"><a href="#" title="Portal da Câmara dos Deputados"><img src="img/layout/logo.svg" alt="Portal da Câmara dos Deputados"></a></h1>
-                    <div class="external-links">
-                        <div class="box-links">
-                            <div class="box-libras"><span class="icon"><img src="img/layout/icones-home-vlibras.svg" alt="Libras"></span></div>
-                            <a href="http://camara.custhelp.com/">Fale Conosco</a>
-                            <a href="http://www2.camara.leg.br/transparencia/acesso-a-informacao">Acesso à Informação</a>
-                            <a href="http://www.congressonacional.leg.br/" class="congresso"><img src="img/layout/icones-home-congresso.svg" alt="Congresso"></a>
-                            <a href="http://www.senado.gov.br/" class="senado"><img src="img/layout/icones-home-senado.svg" alt="Senado"></a>
-                            <a href="http://www.tcu.gov.br/" class="tcu"><img src="img/layout/icones-home-tcu.svg" alt="TCU"></a>
-                        </div>
-                    </div>
-                    <div class="bg-search"></div>
-                </div>
-            </div>
-            <div class="bg-menu"></div>
-            <div class="menu">
-                <div class="center">
-                    <nav>
-                        <ul class="main-menu">
-                            <li class="has-submenu">
-                                <a href="/a-camara">Institucional<span class="bt-submenu"><span></span><span></span></span></a>
-                                <div class="submenu">
-                                    <ul>
-                                        <li>
-                                            <a href="/a-camara/conheca">Papel e história da Câmara</a>
-                                        </li>
-                                        <li>
-                                            <a href="/a-camara/estruturaadm">Estrutura organizacional</a>
-                                        </li>
-                                        <li>
-                                            <a href="/a-camara/cursos">Cursos</a>
-                                        </li>
-                                        <li>
-                                            <a href="/a-camara/programas-institucionais">Programas Institucionais</a>
-                                        </li>
-                                        <li>
-                                            <a href="/a-camara/documentos-e-pesquisa">Publicações e acervos</a>
-                                        </li>
-                                        <li>
-                                            <a href="/a-camara/visiteacamara">Visite a Câmara</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="#">Deputados<span class="bt-submenu"><span></span><span></span></span></a>
-                                <div class="submenu">
-                                    <ul>
-                                        <li>
-                                            <a href="/deputados/pesquisa">Conheça os Deputados</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Discursos</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/liderancas-partidarias">Lideranças partidárias</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/frentes-e-grupos-parlamentares">Frente e grupos parlamentares</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="has-submenu"><a href="#">Atividade Legislativa<span class="bt-submenu"><span></span><span></span></span></a>
-                                <div class="submenu">
-                                    <ul>
-                                        <li>
-                                            <a href="/deputados/pesquisa">Agenda</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Plenário</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/frentes-e-grupos-parlamentares">Projetos de lei e outras proposições</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/liderancas-partidarias">Comissões</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/frentes-e-grupos-parlamentares">Legislação</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="has-submenu"><a href="#">Orçamento da União<span class="bt-submenu"><span></span><span></span></span></a>
-                                <div class="submenu">
-                                    <ul>
-                                        <li>
-                                            <a href="/deputados/pesquisa">Leis Orçamentárias</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Fiscalize</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="has-submenu right"><a href="#">Transparência<span class="bt-submenu"><span></span><span></span></span></a>
-                                <div class="submenu">
-                                    <ul>
-                                        <li>
-                                            <a href="/deputados/pesquisa">Acesso à informação</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Cota Parlamentar</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Viagens oficiais e passaportes</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Imóveis funcionais e auxílio-moradia</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Licitações e contratos</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Recursos humanos e concursos</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Receitas e despesas</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Dados abertos</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="has-submenu right"><a href="#">Comunicação<span class="bt-submenu"><span></span><span></span></span></a>
-                                <div class="submenu">
-                                    <ul>
-                                        <li>
-                                            <a href="/deputados/pesquisa">Câmara Notícias</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">TV Câmara</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Rádio Câmara</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Jornal da Câmara</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Assessoria de Imprensa</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Banco de Imagens</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Rede Legislativa de Rádio e TV</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Plenarinho</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="has-submenu right"><a href="#">Participação<span class="bt-submenu"><span></span><span></span></span></a>
-                                <div class="submenu">
-                                    <ul>
-                                        <li>
-                                            <a href="/deputados/pesquisa">Saiba como participar</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Participe dos debates</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Sugira um projeto</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Ajude a escrever a lei</a>
-                                        </li>
-                                        <li>
-                                            <a href="/deputados/discursos-e-notas-taquigraficas">Fale Conosco</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="bg-easy-access"></div>
-            <div class="easy-access">
-                <div class="center">
-                    <nav>
-                        <ul class="menu-easy-access">
-                            <li class="search-form">
-                                <a href="#"><span class="icon"><img src="img/layout/search.svg" alt="Pesquisa" class="img-color-change color3"></span><span class="title">Pesquisa</span></a>
-                                <div class="subitem">
-                                    <div class="form">
+	<header>
+		<div class="header" id="header">
+			<div class="top-header">
+				<div class="center">
+					<a class="bt-menu" title="Menu">
+									<span class="bar"></span>
+									<span class="bar"></span>
+									<span class="bar"></span>
+									<span class="text">Menu</span>
+								</a>
+					<h1 class="logo"><a id="logo" href="./" title="Portal da Câmara dos Deputados"><img src="img/layout/logo.svg" alt="Portal da Câmara dos Deputados"></a></h1>
+					<div class="external-links">
+						<div class="box-links">
+							<div class="box-libras toogle-show"><span class="icon"><img src="img/layout/icones-home-vlibras.svg" alt="Libras"></span></div>
+							<a class="toogle-show" href="http://camara.custhelp.com/">Fale Conosco</a>
+							<a class="toogle-show" href="http://www2.camara.leg.br/transparencia/acesso-a-informacao">Acesso à Informação</a>
+							<a class="toogle-show" href="http://www.congressonacional.leg.br/" class="congresso"><img src="img/layout/icones-home-congresso.svg" alt="Congresso"></a>
+							<a class="toogle-show" href="http://www.senado.gov.br/" class="senado"><img src="img/layout/icones-home-senado.svg" alt="Senado"></a>
+							<a class="toogle-show" href="http://www.tcu.gov.br/" class="tcu"><img src="img/layout/icones-home-tcu.svg" alt="TCU"></a>
+							<a href="#" class="settings-icon">
+											<img class="img-color-change" src="img/layout/cog.svg" alt="Tamanho da fonte e contraste do site">
+										</a>
+							<div class="site-settings">
+								<ul class="settings-list">
+									<li class="box-font-size">
+										<span class="title">Tamanho da fonte</span>
+										<ul>
+											<li><a href="#" class="font-size less">-Aa</a></li>
+											<li><a href="#" class="font-size reset">Aa</a></li>
+											<li><a href="#" class="font-size more">+Aa</a></li>
+										</ul>
+									</li>
+									<li class="box-contrast">
+										<span class="title">Alterar estilo</span>
+										<ul>
+											<li><a href="#" class="normal-contrast">Normal</a></li>
+											<li><a href="#" class="hight-contrast">Contraste</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-menu"></div>
+			<div class="menu" id="menu">
+				<div class="center">
+					<nav>
+						<ul class="main-menu">
+							<li class="has-submenu">
+								<a href="/a-camara" class="invert-contrast">Institucional<span class="bt-submenu"><span></span><span></span></span></a>
+								<div class="submenu">
+									<ul>
+										<li>
+											<a href="/a-camara/conheca">Papel e história da Câmara</a>
+										</li>
+										<li>
+											<a href="/a-camara/estruturaadm">Estrutura organizacional</a>
+										</li>
+										<li>
+											<a href="/a-camara/cursos">Cursos</a>
+										</li>
+										<li>
+											<a href="/a-camara/programas-institucionais">Programas Institucionais</a>
+										</li>
+										<li>
+											<a href="/a-camara/documentos-e-pesquisa">Publicações e acervos</a>
+										</li>
+										<li>
+											<a href="/a-camara/visiteacamara">Visite a Câmara</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="has-submenu">
+								<a href="#" class="invert-contrast">Deputados<span class="bt-submenu"><span></span><span></span></span></a>
+								<div class="submenu">
+									<ul>
+										<li>
+											<a href="/deputados/pesquisa">Conheça os Deputados</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Discursos</a>
+										</li>
+										<li>
+											<a href="/deputados/liderancas-partidarias">Lideranças partidárias</a>
+										</li>
+										<li>
+											<a href="/deputados/frentes-e-grupos-parlamentares">Frente e grupos parlamentares</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="has-submenu"><a href="#" class="invert-contrast">Atividade Legislativa<span class="bt-submenu"><span></span><span></span></span></a>
+								<div class="submenu">
+									<ul>
+										<li>
+											<a href="/deputados/pesquisa">Agenda</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Plenário</a>
+										</li>
+										<li>
+											<a href="/deputados/frentes-e-grupos-parlamentares">Projetos de lei e outras proposições</a>
+										</li>
+										<li>
+											<a href="/deputados/liderancas-partidarias">Comissões</a>
+										</li>
+										<li>
+											<a href="/deputados/frentes-e-grupos-parlamentares">Legislação</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="has-submenu"><a href="#" class="invert-contrast">Orçamento da União<span class="bt-submenu"><span></span><span></span></span></a>
+								<div class="submenu">
+									<ul>
+										<li>
+											<a href="/deputados/pesquisa">Leis Orçamentárias</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Fiscalize</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="has-submenu right"><a href="#" class="invert-contrast">Transparência<span class="bt-submenu"><span></span><span></span></span></a>
+								<div class="submenu">
+									<ul>
+										<li>
+											<a href="/deputados/pesquisa">Acesso à informação</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Cota Parlamentar</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Viagens oficiais e passaportes</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Imóveis funcionais e auxílio-moradia</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Licitações e contratos</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Recursos humanos e concursos</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Receitas e despesas</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Dados abertos</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="has-submenu right"><a href="#" class="invert-contrast">Comunicação<span class="bt-submenu"><span></span><span></span></span></a>
+								<div class="submenu">
+									<ul>
+										<li>
+											<a href="/deputados/pesquisa">Câmara Notícias</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">TV Câmara</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Rádio Câmara</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Jornal da Câmara</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Assessoria de Imprensa</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Banco de Imagens</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Rede Legislativa de Rádio e TV</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Plenarinho</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="has-submenu right"><a href="#" class="invert-contrast">Participação<span class="bt-submenu"><span></span><span></span></span></a>
+								<div class="submenu">
+									<ul>
+										<li>
+											<a href="/deputados/pesquisa">Saiba como participar</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Participe dos debates</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Sugira um projeto</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Ajude a escrever a lei</a>
+										</li>
+										<li>
+											<a href="/deputados/discursos-e-notas-taquigraficas">Fale Conosco</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="bg-easy-access"></div>
+			<div class="easy-access" id="easy-access">
+				<div class="center">
+					<nav>
+						<ul class="menu-easy-access">
+							<li class="search-form">
+								<a href="#"><span class="icon"><img src="img/layout/search.svg" alt="Pesquisa" class="img-color-change color3"></span><span class="title">Pesquisa</span></a>
+								<div class="subitem">
+									<div class="form">
 										<div class="box-search">
-											<form>
-												<input id="buscarPortal" name="buscarPortal" type="search" placeholder="Buscar no Portal">
-												<a href="#" class="search-button"><img class="img-color-change color2" src="img/layout/search.svg" alt="Buscar"></a>
-											</form>
+											<div class="field-relative">
+												<form>
+													<input id="buscarPortal" name="buscarPortal" type="search" placeholder="Buscar no Portal">
+													<a href="#" class="search-button"><img class="img-color-change color2" src="img/layout/search.svg" alt="Buscar"></a>
+												</form>
+												<div class="shadow ResultadoBusca" id="ResultadoBusca"></div>
+											</div>
 										</div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span><span class="title">Transmissões</span></a>
-                                <div class="subitem transmissoes">
-                                    <ul class="menu-subitem">
-                                        <li>
-                                            <a href="#">Ao Vivo</a>
-                                            <div class="subitems-list">
-                                                <div class="scroll">
-                                                    <ul class="list slides">
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#">Eventos Previstos</a>
-                                            <div class="subitems-list">
-                                                <div class="scroll">
-                                                    <ul class="list slides">
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="#">Transmissões Encerradas</a>
-                                            <div class="subitems-list">
-                                                <div class="scroll">
-                                                    <ul class="list slides">
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#">
-																<span class="category">Transmissões Encerradas</span>
-																<span class="title">Câmara dos deputados</span>
-																<span class="text">Sessão Deliberativa Estraordinária</span>
-																<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
-															</a>
-                                                            <div class="links">
-                                                                <a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
-                                                                <a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon"><img src="img/layout/calendar.svg" alt="Agenda" class="img-color-change color3"></span><span class="title">Agenda</span></a>
-                                <div class="subitem agenda">
-									<panels-gen section="acesso_rapido" pos="1"></panels-gen>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#"><span class="icon"><img src="img/layout/newspaper.svg" alt="Notícias" class="img-color-change color3"></span><span class="title">Notícias</span></a>
-                                <div class="subitem">
-                                    <div class="box-news">
-                                        <ul class="news-list">
-                                            <li><a href="#">ADMINISTRAÇÃO PÚBLICA</a></li>
-                                            <li><a href="#">AGROPECUÁRIA</a></li>
-                                            <li><a href="#">ASSISTÊNCIA SOCIAL</a></li>
-                                            <li><a href="#">CIDADES</a></li>
-                                            <li><a href="#">CIÊNCIA E TECNOLOGIA</a></li>
-                                            <li><a href="#">COMUNICAÇÃO</a></li>
-                                            <li><a href="#">CONSUMIDOR</a></li>
-                                            <li><a href="#">DIREITO E JUSTIÇA</a></li>
-                                            <li><a href="#">DIREITOS HUMANOS</a></li>
-                                            <li><a href="#">ECONOMIA</a></li>
-                                            <li><a href="#">EDUCAÇÃO E CULTURA</a></li>
-                                            <li><a href="#">ESPORTES</a></li>
-                                            <li><a href="#">INDÚSTRIA E COMÉRCIO</a></li>
-                                            <li><a href="#">INSTITUCIONAL</a></li>
-                                            <li><a href="#">MEIO AMBIENTE</a></li>
-                                            <li><a href="#">POLÍTICA</a></li>
-                                            <li><a href="#">RELAÇÕES EXTERIORES</a></li>
-                                            <li><a href="#">SAÚDE</a></li>
-                                            <li><a href="#">SEGURANÇA</a></li>
-                                            <li><a href="#">TRABALHO E PREVIDÊNCIA</a></li>
-                                            <li><a href="#">TRANSPORTE E TRÂNSITO</a></li>
-                                            <li><a href="#">TURISMO</a></li>
-                                        </ul>
-                                        <div class="news-highlight">
-                                            <a href="#">
-												<img src="img/uploads/img_02.jpg" alt="Sergio Zveiter será relator na CCJ da denúncia contra Michel Temer">
-												<span class="title">Sergio Zveiter será relator na CCJ da denúncia contra Michel Temer</span>
-											</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-    <section>
-    	<div class="section-header background-parallax" style="background-image: url(img/uploads/img_18.jpg);">
-    		<div class="center">
-    			<ul class="breadcrumb">
-    				<li><a href="#">Página Inicial</a></li>
-    				<li><a href="#">Comunicação</a></li>
-    				<li>Câmara Notícias</li>
-    			</ul>
-    			<h1 class="title">Câmara Notícias</h1>
-    		</div>
-    	</div>
-    </section>
-    <section>
-    	<div class="section-news">
-    		<div class="center">
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="#" class=""><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span><span class="title">Transmissões</span></a>
+								<div class="subitem transmissoes">
+									<ul class="menu-subitem" id="transm-default">
+										<li>
+											<a href="#">Ao Vivo</a>
+											<div class="subitems-list">
+												<div class="scroll">
+													<ul class="list slides">
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li>
+											<a href="#">Eventos Previstos</a>
+											<div class="subitems-list">
+												<div class="scroll">
+													<ul class="list slides">
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li>
+											<a href="#">Transmissões Encerradas</a>
+											<div class="subitems-list">
+												<div class="scroll">
+													<ul class="list slides">
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<panels-gen section="acesso_rapido" pos="1" replace="transm-default"></panels-gen>
+								</div>
+							</li>
+							<li>
+								<a href="#"><span class="icon"><img src="img/layout/calendar.svg" alt="Agenda" class="img-color-change color3"></span><span class="title">Agenda</span></a>
+								<div class="subitem agenda" style="min-height:230px">
+									<ul class="menu-subitem" id="agenda-default">
+										<li>
+											<a href="#">Plenário</a>
+											<div class="subitems-list">
+												<div class="scroll">
+													<ul class="list slides">
+														<li>
+															<a href="#">
+																					<span class="category">Plenário</span>
+																					<span class="title">Sessão Deliberativa Extraordinária</span>
+																					<span class="date-time-status">28/06 | 09h00 <span class="right">Encerrada</span></span>
+																				</a>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Plenário</span>
+																					<span class="title">Sessão Deliberativa Extraordinária</span>
+																					<span class="date-time-status">28/06 | 09h00 <span class="right">Encerrada</span></span>
+																				</a>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Plenário</span>
+																					<span class="title">Sessão Deliberativa Extraordinária</span>
+																					<span class="date-time-status">28/06 | 09h00 <span class="right">Encerrada</span></span>
+																				</a>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Plenário</span>
+																					<span class="title">Sessão Deliberativa Extraordinária</span>
+																					<span class="date-time-status">28/06 | 09h00 <span class="right">Encerrada</span></span>
+																				</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li>
+											<a href="#">Comissões</a>
+											<div class="subitems-list">
+												<div class="scroll">
+													<ul class="list slides">
+														<li>
+															<a href="#">
+																					<span class="category">Comissões</span>
+																					<span class="title">PEC19916 - PEC 199/16 - SERVIDORES EX-TERRITÓRIOS FEDERAIS </span>
+																					<span class="date-time-status">28/06 | 17h00 <span class="right">Convocada</span></span>
+																					<span class="text">Reunião Técnica</span>
+																					<span class="place">Anexo II, Pav. Superior, Ala A sala 145</span>
+																				</a>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Comissões</span>
+																					<span class="title">CSPCCO - COMISSÃO DE SEGURANÇA PÚBLICA E COMBATE AO CRIME ORGANIZADO</span>
+																					<span class="date-time-status">28/06 | 16h30 <span class="right">Encerrada</span></span>
+																					<span class="text">Audiência Pública</span>
+																					<span class="place">Anexo II, Plenário 06</span>
+																				</a>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Comissões</span>
+																					<span class="title">Sessão Deliberativa Extraordinária</span>
+																					<span class="date-time-status">28/06 | 9h00 <span class="right">Encerrada</span></span>
+																				</a>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Comissões</span>
+																					<span class="title">Sessão Deliberativa Extraordinária</span>
+																					<span class="date-time-status">28/06 | 9h00 <span class="right">Encerrada</span></span>
+																				</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li>
+											<a href="#">Outros Eventos</a>
+											<div class="subitems-list">
+												<div class="scroll">
+													<ul class="list slides">
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+														<li>
+															<a href="#">
+																					<span class="category">Transmissões Encerradas</span>
+																					<span class="title">Câmara dos deputados</span>
+																					<span class="text">Sessão Deliberativa Estraordinária</span>
+																					<span class="place">Plenário da Câmara dos Deputados<span class="date-time"> - 09h00</span></span>
+																				</a>
+															<div class="links">
+																<a href="#" class="video"><span class="icon"><img src="img/layout/play2.svg" alt="Transmissões" class="img-color-change color3"></span>Vídeo</a>
+																<a href="#" class="audio"><span class="icon"><img src="img/layout/volume-medium.svg" alt="Transmissões" class="img-color-change color3"></span>Áudio</a>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<panels-gen section="acesso_rapido" pos="2" replace="agenda-default"></panels-gen>
+								</div>
+							</li>
+							<li>
+								<a href="#"><span class="icon"><img src="img/layout/newspaper.svg" alt="Notícias" class="img-color-change color3"></span><span class="title">Notícias</span></a>
+								<div class="subitem">
+									<div class="box-news">
+										<ul class="news-list">
+											<li><a href="macrotema.html">ADMINISTRAÇÃO PÚBLICA</a></li>
+											<li><a href="macrotema.html">AGROPECUÁRIA</a></li>
+											<li><a href="macrotema.html">ASSISTÊNCIA SOCIAL</a></li>
+											<li><a href="macrotema.html">CIDADES</a></li>
+											<li><a href="macrotema.html">CIÊNCIA E TECNOLOGIA</a></li>
+											<li><a href="macrotema.html">COMUNICAÇÃO</a></li>
+											<li><a href="macrotema.html">CONSUMIDOR</a></li>
+											<li><a href="macrotema.html">DIREITO E JUSTIÇA</a></li>
+											<li><a href="macrotema.html">DIREITOS HUMANOS</a></li>
+											<li><a href="macrotema.html">ECONOMIA</a></li>
+											<li><a href="macrotema.html">EDUCAÇÃO E CULTURA</a></li>
+											<li><a href="macrotema.html">ESPORTES</a></li>
+											<li><a href="macrotema.html">INDÚSTRIA E COMÉRCIO</a></li>
+											<li><a href="macrotema.html">INSTITUCIONAL</a></li>
+											<li><a href="macrotema.html">MEIO AMBIENTE</a></li>
+											<li><a href="macrotema.html">POLÍTICA</a></li>
+											<li><a href="macrotema.html">RELAÇÕES EXTERIORES</a></li>
+											<li><a href="macrotema.html">SAÚDE</a></li>
+											<li><a href="macrotema.html">SEGURANÇA</a></li>
+											<li><a href="macrotema.html">TRABALHO E PREVIDÊNCIA</a></li>
+											<li><a href="macrotema.html">TRANSPORTE E TRÂNSITO</a></li>
+											<li><a href="macrotema.html">TURISMO</a></li>
+										</ul>
+										<div class="news-highlight">
+											<a href="#">
+															<img src="img/uploads/img_02.jpg" alt="Sergio Zveiter será relator na CCJ da denúncia contra Michel Temer">
+															<span class="title">Sergio Zveiter será relator na CCJ da denúncia contra Michel Temer</span>
+														</a>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="section-header background-parallax" style="background-image: url(img/uploads/img_18.jpg);">
+			<div class="center">
+				<ul class="breadcrumb">
+					<li><a href="#">Página Inicial</a></li>
+					<li><a href="#">Comunicação</a></li>
+					<li>Câmara Notícias</li>
+				</ul>
+				<h1 class="title">Câmara Notícias</h1>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="section-news">
+			<div class="center">
 				<div class="list-news">
 					<ul>
 						<li class="size1 type1 show-text shadow">
@@ -589,11 +752,11 @@
 						</li>
 					</ul>
 				</div>
-                <div class="box-news mobile-invert-order">
-                    <div class="list-news">
-                        <ul>
-                            <li class="size4 type1 show-text shadow">
-                                <a href="#">
+				<div class="box-news mobile-invert-order">
+					<div class="list-news">
+						<ul>
+							<li class="size4 type1 show-text shadow">
+								<a href="#">
    									<span class="img"><img src="img/uploads/img_03.jpg" alt=""></span>
    									<span class="box-text">
 										<span class="title">Parecer sobre a denúncia contra Temer deve ser lido na CCJ na próxima segunda</span>
@@ -601,7 +764,7 @@
 										<span class="date-category"><span>Política</span>05/07/2017</span>
    									</span>
    								</a>
-                            </li>
+							</li>
 							<li class="size3 type4 show-text shadow">
 								<a href="#">
 									<span class="img"><img src="img/uploads/img_20.jpg" alt=""></span>
@@ -622,16 +785,16 @@
 									</span>
 								</a>
 							</li>
-                        </ul>
-                    </div>
-                    <div class="last-news tab-filter shadow">
-                        <h2 class="title">Agência Câmara</h2>
-                        <ul class="tabs">
-                        	<li><a href="#" class="act">Últimas</a></li>
-                        	<li><a href="#">+ Lidas</a></li>
-                        	<li><a href="#">+ Comentadas</a></li>
-                        </ul>
-                        <div class="box-show-hide ultimas act">
+						</ul>
+					</div>
+					<div class="last-news tab-filter shadow">
+						<h2 class="title">Agência Câmara</h2>
+						<ul class="tabs">
+							<li><a href="#" class="act">Últimas</a></li>
+							<li><a href="#">+ Lidas</a></li>
+							<li><a href="#">+ Comentadas</a></li>
+						</ul>
+						<div class="box-show-hide ultimas act">
 							<ul class="list">
 								<li><a href="#"><strong>10h17</strong> Deputados mantêm em MP regras sobre concessão de uso de instalações olímpicas</a>
 								</li>
@@ -655,8 +818,8 @@
 								</li>
 							</ul>
 							<a href="#" class="button more-news">Ver mais</a>
-                        </div>
-                        <div class="box-show-hide lidas">
+						</div>
+						<div class="box-show-hide lidas">
 							<ul class="list">
 								<li><a href="#">Deputados mantêm em MP regras sobre concessão de uso de instalações olímpicas</a>
 								</li>
@@ -670,8 +833,8 @@
 								</li>
 							</ul>
 							<a href="#" class="button more-news">Ver mais</a>
-                        </div>
-                        <div class="box-show-hide comentadas">
+						</div>
+						<div class="box-show-hide comentadas">
 							<ul class="list">
 								<li><a href="#">Deputados mantêm em MP regras sobre concessão de uso de instalações olímpicas</a>
 								</li>
@@ -685,11 +848,11 @@
 								</li>
 							</ul>
 							<a href="#" class="button more-news">Ver mais</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="list-news">
-                	<ul>
+						</div>
+					</div>
+				</div>
+				<div class="list-news">
+					<ul>
 						<li class="size5 type2 shadow">
 							<a href="../server_simulator/pages/noticias/noticia1.html">
 								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
@@ -726,22 +889,22 @@
 								</span>
 							</a>
 						</li>
-                	</ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-    	<div class="section-carousel">
-    		<div class="center">
-    			<div class="gallery flexslider">
-    				<div class="top">
-    					<h2 class="title"><a href="#">Banco de Imagens</a></h2>
-    				</div>
-    				<ul class="slides">
-    					<li>
-    						<div class="align-h">
-    							<div class="align-v">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="section-carousel">
+			<div class="center">
+				<div class="gallery flexslider">
+					<div class="top">
+						<h2 class="title"><a href="#">Banco de Imagens</a></h2>
+					</div>
+					<ul class="slides">
+						<li>
+							<div class="align-h">
+								<div class="align-v">
 									<a href="#">
 										<img src="img/uploads/img20170911116323999255.jpg" alt="Lorem Ipsum">
 										<span class="box-text">
@@ -751,12 +914,12 @@
 											</span>
 										</span>
 									</a>
-    							</div>
-    						</div>
-    					</li>
-    					<li>
-    						<div class="align-h">
-    							<div class="align-v">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="align-h">
+								<div class="align-v">
 									<a href="#">
 										<img src="img/uploads/img20170911117114003164.jpg" alt="Lorem Ipsum">
 										<span class="box-text">
@@ -766,12 +929,12 @@
 											</span>
 										</span>
 									</a>
-    							</div>
-    						</div>
-    					</li>
-    					<li>
-    						<div class="align-h">
-    							<div class="align-v">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="align-h">
+								<div class="align-v">
 									<a href="#">
 										<img src="img/uploads/img20170911115543995461.jpg" alt="Lorem Ipsum">
 										<span class="box-text">
@@ -781,12 +944,12 @@
 											</span>
 										</span>
 									</a>
-    							</div>
-    						</div>
-    					</li>
-    					<li>
-    						<div class="align-h">
-    							<div class="align-v">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="align-h">
+								<div class="align-v">
 									<a href="#">
 										<img src="img/uploads/img2017091111704002066.jpg" alt="Lorem Ipsum">
 										<span class="box-text">
@@ -796,12 +959,12 @@
 											</span>
 										</span>
 									</a>
-    							</div>
-    						</div>
-    					</li>
-    					<li>
-    						<div class="align-h">
-    							<div class="align-v">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="align-h">
+								<div class="align-v">
 									<a href="#">
 										<img src="img/uploads/img201709061145344233484.jpg" alt="Lorem Ipsum">
 										<span class="box-text">
@@ -811,12 +974,12 @@
 											</span>
 										</span>
 									</a>
-    							</div>
-    						</div>
-    					</li>
-    					<li>
-    						<div class="align-h">
-    							<div class="align-v">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="align-h">
+								<div class="align-v">
 									<a href="#">
 										<img src="img/uploads/img201709061510365463673.jpg" alt="Lorem Ipsum">
 										<span class="box-text">
@@ -826,12 +989,12 @@
 											</span>
 										</span>
 									</a>
-    							</div>
-    						</div>
-    					</li>
-    					<li>
-    						<div class="align-h">
-    							<div class="align-v">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="align-h">
+								<div class="align-v">
 									<a href="#">
 										<img src="img/uploads/img201709061559235756362.jpg" alt="Lorem Ipsum">
 										<span class="box-text">
@@ -841,12 +1004,12 @@
 											</span>
 										</span>
 									</a>
-    							</div>
-    						</div>
-    					</li>
-    					<li>
-    						<div class="align-h">
-    							<div class="align-v">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="align-h">
+								<div class="align-v">
 									<a href="#">
 										<img src="img/uploads/img201709061150314263191.jpg" alt="Lorem Ipsum">
 										<span class="box-text">
@@ -856,12 +1019,12 @@
 											</span>
 										</span>
 									</a>
-    							</div>
-    						</div>
-    					</li>
-    					<li>
-    						<div class="align-h">
-    							<div class="align-v">
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="align-h">
+								<div class="align-v">
 									<a href="#">
 										<span class="box-text show-text">
 											<span class="text">
@@ -869,11 +1032,11 @@
 											</span>
 										</span>
 									</a>
-    							</div>
-    						</div>
-    					</li>
-    				</ul>
-    			</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
 				<div class="slider">
 					<ul class="slides">
 						<li>
@@ -905,23 +1068,22 @@
 						</li>
 					</ul>
 				</div>
-    		</div>
-    	</div>
-    </section>
-    <section>
-    	<div class="section-news">
-    		<div class="center">
-                <header>
-                    <div class="text-top">
-                        <h2 class="title">
-                            Comissões Aprovam
-                        </h2>
-                        <h3 class="resume">
-                            Conheça os temas que já foram aprovadas em uma ou mais comissões e que podem está próximas de se tornarem lei.
-                        </h3>
-                        <button class="button">Saiba mais</button>
-                    </div>
-                </header>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="section-news">
+			<div class="center">
+				<header>
+					<div class="text-top">
+						<h2 class="title">
+							Comissões Aprovam
+						</h2>
+						<h3 class="resume">
+							Conheça os temas que já foram aprovadas em uma ou mais comissões e que podem está próximas de se tornarem lei.
+						</h3>
+					</div>
+				</header>
 				<div class="list-news">
 					<ul>
 						<li class="size6 type5 shadow">
@@ -996,9 +1158,9 @@
 								</span>
 							</a>
 						</li>
-                	</ul>
+					</ul>
 				</div>
-   				<div class="flex-1">
+				<div class="flex-1">
 					<div class="box-gallery shadow">
 						<h2 class="title">
 							Programas
@@ -1110,58 +1272,58 @@
 							<a href="camaranoticias.html" class="button more-news">Ver mais discursos</a>
 						</div>
 					</div>
-   				</div>
+				</div>
 			</div>
 		</div>
-    </section>
-    <section>
-    	<div class="section-links-footer">
-    		<div class="center">
-    			<div class="flex-1">
-    				<div class="col">
-    					<ul class="links">
-    						<li><a href="#">RSS</a></li>
-    						<li><a href="#">Widgets</a></li>
-    					</ul>
-    				</div>
-    				<div class="col">
-                        <div class="social-links">
-                            <ul>
-                                <li>
-                                    <a href="#"><img src="img/layout/icon_twitter.png" alt="Twitter" class="shadow"></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="img/layout/icon_facebook.png" alt="Facebook" class="shadow"></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="img/layout/icon_youtube.png" alt="YouTube" class="shadow"></a>
-                                </li>
-                            </ul>
-                        </div>
-    				</div>
-    				<div class="col boletins">
-    					<h2 class="title">Boletins Informativos</h2>
-    					<div class="form">
-    						<div class="row">
+	</section>
+	<section>
+		<div class="section-links-footer">
+			<div class="center">
+				<div class="flex-1">
+					<div class="col">
+						<ul class="links">
+							<li><a href="#">RSS</a></li>
+							<li><a href="#">Widgets</a></li>
+						</ul>
+					</div>
+					<div class="col">
+						<div class="social-links">
+							<ul>
+								<li>
+									<a href="#"><img src="img/layout/icon_twitter.png" alt="Twitter" class="shadow"></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/layout/icon_facebook.png" alt="Facebook" class="shadow"></a>
+								</li>
+								<li>
+									<a href="#"><img src="img/layout/icon_youtube.png" alt="YouTube" class="shadow"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col boletins">
+						<h2 class="title">Boletins Informativos</h2>
+						<div class="form">
+							<div class="row">
 								<label><span>E-mail*</span><input type="email" placeholder="Digite seu E-mail" required></label>
-    						</div>
-    						<div class="row">
-    							<label><span>Senha*</span><input type="password" placeholder="Digite sua Senha" required></label>
-    						</div>
-    						<p>*Campos obrigatórios</p>
-    						<a href="#" class="link">Lembrar Senha</a>
-    						<div class="buttons">
-    							<a href="#" class="button">Quero me cadastrar</a>
-    							<a href="#" class="button">Entrar</a>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section>
-    
-    <footer>
+							</div>
+							<div class="row">
+								<label><span>Senha*</span><input type="password" placeholder="Digite sua Senha" required></label>
+							</div>
+							<p>*Campos obrigatórios</p>
+							<a href="#" class="link">Lembrar Senha</a>
+							<div class="buttons">
+								<a href="#" class="button">Quero me cadastrar</a>
+								<a href="#" class="button">Entrar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
 		<div class="footer">
 			<div class="box-menu">
 				<a class="bt-menu" title="Menu">
@@ -1341,8 +1503,7 @@
 				<div class="center">
 					<h4 class="legislatura"><strong>55ª Legislatura - 3ª Sessão Legislativa Ordinária</strong></h4>
 					<p class="contato"><span><strong>Telefone: </strong>+55 (61) 3216-0000 </span>| <span><strong>Disque-Câmara: </strong>0800-619-619</span></p>
-					<p>Câmara dos Deputados - Palácio do Congresso Nacional - Praça dos Três Poderes - Brasília - DF - Brasil - <span>CEP 70160-900</span><br>
-CNPJ: 00.530.352/0001-59 | Horário de atendimento ao público: 9h às 19h</p>
+					<p>Câmara dos Deputados - Palácio do Congresso Nacional - Praça dos Três Poderes - Brasília - DF - Brasil - <span>CEP 70160-900</span><br>						CNPJ: 00.530.352/0001-59 | Horário de atendimento ao público: 9h às 19h</p>
 				</div>
 			</div>
 			<div class="footer-links">
@@ -1378,51 +1539,52 @@ CNPJ: 00.530.352/0001-59 | Horário de atendimento ao público: 9h às 19h</p>
 			</div>
 		</div>
 	</footer>
-<script>
-	$(document).ready(function(){
-		  $('.slider').flexslider({
-			animation: "slide",
-			controlNav: false,
-			directionNav: false,
-			animationLoop: false,
-			slideshow: false,
-			itemWidth: 120,
-			itemMargin: 20,
-			asNavFor: '.gallery'
-		  });
+	<script>
+		$(document).ready(function () {
+			$('.slider').flexslider({
+				animation: "slide",
+				controlNav: false,
+				directionNav: false,
+				animationLoop: false,
+				slideshow: false,
+				itemWidth: 120,
+				itemMargin: 20,
+				asNavFor: '.gallery'
+			});
 
-		  $('.gallery').flexslider({
-			animation: "slide",
-			controlNav: false,
-			animationLoop: false,
-			slideshow: false,
-			sync: ".slider"
-		  });
-		
-		  $('.slider-2').flexslider({
-			animation: "slide",
-			controlNav: false,
-			directionNav: true,
-			animationLoop: true,
-			slideshow: false,
-			itemWidth: 120,
-			itemMargin: 20,
-			asNavFor: '.gallery-2'
-		  });
+			$('.gallery').flexslider({
+				animation: "slide",
+				controlNav: false,
+				animationLoop: false,
+				slideshow: false,
+				sync: ".slider"
+			});
 
-		  $('.gallery-2').flexslider({
-			animation: "slide",
-			controlNav: false,
-			directionNav: false,
-			animationLoop: true,
-			slideshow: true,
-			sync: ".slider-2"
-		  });
-	});
-</script>
+			$('.slider-2').flexslider({
+				animation: "slide",
+				controlNav: false,
+				directionNav: true,
+				animationLoop: true,
+				slideshow: false,
+				itemWidth: 120,
+				itemMargin: 20,
+				asNavFor: '.gallery-2'
+			});
 
-<!-- #################### APAGAR E COLCOAR O DA HOME ###################### -->
-<div ng-controller="meuEspacoCamaraController as meuEspacoCamara">
+			$('.gallery-2').flexslider({
+				animation: "slide",
+				controlNav: false,
+				directionNav: false,
+				animationLoop: true,
+				slideshow: true,
+				sync: ".slider-2"
+			});
+		});
+
+	</script>
+
+	<!-- #################### APAGAR E COLCOAR O DA HOME ###################### -->
+	<div ng-controller="meuEspacoCamaraController as meuEspacoCamara">
 		<section class="hidden" id="section-meuEspacoCamara">
 			<div id="div-meuEspacoCamara">
 				<meu-espaco-camara id="meuEspacoCamara" action="meuEspacoCamara.toggleMescam()"></meu-espaco-camara>
@@ -1433,38 +1595,38 @@ CNPJ: 00.530.352/0001-59 | Horário de atendimento ao público: 9h às 19h</p>
 		</div>
 	</div>
 
-<!-- #################### FIM DO RESTO DO CORPO, SOMENTE PARA GUIA, VAMOS REFORMULAR, DE CERTO, TODA SUA ESTRUTURA -->
+	<!-- #################### FIM DO RESTO DO CORPO, SOMENTE PARA GUIA, VAMOS REFORMULAR, DE CERTO, TODA SUA ESTRUTURA -->
 
 
-<!-- Scripts Bower -->
-<script src="bower_components/angular/angular.min.js"></script>
-<!-- lazyLoad -->
-<script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
-<!-- Main App -->
-<script src="js/components/app.js"></script>
-<script src="js/components/app.run.js"></script>
-<!-- Search -->
-<script src="js/components/search/search.js"></script>
-<!-- SelectFilter -->
-<script src="js/components/select-filter/select-filter.js"></script>
-<!-- Meu Espaço Câmara -->
-<script src="js/components/meu-espaco-camara/meu-espaco-camara.js"></script>
-<script src="js/components/meu-espaco-camara/meu-espaco-camara.controller.js"></script>
-<script src="js/components/meu-espaco-camara/meu-espaco-camara.espaco-nav.js"></script>
-<!-- Browser Storage -->
-<script src="js/components/browser-storage/browser-storage.js"></script>
-<script src="js/components/browser-storage/browser-storage.localStorageService.js"></script>
-<!-- Panels Gen -->
-<script src="js/components/panels-gen/panels-gen.js"></script>
-<script src="js/components/panels-gen/panels-gen.directive.js"></script>
-<script src="js/components/panels-gen/panels-gen.service.js"></script>
-<script src="js/components/panels-gen/locale_pt-br.js"></script>
-<!-- Panels Requisição para WS -->
-<script src="js/components/ws-request/ws-request.js"></script>
-<!-- Simulador de Requisições WS -->
-<script src="js/components/ws-request/ws-mock.js"></script>
-<!-- Panels Requisição para WS -->
-<script src="js/components/gps/gps.js"></script>
+	<!-- Scripts Bower -->
+	<script src="bower_components/angular/angular.min.js"></script>
+	<!-- lazyLoad -->
+	<script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+	<!-- Main App -->
+	<script src="js/components/app.js"></script>
+	<script src="js/components/app.run.js"></script>
+	<!-- Search -->
+	<script src="js/components/search/search.js"></script>
+	<!-- SelectFilter -->
+	<script src="js/components/select-filter/select-filter.js"></script>
+	<!-- Meu Espaço Câmara -->
+	<script src="js/components/meu-espaco-camara/meu-espaco-camara.js"></script>
+	<script src="js/components/meu-espaco-camara/meu-espaco-camara.controller.js"></script>
+	<script src="js/components/meu-espaco-camara/meu-espaco-camara.espaco-nav.js"></script>
+	<!-- Browser Storage -->
+	<script src="js/components/browser-storage/browser-storage.js"></script>
+	<script src="js/components/browser-storage/browser-storage.localStorageService.js"></script>
+	<!-- Panels Gen -->
+	<script src="js/components/panels-gen/panels-gen.js"></script>
+	<script src="js/components/panels-gen/panels-gen.directive.js"></script>
+	<script src="js/components/panels-gen/panels-gen.service.js"></script>
+	<script src="js/components/panels-gen/locale_pt-br.js"></script>
+	<!-- Panels Requisição para WS -->
+	<script src="js/components/ws-request/ws-request.js"></script>
+	<!-- Simulador de Requisições WS -->
+	<script src="js/components/ws-request/ws-mock.js"></script>
+	<!-- Panels Requisição para WS -->
+	<script src="js/components/gps/gps.js"></script>
 
 </body>
 
