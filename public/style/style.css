@@ -22,6 +22,7 @@ a,
 .box-search,
 .button:after,
 .bt-menu .bar,
+.settings-icon,
 .bt-menu:after,
 .bt-menu:before,
 .bt-submenu span,
@@ -838,6 +839,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .see-too a img{display: inline-block; width: 30px; height: 30px; -o-object-fit: cover; object-fit: cover; display: inline-block; vertical-align: middle; margin-right: 10px; border-radius: 50%;}
 .column-group{-webkit-column-gap:10px;column-gap:10px; -webkit-column-width: 170px; column-width: 170px;}
 
+.settings-icon{-webkit-transform: rotate(0);transform: rotate(0);}
+.settings-icon.act{-webkit-transform: rotate(90deg);transform: rotate(90deg);}
 .site-settings{position: relative; display: inline-block; height: 22px; vertical-align: top; width: 0; margin: 0;}
 .site-settings .settings-list{position: absolute;top: -13px; right: 42px; background: #fff; width: 0; overflow: hidden; opacity: 0; text-align: center;}
 .site-settings.act .settings-list{width: 445px; opacity: 1;}

@@ -1,4 +1,4 @@
-<button ng-click="vm.close()" class="close">x</button>
+<button ng-click="vm.close()" class="close invert-contrast">x</button>
 <div class="title">#MeuEspaçoCâmara</div>
 <div class="content">
     <div ng-switch="vm.selectedTab">
@@ -13,8 +13,8 @@
                     o configurado por outras pessoas.</p>
             </div>
             <ul class="rows">
-                <li><a href="#" class="ok" ng-click="vm.gotIt()">Quero Conhecer</a></li>
-                <li><a href="#" ng-click="vm.disableIt()">Agora não!</a></li>
+                <li><a href="#" class="ok invert-contrast" ng-click="vm.gotIt()">Quero Conhecer</a></li>
+                <li><a href="#" class="invert-contrast" ng-click="vm.disableIt()">Agora não!</a></li>
             </ul>
 
         </div>
@@ -29,9 +29,9 @@
             </ul>
         </div>
         <ul class="actions" id="mescam-actions" style="display:none">
-            <li><a href="#" ng-click="vm.selectTab('favoritos')" ng-class="{act:vm.isActive('favoritos')}">Favoritos</a></li>
-            <li><a href="#" ng-click="vm.selectTab('paineis')" ng-class="{act:vm.isActive('paineis')}">Painéis</a></li>
-            <li><a href="#" ng-click="vm.selectTab('preferencias')" ng-class="{act:vm.isActive('preferencias')}">Preferências</a></li>
+            <li><a href="#" class="invert-contrast" ng-click="vm.selectTab('favoritos')" ng-class="{act:vm.isActive('favoritos')}">Favoritos</a></li>
+            <li><a href="#" class="invert-contrast" ng-click="vm.selectTab('paineis')" ng-class="{act:vm.isActive('paineis')}">Painéis</a></li>
+            <li><a href="#" class="invert-contrast" ng-click="vm.selectTab('preferencias')" ng-class="{act:vm.isActive('preferencias')}">Preferências</a></li>
         </ul>
         <div ng-switch-when="favoritos" class="tabs">
             <div class="mescam-title">Ordenar por:</div>
@@ -102,7 +102,7 @@
                 </div>
 
                 <ul class="rows">
-                    <li><a href="" class="ok" ng-click="vm.disableIt()">Desabilitar</a></li>
+                    <li><a href="" class="ok invert-contrast" ng-click="vm.disableIt()">Desabilitar</a></li>
                 </ul>
             </div>
         </div>
