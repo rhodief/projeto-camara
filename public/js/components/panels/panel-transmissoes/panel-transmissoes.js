@@ -22,9 +22,9 @@
             controllerAs:'vm'
         };
 
-        panelTransmissoesController.$inject = ['$http', '$q', '$sce'];
+        panelTransmissoesController.$inject = ['$http', '$q', '$sce', '$timeout'];
 
-        function panelTransmissoesController($http, $q, $sce){
+        function panelTransmissoesController($http, $q, $sce, $timeout){
             var vm = this;
             vm.transmissoes = [];
             vm.media = '';
@@ -52,10 +52,14 @@
 
             function getMedia(url){
                 vm.mediaId = url;
+                vm.loadingMedia = true;
                 _getMedia(url).then(okMedia).catch(_error);
 
                 function okMedia(url){
                     vm.media = $sce.trustAsResourceUrl(url);
+                    $timeout(function(){
+                        vm.loadingMedia = false;
+                    }, 500);
                 }
             }
 

@@ -454,7 +454,7 @@ div.panel-det{margin:1em}
     height: 100%;
 }
 .facebookWrapper,
-.twitterwrapper{max-width: 100%;position: relative; max-height: 300px; overflow: auto; margin-top: 20px; background: #fff;}
+.twitterwrapper{max-width: 100%;position: relative; max-height: 300px; overflow: auto; margin-top: 20px;-webkit-overflow-scrolling: touch;background: #fff;}
 .field select,
 .field input[type=tel],
 .field input[type=text],
@@ -592,6 +592,9 @@ div.panel-det{margin:1em}
 .vertical.scroll .media-tabs a{font-size: 14px; font-size: 0.875rem; padding: 10px; background: #686868; color: #fff; display: block; position: relative;}
 .vertical.scroll .media-tabs a:hover,
 .vertical.scroll .media-tabs a.act{background: #004a2f;}
+
+.live.redpoint.icon{display: inline-block !important; vertical-align: middle; margin-left:5px; position: relative; left: -10px; text-indent: -5000em; width:12px !important; height: 12px !important; background: #c30f16; border-radius: 50%; -webkit-animation: animate-fade-toggle 2s linear infinite;animation: animate-fade-toggle 2s linear infinite;}
+
 .vertical.scroll .media-tabs .live .icon{display: inline-block; vertical-align: middle; margin-left: 10px; position: relative; left: -10px; text-indent: -5000em; width:12px; height: 12px; background: #c30f16; border-radius: 50%; -webkit-animation: animate-fade-toggle 2s linear infinite;animation: animate-fade-toggle 2s linear infinite;}
 .list-news .player{position: relative; display: block;}
 .list-news .player:before{content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background:rgba(0,0,0,0.5); z-index: 1;}

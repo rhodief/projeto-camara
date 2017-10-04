@@ -44,11 +44,11 @@
             <div class="panel-container-3 panel-view size-2 step-3" ng-class="{act: vm.mediaId}">
                 <a href="#" class="back" ng-click="vm.mediaId = null">Voltar</a>
                 <div class="detail">
-                    <div ng-if="vm.loadingView">
+                    <div ng-if="vm.loadingMedia">
                         <span class="loading">{{vm.loadingViewMessage}}</span>
                         <div ng-if="vm.reloadButton"><a href="" onClick="location.reload()">Recarregue a Página</a></div>
                     </div>
-                    <div ng-if="!vm.loadingView">
+                    <div ng-if="!vm.loadingMedia">
                         <div ng-if="!vm.media">
                             <div class="inact">
                                 <div class="img">

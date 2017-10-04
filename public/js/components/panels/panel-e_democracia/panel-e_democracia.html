@@ -25,11 +25,13 @@
                         <div ng-if="vm.list[0] && !vm.list[0].error">
                             <li class="panel-list-item" ng-repeat="item in vm.list | filter:vm.customFilter" ng-click="vm.goTo(item.url)">
                                 <div style="display:flex;margin:5px">
-                                    <div style="margin:5px">
+                                    <div style="margin-right:2em">
                                         <img-logo ng-model="item.categoria"></img-logo>
                                     </div>
-                                    <div>
-                                        <div><span ng-if="item.tipo == 'Ao Vivo'" class="icon record"><img class="img-color-change color5 live" src="img/layout/record.svg" alt="Ao Vivo"></span><span class="title">{{item.tipo}}</span></div>
+                                    <div style="width:100%">
+                                        <div ng-if="item.tipo == 'Ao Vivo'">
+                                                <span class="live redpoint icon"></span><span class="title">{{item.tipo}}</span>
+                                        </div>
                                         <div class="title">{{item.titulo}}</div>
                                         <div>{{item.titulo}}</div>
 
@@ -49,6 +51,4 @@
         </div>
     </div>
 </div>
-<script>
-    imgColorChange();
-</script>
+
