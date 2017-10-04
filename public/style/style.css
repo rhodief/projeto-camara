@@ -421,7 +421,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 
 .loading{font-size: 14px; font-size:  0.875rem;}
 .loading:before{content: ''; background: url(../img/layout/loading.png) no-repeat center center; width: 20px; height: 20px; display: block; background-size:100%; margin: 10px auto;-webkit-animation: spin 1s linear infinite;animation: spin 1s linear infinite;}
-.step-2 .list{background: #eee;margin: 10px 10px 0;padding: 0 10px;display: block;height: 283px;overflow: auto; position: relative;}
+.step-2 .list{background: #eee;margin: 10px 10px 0;padding: 0 10px;display: block;height: 283px;overflow: auto; position: relative;-webkit-overflow-scrolling: touch}
 .step-2 .filter + .list{height: 223px;}
 .step-2 .list li{background: #fff; margin: 10px 0 !important; padding: 10px; display: block; text-align: left; cursor: pointer;}
 .step-2 .list li:hover{background:#F8F6F6;}
