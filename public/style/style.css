@@ -395,7 +395,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .panel-view .detail img{width: 200px; height: 200px; -o-object-fit: cover; object-fit: cover; display: block; margin: 0 auto; border-radius: 50%;}
 .detail .text{text-align: center; width: 100%; background: rgba(255,255,255,0.5); -webkit-box-sizing: border-box; box-sizing: border-box;}
 .detail .text .list{overflow: auto;max-height: 330px}
-.detail .text .list .listpadding {padding:1em}
+.detail .text .list .listpadding {padding:1em;text-align: left}
 .detail .text .list .title{color:#004a2f;font-weight: 600;margin-top: 1em; margin-bottom: .5em}
 .detail .text .list .subtitle{color:#004a2f;font-weight: 500;margin-top: 1em;}
 .detail .text .list .item{font-size: 0.9rem;color: #535151;}
