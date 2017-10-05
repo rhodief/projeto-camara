@@ -1227,8 +1227,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.panel-container-3.step-1,
 	.panel-container-3.step-2,
 	.panel-container-3.step-3{position:static; width:calc(33.333333% - 20px)!important; min-width: 300px; margin:10px; float:left;}
+	.panel-container-3.step-3{min-height:355px; position: relative; left: 0!important; top:0;}
 	.panel-container-3.step-2.large{min-width: 80%}
-	.panel-container-3.step-3{min-height:365px; position: relative; left: 0!important; top:0;}
 	.appointment .pickadate{padding: 20px;}
 	.panel-container-3.step-2{padding: 20px 10px;}
 	.section-about .box-links .row{padding: 10px 10px 5px;}
