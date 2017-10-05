@@ -58,6 +58,7 @@ a,
 .box-thumb .resume .title:after,
 .main-menu .submenu .thumb-resume,
 .header .box-search input[type=text],
+.section-news .last-news .list a:after,
 .header .box-search input[type=search]{
     -webkit-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
@@ -574,7 +575,25 @@ div.panel-det{margin:1em}
 .section-news .last-news .tabs li a:focus,
 .section-news .last-news .tabs li a.act{background: #004a2f;}
 .section-news .last-news .list{max-height: 270px; overflow: auto; margin-bottom: 10px;}
-.section-news .last-news .list li{padding: 8px 0; display: block;}
+.section-news .last-news .list li{padding: 8px 0; display: block;position: relative;}
+.list-news a:after,
+.section-inspect .col a:after,
+.section-participate .post a:after,
+.section-participate .links a:after,
+.section-education .box-posts a:after,
+.section-news .last-news .list a:after{content: ''; position: absolute; top: 0; left: 0; background: #686868; width: 100%; height: 100%; opacity: 0;}
+.list-news a:hover:after,
+.section-inspect .col a:hover:after,
+.section-participate .post a:hover:after,
+.section-participate .links a:hover:after,
+.section-education .box-posts a:hover:after,
+.section-news .last-news .list a:hover:after,
+.list-news a:focus:after,
+.section-inspect .col a:focus:after,
+.section-participate .post a:focus:after,
+.section-participate .links a:focus:after,
+.section-education .box-posts a:focus:after,
+.section-news .last-news .list a:focus:after{opacity: 0.1;}
 .section-news .last-news .list li + li{border-top:1px solid #ebebeb;}
 .section-news .last-news a{font-size: 14px; font-size: 0.875rem; line-height: 16px; line-height: 1rem; color: #333333; text-decoration: none; display: block; margin-bottom: 5px;}
 .section-news .last-news .date-time{font-size: 12px; font-size: 0.75rem; color: #767676;}
@@ -647,7 +666,7 @@ div.panel-det{margin:1em}
 .section-inspect .center{max-width: 1200px; padding: 0 5px;}
 .section-inspect .text-top{margin-bottom: 30px;}
 .section-inspect .box-posts{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
-.section-inspect .col{margin: 5px; position: relative;-webkit-box-flex:1;-ms-flex:1 1 245px;flex:1 1 245px;}
+.section-inspect .col{margin: 5px; position: relative;-webkit-box-flex:1;-ms-flex:1 1 245px;flex:1 1 245px; position: relative;}
 .section-inspect .col a{text-decoration: none; display: block;}
 .section-inspect .col .box-img{position: relative;}
 .section-inspect .box-img img{display: block; width: 100%; height: auto; -o-object-fit: cover; object-fit: cover;}
@@ -675,8 +694,9 @@ div.panel-det{margin:1em}
 .section-participate .box-text{padding: 10px 10px;}
 .section-participate .box-text p{font-size: 14px; font-size: 0.875rem; color: #636363;}
 .section-participate .links{margin: 10px 0;}
-.section-participate .links li{margin: 10px 0 30px;}
-.section-participate .links a{text-decoration: none;}
+.section-participate .links li{margin: 10px 0 30px; position: relative;}
+.section-participate .links a{text-decoration: none; display: block;}
+.section-participate .links a:after{background: #000;}
 .section-participate.background-parallax .links a{color: #fff;}
 .section-participate .links .icon{display: block; margin-bottom: 10px;}
 .links .icon svg,
@@ -693,7 +713,7 @@ div.panel-det{margin:1em}
 .section-education{padding: 40px 0; background: #ebebeb;}
 .section-education .center{padding: 0; max-width: 1200px;}
 .section-education .box-posts{-ms-flex-pack: distribute;justify-content: space-around;}
-.section-education .box-posts li{-ms-flex-preferred-size: 275px;flex-basis: 275px; margin: 10px; background: #fff;}
+.section-education .box-posts li{-ms-flex-preferred-size: 275px;flex-basis: 275px; margin: 10px; background: #fff; position: relative;}
 .section-education .box-posts a{text-decoration: none; display: block;}
 .section-education .box-posts img{width: 100%; display: block; height: auto;}
 .section-education .box-posts .text{width: 100%; display: block; font-size: 18px; font-size: 1.125rem; color: #004a2f; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box;}
