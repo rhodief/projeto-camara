@@ -193,6 +193,7 @@ dt { clear: both; }
 .ResultadoBusca{padding: 10px; background: #fff; width: 100%; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: left;}
 .ResultadoBusca:empty{padding: 0;}
 .ResultadoBusca li{ display: block; font-size: 14px; font-size: 0.875rem; color: #333333; padding-bottom: 8px;}
+.ResultadoBusca li:hover{background: #F8F6F6; cursor: pointer;}
 .ResultadoBusca li + li{border-top: 1px solid #ebebeb; padding: 8px 0;}
 .ResultadoBusca li p{display: block; margin: 0;}
 .ResultadoBusca li strong{font-size: 14px; font-size: 0.875rem;color: #004a2f; font-weight: 700;}
@@ -386,6 +387,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .appointment .pickadate .pickadate-next:before{float: right;content: '\203A';text-indent: 0; font-size: 34px; font-size: 2.125rem; line-height: 12px; line-height: 0.75rem; color: #004a2f;}
 .appointment .pickadate .pickadate-centered-heading{font-size: 14px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; color: #004a2f;}
 .appointment .pickadate-cell li{font-size: 12px; font-size: 0.75rem; padding-top: 10px; padding-bottom: 10px;}
+.appointment .pickadate-cell li:hover{background: #F8F6F6;}
 .appointment .pickadate-cell .pickadate-head{background: rgba(3, 49, 30, 0.75); color: #fff; text-transform: uppercase; font-size: 13px; font-size: 0.8125rem; padding-top: 14px; padding-bottom: 14px;}
 .appointment .pickadate-cell .pickadate-head:first-child,
 .appointment .pickadate-cell .pickadate-head:last-child{background: rgba(3, 49, 30, 0.85);}
@@ -906,10 +908,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.filter .toggle-dropdown{display: none;}
 	.field-dropdown-mobile{margin-bottom: 10px;}
 	.field-dropdown-mobile .dropdown{-webkit-box-shadow: none;box-shadow: none;}
-	.field-dropdown-mobile .dropdown button{display: inline-block; color: #fff; background: #686868; text-transform: uppercase; padding: 10px 20px; cursor: pointer;}
+	.field-dropdown-mobile .dropdown button{display: inline-block; color: #004a2f; background: #dcdcdc; text-transform: uppercase; padding: 10px 20px; cursor: pointer;}
 	.field-dropdown-mobile .dropdown button:hover,
 	.field-dropdown-mobile .dropdown button:focus,
-	.field-dropdown-mobile .dropdown button.act{background: #004a2f;}
+	.field-dropdown-mobile .dropdown button.act{background: #004a2f; color: #fff;}
 	
 	.box-news{background: #fff; max-width: 1200px;}
 	.menu-easy-access .box-news{margin:20px auto;background: #fff; max-width: 1200px;}
