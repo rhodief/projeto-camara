@@ -1,0 +1,48 @@
+{
+    "root":[
+        {
+            "titulo":"Atividade Parlamentar",
+            "descricao": "",
+            "subpaginas":[
+                {
+                    "titulo": "Institucional",
+                    "descricao": "",
+                    "subpaginas":[]
+                },
+                {
+                    "titulo": "Deputados",
+                    "descricao": "",
+                    "subpaginas":[]
+                },
+                {
+                    "titulo": "Atividade Parlamentar",
+                    "descricao": "",
+                    "subpaginas":[]
+                }
+
+            ]
+        },
+        {
+            "titulo":"Comunicação",
+            "descricao": "",
+            "subpaginas":[
+
+            ]
+        },
+        {
+            "titulo":"Transparência",
+            "descricao": "",
+            "subpaginas":[]
+        },
+        {
+            "titulo":"Participação",
+            "descricao": "",
+            "subpaginas":[]
+        },
+        {
+            "titulo":"Educação",
+            "descricao": "",
+            "subpaginas":[]
+        }
+    ]
+}

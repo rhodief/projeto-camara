@@ -28,15 +28,15 @@
 					<div ng-if="!vm.loadingList">
 						<div ng-if="vm.agenda[0]">
 							<li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(evento.id)}" ng-repeat="evento in vm.agenda | filter:vm.customFilter | filter:vm.agendaFilter"
-							 ng-click="vm.getDetail(evento.id)" id="anchor-{{$index}}">
-								<div>
+							 ng-click="vm.getDetail(evento.id)">
+								<a href="">
 									<p class="date-time">{{evento.horaInicio}}</p>
 									<div class="title">{{evento.orgaos[0].nome}}</div>
 									<div><strong>{{evento.orgao_sigla}}</strong></div>
 									<div class="">{{evento.descricaoTipo}}</div>
 									<div>{{evento.localCamara_nome}}</div>
 									<div class="">{{::evento.descricaoSituacao}}</div>
-								</div>
+								</a>
 							</li>
 						</div>
 						<div ng-if="!vm.agenda[0]">

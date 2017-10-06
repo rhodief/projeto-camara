@@ -24,19 +24,21 @@
                     <div ng-if="!vm.loadingList">
                         <div ng-if="vm.list[0] && !vm.list[0].error">
                             <li class="panel-list-item" ng-repeat="item in vm.list | filter:vm.customFilter" ng-click="vm.goTo(item.url)">
-                                <div style="display:flex;margin:5px">
-                                    <div style="margin-right:2em">
-                                        <img-logo ng-model="item.categoria"></img-logo>
-                                    </div>
-                                    <div style="width:100%">
-                                        <div ng-if="item.tipo == 'Ao Vivo'">
-                                                <span class="live redpoint icon"></span><span class="title">{{item.tipo}}</span>
+                                <a href="">
+                                    <div style="display:flex;margin:5px">
+                                        <div style="margin-right:2em">
+                                            <img-logo ng-model="item.categoria"></img-logo>
                                         </div>
-                                        <div class="title">{{item.titulo}}</div>
-                                        <div>{{item.titulo}}</div>
+                                        <div style="width:100%">
+                                            <div ng-if="item.tipo == 'Ao Vivo'">
+                                                <span class="live redpoint icon"></span><span class="title">{{item.tipo}}</span>
+                                            </div>
+                                            <div class="title">{{item.titulo}}</div>
+                                            <div>{{item.titulo}}</div>
 
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                         </div>
                         <div ng-if="!vm.list[0]">
@@ -51,4 +53,3 @@
         </div>
     </div>
 </div>
-

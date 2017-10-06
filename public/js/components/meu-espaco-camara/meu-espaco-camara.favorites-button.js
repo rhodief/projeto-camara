@@ -14,25 +14,36 @@
         //
         var directive = {
             restrict: 'E',
-            scope: {},
-            template: '<button class="favorite-button" ng-class="{act: vm.included}" ng-click="vm.toggleInclude()">{{vm.included ? "Favoritado" : "Não Favoritado. Favoritar?"}}</button>',
+            scope: {
+                url:'@',
+                title: '@'
+            },
+            template: '<button class="favorite-button" ng-class="{act: vm.included, show:vm.included}" ng-click="vm.toggleInclude(vm.url, vm.title)">{{vm.included ? "Favoritado" : "Não Favoritado. Favoritar?"}}</button>',
             controller: favoritesButtonController,
             controllerAs:'vm'
         };
         
         return directive;
     }
-    favoritesButtonController.$inject = ['localStorageService'];
+    favoritesButtonController.$inject = ['localStorageService', '$scope'];
     
-    function favoritesButtonController(localStorageService){
+    function favoritesButtonController(localStorageService, $scope){
         var vm = this;
         vm.included;
         vm.toggleInclude = toggleInclude;
+        vm.url = $scope.url || null;
+        vm.title = $scope.title || null;
+
+        $scope.$on('removeFavorites', function(ev, data){
+            if(data){
+                active();
+            }
+        })
 
         active();
 
         function active(){
-            _isIncluded()
+            _isIncluded(vm.url)
                 .then(function(data){
                     vm.included = data;
                 })
@@ -41,26 +52,26 @@
                 });
         }
 
-        function toggleInclude(){
+        function toggleInclude(url, title){
             //broadCast Message to refresh Panel
             if(vm.included){
-                _desableFavorite();
+                _desableFavorite(url);
             }else{
-                _enableFavorite();
+                _enableFavorite(url, title);
             }
         }
 
-        function _isIncluded(){
-            return localStorageService.isFavorite();
+        function _isIncluded(url){
+            return localStorageService.isFavorite(url);
         }
        
-        function _desableFavorite(){
-            localStorageService.removeFavorite();
+        function _desableFavorite(url){
+            localStorageService.removeFavorite(url);
             vm.included = false;
         }
 
-        function _enableFavorite(){
-            localStorageService.addFavorite();
+        function _enableFavorite(url, title){
+            localStorageService.addFavorite(url, title);
             vm.included = true;
         }
     }

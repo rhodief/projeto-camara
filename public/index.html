@@ -682,7 +682,7 @@
                     <div class="list-news">
                         <ul>
                             <li class="size1 type1 shadow">
-								<favorites-button class="ng-isolate-scope"><button class="favorite-button ng-binding" ng-class="{act: vm.included}" ng-click="vm.toggleInclude()">Favoritado</button></favorites-button>
+								<favorites-button></favorites-button>
 								<div class="share-options">
 									<button class="share-button" title="Compartilhar"></button>
                                		<ul class="box-options">
@@ -706,7 +706,7 @@
    								</a>
                             </li>
                             <li class="size2 type2 shadow">
-								<favorites-button class="ng-isolate-scope"><button class="favorite-button ng-binding" ng-class="{act: vm.included}" ng-click="vm.toggleInclude()">Favoritado</button></favorites-button>
+								<favorites-button url="../server_simulator/pages/noticias/noticia1.html" title="Notícia 1"></favorites-button>
 								<div class="share-options">
 									<button class="share-button" title="Compartilhar"></button>
                                		<ul class="box-options">
@@ -733,7 +733,7 @@
                                 <panels-gen section="noticias" pos="1" replace="noticias-panel" params="{'url':'https://www.youtube.com/embed/fsKKyH9dafA', 'text': 'TV Câmara ao Vivo'}"></panels-gen>
                             </li>
                             <li class="size1 type3 shadow">
-								<favorites-button class="ng-isolate-scope"><button class="favorite-button ng-binding" ng-class="{act: vm.included}" ng-click="vm.toggleInclude()">Favoritado</button></favorites-button>
+								<favorites-button url="../server_simulator/pages/noticias/noticia2.html" title="Notícia 2"></favorites-button>
 								<div class="share-options">
 									<button class="share-button" title="Compartilhar"></button>
                                		<ul class="box-options">
@@ -758,7 +758,7 @@
    								</a>
                             </li>
                             <li class="size2 type2 shadow">
-								<favorites-button class="ng-isolate-scope"><button class="favorite-button ng-binding" ng-class="{act: vm.included}" ng-click="vm.toggleInclude()">Favoritado</button></favorites-button>
+								<favorites-button url="../server_simulator/pages/noticias/noticia3.html" title="Notícia 3"></favorites-button>
 								<div class="share-options">
 									<button class="share-button" title="Compartilhar"></button>
                                		<ul class="box-options">
@@ -1292,6 +1292,7 @@
     <script src="js/components/meu-espaco-camara/meu-espaco-camara.js"></script>
     <script src="js/components/meu-espaco-camara/meu-espaco-camara.controller.js"></script>
     <script src="js/components/meu-espaco-camara/meu-espaco-camara.espaco-nav.js"></script>
+    <script src="js/components/meu-espaco-camara/meu-espaco-camara.favorites-button.js"></script>
     <!-- Browser Storage -->
     <script src="js/components/browser-storage/browser-storage.js"></script>
     <script src="js/components/browser-storage/browser-storage.localStorageService.js"></script>
