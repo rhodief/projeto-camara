@@ -27,10 +27,6 @@ $(document).ready(function () {
 		}
 		return false;
 	});
-	/*$('.bt-submenu').click(function(){
-		$(this).toggleClass('act').parent().toggleClass('act').next('.submenu').slideToggle();
-		return false;
-	});*/
 	$('.bt-search').click(function () {
 		abrirSubitem($('.search-form > a'));
 		$('#buscarPortal').focusin();
@@ -203,6 +199,9 @@ $(document).ready(function () {
 		$("html").removeClass('hight-contrast');
 		$('.box-contrast a').removeClass('act');
 		return false;
+	});
+	$('.share-button').click(function(){
+		$(this).parent().toggleClass('act').children('.box-options').slideToggle();
 	});
 	
 	// ATALHOS DO TECLADO!!!
