@@ -907,7 +907,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .settings-icon{-webkit-transform: rotate(0);transform: rotate(0);}
 .settings-icon.act{-webkit-transform: rotate(90deg);transform: rotate(90deg);}
 .site-settings{position: relative; display: inline-block; height: 22px; vertical-align: top; width: 0; margin: 0;}
-.site-settings .settings-list{position: absolute;top: -13px; right: 42px; background: #fff; width: 0; overflow: hidden; opacity: 0; text-align: center;}
+.site-settings .settings-list{position: absolute;top: -13px; right: 42px; background: #fff; width: 0; overflow: hidden; opacity: 0; text-align: center; height: 50px;}
 .site-settings.act .settings-list{width: 445px; opacity: 1;}
 .site-settings .settings-list li{display: inline-block; padding: 0 3px;}
 .site-settings .settings-list > li{padding: 0 14px; background: #eee; width: 190px}
