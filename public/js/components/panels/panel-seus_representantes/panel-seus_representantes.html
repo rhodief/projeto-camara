@@ -28,11 +28,13 @@
                         <div ng-if="vm.deputados[0] && !vm.deputados[0].error">
                             <li class="panel-list-item flex" ng-class="{'item-selected': vm.isSelected(deputado.id)}" ng-repeat="deputado in vm.deputados | filter:vm.deputadosFilter"
                                 ng-click="vm.getDetail(deputado.id)">
-                                <img ng-src="{{deputado.foto}}" class="img-round">
-                                <div class="panel-det">
-                                    <div class="title">{{deputado.nome}}</div>
-                                    <span>{{deputado.partido_sig}}/{{deputado.uf_sig}}</span>
-                                </div>
+                                <a href="">
+                                    <img ng-src="{{deputado.foto}}" class="img-round">
+                                    <div class="panel-det">
+                                        <div class="title">{{deputado.nome}}</div>
+                                        <span>{{deputado.partido_sig}}/{{deputado.uf_sig}}</span>
+                                    </div>
+                                </a>
                             </li>
                         </div>
                         <div ng-if="!vm.deputados[0]">
@@ -100,5 +102,6 @@
     </div>
 </div>
 <script>
-    imgColorChange();
+                                imgColorChange();
+
 </script>
