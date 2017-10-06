@@ -43,7 +43,7 @@
             e.preventDefault();
             if(e.altKey && e.shiftKey && e.which == '57'){
                 toggleMescam();
-                angular.element(document.getElementById('favinput')).focus();
+                angular.element(document.querySelector('meu-espaco-camara .actions li a')).focus();
             }
         }
     }
