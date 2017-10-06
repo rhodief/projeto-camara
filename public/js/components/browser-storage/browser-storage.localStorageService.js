@@ -5,9 +5,9 @@
         .module('browserStorage')
         .factory('localStorageService', localStorageService)
 
-    localStorageService.$inject = ['$q', 'LOCALSTORAGE', 'ERROR_MESSAGE'];
+    localStorageService.$inject = ['$q', 'LOCALSTORAGE', 'ERROR_MESSAGE', '$rootScope'];
 
-    function localStorageService($q, LOCALSTORAGE, ERROR_MESSAGE) {
+    function localStorageService($q, LOCALSTORAGE, ERROR_MESSAGE, $rootScope) {
 
         var service = {
             isKnown: isKnown,
@@ -107,7 +107,7 @@
             _getFavorites().then(okFav).catch(configError);
 
             function okFav(data) {
-                var url = Url || _getCurrentPageUrl();
+                var url = _normalizeUrl(Url);
                 var title = Title || _getCurrentTitle();
                 var index = _findValueInIndexObj(url, 'url', data);
                 var date = _getCurrentDate();
@@ -128,17 +128,18 @@
             _getFavorites().then(okDFav).catch(configError);
 
             function okDFav(data) {
-                var url = Url || _getCurrentPageUrl();
+                var url = _normalizeUrl(Url);
                 var index = _findValueInIndexObj(url, 'url', data);
                 if (index !== -1) data.splice(index, 1);
                 _setFavorites(data);
+                $rootScope.$broadcast('removeFavorites', true);
             }
         }
 
-        function isFavorite() {
+        function isFavorite(Url) {
             return _getFavorites().then(okDFav).catch(configError);
             function okDFav(data) {
-                var url = _getCurrentPageUrl();
+                var url = _normalizeUrl(Url);
                 return _findValueInIndexObj(url, 'url', data) !== -1;
             }
         }
@@ -202,7 +203,6 @@
             function okPanels(panels){
                 if(!panels[panelName] || !panels[panelName].configs) $q.reject('Panel não Encontrado');
                 panels[panelName].configs[index] = value;
-                console.log(panels);
                 _setPanels(panels);
             }
             function notFound(e){
@@ -267,6 +267,36 @@
                 date: dd + '/' + mm + '/' + yyyy,
                 time: hh + ':' + ii
             }
+        }
+
+        function _normalizeUrl(url){
+            var current = _getCurrentPageUrl();
+            if(!url || url == current) return current;
+            
+            var isFullUrl = url.split('http').length > 1;
+            if(isFullUrl) return url;
+            
+            var currentMatch = current.match(/(https?:\/\/)(.+[^/])/, 'g');
+            var arrayUrl = currentMatch[2];
+            
+            var urlSplited = url.split('../');
+            var host = arrayUrl.split('/').reverse();
+            
+            var endUrl = []; 
+            var count = 0;
+            for(var i = 0;i<urlSplited.length;i++){
+                if(urlSplited[i] != ''){
+                    endUrl.push(urlSplited[i]);
+                }else{
+                    count++;
+                } 
+            }
+            for(var j=0;j<count;j++){
+                host.shift();    
+            }
+
+            var newUrl = currentMatch[1] + host.reverse().join('/') + '/' +  endUrl.join('/');
+            return newUrl;
         }
     }
 })();

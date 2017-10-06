@@ -1229,6 +1229,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.section-news .box-news .last-news{margin: 10px;}
 	.share-options,
 	.favorite-button{display: none;}
+	.favorite-button.show{display: block}
 	.list-news li:hover .share-options,
 	.list-news li:hover .favorite-button{display: block;}
 	.list-news li.size1{-ms-flex-preferred-size: 45%;flex-basis: 45%;}
