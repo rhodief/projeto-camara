@@ -448,7 +448,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .step-3.act .back{left: -16%; width: 16%;}
 .back:before{content: '\2039';position: absolute; top:50%; left: 50%; margin-left: -8px; margin-top: -20px; text-indent: 0; font-size: 50px;font-size: 3.125rem; line-height: 12px; line-height: 0.75rem; color: #fff;}
 
-li.panel-list-item.flex {display: -webkit-box;display: -ms-flexbox;display: flex;}
+li.panel-list-item a.flex {display: -webkit-box;display: -ms-flexbox;display: flex;text-decoration: none}
 div.panel-det{margin:1em}
 
 .videowrapper {

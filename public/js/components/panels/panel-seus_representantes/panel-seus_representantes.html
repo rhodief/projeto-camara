@@ -26,9 +26,9 @@
                     </div>
                     <div ng-if="!vm.loadingList">
                         <div ng-if="vm.deputados[0] && !vm.deputados[0].error">
-                            <li class="panel-list-item flex" ng-class="{'item-selected': vm.isSelected(deputado.id)}" ng-repeat="deputado in vm.deputados | filter:vm.deputadosFilter"
+                            <li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(deputado.id)}" ng-repeat="deputado in vm.deputados | filter:vm.deputadosFilter"
                                 ng-click="vm.getDetail(deputado.id)">
-                                <a href="">
+                                <a href="" class="flex">
                                     <img ng-src="{{deputado.foto}}" class="img-round">
                                     <div class="panel-det">
                                         <div class="title">{{deputado.nome}}</div>
