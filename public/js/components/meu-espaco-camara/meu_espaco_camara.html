@@ -69,7 +69,7 @@
                         <ul class="panels">
                             <li ng-repeat="panel in section.panels">
                                 <div class="margin">
-                                    <span class="subtext">{{panel.activated ? "[" : ""}}{{panel.label}}{{panel.activated ? "]" : ""}}</span>                                    <button ng-click="vm.togglePanel(panel, $parent.section)" ng-class="{act:panel.activated}">{{panel.activated ? "Ligado" : "Desligado"}}</button>
+                                    <span class="subtext">{{panel.activated ? "[" : ""}}{{panel.label}}{{panel.activated ? "]" : ""}}</span>                                    <button class="togglePanel" ng-click="vm.togglePanel(panel, $parent.section)" ng-class="{act:panel.activated}">{{panel.activated ? "Ligado" : "Desligado"}}</button>
                                 </div>
                             </li>
                         </ul>

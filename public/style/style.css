@@ -739,7 +739,13 @@ div.panel-det{margin:1em}
 #div-meuEspacoCamara .content .actions li a{padding: 0.5em;text-decoration: none;background-color: #276C4C; color:#fff}
 #div-meuEspacoCamara .content .tabs .rows li a:hover,
 #div-meuEspacoCamara .content .tabs .rows li a:focus{background-color: #949090; color:#fff}
-#div-meuEspacoCamara .content .tabs .subtext{font-size: 0.8rem;color: #767676;margin-left: 1rem}		
+#div-meuEspacoCamara .content .tabs .subtext{font-size: 0.8rem;color: #767676;}
+#div-meuEspacoCamara .content .tabs .togglePanel {float: right; border:1px solid #949090; border-right-width: 25px; cursor: pointer; padding: 3px 5px; width: 115px; text-align: center;}
+#div-meuEspacoCamara .content .tabs .togglePanel:hover,
+#div-meuEspacoCamara .content .tabs .togglePanel:focus {background: #eaeaea; border-color: #767676;}
+#div-meuEspacoCamara .content .tabs .togglePanel.act{border-right: 0; border-left: 25px solid #949090; color: #fff;}
+#div-meuEspacoCamara .content .tabs .togglePanel.act:hover,
+#div-meuEspacoCamara .content .tabs .togglePanel.act:focus {background: #004a2f; border-color: #767676;}
 #div-meuEspacoCamara .content .tabs .mescam-content .margin{margin:0.5rem}
 #div-meuEspacoCamara .content .actions li a:hover,
 #div-meuEspacoCamara .content .actions li a:focus{background-color: #54AA84}
@@ -750,8 +756,7 @@ div.panel-det{margin:1em}
 #div-meuEspacoCamara .content .tabs{background: #fff;min-height: 450px;padding:0.5em}
 #div-meuEspacoCamara .content .tabs .filters{display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex}
 #div-meuEspacoCamara .content .tabs .filters li{margin: 0.5em;}
-#div-meuEspacoCamara .content .tabs .section{padding: 0.5em 0 0 0}
-#div-meuEspacoCamara .content .tabs ul.panels{padding-left: 1em}
+#div-meuEspacoCamara .content .tabs .section{padding: 0.5em 0 0 0;}
 #div-meuEspacoCamara .content .tabs ul.panels button.act{background-color:#276C4C; color:#fff}
 #div-meuEspacoCamara .content .tabs .list{margin:10px 0; overflow: auto;}
 #div-meuEspacoCamara .content .tabs .list ul {max-height: 270px; overflow: auto; margin-bottom: 10px;}
