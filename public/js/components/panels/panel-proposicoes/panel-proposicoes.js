@@ -40,7 +40,7 @@
             vm.loadingView;
             vm.loadingViewMessage = defaultViewMessage
             vm.reloadButton;
-            vm.tipo = {value:'PL', id:'45'}
+            vm.tipo = {value:'', id:''}
             
             var configs;
 

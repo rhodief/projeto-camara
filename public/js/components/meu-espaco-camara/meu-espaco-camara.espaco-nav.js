@@ -35,7 +35,9 @@
         vm.panels = {};
         vm.togglePanel = togglePanel
         vm.favorites = [];
-        vm.removeFavorite = removeFavorite
+        vm.removeFavorite = removeFavorite;
+        vm.orderFavorites = orderFavorites;
+        vm.order;;
         vm.importMescam = importMescam;
         vm.exportMescam = exportMescam;
         vm.textMescam = '';
@@ -56,6 +58,7 @@
             getFavorites().then(showFavoritesList);
             activatePanels().then(getPanelsList);
             selectDefaultTab();
+            orderFavorites('title');
         }
 
         function favoritesInit(){
@@ -121,6 +124,10 @@
                 vm.inEdition.splice(index, 1);
             }
             localStorageService.editTitle(url, title);
+        }
+
+        function orderFavorites(val){
+            vm.order = val;
         }
 
         function editable(url){
