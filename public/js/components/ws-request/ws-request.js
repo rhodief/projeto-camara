@@ -11,9 +11,9 @@
         .module('wsRequest')
         .factory('wsRequestService', wsRequestService)
 
-    wsRequestService.$inject = ['$http', 'wsMockService'];
+    wsRequestService.$inject = ['$http', 'wsMockService', '$q'];
 
-    function wsRequestService($http, wsMockService) {
+    function wsRequestService($http, wsMockService, $q) {
 
         var ufsList;
 
@@ -23,13 +23,14 @@
             getUfsList: getUfsList,
             getAgenda: getAgenda,
             getAgendaDetail: getAgendaDetail,
-            getEDemocraciaList: getEDemocraciaList
+            getEDemocraciaList: getEDemocraciaList,
+            getProposicoesList: getProposicoesList
         };
 
         const SCHEMA = {
             deputadosList: {
                 name: 'deputados-list',
-                url: function(params){
+                url: function (params) {
                     var siglaUf = params.siglaUf || '';
                     return 'https://dadosabertos.camara.leg.br/api/v2/deputados?siglaUf=' + siglaUf + '&itens=1000&ordem=ASC&ordenarPor=nome';
                 },
@@ -45,7 +46,7 @@
                     view_partido: 'uriPartido',
                     foto: ["urlFoto", /.+/g, function (value) {
                         var splitS = value.split('https');
-                        if(splitS[1]){
+                        if (splitS[1]) {
                             return value;
                         }
                         return value.split('http').join('https');
@@ -54,7 +55,7 @@
             },
             deputadoView: {
                 name: 'deputado-view',
-                url: function(params){
+                url: function (params) {
                     return 'https://dadosabertos.camara.leg.br/api/v2/deputados/' + params.id;
                 },
                 path: 'data.dados',
@@ -90,7 +91,7 @@
                     ultimoStatus_partido_view: 'ultimoStatus.uriPartido',
                     ultimoStatus_foto: ['ultimoStatus.urlFoto', /.+/g, function (value) {
                         var splitS = value.split('https');
-                        if(splitS[1]){
+                        if (splitS[1]) {
                             return value;
                         }
                         return value.split('http').join('https');
@@ -136,9 +137,9 @@
             },
             agendaView: {
                 name: 'agenda-view',
-                url: function(params){
+                url: function (params) {
                     //eventoss -> erro proposital para disparar os dados simulados.
-                    return 'https://dadosabertos.camara.leg.br/api/v2/eventoss/'+params.id;
+                    return 'https://dadosabertos.camara.leg.br/api/v2/eventoss/' + params.id;
                 },
                 path: 'data.dados',
                 list: false,
@@ -170,41 +171,62 @@
                     }
                 }
             },
-            ufList:{
+            ufList: {
                 name: 'uf-list',
-                url: function(){
+                url: function () {
                     return 'https://dadosabertos.camara.leg.br/api/v2/referencias/uf';
                 },
                 path: 'data.dados',
                 list: true,
-                schema:{
+                schema: {
                     id: 'id',
                     sigla: 'sigla',
                     nome: 'nome',
                     descricao: 'descricao'
                 }
             },
-            eDemocracia:{
+            eDemocracia: {
                 name: "e-democracia",
-                url: function(){
+                url: function () {
                     return "../server_simulator/e_democracia/e_democracia.json"
                 },
-                path:"data.dados",
+                path: "data.dados",
                 list: true,
-                schema:{
+                schema: {
                     categoria: "categoria",
                     img: "img",
                     url: "url",
                     titulo: "titulo",
                     detalhes: "detalhes",
                     tipo: "tipo",
-                    itens:{
+                    itens: {
                         path: "itens",
-                        schema:{
+                        schema: {
                             valor: 'valor',
                             rotulo: 'rotulo'
                         }
                     }
+                }
+            },
+            proposicoesList: {
+                name: 'proposicoes-list',
+                url: function (params) {
+                    var tipo = params.tipo || '';
+                    var numero = params.numero || '';
+                    var ano = params.ano || '';
+                    var autor = params.autor || '';
+                    return 'https://dadosabertos.camara.leg.br/api/v2/proposicoes?siglaTipo=' + tipo + '&numero=' + numero + '&ano=' + ano + (autor ? '&autor=' + encodeURI(autor) : '') + '&itens=1000';
+                },
+                path: 'data.dados',
+                list: true,
+                schema: {
+                    id: 'id',
+                    url: 'uri',
+                    tipo_sigla: 'siglaTipo',
+                    tipo_id: 'idTipo',
+                    numero: 'numero',
+                    ano: 'ano',
+                    ementa: 'ementa'
                 }
             }
         };
@@ -216,7 +238,7 @@
         }
 
         function getDeputado(id) {
-            var params = {id:id};
+            var params = { id: id };
             return _getDataWs(SCHEMA.deputadoView, params);
         }
 
@@ -230,12 +252,18 @@
         }
 
         function getAgendaDetail(id) {
-            var params = { id: id};
+            var params = { id: id };
             return _getDataWs(SCHEMA.agendaView, params);
         }
 
-        function getEDemocraciaList(){
+        function getEDemocraciaList() {
             return _getDataWs(SCHEMA.eDemocracia);
+        }
+
+        function getProposicoesList(value) {
+            var params = _getRequestsParamsFromString(value);
+            if(!angular.equals(params, {})) return _getDataWs(SCHEMA.proposicoesList, params);
+            return $q.reject({msg: 'Requisição ainda não foi realizada', erro:'await'})
         }
 
         function _getDataWs(schemaObj, params) {
@@ -269,10 +297,10 @@
                 } else {
                     var value = (isParams ? schema[k][0] : schema[k]);
                     var item = Rparse(value, data);
-                    if(isParams){
+                    if (isParams) {
                         var prev = (schema[k][1] && item ? item.match(schema[k][1])[0] : item);
                         var prevalue = (schema[k][2] ? schema[k][2](prev) : prev);
-                    }else{
+                    } else {
                         var prevalue = item;
                     }
                     outputObj[k] = (typeof prevalue === 'object' ? null : prevalue);
@@ -321,12 +349,67 @@
             return (out && out[0] && out.length === 1 ? out[0] : out);
         }
 
+        function _getRequestsParamsFromString(string) {
+            var group = _executeRegex(string);
+            var params = _buildParams(group);
+            return params;
+        }
+
+        function _buildParams(group){
+            var params = {};
+            var autor = false;
+            for(var i = 0;i<group.length;i++){
+                var item = group[i];
+                _process(item);
+            }
+            
+            function _process(it){
+                if(autor){
+                    params.autor = it;
+                    autor = false;
+                    return;
+                }
+                var testAutorLabel = it.match(/^autor/i);
+                if(testAutorLabel){
+                    autor = true;
+                    return;
+                }
+                var testTipo = it.length < 6 ? it.match(/^[\D]\w{1,5}/i) : false;
+                if(testTipo){
+                    params.tipo = testTipo[0];
+                    return;    
+                }
+                var testNumero = it.length < 6 && !params.numero ? it.match(/^\d{1,5}/i) : false;
+                if(testNumero){
+                    params.numero = testNumero[0];
+                    return;
+                }
+                var testAno = it.length == 4 && params.numero ? it.match(/^\d{1,4}/i) : false;
+                if(testAno){
+                    params.ano = testAno[0];
+                }
+            }
+            return params;
+        }
+
+        function _executeRegex(string) {
+            const REGEX = '(?:[\S][]+)?[a-z0-9áàâãéèêíïóôõöúçñ]+(?:[\S][]+)?'
+            var objetoRegex = new RegExp(REGEX, 'gi');
+            var results = [];
+            var result = null;
+            while (result = objetoRegex.exec(string)) {
+                if (result[0] === "") return false;
+                results.push(result[0]);
+            }
+            return results;
+        }
+
 
         function _requestDataFromWs(url) {
             return $http.get(url);
         }
 
-        function _getMockData(schemaObj, error){
+        function _getMockData(schemaObj, error) {
             console.log('Não foi possível se conectar com o WebService da Câmara dos Deputados. Assim, os dados serão simulados para mostrar a experiência.')
             return wsMockService.getData(schemaObj);
         }

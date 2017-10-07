@@ -17,22 +17,23 @@
         var directive = {
             link: link,
             scope:{
+                ngModel:'=',
                 selectFilter:'@',
                 openLink: "@",
                 name: "@"
             },
             restrict: 'A',
-            template:'<input type="hidden" name="{{name}}" id="{{name}}-id"><input type="text" placeholder="{{placeholder}}" ng-model="input.name"><button class="toggle-dropdown" type="button" ng-click="toggle()">&#9660;</button><div class="dropdown shadow"><div ng-repeat="data in datas | filter:input.name"><a ng-href="{{openLink ? data.link : \'#\'}}" ng-click="select(data.nome,data.cod)">{{data.nome}}</a></div></div><div ng-if=""></div>'
+            template:'<input type="hidden" name="{{name}}" id="{{name}}-id"><input type="search" placeholder="{{placeholder}}" ng-model="input.value"><button class="toggle-dropdown" type="button" ng-click="toggle()">&#9660;</button><div class="dropdown shadow"><div ng-repeat="data in datas | filter:input.value"><a ng-href="{{openLink ? data.link : \'#\'}}" ng-click="select(data.nome,data.cod)">{{data.nome}}</a></div></div><div ng-if=""></div>'
         };
         return directive;
 
         function link(scope, element, attrs) {
             var panel;
             var datas = [
-                {"nome": "Rhodie André Ferreira (PZ/DF)", "link":"https://www.teste.com", "cod":1},
-                {"nome": "Jhonatan Cordeiro (PFS/SC)", "link":"#", "cod":2},
-                {"nome": "Suzi Maria (PZ/SC)", "link":"#", "cod":3},
-                {"nome": "Felipe Cortez (PFS/SC)", "link":"#", "cod":4}
+                {"nome": "PL", "link":"https://www.teste.com", "cod":1},
+                {"nome": "PLS", "link":"#", "cod":2},
+                {"nome": "PLP", "link":"#", "cod":3},
+                {"nome": "PEC", "link":"#", "cod":4}
             ];
             var minLengh = scope.minLengh || 2;
             var opened = false;
@@ -40,13 +41,14 @@
 
             scope.placeholder = attrs.placeholder || '';
             //scope.class = attrs.class || '';
-            scope.input = {name:''};
+            scope.input = scope.ngModel;
+            passLabel = scope.ngModel.value || false;
             
             scope.select = select;
             scope.toggle = toggle;
 
-           scope.$watch('input.name', function(value){
-               if(passLabel !== value){
+           scope.$watch('input.value', function(value){
+               if(value && passLabel !== value){
                     if(value && value.length >= minLengh){
                         open();
                     }else if(!value || value.length < 1){
@@ -55,17 +57,24 @@
                 }
             });
 
-            function select (label, value){
+            function select (value, index){
                 if(!scope.openLink){
-                    scope.input.name = label;
-                    $document[0].getElementById(scope.name + '-id').value = value;
-                    passLabel = label
+                    scope.input.value = value;
+                    $document[0].getElementById(scope.name + '-id').value = index;
+                    passLabel = value
+                    scope.ngModel = {value:value, id:index}
                     close();
                 }
             }
 
             function toggle(){
-                opened ? close() : open();
+                if(opened){
+                    close();
+                }else{
+                    scope.input = blankInput();
+                    open();
+                    
+                }
             }
 
             function open(){
@@ -77,6 +86,11 @@
                 scope.datas = [];
                 opened = false;
             }
+
+            function blankInput(){
+                return {id:'', value:''};
+            }
+
         }
     }
 
