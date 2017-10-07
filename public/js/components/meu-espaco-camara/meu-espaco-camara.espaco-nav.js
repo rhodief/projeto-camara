@@ -40,7 +40,9 @@
         vm.exportMescam = exportMescam;
         vm.textMescam = '';
         vm.isActive = isActive;
-        
+        vm.toggleEdit = toggleEdit;
+        vm.editable = editable;
+        vm.inEdition = [];
         //Necessário para mobile
         $scope.$on('initMescamFavorites', function(ev, data){
             if(data){
@@ -99,6 +101,30 @@
 
         function isActive(tab){
             return vm.selectedTab === tab;
+        }
+
+        function toggleEdit(url, title){
+            if(editable(url)){
+                _closeEdition(url, title);
+            }else{
+                _openEdition(url);
+            }
+        }
+
+        function _openEdition(url){
+            vm.inEdition.push(url);
+        }
+
+        function _closeEdition(url, title){
+            var index = vm.inEdition.indexOf(url);
+            if(index !== -1){
+                vm.inEdition.splice(index, 1);
+            }
+            localStorageService.editTitle(url, title);
+        }
+
+        function editable(url){
+            return vm.inEdition.indexOf(url) !== -1;
         }
 
         function removeFavorite(url, index){

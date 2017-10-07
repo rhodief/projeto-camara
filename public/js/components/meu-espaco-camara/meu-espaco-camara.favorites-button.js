@@ -34,7 +34,7 @@
         vm.url = $scope.url || null;
         vm.title = $scope.title || null;
 
-        $scope.$on('removeFavorites', function(ev, data){
+        $scope.$on('refrashFavorites', function(ev, data){
             if(data){
                 active();
             }

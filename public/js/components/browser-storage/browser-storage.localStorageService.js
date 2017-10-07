@@ -12,8 +12,8 @@
         var service = {
             isKnown: isKnown,
             isEnabled: isEnabled,
-            disableMescam:disableMescam,
-            enableMescam:enableMescam,
+            disableMescam: disableMescam,
+            enableMescam: enableMescam,
             known: known,
             addPanel: addPanel,
             removePanel: removePanel,
@@ -22,6 +22,7 @@
             setPanelSettings: setPanelSettings,
             getFavorites: getFavorites,
             addFavorite: addFavorite,
+            editTitle: editTitle,
             removeFavorite: removeFavorite,
             isFavorite: isFavorite,
             exportMescam: exportMescam
@@ -40,19 +41,19 @@
             _setAttr(LOCALSTORAGE.FAVORITES, []);
         }
 
-        function isEnabled(){
+        function isEnabled() {
             return _getAttr(LOCALSTORAGE.DISABLED).then(ok);
-            function ok(data){
+            function ok(data) {
                 return !data;
             }
         }
 
-        function disableMescam(){
+        function disableMescam() {
             //known(); Para apagar os dados.
             _setAttr(LOCALSTORAGE.DISABLED, true);
         }
 
-        function enableMescam(){
+        function enableMescam() {
             _setAttr(LOCALSTORAGE.DISABLED, false);
         }
 
@@ -61,7 +62,7 @@
             _getPanels().then(found).catch(notFound);
 
             function found(data) {
-                if(!data[panelName]){
+                if (!data[panelName]) {
                     data[panelName] = { name: panelName, configs: configs }
                     _setPanels(data);
                 }
@@ -91,11 +92,11 @@
             return _getPanels();
         }
 
-        function getPanelSettings(panelName, index){
+        function getPanelSettings(panelName, index) {
             return _getPanelSettings(panelName, index);
         }
 
-        function setPanelSettings(panelName, index, value){
+        function setPanelSettings(panelName, index, value) {
             return _setPanelSettings(panelName, index, value);
         }
 
@@ -124,6 +125,17 @@
             }
         }
 
+        function editTitle(url, newTitle) {
+            _getFavorites().then(okDFav).catch(configError);
+
+            function okDFav(data) {
+                var index = _findValueInIndexObj(url, 'url', data);
+                data[index].title = newTitle;
+                _setFavorites(data);
+                //$rootScope.$broadcast('refrashFavorites', true);
+            }
+        }
+
         function removeFavorite(Url) {
             _getFavorites().then(okDFav).catch(configError);
 
@@ -132,7 +144,7 @@
                 var index = _findValueInIndexObj(url, 'url', data);
                 if (index !== -1) data.splice(index, 1);
                 _setFavorites(data);
-                $rootScope.$broadcast('removeFavorites', true);
+                $rootScope.$broadcast('refrashFavorites', true);
             }
         }
 
@@ -144,11 +156,11 @@
             }
         }
 
-        function exportMescam(){
+        function exportMescam() {
             return _exportMescam();
         }
 
-        function _getCategory(url){
+        function _getCategory(url) {
             return 'Notícias';
         }
 
@@ -174,8 +186,8 @@
 
         }
 
-        function _exportMescam(){
-            var datas =  _getData();
+        function _exportMescam() {
+            var datas = _getData();
             return $q.resolve(JSON.stringify(datas));
         }
 
@@ -186,31 +198,31 @@
             return $q.resolve(_setData(datas));
         }
 
-        function _getPanelSettings(panelName, index){
+        function _getPanelSettings(panelName, index) {
             return _getPanels().then(panelsList).catch(notFound);
-            function panelsList(panels){
-                if(!panels[panelName] || !panels[panelName].configs) $q.reject('Panel não Encontrado');
-                if(index && !panels[panelName].configs.index) return false;
-                return index ? panels[panelName].configs.index : panels[panelName].configs; 
+            function panelsList(panels) {
+                if (!panels[panelName] || !panels[panelName].configs) $q.reject('Panel não Encontrado');
+                if (index && !panels[panelName].configs.index) return false;
+                return index ? panels[panelName].configs.index : panels[panelName].configs;
             }
             function notFound(e) {
                 configError();
             }
         }
 
-        function _setPanelSettings(panelName, index, value){
+        function _setPanelSettings(panelName, index, value) {
             return _getPanels().then(okPanels).catch(notFound);
-            function okPanels(panels){
-                if(!panels[panelName] || !panels[panelName].configs) $q.reject('Panel não Encontrado');
+            function okPanels(panels) {
+                if (!panels[panelName] || !panels[panelName].configs) $q.reject('Panel não Encontrado');
                 panels[panelName].configs[index] = value;
                 _setPanels(panels);
             }
-            function notFound(e){
+            function notFound(e) {
                 console.log(e);
             }
         }
 
-        
+
 
         function _getPanels() {
             return _getAttr(LOCALSTORAGE.PANELS_NAME);
@@ -232,13 +244,13 @@
             return window.location.href;
         }
 
-        function _getCurrentTitle(){
+        function _getCurrentTitle() {
             return document.title;
         }
 
-        function _findValueInIndexObj(value, index, array){
-            for(var i=0;i<array.length;i++){
-                if(index && array[i][index] && array[i][index] === value){
+        function _findValueInIndexObj(value, index, array) {
+            for (var i = 0; i < array.length; i++) {
+                if (index && array[i][index] && array[i][index] === value) {
                     return i;
                 }
             }
@@ -250,52 +262,51 @@
             throw new Error(ERROR_MESSAGE.CONFIG_NOT_FOUND)
         }
 
-        function _getCurrentDate(){
+        function _getCurrentDate() {
             var today = new Date;
             var dd = today.getDate();
-            var mm = today.getMonth()+1; //January is 0!
+            var mm = today.getMonth() + 1; //January is 0!
             var yyyy = today.getFullYear();
             var hh = today.getHours();
             var ii = today.getMinutes();
-    
-            if(dd<10) dd = '0'+dd;
-            if(mm<10) mm = '0'+mm;
-            if(hh<10)hh = '0'+hh;
-            if(ii<10)ii = '0'+ii;
-            
+
+            if (dd < 10) dd = '0' + dd;
+            if (mm < 10) mm = '0' + mm;
+            if (hh < 10) hh = '0' + hh;
+            if (ii < 10) ii = '0' + ii;
+
             return {
                 date: dd + '/' + mm + '/' + yyyy,
                 time: hh + ':' + ii
             }
         }
 
-        function _normalizeUrl(url){
+        function _normalizeUrl(url) {
             var current = _getCurrentPageUrl();
-            if(!url || url == current) return current;
-            
+            if (!url || url == current) return current;
             var isFullUrl = url.split('http').length > 1;
-            if(isFullUrl) return url;
-            
-            var currentMatch = current.match(/(https?:\/\/)(.+[^/])/, 'g');
+            if (isFullUrl) return url;
+
+            var currentMatch = current.match(/(https?:\/\/)(.+[^/#])/, 'g');
             var arrayUrl = currentMatch[2];
-            
+
             var urlSplited = url.split('../');
             var host = arrayUrl.split('/').reverse();
-            
-            var endUrl = []; 
+
+            var endUrl = [];
             var count = 0;
-            for(var i = 0;i<urlSplited.length;i++){
-                if(urlSplited[i] != ''){
+            for (var i = 0; i < urlSplited.length; i++) {
+                if (urlSplited[i] != '') {
                     endUrl.push(urlSplited[i]);
-                }else{
+                } else {
                     count++;
-                } 
+                }
             }
-            for(var j=0;j<count;j++){
-                host.shift();    
+            for (var j = 0; j < count; j++) {
+                host.shift();
             }
 
-            var newUrl = currentMatch[1] + host.reverse().join('/') + '/' +  endUrl.join('/');
+            var newUrl = currentMatch[1] + host.reverse().join('/') + '/' + endUrl.join('/');
             return newUrl;
         }
     }

@@ -46,6 +46,12 @@
                     "label": "Seus Representantes",
                     "pos": 1,
                     "activated": false
+                },
+                {
+                    "name": "proposicoes",
+                    "label": "Proposições",
+                    "pos": 2,
+                    "activated": false
                 }
             ]
         },

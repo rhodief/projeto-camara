@@ -1,0 +1,112 @@
+<div class="appointment">
+    <script>
+        $('#proposicoes-list').bind('mousewheel DOMMouseScroll', blockScroll);
+    </script>
+    <div class="center">
+        <div>
+            <div class="panel-container-3 step-2 list act">
+                <div class="filter"><!-- box-search -->
+                    <div class="field-dropdown-mobile">
+                            <div id="agenda-dropdown" class="dropdown shadow">
+                                <button ng-click="vm.actFilter(undefinded)" ng-class="{act:vm.customFilter.$ == undefined}">Todos</button>
+                                <button ng-click="vm.actFilter('Plenário da Câmara dos Deputados')" ng-class="{act:vm.customFilter.$ == 'Plenário da Câmara dos Deputados'}">Salvos</button>
+                                
+                            </div>
+                            <button class="toggle-dropdown filter" type="button" onclick="toggleDropdown(this)">&#9660;</button>
+                        </div>
+                    <div class="field">
+                            <!-- <div class="field-dropdown search" select-filter="deputadosList" name="tipo-proposicao" placeholder="Tipo..." ng-model="vm.tipo"></div> -->
+                        <input type="search" ng-model="inputSearch" placeholder="Ex. PL 12/2017 ou autor rodrigo maia">
+                        
+                            <!-- <div class="row-input"><input type="text" placeholder="Número" ng-model="vm.numero">
+                            <input type="text" placeholder="Ano" ng-model="vm.ano"> </div> -->
+                            
+                       
+
+                    </div>
+                </div>
+                <ul class="panel-list list" id="proposicoes-list">
+                    <div ng-if="vm.loadingList">
+                        <span class="loading">{{vm.loadingListMessage}}</span>
+                        <div ng-if="vm.reloadButton"><a href="" onClick="location.reload()">Recarregue a Página</a></div>
+                    </div>
+                    <div ng-if="!vm.loadingList">
+                        <div ng-if="vm.proposicoes[0] && !vm.proposicoes[0].error">
+                            <li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(proposicao.id)}" ng-repeat="proposicao in vm.proposicoes | filter:vm.proposicoesFilter"
+                                ng-click="vm.getDetail(proposicao.id)">
+                                <a href="">
+                                    <div class="panel-list">
+                                        <div class="title">{{proposicao.tipo_sigla + '-' + proposicao.numero + '/' + proposicao.ano}}</div>
+                                        <span>{{proposicao.ementa}}</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </div>
+                        <div ng-if="!vm.proposicoes[0]">
+                            <span class="no-event">Não há ocorrências para esta busca.</span>
+                        </div>
+                        <div ng-if="vm.proposicoes[0] && vm.proposicoes[0].error ">
+                            <span class="no-event">{{vm.proposicoes[0].error}}</span>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="panel-container-3 panel-view step-3" ng-class="{act: vm.viewId}">
+                <a href="#" class="back" ng-click="vm.viewId = null">Voltar</a>
+                <div class="detail">
+                    <div ng-if="vm.loadingView">
+                        <span class="loading">{{vm.loadingViewMessage}}</span>
+                        <div ng-if="vm.reloadButton"><a href="" onClick="location.reload()">Recarregue a Página</a></div>
+                    </div>
+                    <div ng-if="!vm.loadingView">
+                        <div ng-if="vm.view.ultimoStatus_nome===undefined">
+                            <div class="inact">
+                                <div class="img">
+                                    <img src="img/img_avatar2.png" alt="Avatar">
+                                </div>
+                                <div class="text">
+                                    <p>Selecione uma<br><span>Proposicao</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if="vm.view.ultimoStatus_nome">
+                            <script>
+                                $('#proposicoes-view').bind('mousewheel DOMMouseScroll', blockScroll);
+                            </script>
+                            <div class="text">
+                                <div class="list" id="proposicoes-view">
+                                    <img ng-src="{{vm.view.ultimoStatus_foto}}" alt="Avatar" style="max-width:60%">
+                                    <div class="title">{{vm.view.ultimoStatus_nome}}</div>
+                                    <div class="item">{{vm.view.ultimoStatus_partido_sig}}/{{vm.view.ultimoStatus_uf_sig}}</div>
+                                    <dl class="tabela">
+                                        <dt>Nome Civil</dt>
+                                        <dd>{{vm.view.nome_civil}}</dd>
+                                        <dt>Nascimento</dt>
+                                        <dd>{{vm.view.dataNascimento}}</dd>
+                                        <dt>Escolaridade</dt>
+                                        <dd>{{vm.view.escolaridade}}</dd>
+                                        <dt>Naturalidade</dt>
+                                        <dd>{{vm.view.municipioNascimento}}, {{vm.view.ufNascimento}}</dd>
+                                        <dt>Gabinete</dt>
+                                        <dd>Anexo {{vm.view.ultimoStatus_gabinete_predio}}, gab. {{vm.view.ultimoStatus_gabinete_sala}}</dd>
+                                        <dt>Email</dt>
+                                        <dd>{{vm.view.ultimoStatus_gabinete_email}}</dd>
+                                        <dt>Telefone</dt>
+                                        <dd>{{vm.view.ultimoStatus_gabinete_telefone}}</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if="vm.view[0] && vm.view[0].error">
+                            <span class="no-event">{{vm.view[0].error}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+                                imgColorChange();
+
+</script>
