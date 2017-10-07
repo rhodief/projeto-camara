@@ -720,6 +720,8 @@ div.panel-det{margin:1em}
 .section-education .box-posts img{width: 100%; display: block; height: auto;}
 .section-education .box-posts .text{width: 100%; display: block; font-size: 18px; font-size: 1.125rem; color: #004a2f; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box;}
 
+.vertical-middle:before{content: ''; display: inline-block; vertical-align: middle; width: 0.1px; height: 0.1px;}
+
 #section-meuEspacoCamara{display: block; position: fixed; top: 0; right: -100%; width: 340px; height: 100%; max-height: 100%; overflow: auto; max-width: 100%; background: rgba(0, 148, 219, 0.3); z-index: 10; padding: 10px;  -webkit-box-sizing: border-box;  box-sizing: border-box;}
 #section-meuEspacoCamara.act{right: 0;}
 #div-meuEspacoCamara{background: #E1DFDF;
@@ -751,10 +753,13 @@ div.panel-det{margin:1em}
 #div-meuEspacoCamara .content .tabs .section{padding: 0.5em 0 0 0}
 #div-meuEspacoCamara .content .tabs ul.panels{padding-left: 1em}
 #div-meuEspacoCamara .content .tabs ul.panels button.act{background-color:#276C4C; color:#fff}
-#div-meuEspacoCamara .content .tabs .list{margin:1em; overflow: auto}
+#div-meuEspacoCamara .content .tabs .list{margin:10px 0; overflow: auto;}
 #div-meuEspacoCamara .content .tabs .list ul {max-height: 270px; overflow: auto; margin-bottom: 10px;}
 #div-meuEspacoCamara .content .tabs .list li{padding: 8px 0; display: -webkit-box; display: -ms-flexbox; display: flex; position:relative}
-#div-meuEspacoCamara .content .tabs .list li .delete{font-size: 0.875rem;line-height: 15px;line-height: 0.9375rem;color: #fff;text-decoration: none;background: red;border-radius: 50%;width: 18px;height: 18px;text-align: center;cursor:pointer}
+#div-meuEspacoCamara .content .tabs .list li .delete,
+#div-meuEspacoCamara .content .tabs .list li .edit{text-indent: -5000em; width: 20px; height: 20px; cursor: pointer; margin-top: 15px}
+#div-meuEspacoCamara .content .tabs .list li .delete{background: url(../img/layout/bin2.png) no-repeat center center; margin-right: 5px;}
+#div-meuEspacoCamara .content .tabs .list li .edit{background: url(../img/layout/pencil.png) no-repeat center center; margin-left: 5px;}
 #div-meuEspacoCamara .content .tabs .list li:hover{background-color: #E8E6E6}
 #div-meuEspacoCamara .content .tabs .list li + li{border-top:1px solid #ebebeb;}
 #div-meuEspacoCamara .content .tabs .list a{font-size: 14px; font-size: 0.875rem; line-height: 16px; line-height: 1rem; color: #333333; text-decoration: none; display: block; margin-bottom: 5px;}
@@ -1320,6 +1325,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.corner-menu > li .submenu{background: #d2d2d2;}
 	.corner-menu .submenu li > a{color: #333333; border-bottom: 1px solid rgba(255,255,255,0.5);}
 	.section-container{padding: 0 20px 40px;}
+	
+	#div-meuEspacoCamara .content .tabs .list li .delete,
+	#div-meuEspacoCamara .content .tabs .list li .edit{opacity: 0;}
+	#div-meuEspacoCamara .content .tabs .list li:hover .delete,
+	#div-meuEspacoCamara .content .tabs .list li:hover .edit{opacity: 0.7;}
+	#div-meuEspacoCamara .content .tabs .list li .delete:hover,
+	#div-meuEspacoCamara .content .tabs .list li .edit:hover,
+	#div-meuEspacoCamara .content .tabs .list li .delete:focus,
+	#div-meuEspacoCamara .content .tabs .list li .edit:focus {opacity: 1;}
 }
 @media screen and (min-width: 1370px) {
 	.header .submenu li:hover > a:after,

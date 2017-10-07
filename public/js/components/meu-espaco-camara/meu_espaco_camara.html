@@ -48,13 +48,14 @@
                     <ul>
                         <li ng-if="!vm.favorites[0]"><strong>Nada foi salvo. Navegue pelas páginas e grave aqui o que for do seu interesse</strong></li>
                         <li ng-repeat="fav in vm.favorites | orderBy:vm.orderFavorites | filter:favinput">
+                           <div class="left" title="Alterar"><button class="edit">Editar</button></div>
                             <div class="center">
                                 <a href="{{fav.url}}">
                                     <div class="text"><strong>{{fav.title}}</strong></div>
                                     <div class="date-time">{{fav.category}} - Salvo em {{fav.date.date}}, {{fav.date.time}}</div>
                                 </a>
                             </div>
-                            <div class="right"><button class="delete" ng-click="vm.removeFavorite(fav.url, $index)">x</button></div>
+                            <div class="right"><button class="delete" title="Remover" ng-click="vm.removeFavorite(fav.url, $index)">x</button></div>
                         </li>
                     </ul>
                 </div>
