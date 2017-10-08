@@ -37,9 +37,9 @@
             <div class="mescam-title">Ordenar por:</div>
             <div class="mescam-content">
                 <ul class="filters">
-                    <li><a href="#" ng-click="vm.orderFavorites = 'title'">Título</a></li>
-                    <li><a href="#" ng-click="vm.orderFavorites = '-date'">Data</a></li>
-                    <li><a href="#" ng-click="vm.orderFavorites = 'category'">Categoria</a></li>
+                    <li><a href="#" ng-click="vm.orderFavorites('title')" ng-class="{act:vm.order == 'title'}">Título</a></li>
+                    <li><a href="#" ng-click="vm.orderFavorites('date')" ng-class="{act:vm.order == 'date'}">Data</a></li>
+                    <li><a href="#" ng-click="vm.orderFavorites('category')" ng-class="{act:vm.order == 'category'}">Categoria</a></li>
                 </ul>
                 <div class="form">
                     <input type="text" placeholder="Encontrar um Favorito" id="favinput" ng-model="favinput.$">
@@ -47,7 +47,7 @@
                 <div class="list">
                     <ul>
                         <li ng-if="!vm.favorites[0]"><strong>Nada foi salvo. Navegue pelas páginas e grave aqui o que for do seu interesse</strong></li>
-                        <li ng-repeat="fav in vm.favorites | orderBy:vm.orderFavorites | filter:favinput">
+                        <li ng-repeat="fav in vm.favorites | orderBy:vm.order | filter:favinput">
                            <div class="left" title="Alterar">
                                <button class="edit" ng-click="vm.toggleEdit(fav.url, fav.title)">Editar</button>
                             </div>

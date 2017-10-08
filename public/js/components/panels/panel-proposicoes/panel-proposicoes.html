@@ -32,7 +32,7 @@
                     </div>
                     <div ng-if="!vm.loadingList">
                         <div ng-if="vm.proposicoes[0] && !vm.proposicoes[0].error">
-                            <li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(proposicao.id)}" ng-repeat="proposicao in vm.proposicoes | filter:vm.proposicoesFilter"
+                            <li class="panel-list-item" ng-class="{'item-selected': vm.isSelected(proposicao.id)}" ng-repeat="proposicao in vm.proposicoes"
                                 ng-click="vm.getDetail(proposicao.id)">
                                 <a href="">
                                     <div class="panel-list">
