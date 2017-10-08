@@ -142,7 +142,7 @@ dt { clear: both; }
 	font-size: 0.9rem;
     color: #535151;
 	}
-.row-input {display: inline-flex;}
+.row-input {display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex;}
 .row-input input {margin: 0.3em}
 
 .button{background: #004a2f; font-size: 14px; font-size: 0.875rem; line-height: 14px; line-height: 0.875rem; padding: 10px 30px; color: #fff; text-transform: uppercase; min-width:116px;text-align: center; cursor: pointer; position: relative;}
@@ -873,7 +873,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .share-options .box-options a:after,
 .share-options .box-options a:before{display: none;}
 .share-options .box-options img{border-radius: 50%; width: 30px; height: 30px;}
-.mescam-content .icon {display: inline-block; vertical-align: middle;}
+.mescam-content .icon {display: inline-block; vertical-align: middle; margin-right: 10px;}
 .mescam-content .icon svg,
 .mescam-content .icon img{max-width: 40px; max-height: 40px;}
 
@@ -929,6 +929,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .site-settings .settings-list .font-size.reset{font-size: 1rem;}
 .site-settings .settings-list .font-size.more{font-size: 1.125rem;}
 
+/* box-dialog */
+.bg-dialog{position: absolute; top:0; left: 0; width: 100%; height: 100%; background: #000; opacity: 0.5; z-index: 999;}
+.box-dialog{display:table; max-width: 100%; width: auto; height: 100%; opacity: 0.9; z-index: 1000; position: relative; margin: 0 auto; text-align: center;}
+.box-dialog.position-1{position: absolute; top: 0; left: 0; width: 100%; overflow: auto;}
+.position-1 ~ .bg-dialog{opacity: 0.3;}
+.position-1 .middle{border:1px solid #e1dfdf;}
+.box-dialog.position-2{display: -webkit-box;display: -ms-flexbox;display: flex; position: fixed; top: 0; left: 0; width: 100%; max-height: 100%; overflow: auto; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.box-dialog.position-2 .middle{padding: 10px;}
+.box-dialog.position-2 .box-buttons{margin-top: 20px;}
+.box-dialog.position-2 ~ .bg-dialog{position: fixed;}
+.position-0 .center{padding: 10px;}
+.box-dialog .center{display: table-cell; vertical-align: middle; width: auto; height: auto; text-align: center;}
+.box-dialog .middle{display: inline-block; margin: 0 auto;  vertical-align: middle; background: #fff; opacity: 0.99; width: auto; height: auto; -o-object-fit: cover; object-fit: cover; max-width: 100%; max-height: 100%; overflow: auto;}
+.box-dialog .box-text{margin: 10px 0;}
+.box-dialog .box-text,
+.box-dialog .box-buttons{display: -webkit-box;display: -ms-flexbox;display: flex;-ms-flex-pack: distribute;justify-content: space-around; -ms-flex-wrap: wrap; flex-wrap: wrap;}
+.box-dialog .box-buttons .button{margin: 5px; min-width: inherit;}
+.box-dialog .button.cancel{background: #767676;}
+/* box-dialog */
 @media screen and (max-width: 767px) {
 	.section-news .box-news.mobile-invert-order{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
 	.mobile-invert-order > div:first-child{-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2; -ms-flex-preferred-size:100%; flex-basis:100%;}

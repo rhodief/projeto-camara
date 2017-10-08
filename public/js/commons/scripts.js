@@ -227,7 +227,58 @@ $(document).ready(function () {
 		}
 
 	});
-
+	
+	
+	$('*[data-dialog-type]').on('click', function(e){
+		/******
+		// data-dialog-type[type, position]
+		//// type: 1 = question (botao ok + cancelar)
+		//// type: 2 = ok (somente botao ok)
+		//// position: 0 = adiciona o dialogo apos o elemento
+		//// position: 1 = posicao absoluta ao pai do elento clicado
+		//// position: 2 = posicao fixa ao html
+		******/	
+		e.preventDefault();
+		var dialogValues = $(this).attr('data-dialog-type').split(',');
+		var buttons = '';
+		var message = '';
+		var acceptFunction = '';
+		var cancelFunction = '';
+		var positionClass = '';
+		
+		if ($(this).attr('data-dialog-accept-function') != ''){
+			acceptFunction = 'onclick="'+$(this).attr('data-dialog-accept-function')+'"';
+		}
+		if ($(this).attr('data-dialog-cancel-function') != ''){
+			cancelFunction = 'onclick="'+$(this).attr('data-dialog-cancel-function')+'"';
+		}
+		var acceptButton = '<button class="button accept invert-contrast" '+acceptFunction+'>Ok</button>'
+		var cancelButton = '<button class="button cancel" '+cancelFunction+'>Cancelar</button>'
+		$(this).addClass('target');
+		if (dialogValues[0] == 1){
+			buttons = acceptButton;
+		}
+		if (dialogValues[0] == 2){
+			buttons = acceptButton+''+cancelButton;
+		}
+		if ($(this).attr('data-dialog-message') != ''){
+			message = '<div class="box-text"><p class="message">'+$(this).attr('data-dialog-message')+'</p></div>'
+		};
+		$('.box-dialog, .bg-dialog').remove();
+		if(dialogValues[1] == 0){
+			positionClass = 'position-0';
+		};
+		if(dialogValues[1] == 1){
+			positionClass = 'position-1';
+		};
+		if(dialogValues[1] == 2){
+			positionClass = 'position-2';
+		};
+		var html = '<div class="box-dialog '+positionClass+'"><div class="center"><div class="middle shadow">'+message+'<div class="box-buttons">'+buttons+'</div></div></div></div><div class="bg-dialog"></div>';
+		$(html).hide().insertAfter($(this)).fadeIn().parent().css('position', 'relative');
+		//$(this).after(html).fadeIn().parent().css('position', 'relative');
+	});
+	
 	moverRecomendados();
 	menu_max_height();
 	atualizaMinHeight();
@@ -396,3 +447,14 @@ function animateScroll(container, scrollTo){
 		scrollTop: scrollTo.offset().top
 	});
 }
+
+function acceptButton(e){
+	/*$(e).parent().parent().find('.target').removeClass('target').click();
+	cancelButton($(e));*/
+};
+function cancelButton(e){
+	$('.box-dialog').parent().css('position','').find('.target').removeClass('target');
+	$('.box-dialog, .bg-dialog').fadeOut("normal", function() {
+        $(this).remove();
+    });
+};
