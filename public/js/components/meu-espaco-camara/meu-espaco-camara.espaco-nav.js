@@ -58,7 +58,7 @@
             getFavorites().then(showFavoritesList);
             activatePanels().then(getPanelsList);
             selectDefaultTab();
-            orderFavorites('title');
+            orderFavorites('date');
         }
 
         function favoritesInit(){

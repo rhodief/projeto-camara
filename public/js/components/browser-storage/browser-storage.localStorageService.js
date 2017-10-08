@@ -142,7 +142,6 @@
             function okDFav(data) {
                 var url = _normalizeUrl(Url);
                 var index = _findValueInIndexObj(url, 'url', data);
-                console.log('aqui');
                 if (index !== -1) data.splice(index, 1);
                 _setFavorites(data);
                 $rootScope.$broadcast('refrashFavorites', true);
