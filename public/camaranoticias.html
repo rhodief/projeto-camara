@@ -673,6 +673,31 @@
 			<div class="center">
 				<div class="list-news">
 					<ul>
+						<li class="size1 type1 title-highlight show-text shadow">
+							<favorites-button class="ng-isolate-scope"><button class="favorite-button ng-binding" ng-class="{act: vm.included}" ng-click="vm.toggleInclude()">Favoritado</button></favorites-button>
+							<div class="share-options">
+								<button class="share-button" title="Compartilhar"></button>
+								<ul class="box-options">
+									<li>
+										<a href="#"><img src="img/layout/icon_mail.png" alt="email" class="shadow"></a>
+									</li>
+									<li>
+										<a href="#"><img src="img/layout/icon_facebook.png" alt="Facebook" class="shadow"></a>
+									</li>
+									<li>
+										<a href="#"><img src="img/layout/icon_twitter.png" alt="Twitter" class="shadow"></a>
+									</li>
+								</ul>
+							</div>
+							<a href="#">
+								<span class="img"><img src="img/uploads/img201610031241174567718.jpg" alt=""></span>
+								<span class="box-text">
+									<span class="hat-text"><span>Regras Eleitorais</span></span>
+									<span class="title">Debate sobre reforma política continuará após mudanças nas regras eleitorais</span>
+									<span class="date-category"><span>Política</span>06/10/2017</span>
+								</span>
+							</a>
+						</li>
 						<li class="size1 type1 show-text shadow">
 							<favorites-button class="ng-isolate-scope"><button class="favorite-button ng-binding" ng-class="{act: vm.included}" ng-click="vm.toggleInclude()">Favoritado</button></favorites-button>
 							<div class="share-options">
@@ -692,48 +717,12 @@
 							<a href="#">
 								<span class="img"><img src="img/uploads/img_03.jpg" alt=""></span>
 								<span class="box-text">
+									<span class="hat-text"><span>República</span></span>
 									<span class="title">Parecer sobre a denúncia contra Temer deve ser lido na CCJ na próxima segunda</span>
 									<span class="text">Os dois projetos tramitam em caráter conclusivo e devem ser transformados em um texto único, que segue para o Senado, a não ser que haja recurso</span>
 									<span class="date-category"><span>Política</span>05/07/2017</span>
 								</span>
 							</a>
-						</li>
-						<li class="size1 thumb-menu shadow">
-							<div class="box-media">
-								<div class="vertical scroll">
-									<ul class="media-tabs">
-										<li>
-											<a href="#" class="act">TV 1 (ao vivo)</a>
-										</li>
-										<li>
-											<a href="#">TV 2</a>
-										</li>
-										<li>
-											<a href="#">Rádio</a>
-										</li>
-										<li>
-											<a href="#">Transmissão A</a>
-										</li>
-										<li>
-											<a href="#">Transmissão B</a>
-										</li>
-										<li>
-											<a href="#">Transmissão C</a>
-										</li>
-										<li>
-											<a href="#">Transmissão D</a>
-										</li>
-										<li>
-											<a href="#">Transmissão E</a>
-										</li>
-									</ul>
-								</div>
-								<a href="#" class="player">
-									<span class="img">
-										<img src="img/uploads/img_19.jpg" alt="">
-									</span>
-								</a>
-							</div>
 						</li>
 						<li class="size3 type4 show-text shadow">
 							<favorites-button class="ng-isolate-scope"><button class="favorite-button ng-binding" ng-class="{act: vm.included}" ng-click="vm.toggleInclude()">Favoritado</button></favorites-button>
@@ -754,6 +743,7 @@
 							<a href="#">
 								<span class="img"><img src="img/uploads/img_04.jpg" alt=""></span>
 								<span class="box-text">
+									<span class="hat-text"><span>Exterior</span></span>
 									<span class="title">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</span>
 									<span class="text">Os dois projetos tramitam em caráter conclusivo e devem ser transformados em um texto único, que segue para o Senado, a não ser que haja recurso</span>
 									<span class="date-category"><span>Relações Exteriores</span>05/07/2017</span>
@@ -779,6 +769,7 @@
 							<a href="#">
 								<span class="img"><img src="img/uploads/img_06.jpg" alt=""></span>
 								<span class="box-text">
+									<span class="hat-text"><span>Debate</span></span>
 									<span class="title">Principal desafio para cumprimento das metas do PNE é o financiamento, apontam debatedores</span>
 									<span class="text">Os dois projetos tramitam em caráter conclusivo e devem ser transformados em um texto único, que segue para o Senado, a não ser que haja recurso</span>
 									<span class="date-category"><span>Administração Pública</span>04/07/2017</span>
@@ -804,6 +795,7 @@
 							<a href="#">
 								<span class="img"><img src="img/uploads/img_20.jpg" alt=""></span>
 								<span class="box-text">
+									<span class="hat-text"><span>Metas do PNE</span></span>
 									<span class="title">Principal desafio para cumprimento das metas do PNE é o financiamento, apontam debatedores</span>
 									<span class="text">Os dois projetos tramitam em caráter conclusivo e devem ser transformados em um texto único, que segue para o Senado, a não ser que haja recurso</span>
 									<span class="date-category"><span>Administração Pública</span>04/07/2017</span>
@@ -815,7 +807,7 @@
 				<div class="box-news mobile-invert-order">
 					<div class="list-news">
 						<ul>
-							<li class="size4 type1 show-text shadow">
+							<li class="size1 type1 show-text shadow">
 								<favorites-button class="ng-isolate-scope"><button class="favorite-button ng-binding" ng-class="{act: vm.included}" ng-click="vm.toggleInclude()">Favoritado</button></favorites-button>
 								<div class="share-options">
 									<button class="share-button" title="Compartilhar"></button>
@@ -840,7 +832,44 @@
    									</span>
    								</a>
 							</li>
-							<li class="size3 type4 show-text shadow">
+							<li class="size1 thumb-menu shadow">
+								<div class="box-media">
+									<div class="vertical scroll">
+										<ul class="media-tabs">
+											<li>
+												<a href="#" class="act">TV 1 (ao vivo)</a>
+											</li>
+											<li>
+												<a href="#">TV 2</a>
+											</li>
+											<li>
+												<a href="#">Rádio</a>
+											</li>
+											<li>
+												<a href="#">Transmissão A</a>
+											</li>
+											<li>
+												<a href="#">Transmissão B</a>
+											</li>
+											<li>
+												<a href="#">Transmissão C</a>
+											</li>
+											<li>
+												<a href="#">Transmissão D</a>
+											</li>
+											<li>
+												<a href="#">Transmissão E</a>
+											</li>
+										</ul>
+									</div>
+									<a href="#" class="player">
+										<span class="img">
+											<img src="img/uploads/img_19.jpg" alt="">
+										</span>
+									</a>
+								</div>
+							</li>
+							<li class="size5 type4 show-text shadow">
 								<favorites-button class="ng-isolate-scope"><button class="favorite-button ng-binding" ng-class="{act: vm.included}" ng-click="vm.toggleInclude()">Favoritado</button></favorites-button>
 								<div class="share-options">
 									<button class="share-button" title="Compartilhar"></button>
@@ -865,7 +894,32 @@
 									</span>
 								</a>
 							</li>
-							<li class="size3 type4 show-text shadow">
+							<li class="size5 type4 show-text shadow">
+								<favorites-button class="ng-isolate-scope"><button class="favorite-button ng-binding" ng-class="{act: vm.included}" ng-click="vm.toggleInclude()">Favoritado</button></favorites-button>
+								<div class="share-options">
+									<button class="share-button" title="Compartilhar"></button>
+									<ul class="box-options">
+										<li>
+											<a href="#"><img src="img/layout/icon_mail.png" alt="email" class="shadow"></a>
+										</li>
+										<li>
+											<a href="#"><img src="img/layout/icon_facebook.png" alt="Facebook" class="shadow"></a>
+										</li>
+										<li>
+											<a href="#"><img src="img/layout/icon_twitter.png" alt="Twitter" class="shadow"></a>
+										</li>
+									</ul>
+								</div>
+								<a href="#">
+									<span class="img"><img src="img/uploads/img_06.jpg" alt=""></span>
+									<span class="box-text">
+										<span class="title">Principal desafio para cumprimento das metas do PNE é o financiamento, apontam debatedores</span>
+										<span class="text">Os dois projetos tramitam em caráter conclusivo e devem ser transformados em um texto único, que segue para o Senado, a não ser que haja recurso</span>
+										<span class="date-category"><span>Administração Pública</span>04/07/2017</span>
+									</span>
+								</a>
+							</li>
+							<li class="size5 type4 show-text shadow">
 								<favorites-button class="ng-isolate-scope"><button class="favorite-button ng-binding" ng-class="{act: vm.included}" ng-click="vm.toggleInclude()">Favoritado</button></favorites-button>
 								<div class="share-options">
 									<button class="share-button" title="Compartilhar"></button>

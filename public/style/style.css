@@ -573,10 +573,10 @@ div.panel-det{margin:1em}
 .section-news .last-news .title{font-size: 18px; font-size: 1.125rem; text-transform: uppercase; text-align: center; color: #004a2f; margin-bottom: 8px;}
 .section-news .last-news .tabs{display: table; width: 100%;}
 .section-news .last-news .tabs li{display: table-cell; text-align: center;}
-.section-news .last-news .tabs li a{background: #686868; color: #fff; font-weight: 600; padding: 10px;}
+.section-news .last-news .tabs li a{background: #dcdcdc; color: #004a2f; font-weight: 600; padding: 10px;}
 .section-news .last-news .tabs li a:hover,
 .section-news .last-news .tabs li a:focus,
-.section-news .last-news .tabs li a.act{background: #004a2f;}
+.section-news .last-news .tabs li a.act{background: #004a2f; color: #fff;}
 .section-news .last-news .list{max-height: 270px; overflow: auto; margin-bottom: 10px;}
 .section-news .last-news .list li{padding: 8px 0; display: block;position: relative;}
 .list-news a:after,
@@ -618,8 +618,12 @@ div.panel-det{margin:1em}
 .list-news li > .title{margin: 10px; font-size: 18px; font-size: 1.125rem; text-align: center; font-weight: 600; color: #276c4d;}
 .list-news .img img{display: block; width: 100%; height: 210px; -o-object-fit: cover; object-fit: cover;}
 .list-news .box-text{padding: 10px; display: block;}
+.list-news .box-text .hat-text{font-size: 13px; font-size: 0.8125rem; line-height: 16px; line-height: 1rem; color: #fff; font-weight: 400; display: table; margin-bottom: 15px; position: relative; margin-top: -50px; padding: 10px 0;}
+.list-news .box-text .hat-text span{position: relative; z-index: 1;}
+.list-news .box-text .hat-text:before{content: ''; width: calc(100% + 70px); height: 100%; display: block; position: absolute; top: 0; left: -10px; z-index: 0; opacity: 0.85; background: rgba(0,0,0,1);background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(0,0,0,0)));background: -webkit-gradient(linear, left top, right top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );}
 .list-news .box-text .title{font-size: 14px; font-size: 0.875rem; line-height: 16px; line-height: 1rem; color: #004a2f; font-weight: 500; display: block; margin-bottom: 15px;}
 .list-news .box-text .text{display: none; font-size: 14px; font-size: 0.875rem; color: #333333;}
+.list-news .title-highlight .box-text .title{font-size: 20px; font-size:1.25rem; line-height: normal;}
 .list-news .box-text .date-category{font-size: 14px; font-size: 0.875rem; line-height: 16px; line-height: 1rem; color: #333333; display: block; margin-bottom: 10px; text-align: center;}
 .list-news .box-text .date-category span{display: block;}
 .list-news .type5 a{display: block; height: 100%;}
@@ -631,10 +635,10 @@ div.panel-det{margin:1em}
 .list-news .vertical.scroll{max-width: 100%; overflow: auto;max-height: 109px;}
 .list-news .vertical.scroll .media-tabs{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: 5px 5px 0;}
 .vertical.scroll .media-tabs li{width: auto; text-align: center; margin: 5px; -webkit-box-flex:1; -ms-flex:1 1 auto; flex:1 1 auto;}
-.vertical.scroll .media-tabs a{font-size: 14px; font-size: 0.875rem; padding: 10px; background: #686868; color: #fff; display: block; position: relative;}
+.vertical.scroll .media-tabs a{font-size: 14px; font-size: 0.875rem; padding: 10px; background: #dcdcdc; color: #004a2f; display: block; position: relative;}
 .vertical.scroll .media-tabs a:hover,
 .vertical.scroll .media-tabs a:focus,
-.vertical.scroll .media-tabs a.act{background: #004a2f;}
+.vertical.scroll .media-tabs a.act{background: #004a2f; color: #fff;}
 
 .live.redpoint.icon{display: inline-block !important; vertical-align: middle; margin-left:5px; position: relative; left: -10px; text-indent: -5000em; width:12px !important; height: 12px !important; background: #c30f16; border-radius: 50%; -webkit-animation: animate-fade-toggle 2s linear infinite;animation: animate-fade-toggle 2s linear infinite;}
 
@@ -757,8 +761,10 @@ div.panel-det{margin:1em}
 #div-meuEspacoCamara .content .rows li a.ok:hover,
 #div-meuEspacoCamara .content .rows li a.ok:focus{background-color:#5DA987;}
 #div-meuEspacoCamara .content .tabs{background: #fff;min-height: 450px;padding:0.5em}
-#div-meuEspacoCamara .content .tabs .filters{display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex}
-#div-meuEspacoCamara .content .tabs .filters li{margin: 0.5em;}
+#div-meuEspacoCamara .content .tabs .filters{display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex;}
+#div-meuEspacoCamara .content .tabs .filters li{margin:5px;}
+#div-meuEspacoCamara .content .tabs .filters a{padding: 2px; display: block; text-decoration:none; border-bottom:5px solid transparent;}
+#div-meuEspacoCamara .content .tabs .filters a.act{border-bottom-color:#276C4C;}
 #div-meuEspacoCamara .content .tabs .section{padding: 0.5em 0 0 0;}
 #div-meuEspacoCamara .content .tabs ul.panels button.act{background-color:#276C4C; color:#fff}
 #div-meuEspacoCamara .content .tabs .list{margin:10px 0; overflow: auto;}
@@ -943,6 +949,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .box-dialog .center{display: table-cell; vertical-align: middle; width: auto; height: auto; text-align: center;}
 .box-dialog .middle{display: inline-block; margin: 0 auto;  vertical-align: middle; background: #fff; opacity: 0.99; width: auto; height: auto; -o-object-fit: cover; object-fit: cover; max-width: 100%; max-height: 100%; overflow: auto;}
 .box-dialog .box-text{margin: 10px 0;}
+.box-dialog.position-1 .box-text{margin:10px;}
 .box-dialog .box-text,
 .box-dialog .box-buttons{display: -webkit-box;display: -ms-flexbox;display: flex;-ms-flex-pack: distribute;justify-content: space-around; -ms-flex-wrap: wrap; flex-wrap: wrap;}
 .box-dialog .box-buttons .button{margin: 5px; min-width: inherit;}
@@ -1012,6 +1019,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.list-news .type1 .box-text .title,
 	.list-news .type1 .box-text .text,
 	.list-news .type1 .box-text .date-category{color: #fff;}
+	.list-news .type1 .box-text .hat-text{padding: 8px 10px; margin:0 0 5px -10px; background: rgba(0,0,0,0.5);}
+	.list-news .type1 .box-text .hat-text:before{content: ''; width: 30%; height: 1px; background: #fff; position: absolute; top: 0; left: 0; opacity: 0.6;}
+	.list-news .type1 .box-text .hat-text:after{content: ''; width: 30%; height: 1px; background: #fff; position: absolute; bottom: 0; right: -5px; opacity: 0.6;}
 	.list-news .show-text .box-text .text{display: block; margin-bottom: 30px;}
 	.list-news .type1 .box-text .text{margin-bottom:20px;}
 	.list-news .box-text .text.no-margin-bottom{margin-bottom: 0;}
@@ -1272,6 +1282,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.list-news a:focus .img img{-webkit-transform: scale(1);transform: scale(1);}
 	.list-news .type1 .box-text .title,
 	.list-news .type3 .box-text .title{font-size: 18px; font-size: 1.125rem; line-height: 20px; line-height: 1.25rem;}
+	.list-news .box-text .hat-text{font-size: 14px; font-size:0.875rem;}
+	.list-news .type1.title-highlight .box-text .title{font-size: 30px; font-size: 1.875rem; line-height: normal;}
 	.list-news .player .img,
 	.list-news .type1 .img,
 	.list-news .type3 .img{height: 100%;}
