@@ -9,7 +9,7 @@
 
     function appRun(localStorageService) {
 
-        var message = 'Você conhece o #MeuEspaçoCamara? Clique no ícone da Câmara dos Deputados no canto inferior direto da sua tela e conheça diversas de personalizar sua experiência neste Portal';
+        var message = 'Você conhece o #MeuEspaçoCâmara? Clique no ícone da Câmara dos Deputados, no canto inferior direito da sua tela, e conheça diversas formas de personalizar sua experiência neste Portal';
 
         function active() {
             initMeuEspacoCamaraButton();

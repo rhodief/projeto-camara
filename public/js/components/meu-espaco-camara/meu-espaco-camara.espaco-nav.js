@@ -134,9 +134,17 @@
             return vm.inEdition.indexOf(url) !== -1;
         }
 
-        function removeFavorite(url, index){
-            vm.favorites.splice(index, 1);
+        function removeFavorite(url){
+            _removeByUrl(url, vm.favorites);
             localStorageService.removeFavorite(url);
+        }
+
+        function _removeByUrl(url, array){
+            for(var i=0;i<array.length;i++){
+                if(array[i].url == url){
+                    return array.splice(i,1);
+                }
+            }
         }
 
         function activatePanels() {

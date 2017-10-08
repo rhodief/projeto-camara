@@ -12,5 +12,5 @@ if (typeof (Storage) === "undefined") {
 }
 
 function notifyNotSupported() {
-    alert('Não Há Suporte para LocalStorage... Tente acessar de um Navegador mais moderno (recente) para obter funcionalidades personalizadas');
+    alert('Não há Suporte para LocalStorage... Tente acessar de um Navegador mais moderno (recente) para obter funcionalidades personalizadas');
 }
