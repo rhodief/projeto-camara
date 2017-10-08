@@ -82,7 +82,7 @@
 
             function getDetail(id) {
                 vm.viewId = id;
-                getDeputado(id);
+                getProposicao(id);
             }
 
             function getProposicoes(params){
@@ -90,15 +90,7 @@
             }
 
             function getProposicao(id) {
-                return _getProposicao(id).then(_renderDeputado).catch(_errorView);
-            }
-
-            function recordUf(uf){
-                _recordUf(uf);
-            }
-
-            function isRecordUf(){
-
+                return _getProposicao(id).then(_renderProposicao).catch(_errorView);
             }
 
             function _getProposicoes(params) {
@@ -116,7 +108,8 @@
                 vm.loadingList = false;
             }
 
-            function _renderDeputado(data){
+            function _renderProposicao(data){
+                console.log(data);
                 vm.view = data;
                 vm.loadingView = false;
             }

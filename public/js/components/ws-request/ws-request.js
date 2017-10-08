@@ -24,7 +24,8 @@
             getAgenda: getAgenda,
             getAgendaDetail: getAgendaDetail,
             getEDemocraciaList: getEDemocraciaList,
-            getProposicoesList: getProposicoesList
+            getProposicoesList: getProposicoesList,
+            getProposicao: getProposicao
         };
 
         const SCHEMA = {
@@ -228,6 +229,48 @@
                     ano: 'ano',
                     ementa: 'ementa'
                 }
+            },
+            proposicaoView:{
+                name: 'proposicoes-view',
+                url: function (params) {
+                    var id = params.id;
+                    return 'https://dadosabertos.camara.leg.br/api/v2/proposicoes/' + id;
+                },
+                path: 'data.dados',
+                list: false,
+                schema: {
+                    ano: "ano",
+                    apresentacao_data:"dataApresentacao",
+                    tipo_descricao: "descricaoTipo",
+                    ementa: "ementa",
+                    emenda_detalahada:"ementaDetalhada",
+                    id: "id",
+                    id_tipo: "idTipo",
+                    id_tipoAutor: "idTipoAutor",
+                    justificativa: "justificativa",
+                    palavrasChave: "keywords",
+                    numero: "numero",
+                    tipo_sigla: "siglaTipo",
+                    status_dataHora: 'statusProposicao.dataHora',
+                    status_descricaoSituacao: 'statusProposicao.descricaoSituacao',
+                    status_descricaoTramitacao: "statusProposicao.descricaoTramitacao",
+                    status_despacho: "statusProposicao.despacho",
+                    status_idSituacao: "statusProposicao.idSituacao",
+                    status_idTipoTramitacao: "statusProposicao.idTipoTramitacao",
+                    status_regime: "statusProposicao.regime",
+                    status_sequencia: 'statusProposicao.sequencia',
+                    status_orgao_sigla: 'statusProposicao.siglaOrgao',
+                    status_orgao_uri: 'statusProposicao.uriOrgao',
+                    status_url: 'statusProposicao.surl',
+                    texto: "texto",
+                    autor_tipo: "tipoAutor",
+                    url: "uri",
+                    autor_urls: "uriAutores",
+                    principal_url: "uriPropPrincipal",
+                    ultimoRelator_url: "uriUltimoRelator",
+                    inteiroTeor_url: "urlInteiroTeor",
+                    urnFinal: "urnFinal",
+                }
             }
         };
 
@@ -264,6 +307,11 @@
             var params = _getRequestsParamsFromString(value);
             if(!angular.equals(params, {})) return _getDataWs(SCHEMA.proposicoesList, params);
             return $q.reject({msg: 'Requisição ainda não foi realizada', erro:'await'})
+        }
+
+        function getProposicao(id){
+            var params = {id: id};
+            return _getDataWs(SCHEMA.proposicaoView, params);
         }
 
         function _getDataWs(schemaObj, params) {

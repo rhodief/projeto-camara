@@ -59,7 +59,7 @@
                         <div ng-if="vm.reloadButton"><a href="" onClick="location.reload()">Recarregue a Página</a></div>
                     </div>
                     <div ng-if="!vm.loadingView">
-                        <div ng-if="vm.view.ultimoStatus_nome===undefined">
+                        <div ng-if="vm.view.tipo_sigla===undefined">
                             <div class="inact">
                                 <div class="img">
                                     <img src="img/img_avatar2.png" alt="Avatar">
@@ -69,30 +69,28 @@
                                 </div>
                             </div>
                         </div>
-                        <div ng-if="vm.view.ultimoStatus_nome">
+                        <div ng-if="vm.view.tipo_sigla">
                             <script>
                                 $('#proposicoes-view').bind('mousewheel DOMMouseScroll', blockScroll);
                             </script>
                             <div class="text">
                                 <div class="list" id="proposicoes-view">
-                                    <img ng-src="{{vm.view.ultimoStatus_foto}}" alt="Avatar" style="max-width:60%">
-                                    <div class="title">{{vm.view.ultimoStatus_nome}}</div>
-                                    <div class="item">{{vm.view.ultimoStatus_partido_sig}}/{{vm.view.ultimoStatus_uf_sig}}</div>
+                                    <div class="title">{{vm.view.tipo_sigla + ' - ' + vm.view.tipo_descricao + ' ' + vm.view.numero + '/' + vm.view.ano}}</div>
+                                    <div class="item">{{vm.view.ementa}}</div>
                                     <dl class="tabela">
-                                        <dt>Nome Civil</dt>
-                                        <dd>{{vm.view.nome_civil}}</dd>
-                                        <dt>Nascimento</dt>
-                                        <dd>{{vm.view.dataNascimento}}</dd>
-                                        <dt>Escolaridade</dt>
-                                        <dd>{{vm.view.escolaridade}}</dd>
-                                        <dt>Naturalidade</dt>
-                                        <dd>{{vm.view.municipioNascimento}}, {{vm.view.ufNascimento}}</dd>
-                                        <dt>Gabinete</dt>
-                                        <dd>Anexo {{vm.view.ultimoStatus_gabinete_predio}}, gab. {{vm.view.ultimoStatus_gabinete_sala}}</dd>
-                                        <dt>Email</dt>
-                                        <dd>{{vm.view.ultimoStatus_gabinete_email}}</dd>
-                                        <dt>Telefone</dt>
-                                        <dd>{{vm.view.ultimoStatus_gabinete_telefone}}</dd>
+                                        <dt>Orgão</dt>
+                                        <dd>{{vm.view.status_orgao_sigla}}</dd>
+                                        <dt>Situação</dt>
+                                        <dd>{{vm.view.status_descricaoSituacao}}</dd>
+                                        <dt>Regime de Tramitação</dt>
+                                        <dd>{{vm.view.status_regime}}</dd>
+                                        <dt>Despacho</dt>
+                                        <dd>{{vm.view.status_despacho}}</dd>
+                                        <dt>Descrição Tramitação</dt>
+                                        <dd>Anexo {{vm.view.status_descricaoTramitacao}}</dd>
+                                        <dt>Palavras Chave</dt>
+                                        <dd>{{vm.view.palavrasChave}}</dd>
+                                       
                                     </dl>
                                 </div>
                             </div>
