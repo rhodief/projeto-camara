@@ -204,6 +204,11 @@ $(document).ready(function () {
 		$(this).parent().toggleClass('act').children('.box-options').slideToggle();
 	});
 	
+	$('.toggle-category').click(function(){
+		$(this).toggleClass('act').next('.box-list').slideToggle();
+		return false;
+	});
+	
 	// ATALHOS DO TECLADO!!!
 	var sectionIndex = 0;
 	$('html').keydown(function (e) {
