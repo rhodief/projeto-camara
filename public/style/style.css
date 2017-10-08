@@ -580,18 +580,21 @@ div.panel-det{margin:1em}
 .section-news .last-news .list{max-height: 270px; overflow: auto; margin-bottom: 10px;}
 .section-news .last-news .list li{padding: 8px 0; display: block;position: relative;}
 .list-news a:after,
+.options .news-list a:after,
 .section-inspect .col a:after,
 .section-participate .post a:after,
 .section-participate .links a:after,
 .section-education .box-posts a:after,
 .section-news .last-news .list a:after{content: ''; position: absolute; top: 0; left: 0; background: #686868; width: 100%; height: 100%; opacity: 0;}
 .list-news a:hover:after,
+.options .news-list a:hover:after,
 .section-inspect .col a:hover:after,
 .section-participate .post a:hover:after,
 .section-participate .links a:hover:after,
 .section-education .box-posts a:hover:after,
 .section-news .last-news .list a:hover:after,
 .list-news a:focus:after,
+.options .news-list a:focus:after,
 .section-inspect .col a:focus:after,
 .section-participate .post a:focus:after,
 .section-participate .links a:focus:after,
@@ -639,6 +642,17 @@ div.panel-det{margin:1em}
 .vertical.scroll .media-tabs a:hover,
 .vertical.scroll .media-tabs a:focus,
 .vertical.scroll .media-tabs a.act{background: #004a2f; color: #fff;}
+.section-news .box-title{display: -webkit-box;display: -ms-flexbox;display: flex; padding: 10px; }
+.section-news .box-title .title{font-size: 20px;font-size: 1.25rem; display: block; color: #276c4d; font-weight: 600; min-width: 250px;}
+.options .toggle-category{display: block; width: 20px; height: 20px; background: url(../img/layout/pencil.png) no-repeat center center; background-size: 90%; padding: 5px; text-indent: -5000em; margin-left: 10px; cursor: pointer;}
+.options{position: relative; z-index: 5;}
+.options .title-list{font-size: 16px; font-size: 1rem; display: inline-block; color: #276c4d; font-weight: 600; padding-bottom: 3px; border-bottom: 2px solid #276c4d; margin-bottom: 10px;}
+.options .box-list{position: absolute; right: 0; top: 100%; background: #fff; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box; min-width: 250px; display: none;}
+.options .box-list ul{max-height: 300px; overflow: auto;}
+.options .news-list li{font-size: 14px; font-size: 0.875rem; position: relative;padding: 5px 0;}
+.options .news-list li + li{border-top: 1px solid #acacac;}
+.options .news-list li a{text-decoration: none;}
+.options .news-list li a:hover{background: }
 
 .live.redpoint.icon{display: inline-block !important; vertical-align: middle; margin-left:5px; position: relative; left: -10px; text-indent: -5000em; width:12px !important; height: 12px !important; background: #c30f16; border-radius: 50%; -webkit-animation: animate-fade-toggle 2s linear infinite;animation: animate-fade-toggle 2s linear infinite;}
 
