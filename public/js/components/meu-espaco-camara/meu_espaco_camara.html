@@ -4,12 +4,12 @@
     <div ng-switch="vm.selectedTab">
         <div ng-switch-when="desconhecido" class="tabs">
             <div class="text">
-                <p>Este é um espaço para configuração personalizada, que permite a você guardar qualquer página deste Portal, bem como adicionar painéis personalizados à página inicial para
-                    acesso rápido às informações de seu interesse.</p>
-                <p>As informações que você guardar neste espaço ficarão armazenadas no seu computador e não serão enviadas
-                    à Câmara dos Deputados. Você pode, se desejar, compartilhá-las com outras pessoas para
-                    que tenham um ambiente personalizado como o seu ou também possam personalizar o seu ambiente de acordo com
-                    o configurado por outros.</p>
+                <p>Este é um espaço para configuração personalizada, que permite a você guardar qualquer página deste Portal,
+                    bem como adicionar painéis personalizados à página inicial para acesso rápido às informações de seu interesse.</p>
+                <p>As informações que você guardar neste espaço ficarão armazenadas no seu computador e não serão enviadas à
+                    Câmara dos Deputados. Você pode, se desejar, compartilhá-las com outras pessoas para que tenham um ambiente
+                    personalizado como o seu ou também possam personalizar o seu ambiente de acordo com o configurado por
+                    outros.</p>
             </div>
             <ul class="rows">
                 <li><a href="#" class="ok invert-contrast" ng-click="vm.gotIt()">Quero Conhecer</a></li>
@@ -28,17 +28,17 @@
             </ul>
         </div>
         <ul class="actions" id="mescam-actions" style="display:none">
-            <li><a href="#" class="invert-contrast" ng-click="vm.selectTab('favoritos')" ng-class="{act:vm.isActive('favoritos')}">Favoritos</a></li>
-            <li><a href="#" class="invert-contrast" ng-click="vm.selectTab('paineis')" ng-class="{act:vm.isActive('paineis')}">Painéis</a></li>
-            <li><a href="#" class="invert-contrast" ng-click="vm.selectTab('preferencias')" ng-class="{act:vm.isActive('preferencias')}">Preferências</a></li>
+            <li><a href="" class="invert-contrast" ng-click="vm.selectTab('favoritos')" ng-class="{act:vm.isActive('favoritos')}">Favoritos</a></li>
+            <li><a href="" class="invert-contrast" ng-click="vm.selectTab('paineis')" ng-class="{act:vm.isActive('paineis')}">Painéis</a></li>
+            <li><a href="" class="invert-contrast" ng-click="vm.selectTab('preferencias')" ng-class="{act:vm.isActive('preferencias')}">Preferências</a></li>
         </ul>
         <div ng-switch-when="favoritos" class="tabs">
             <div class="mescam-title">Ordenar por:</div>
             <div class="mescam-content">
                 <ul class="filters">
-                    <li><a href="#" ng-click="vm.orderFavorites('title')" ng-class="{act:vm.order == 'title'}">Título</a></li>
-                    <li><a href="#" ng-click="vm.orderFavorites('date')" ng-class="{act:vm.order == 'date'}">Data</a></li>
-                    <li><a href="#" ng-click="vm.orderFavorites('category')" ng-class="{act:vm.order == 'category'}">Categoria</a></li>
+                    <li><a href="" ng-click="vm.orderFavorites('title')" ng-class="{act:vm.order == 'title'}">Título</a></li>
+                    <li><a href="" ng-click="vm.orderFavorites('date')" ng-class="{act:vm.order == 'date'}">Data</a></li>
+                    <li><a href="" ng-click="vm.orderFavorites('category')" ng-class="{act:vm.order == 'category'}">Categoria</a></li>
                 </ul>
                 <div class="form">
                     <input type="text" placeholder="Encontrar um Favorito" id="favinput" ng-model="favinput.$">
@@ -47,8 +47,8 @@
                     <ul>
                         <li ng-if="!vm.favorites[0]"><strong>Nada foi salvo. Navegue pelas páginas e grave aqui o que for do seu interesse</strong></li>
                         <li ng-repeat="fav in vm.favorites | orderBy:vm.order | filter:favinput">
-                           <div class="left" title="Alterar">
-                               <button class="edit" ng-click="vm.toggleEdit(fav.url, fav.title)">Editar</button>
+                            <div class="left" title="Alterar">
+                                <button class="edit" ng-click="vm.toggleEdit(fav.url, fav.title)">Editar</button>
                             </div>
                             <div class="center">
                                 <a ng-href="{{!vm.editable(fav.url) ? fav.url : ''}}">
@@ -59,7 +59,11 @@
                                     <div class="date-time">{{fav.category}} - Salvo em {{fav.date.date}}, {{fav.date.time}}</div>
                                 </a>
                             </div>
-                            <div class="right"><button class="delete" title="Remover" ng-click="vm.removeFavorite(fav.url, $index)">x</button></div>
+                            <!-- <div class="right"><button class="delete" title="Remover" ng-click="vm.removeFavorite(fav.url)">x</button></div> -->
+                            <div class="right">
+                                <dialog class="delete" title="Remover" type="2,1" message="Gostaria de acessar o link externo?"
+                                    on-ok="vm.onOk()" on-cancel="vm.onCancel()"></dialog>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -109,10 +113,23 @@
                 <ul class="rows">
                     <li><a href="" class="ok invert-contrast" ng-click="vm.disableIt()">Desabilitar</a></li>
                 </ul>
+                <div class="box-dialog position-1">
+                    <div class="center">
+                        <div class="middle shadow">
+                            <div class="box-text">
+                                <p class="message">Gostaria de acessar o link externo?</p>
+                            </div>
+                            <div class="box-buttons"><button class="button accept invert-contrast" ng-click="vm.onOk()">Ok</button><button class="button cancel" ng-click="undefined">Cancelar</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-dialog"></div>
             </div>
         </div>
     </div>
 </div>
 <script>
     imgColorChange();
+
 </script>
+

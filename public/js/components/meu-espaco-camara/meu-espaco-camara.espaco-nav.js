@@ -45,6 +45,16 @@
         vm.toggleEdit = toggleEdit;
         vm.editable = editable;
         vm.inEdition = [];
+        
+        vm.onOk = function(param){
+            console.log('Clicou ok');
+            return param;
+        }
+        vm.onCancel = function(){
+            console.log('Cancelou');
+        }
+        
+
         //Necessário para mobile
         $scope.$on('initMescamFavorites', function(ev, data){
             if(data){

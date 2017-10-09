@@ -234,7 +234,7 @@ $(document).ready(function () {
 	});
 	
 	
-	$('*[data-dialog-type]').on('click', function(e){
+	$(document).on('click', '*[data-dialog-type]',function(e){
 		/******
 		// data-dialog-type[type, position]
 		//// type: 1 = question (botao ok + cancelar)
