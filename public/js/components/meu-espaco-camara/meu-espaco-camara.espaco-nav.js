@@ -20,9 +20,9 @@
         return espaconav;
     }
 
-    espacoNavController.$inject = ['localStorageService', 'TABS', '$scope', 'panelsGenService', '$timeout']
+    espacoNavController.$inject = ['localStorageService', 'TABS', '$scope', 'panelsGenService', '$timeout', '$rootScope']
 
-    function espacoNavController(localStorageService, TABS, $scope, panelsGenService, $timeout) {
+    function espacoNavController(localStorageService, TABS, $scope, panelsGenService, $timeout, $rootScope) {
 
         var vm = this;
         //Main Settings
@@ -45,10 +45,18 @@
         vm.toggleEdit = toggleEdit;
         vm.editable = editable;
         vm.inEdition = [];
-        vm.ap1 = {value:'Nenhum'};
-        vm.ap2 = {value:'Nenhum'};
-        vm.ap3 = {value:'Nenhum'};
-        vm.ap4 = {value:'Nenhum'};
+        vm.op1 = {value:''};
+        vm.op2 = {value:''};
+        vm.op3 = {value:''};
+        vm.op4 = {value:''};
+
+        $scope.$watch('vm.op2', function(newTerm){
+            if(newTerm.value){
+                $rootScope.$broadcast('activeDynamicNews', {category:newTerm.index, type:'2'});
+            }
+        });
+
+
         
         //Necessário para mobile
         $scope.$on('initMescamFavorites', function(ev, data){
