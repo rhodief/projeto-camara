@@ -9,7 +9,8 @@
                 <p>As informações que você guardar neste espaço ficarão armazenadas no seu computador e não serão enviadas à
                     Câmara dos Deputados. Você pode, se desejar, compartilhá-las com outras pessoas para que tenham um ambiente
                     personalizado como o seu ou também possam personalizar o seu ambiente de acordo com o configurado por
-                    outros.</p>
+                    outros.
+                </p>
             </div>
             <ul class="rows">
                 <li><a href="#" class="ok invert-contrast" ng-click="vm.gotIt()">Quero Conhecer</a></li>
@@ -83,39 +84,24 @@
         <div ng-switch-when="preferencias" class="tabs">
             <div class="mescam-content">
                 <div class="margin">
-                    <div class="subtitle">Macrotemas de Interesse</div>
-                    <div class="box-title">
-							<h2 class="title macrotheme">Segurança</h2>
-							<div class="options">
-								<button class="toggle-category" title="Alterar Assunto">Alterar Assunto</button>
-								<div class="box-list shadow">
-									<p class="title-list">Alterar Assunto</p>
-									<ul class="news-list">
-										<li><a href="macrotema.html">Administração Pública</a></li>
-										<li><a href="macrotema.html">Agropecuária</a></li>
-										<li><a href="macrotema.html">Assistência Social</a></li>
-										<li><a href="macrotema.html">Cidades</a></li>
-										<li><a href="macrotema.html">Ciência e Tecnologia</a></li>
-										<li><a href="macrotema.html">Comunicação</a></li>
-										<li><a href="macrotema.html">Consumidor</a></li>
-										<li><a href="macrotema.html">Direito e Justiça</a></li>
-										<li><a href="macrotema.html">Direitos Humanos</a></li>
-										<li><a href="macrotema.html">Economia</a></li>
-										<li><a href="macrotema.html">Educação e Cultura</a></li>
-										<li><a href="macrotema.html">Esportes</a></li>
-										<li><a href="macrotema.html">Indústria e Comércio</a></li>
-										<li><a href="macrotema.html">Institucional</a></li>
-										<li><a href="macrotema.html">Meio Ambiente</a></li>
-										<li><a href="macrotema.html">Política</a></li>
-										<li><a href="macrotema.html">Relações Exteriores</a></li>
-										<li><a href="macrotema.html">Saúde</a></li>
-										<li><a href="macrotema.html">Segurança</a></li>
-										<li><a href="macrotema.html">Trabalho e Previdência</a></li>
-										<li><a href="macrotema.html">Transporte e Trânsito</a></li>
-										<li><a href="macrotema.html">Turismo</a></li>
-									</ul>
-								</div>
-							</div>
+                    <div><strong> Macrotemas de Notícia </strong></div>
+                    <div class="subtext">1ª Opção</div>
+                    <div>
+                        <selecter button-class="toggle-category" title="Alterar Assunto" ng-model="vm.assunto"></selecter>
+                    </div>
+                    <div class="subtext">2ª Opção</div>
+                    <div>
+                        <selecter button-class="toggle-category" title="Alterar Assunto" ng-model="vm.assunto"></selecter>
+                    </div>
+                    <div class="subtext">3ª Opção</div>
+                    <div>
+                        <selecter button-class="toggle-category" title="Alterar Assunto" ng-model="vm.assunto"></selecter>
+                    </div>
+                    <div class="subtext">4ª Opção</div>
+                    <div>
+                        <selecter button-class="toggle-category" title="Alterar Assunto" ng-model="vm.assunto"></selecter>
+                    </div>
+                    
                 </div>
                 <div class="margin">
                     <a href="#" title="Fale Conosco"><span class="icon"><img class="img-color-change color3" src="img/layout/ico_fale_conosco.svg" alt="Fale Conosco"></span><span class="text">Fale Conosco</span></a>
@@ -151,4 +137,3 @@
     imgColorChange();
 
 </script>
-

@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('meuEspacoCamara', ['browserStorage', 'panelsGen', 'dialog'])
+    angular.module('meuEspacoCamara', ['browserStorage', 'panelsGen', 'dialog', 'selecter'])
     .constant('TABS', {
         STORE: 'favoritos',
         PANELS: 'paineis',

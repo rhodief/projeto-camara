@@ -45,7 +45,7 @@
         vm.toggleEdit = toggleEdit;
         vm.editable = editable;
         vm.inEdition = [];
-        
+        vm.assunto = {value:'none'};
         
         //Necessário para mobile
         $scope.$on('initMescamFavorites', function(ev, data){
