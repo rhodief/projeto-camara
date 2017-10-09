@@ -59,11 +59,7 @@
                                     <div class="date-time">{{fav.category}} - Salvo em {{fav.date.date}}, {{fav.date.time}}</div>
                                 </a>
                             </div>
-                            <!-- <div class="right"><button class="delete" title="Remover" ng-click="vm.removeFavorite(fav.url)">x</button></div> -->
-                            <div class="right">
-                                <dialog class="delete" title="Remover" type="2,1" message="Gostaria de acessar o link externo?"
-                                    on-ok="vm.onOk()" on-cancel="vm.onCancel()"></dialog>
-                            </div>
+                            <dialog class="delete" title="Remover" type="2,2" message="Gostaria de apagar [{{fav.title}}]?" on-ok="vm.removeFavorite(fav.url)"></dialog>
                         </li>
                     </ul>
                 </div>
@@ -113,17 +109,6 @@
                 <ul class="rows">
                     <li><a href="" class="ok invert-contrast" ng-click="vm.disableIt()">Desabilitar</a></li>
                 </ul>
-                <div class="box-dialog position-1">
-                    <div class="center">
-                        <div class="middle shadow">
-                            <div class="box-text">
-                                <p class="message">Gostaria de acessar o link externo?</p>
-                            </div>
-                            <div class="box-buttons"><button class="button accept invert-contrast" ng-click="vm.onOk()">Ok</button><button class="button cancel" ng-click="undefined">Cancelar</button></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-dialog"></div>
             </div>
         </div>
     </div>
