@@ -20,7 +20,6 @@
         <div ng-switch-when="desabilitado" class="tabs">
             <div class="text">
                 <p>#MeuEspaçoCâmara está desligado.</p>
-
             </div>
             <ul class="rows">
                 <li><a href="#" class="ok" ng-click="vm.enableIt()">Quero Ligá-lo</a></li>
@@ -45,7 +44,7 @@
                 </div>
                 <div class="list">
                     <ul>
-                        <li ng-if="!vm.favorites[0]"><strong>Nada foi salvo. Navegue pelas páginas e grave aqui o que for do seu interesse</strong></li>
+                        <li ng-if="!vm.favorites[0]"><strong>Nada foi salvo ainda. Navegue pelas páginas e grave aqui o que for do seu interesse</strong></li>
                         <li ng-repeat="fav in vm.favorites | orderBy:vm.order | filter:favinput">
                             <div class="left" title="Alterar">
                                 <button class="edit" ng-click="vm.toggleEdit(fav.url, fav.title)">Editar</button>
@@ -83,6 +82,41 @@
         </div>
         <div ng-switch-when="preferencias" class="tabs">
             <div class="mescam-content">
+                <div class="margin">
+                    <div class="subtitle">Macrotemas de Interesse</div>
+                    <div class="box-title">
+							<h2 class="title macrotheme">Segurança</h2>
+							<div class="options">
+								<button class="toggle-category" title="Alterar Assunto">Alterar Assunto</button>
+								<div class="box-list shadow">
+									<p class="title-list">Alterar Assunto</p>
+									<ul class="news-list">
+										<li><a href="macrotema.html">Administração Pública</a></li>
+										<li><a href="macrotema.html">Agropecuária</a></li>
+										<li><a href="macrotema.html">Assistência Social</a></li>
+										<li><a href="macrotema.html">Cidades</a></li>
+										<li><a href="macrotema.html">Ciência e Tecnologia</a></li>
+										<li><a href="macrotema.html">Comunicação</a></li>
+										<li><a href="macrotema.html">Consumidor</a></li>
+										<li><a href="macrotema.html">Direito e Justiça</a></li>
+										<li><a href="macrotema.html">Direitos Humanos</a></li>
+										<li><a href="macrotema.html">Economia</a></li>
+										<li><a href="macrotema.html">Educação e Cultura</a></li>
+										<li><a href="macrotema.html">Esportes</a></li>
+										<li><a href="macrotema.html">Indústria e Comércio</a></li>
+										<li><a href="macrotema.html">Institucional</a></li>
+										<li><a href="macrotema.html">Meio Ambiente</a></li>
+										<li><a href="macrotema.html">Política</a></li>
+										<li><a href="macrotema.html">Relações Exteriores</a></li>
+										<li><a href="macrotema.html">Saúde</a></li>
+										<li><a href="macrotema.html">Segurança</a></li>
+										<li><a href="macrotema.html">Trabalho e Previdência</a></li>
+										<li><a href="macrotema.html">Transporte e Trânsito</a></li>
+										<li><a href="macrotema.html">Turismo</a></li>
+									</ul>
+								</div>
+							</div>
+                </div>
                 <div class="margin">
                     <a href="#" title="Fale Conosco"><span class="icon"><img class="img-color-change color3" src="img/layout/ico_fale_conosco.svg" alt="Fale Conosco"></span><span class="text">Fale Conosco</span></a>
                     <br><span class="subtext">Espaço em que a Câmara dos Deputados disponibiliza diversas opções de contato, incluindo pedido de informações, dúvidas, reclamações, denúncias, etc. Para acessar, é necessário entrar com suas credenciais de acesso. Caso não tenha, cadastre-se. É rápido e simples.</span>
