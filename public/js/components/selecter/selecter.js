@@ -24,7 +24,8 @@
             },
             controller: selecterController,
             controllerAs: 'vm',
-            template: `<div class="options">
+            template: `<span>{{ngModel.value}}</span>
+            <div class="options">
             <button ng-class="buttonClass" ng-class="{act: vm.isOpened}" ng-click="vm.toggle()" title="{{title}}">{{buttonClass}}</button>
             <div class="box-list shadow" ng-style="vm.openList">
                 <button ng-click="vm.close()" class="">x</button>
@@ -36,8 +37,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <h2 class="title macrotheme">{{ngModel.value}}</h2>`
+        </div>`
         };
 
         function link(scope, element, attrs){

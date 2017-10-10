@@ -265,7 +265,6 @@
         }
 
         function _setTheme(obj) {
-            console.log(obj);
             return localStorageService.setTheme(obj);
         }
 
