@@ -16,6 +16,7 @@
     function selecter($window) {
         var directive = {
             restrict: 'E',
+            link:link,
             scope: {
                 ngModel: '=',
                 buttonClass: '@',
@@ -23,8 +24,7 @@
             },
             controller: selecterController,
             controllerAs: 'vm',
-            template: `<span>{{ngModel.value}}</span>
-            <div class="options">
+            template: `<div class="options">
             <button ng-class="buttonClass" ng-class="{act: vm.isOpened}" ng-click="vm.toggle()" title="{{title}}">{{buttonClass}}</button>
             <div class="box-list shadow" ng-style="vm.openList">
                 <button ng-click="vm.close()" class="">x</button>
@@ -36,8 +36,13 @@
                     </li>
                 </ul>
             </div>
-        </div>`
+        </div>
+        <h2 class="title macrotheme">{{ngModel.value}}</h2>`
         };
+
+        function link(scope, element, attrs){
+            attrs.$set('style', 'display:inline-flex');
+        }
 
         return directive;
     }

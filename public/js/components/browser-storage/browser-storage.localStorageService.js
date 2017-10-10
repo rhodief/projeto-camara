@@ -255,10 +255,11 @@
         function _setTheme(obj){
             _getPreferences().then(okThemes);
             function okThemes(preferences){
-                var index = 'op' + obj.type
-                if(preferences === false){
+                var index = 'op' + obj.option
+                if(preferences === false || !preferences.themes){
                     preferences = {themes:{}};
                 }
+                console.log(preferences);
                 preferences.themes[index] = obj.category;
                 _setPreferences(preferences);
             }

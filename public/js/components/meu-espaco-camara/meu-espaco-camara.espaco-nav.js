@@ -99,7 +99,7 @@
             function okThemes(themes) {
                 angular.forEach(themes, function (v, i) {
                     vm.op[i] = _getFullObjList(v, vm.themesList);
-                    _notifyDynamicNews({ category: v, type: _getOp(i) })
+                    _notifyDynamicNews({ category: v, option: _getOp(i) })
                 });
             }
             function _error(e) {
@@ -250,7 +250,7 @@
             var ret = [];
             angular.forEach(newTerm, function (v, i) {
                 if (oldTerm[i] && oldTerm[i].index !== v.index) {
-                    ret.push({ category: v.index, type: _getOp(i) });
+                    ret.push({ category: v.index, option: _getOp(i) });
                 }
             })
             return ret;
@@ -265,6 +265,7 @@
         }
 
         function _setTheme(obj) {
+            console.log(obj);
             return localStorageService.setTheme(obj);
         }
 

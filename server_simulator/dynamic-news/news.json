@@ -1,44 +1,128 @@
 {
-    "dados":{
-        "institucional":{
-            "opt1":{
+    "dados": {
+        "institucional": {
+            "opt1": {
                 "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Brazilian_National_Congress.jpg/220px-Brazilian_National_Congress.jpg",
                 "img_alt": "Prédio do Congresso Nacional",
                 "hat": "",
-                "title":"Curioso Fenômeno no Congresso Nacional",
+                "title": "Curioso Fenômeno no Congresso Nacional",
                 "text": "Curiosos se reuniram, apesar da chuva, para acompanhar e registrar o acontecimento",
                 "date": "15/08/2017",
                 "category": "Institucional",
                 "url": "../server_simulator/pages/outras/outra.html"
             },
-            "opt2":{
+            "opt2": {
                 "img": "http://images.adsttc.com/media/images/5285/15de/e8e4/4e22/2500/013e/large_jpg/Screen_Shot_2013-11-14_at_11.18.36_AM.jpg?1384453594",
                 "img_alt": "Prédio do Congresso Nacional",
                 "hat": "",
-                "title":"Construção do Novo Prédio do Congresso Nacional divide Opiniões",
+                "title": "Construção do Novo Prédio do Congresso Nacional divide Opiniões",
                 "text": "Arquiteto responsável defende que a capital federal seja sempre o palco das mais modernas edificaçoes",
                 "date": "15/08/2017",
                 "category": "Institucional",
                 "url": "../server_simulator/pages/outras/outra.html"
             },
-            "opt3":{
+            "opt3": {
                 "img": "https://www.viajejet.com/wp-content/viajes/Viajar-a-Buenos-Aires-Congreso-Nacional.jpg",
                 "hat": "",
                 "img_alt": "Prédio do Congresso Nacional",
-                "title":"Comitiva brasileira se reune com parlamentares argentinos",
+                "title": "Comitiva brasileira se reune com parlamentares argentinos",
                 "text": "O encontro é para firmar acordos bilaterais de comércio e intercâmbio estudantil",
                 "date": "14/08/2017",
                 "category": "Institucional",
                 "url": "../server_simulator/pages/outras/outra.html"
             },
-            "opt4":{
+            "opt4": {
                 "img": "https://media-cdn.tripadvisor.com/media/photo-s/07/c1/a4/90/congresso-nacional.jpg",
                 "hat": "",
                 "img_alt": "Prédio do Congresso Nacional",
-                "title":"Câmara recebe visitantes de todo o país",
+                "title": "Câmara recebe visitantes de todo o país",
                 "text": "Diversas caravanas de estudantes passaram pela Casa este ano, conheça como increver sua instituição de ensino",
                 "date": "13/08/2017",
                 "category": "Institucional",
+                "url": "../server_simulator/pages/outras/outra.html"
+            }
+        },
+        "relacoes_exteriores": {
+            "opt1": {
+                "img": "img/uploads/img_04.jpg",
+                "img_alt": "Parlamentares de Língua Portuguesa",
+                "hat": "Língua Portuguesa",
+                "title": "Parlamentares de Língua Portuguesa debatem estrutura de apoio à atividade legislativa",
+                "text": "O ciclo de reuniões contará com a participação de professores de diversas universidades federais",
+                "date": "15/08/2017",
+                "category": "Relações Exteriores",
+                "url": "../server_simulator/pages/noticias/noticia1.html"
+            },
+            "opt2": {
+                "img": "http://images.adsttc.com/media/images/5285/15de/e8e4/4e22/2500/013e/large_jpg/Screen_Shot_2013-11-14_at_11.18.36_AM.jpg?1384453594",
+                "img_alt": "Prédio do Congresso Nacional",
+                "hat": "",
+                "title": "Representantes da ONU visitam a Câmara dos Deputados",
+                "text": "Secretário Geral também está na comitiva e irá particiapar de eventos pelo país.",
+                "date": "15/08/2017",
+                "category": "Relações Exteriores",
+                "url": "../server_simulator/pages/outras/outra.html"
+            },
+            "opt3": {
+                "img": "https://www.viajejet.com/wp-content/viajes/Viajar-a-Buenos-Aires-Congreso-Nacional.jpg",
+                "hat": "",
+                "img_alt": "Prédio do Congresso Nacional",
+                "title": "Parlatino se reunirá esta semana para debater sobre a democracia na América Latina",
+                "text": "Parlamentares entendem que será importante para se resolver soluções de conflitos",
+                "date": "14/08/2017",
+                "category": "Relações Exteriores",
+                "url": "../server_simulator/pages/outras/outra.html"
+            },
+            "opt4": {
+                "img": "https://media-cdn.tripadvisor.com/media/photo-s/07/c1/a4/90/congresso-nacional.jpg",
+                "hat": "",
+                "img_alt": "Prédio do Congresso Nacional",
+                "title": "Visitantes extrangeiros tiram selfie em frente à Câmara",
+                "text": "Grupo visita o Brasil para conhecer as instituições públicas que fomentam intercâmbio de informações",
+                "date": "13/08/2017",
+                "category": "Relações Exteriores",
+                "url": "../server_simulator/pages/outras/outra.html"
+            }
+        },
+        "administracao_publica": {
+            "opt1": {
+                "img": "img/uploads/img_06.jpg",
+                "img_alt": "Parlamentares de Língua Portuguesa",
+                "hat": "PNE",
+                "title": "Principal desafio para cumprimento das metas do PNE é o financiamento, apontam debatedores",
+                "text": "Debate se deu no âmbito da Comissão Especial sobre o PNE",
+                "date": "15/08/2017",
+                "category": "Administração Pública",
+                "url": "../server_simulator/pages/noticias/noticia1.html"
+            },
+            "opt2": {
+                "img": "http://images.adsttc.com/media/images/5285/15de/e8e4/4e22/2500/013e/large_jpg/Screen_Shot_2013-11-14_at_11.18.36_AM.jpg?1384453594",
+                "img_alt": "Prédio do Congresso Nacional",
+                "hat": "",
+                "title": "Orçamento para 2018 prevê o aporte 25% para órgãos de defesa",
+                "text": "Medida foi anunciada em visitua de Ministro do Planejamento a Comissões da Câmara dos Deputados",
+                "date": "15/08/2017",
+                "category": "Administração Pública",
+                "url": "../server_simulator/pages/outras/outra.html"
+            },
+            "opt3": {
+                "img": "https://www.viajejet.com/wp-content/viajes/Viajar-a-Buenos-Aires-Congreso-Nacional.jpg",
+                "hat": "",
+                "img_alt": "Prédio do Congresso Nacional",
+                "title": "TCU vê indícios de irregularidade em obras federais",
+                "text": "Há servidores, empresários e políticos envolvidos",
+                "date": "14/08/2017",
+                "category": "Administração Pública",
+                "url": "../server_simulator/pages/outras/outra.html"
+            },
+            "opt4": {
+                "img": "https://media-cdn.tripadvisor.com/media/photo-s/07/c1/a4/90/congresso-nacional.jpg",
+                "hat": "",
+                "img_alt": "Prédio do Congresso Nacional",
+                "title": "Nova Lei de Contratos pode ser vota da Comissão",
+                "text": "Alterações afetam pequenos contratos no âmbito das prefeituras",
+                "date": "13/08/2017",
+                "category": "Administração Pública",
                 "url": "../server_simulator/pages/outras/outra.html"
             }
         }
