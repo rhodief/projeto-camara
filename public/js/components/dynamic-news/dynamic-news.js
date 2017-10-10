@@ -25,8 +25,10 @@
             var thisCategory = attrs.category;
             var thisType = attrs.type;
             var thisElement = element.children();
-            var els, img, box, title, text, dataCat, oldUrl;
+            var items = {}
+            
             var replacedNew = angular.copy(thisElement);
+            
 
            scope.$on('activeDynamicNews', function(ev, data){
                var category = data.category;
@@ -39,33 +41,37 @@
             });
 
             function active(){
-                els = angular.copy(thisElement);
-                img = angular.element(els[0]).children()[0];
-                box = angular.element(els[1]).children();
-                title = angular.element(box[0]);
-                text = angular.element(box[1]);
-                dataCat = angular.element(box[2]);
-                oldUrl = angular.copy(attrs.href);
+                items = {};
+                items.els = angular.copy(thisElement);
+                items.img = angular.element(items.els[0]).children()[0];
+                items.box = angular.element(items.els[1]).children();
+                items.title = angular.element(items.box[0]);
+                items.text = angular.element(items.box[1]);
+                items.dataCat = angular.element(items.box[2]);
+                items.oldUrl = angular.copy(attrs.href);
                 _LoadingAnimation(element);
                 _getCategoryNews(thisCategory, thisType).then(okNews).catch(error);
             }
 
             function restore(){
                 element.html(replacedNew);
+                $rootScope.$broadcast('refrashFavorites', items.oldFav);
             }
 
             function okNews(news){
-                img.src = news.img;
-                img.alt = news.alt;
-                title.text(news.title);
-                text.text(news.text);
-                dataCat.html('<span>' + news.category + '</span><span>' + news.date + '</span>');
-                element.html(els);
+                items.img.src = news.img;
+                items.img.alt = news.alt;
+                items.title.text(news.title);
+                items.text.text(news.text);
+                items.dataCat.html('<span>' + news.category + '</span><span>' + news.date + '</span>');
+                element.html(items.els);
                 attrs.$set('href', news.url);
                 var favorite = element.parent().find('favorites-button');
+                items.oldTitle = angular.copy(favorite.attr('title'));
                 favorite.attr('url', news.url);
-                favorite.attr('title', news.title)
-                $rootScope.$broadcast('refrashFavorites', {url:{old:oldUrl, new:news.url}, title:news.title});
+                favorite.attr('title', news.title);
+                items.oldFav = {url:{old:news.url, new:items.oldUrl}, title:items.oldTitle} //Armazenar para o rollback
+                $rootScope.$broadcast('refrashFavorites', {url:{old:items.oldUrl, new:news.url}, title:news.title});
             }
 
         }
