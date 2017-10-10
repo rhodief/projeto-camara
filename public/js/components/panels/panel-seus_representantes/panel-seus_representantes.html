@@ -12,7 +12,7 @@
                             <option ng-repeat="uf in vm.ufsList" ng-model-options="uf.sigla">{{uf.sigla}}</option>
                         </select>
                         <span>
-                            <button ng-click="vm.recordUf(vm.uf)">Gravar meu Estado: {{vm.isRecordUf}}</button>
+                            <button ng-click="vm.recordUf(vm.uf)">Gravar meu Estado{{vm.isRecordUf ? ': ' + vm.isRecordUf : ''}}</button>
                         </span>
                     </div>
                     <div class="field">

@@ -36,6 +36,7 @@
 
         $scope.$on('refrashFavorites', function(ev, data){
             if(data){
+                _refrashFromDynamicNews(data);
                 active();
             }
         })
@@ -73,6 +74,13 @@
         function _enableFavorite(url, title){
             localStorageService.addFavorite(url, title);
             vm.included = true;
+        }
+
+        function _refrashFromDynamicNews(data){
+            if(data.url && data.url.old === vm.url){
+                vm.url = data.url.new;
+                vm.title = data.title;
+            }
         }
     }
 

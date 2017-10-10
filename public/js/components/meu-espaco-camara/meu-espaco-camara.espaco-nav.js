@@ -20,9 +20,9 @@
         return espaconav;
     }
 
-    espacoNavController.$inject = ['localStorageService', 'TABS', '$scope', 'panelsGenService', '$timeout']
+    espacoNavController.$inject = ['localStorageService', 'TABS', '$scope', 'panelsGenService', '$timeout', '$rootScope']
 
-    function espacoNavController(localStorageService, TABS, $scope, panelsGenService, $timeout) {
+    function espacoNavController(localStorageService, TABS, $scope, panelsGenService, $timeout, $rootScope) {
 
         var vm = this;
         //Main Settings
@@ -45,6 +45,19 @@
         vm.toggleEdit = toggleEdit;
         vm.editable = editable;
         vm.inEdition = [];
+        vm.op1 = {value:''};
+        vm.op2 = {value:''};
+        vm.op3 = {value:''};
+        vm.op4 = {value:''};
+
+        $scope.$watch('vm.op2', function(newTerm){
+            if(newTerm.value){
+                $rootScope.$broadcast('activeDynamicNews', {category:newTerm.index, type:'2'});
+            }
+        });
+
+
+        
         //Necessário para mobile
         $scope.$on('initMescamFavorites', function(ev, data){
             if(data){
@@ -58,7 +71,7 @@
             getFavorites().then(showFavoritesList);
             activatePanels().then(getPanelsList);
             selectDefaultTab();
-            orderFavorites('title');
+            orderFavorites('date');
         }
 
         function favoritesInit(){
@@ -134,9 +147,17 @@
             return vm.inEdition.indexOf(url) !== -1;
         }
 
-        function removeFavorite(url, index){
-            vm.favorites.splice(index, 1);
+        function removeFavorite(url){
+            _removeByUrl(url, vm.favorites);
             localStorageService.removeFavorite(url);
+        }
+
+        function _removeByUrl(url, array){
+            for(var i=0;i<array.length;i++){
+                if(array[i].url == url){
+                    return array.splice(i,1);
+                }
+            }
         }
 
         function activatePanels() {

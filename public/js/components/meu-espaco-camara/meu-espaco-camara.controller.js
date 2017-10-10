@@ -10,9 +10,9 @@
     function meuEspacoCamaraController($rootScope) {
         /* jshint validthis:true */
         var vm = this;
-
         vm.opened = false;
         vm.toggleMescam = toggleMescam;
+
 
         var page = angular.element(document.querySelector('html'));
         page.bind('keyup',pressKey);

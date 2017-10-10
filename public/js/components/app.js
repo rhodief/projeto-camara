@@ -3,7 +3,7 @@ if (typeof (Storage) === "undefined") {
 } else {
     (function () {
         'use strict';
-        angular.module('app', ['meuEspacoCamara', 'browserStorage', 'panelsGen', 'search', 'selectFilter'])
+        angular.module('app', ['meuEspacoCamara', 'browserStorage', 'panelsGen', 'search', 'selectFilter', 'dialog', 'selecter', 'dynamicNews'])
         .constant('APP', {
             url: 'js/components/',
             mockServer: '../server_simulator/'
@@ -12,5 +12,5 @@ if (typeof (Storage) === "undefined") {
 }
 
 function notifyNotSupported() {
-    alert('Não Há Suporte para LocalStorage... Tente acessar de um Navegador mais moderno (recente) para obter funcionalidades personalizadas');
+    alert('Não há Suporte para LocalStorage... Tente acessar de um Navegador mais moderno (recente) para obter funcionalidades personalizadas');
 }
