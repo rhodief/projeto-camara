@@ -26,12 +26,18 @@
             var thisType = attrs.type;
             var thisElement = element.children();
             var els, img, box, title, text, dataCat, oldUrl;
+            var replacedNew = angular.copy(thisElement);
 
            scope.$on('activeDynamicNews', function(ev, data){
-                var category = data.category;
-                var type = data.type;
-                if(category === thisCategory && type === thisType){
-                    active();
+                if(data === false){
+                    //Recebendo o valor falso, retorna o card antigo...
+                    element.html(replacedNew);
+                }else{
+                    var category = data.category;
+                    var type = data.type;
+                    if(category === thisCategory && type === thisType){
+                        active();
+                    }
                 }
             });
 

@@ -45,14 +45,18 @@
         vm.toggleEdit = toggleEdit;
         vm.editable = editable;
         vm.inEdition = [];
-        vm.op1 = {value:''};
-        vm.op2 = {value:''};
-        vm.op3 = {value:''};
-        vm.op4 = {value:''};
+        vm.op1 = {value:'Padrão'};
+        vm.op2 = {value:'Padrão'};
+        vm.op3 = {value:'Padrão'};
+        vm.op4 = {value:'Padrão'};
 
         $scope.$watch('vm.op2', function(newTerm){
             if(newTerm.value){
-                $rootScope.$broadcast('activeDynamicNews', {category:newTerm.index, type:'2'});
+                if(newTerm.index !== false){
+                    $rootScope.$broadcast('activeDynamicNews', {category:newTerm.index, type:'2'});
+                }else{
+                    $rootScope.$broadcast('activeDynamicNews', false);
+                }
             }
         });
 

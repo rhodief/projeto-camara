@@ -27,6 +27,7 @@
             <div class="options">
             <button ng-class="buttonClass" ng-class="{act: vm.isOpened}" ng-click="vm.toggle()" title="{{title}}">{{buttonClass}}</button>
             <div class="box-list shadow" ng-style="vm.openList">
+                <button ng-click="vm.close()" class="">x</button>
                 <p class="title-list">{{title}}</p>
                 <p class="form"><input type="search" ng-model="vm.filter"></p>
                 <ul class="news-list">
@@ -47,6 +48,11 @@
 
         var vm = this;
         var list = [
+            {
+                index: false,
+                value: 'Padrão',
+                url: ''
+            },
             {
                 index: 'administracao_publica',
                 value: 'Administração Pública',
@@ -163,6 +169,7 @@
         vm.list = list;
         vm.action = action;
         vm.toggle = toggle;
+        vm.close = close
 
         function toggle(){
             if(vm.isOpened){
