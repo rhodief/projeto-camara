@@ -29,16 +29,13 @@
             var replacedNew = angular.copy(thisElement);
 
            scope.$on('activeDynamicNews', function(ev, data){
-                if(data === false){
-                    //Recebendo o valor falso, retorna o card antigo...
-                    element.html(replacedNew);
-                }else{
-                    var category = data.category;
-                    var type = data.type;
-                    if(category === thisCategory && type === thisType){
-                        active();
-                    }
-                }
+               var category = data.category;
+               var type = data.type;
+               if(type === thisType){
+                   if(category === false) return restore();
+                   if(category === thisCategory) return active();
+               }
+
             });
 
             function active(){
@@ -51,6 +48,10 @@
                 oldUrl = angular.copy(attrs.href);
                 _LoadingAnimation(element);
                 _getCategoryNews(thisCategory, thisType).then(okNews).catch(error);
+            }
+
+            function restore(){
+                element.html(replacedNew);
             }
 
             function okNews(news){

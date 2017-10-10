@@ -45,20 +45,24 @@
         vm.toggleEdit = toggleEdit;
         vm.editable = editable;
         vm.inEdition = [];
-        vm.op1 = {value:'Padrão'};
-        vm.op2 = {value:'Padrão'};
-        vm.op3 = {value:'Padrão'};
-        vm.op4 = {value:'Padrão'};
+        
+        vm.op = {
+            op1: {value:'Padrão'},
+            op2: {value:'Padrão'},
+            op3: {value:'Padrão'},
+            op4: {value:'Padrão'}
+        }
+        
 
-        $scope.$watch('vm.op2', function(newTerm){
-            if(newTerm.value){
-                if(newTerm.index !== false){
-                    $rootScope.$broadcast('activeDynamicNews', {category:newTerm.index, type:'2'});
-                }else{
-                    $rootScope.$broadcast('activeDynamicNews', false);
+        $scope.$watch('vm.op', function(newTerm, oldTerm){
+            if(newTerm){
+                var changedArray = _getPropChanged(newTerm, oldTerm);
+                for(var i = 0;i<changedArray.length;i++){
+                    $rootScope.$broadcast('activeDynamicNews', changedArray[i]);
                 }
+                
             }
-        });
+        }, true);
 
 
         
@@ -221,6 +225,16 @@
 
         function closeTab() {
             $scope.action();
+        }
+
+        function _getPropChanged(newTerm, oldTerm){
+            var ret = [];
+            angular.forEach(newTerm, function(v, i){
+                if(oldTerm[i].index !== v.index){
+                    ret.push({category:v.index, type:i.split('op')[1]});
+                }
+            })
+            return ret;
         }
 
         //ATIVAÇÃO DOS PAINÉS...
