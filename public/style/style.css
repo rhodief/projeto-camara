@@ -659,7 +659,7 @@ div.panel-det{margin:1em}
 .options .toggle-category.act{opacity: 1;}
 .options{position: relative; z-index: 5;}
 .options .title-list{font-size: 16px; font-size: 1rem; display: inline-block; color: #276c4d; font-weight: 600; padding-bottom: 3px; border-bottom: 2px solid #276c4d; margin-bottom: 10px;}
-.options .box-list{position: absolute; right: 0; top: 100%; background: #fff; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box; min-width: 250px; display: none;}
+.options .box-list{position: absolute; right: 0; top: 100%; background: #fff; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box; min-width:200px; display: none;}
 .options .box-list ul{max-height: 300px; overflow: auto;}
 .options .news-list li{font-size: 14px; font-size: 0.875rem; position: relative;padding: 5px 0;}
 .options .news-list li + li{border-top: 1px solid #eaeaea;}
@@ -991,6 +991,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.field-dropdown-mobile .dropdown.act{height: auto; overflow: visible;z-index: 1}
 	.field-dropdown-mobile .dropdown button{display: block; width: 100%; text-align: left;}
 	.field-dropdown-mobile .dropdown button.act{position: absolute; top:0; left: 0;}
+	.section-news .box-title .title{min-width: 290px}
 }
 @media screen and (min-width: 768px) {
 	.my-camara{text-align: justify}
@@ -1137,6 +1138,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.column-2 > ul{-webkit-column-count: 2;column-count: 2; -webkit-column-gap: 40px; column-gap: 40px;}
 	.column-2 > ul > li{-webkit-column-break-inside: avoid;break-inside: avoid; overflow: visible;}
 	.section-news .last-news.column-2 a{overflow: visible; color: #004a2f; display: inline;}
+	.section-news .last-news.column-2 a:after{display: none;}
 	.section-news .last-news.column-2 .list li + li{border-top: 0;}
 	.section-header-generic .title{display: inline;}
 	.section-header-generic .box-title .social{display: block; float: right; margin: 0;}
