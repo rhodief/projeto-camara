@@ -25,6 +25,9 @@
             editTitle: editTitle,
             removeFavorite: removeFavorite,
             isFavorite: isFavorite,
+            setTheme: setTheme,
+            getThemes:getThemes,
+            getThemesList:themesList,
             exportMescam: exportMescam
         };
 
@@ -39,6 +42,7 @@
             _setAttr(LOCALSTORAGE.PANELS_NAME, {});
             _setAttr(LOCALSTORAGE.SETTINGS, {});
             _setAttr(LOCALSTORAGE.FAVORITES, []);
+            _setAttr(LOCALSTORAGE.PREFERENCES, {});
         }
 
         function isEnabled() {
@@ -156,6 +160,14 @@
             }
         }
 
+        function setTheme(obj){
+            return _setTheme(obj);
+        }
+
+        function getThemes(){
+            return _getThemes();
+        }
+
         function exportMescam() {
             return _exportMescam();
         }
@@ -240,6 +252,38 @@
             _setAttr(LOCALSTORAGE.FAVORITES, value);
         }
 
+        function _setTheme(obj){
+            _getPreferences().then(okThemes);
+            function okThemes(preferences){
+                var index = 'op' + obj.type
+                if(preferences === false){
+                    preferences = {themes:{}};
+                }
+                preferences.themes[index] = obj.category;
+                _setPreferences(preferences);
+            }
+        }
+
+        function _getThemes(){
+            return _getPreferences().then(okThemes);
+            function okThemes(preferences){
+                return preferences.themes || {
+                    op1:false,
+                    op2:false,
+                    op3:false,
+                    op4:false
+                };
+            }
+        }
+
+        function _getPreferences(){
+            return _getAttr(LOCALSTORAGE.PREFERENCES);
+        }
+
+        function _setPreferences(obj){
+            return _setAttr(LOCALSTORAGE.PREFERENCES, obj);
+        }
+
         function _getCurrentPageUrl() {
             return window.location.href;
         }
@@ -247,6 +291,8 @@
         function _getCurrentTitle() {
             return document.title;
         }
+
+
 
         function _findValueInIndexObj(value, index, array) {
             for (var i = 0; i < array.length; i++) {
@@ -308,6 +354,126 @@
 
             var newUrl = currentMatch[1] + host.reverse().join('/') + '/' + endUrl.join('/');
             return newUrl;
+        }
+
+        function themesList(){
+            return  $q.resolve([
+                {
+                    index: false,
+                    value: 'Padrão',
+                    url: ''
+                },
+                {
+                    index: 'administracao_publica',
+                    value: 'Administração Pública',
+                    url: '',
+                },
+                {
+                    index: 'agropecuaria',
+                    value: 'Agropecuária',
+                    url: '',
+                },
+                {
+                    index: 'assistencia_social',
+                    value: 'Assistência Social',
+                    url: '',
+                },
+                {
+                    index: 'cidades',
+                    value: 'Cidades',
+                    url: '',
+                },
+                {
+                    index: 'ciencia_e_tecnologia',
+                    value: 'Ciência e Tecnologia',
+                    url: '',
+                },
+                {
+                    index: 'comunicacao',
+                    value: 'Comunicação',
+                    url: '',
+                },
+                {
+                    index: 'consumidor',
+                    value: 'Consumidor',
+                    url: '',
+                },
+                {
+                    index: 'direito_e_justica',
+                    value: 'Direito e Justiça',
+                    url: '',
+                },
+                {
+                    index: 'direitos_humanos',
+                    value: 'Direitos Humanos',
+                    url: '',
+                },
+                {
+                    index: 'economias',
+                    value: 'Economia',
+                    url: '',
+                },
+                {
+                    index: 'educacao_e_cultura',
+                    value: 'Educação e Cultura',
+                    url: '',
+                },
+                {
+                    index: 'esportes',
+                    value: 'Esportes',
+                    url: '',
+                },
+                {
+                    index: 'industria_e_comercio',
+                    value: 'Indústria e Comércio',
+                    url: '',
+                },
+                {
+                    index: 'institucional',
+                    value: 'Institucional',
+                    url: '',
+                },
+                {
+                    index: '',
+                    value: 'Meio Ambiente',
+                    url: '',
+                },
+                {
+                    index: 'politica',
+                    value: 'Política',
+                    url: '',
+                },
+                {
+                    index: 'relacoes_exteriores',
+                    value: 'Relações Exteriores',
+                    url: '',
+                },
+                {
+                    index: 'saude',
+                    value: 'Saúde',
+                    url: '',
+                },
+                {
+                    index: 'seguranca',
+                    value: 'Segurança',
+                    url: '',
+                },
+                {
+                    index: 'trabalho_e_previdencia',
+                    value: 'Trabalho e Previdência',
+                    url: '',
+                },
+                {
+                    index: 'transporte_e_transito',
+                    value: 'Transporte e Trânsito',
+                    url: '',
+                },
+                {
+                    index: 'turismo',
+                    value: 'Turismo',
+                    url: '',
+                }
+            ]);
         }
     }
 })();

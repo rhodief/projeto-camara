@@ -7,7 +7,8 @@
             PANELS_NAME:'PANELS',
             SETTINGS: 'SETTINGS',
             FAVORITES: 'FAVORITES',
-            DISABLED: 'DISABLED'
+            DISABLED: 'DISABLED',
+            PREFERENCES: 'PREFERENCES'
         })
         .constant('ERROR_MESSAGE', {
             ELEMENT_NOT_FOUND: 'O elemento que se tenta recuperar não existe!',
