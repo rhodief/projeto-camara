@@ -33,6 +33,7 @@ a,
 .bt-menu .bar,
 .settings-icon,
 .bt-menu:after,
+.glosario:after,
 .hat-text:after,
 .bt-menu:before,
 .hat-text:before,
@@ -46,6 +47,7 @@ a,
 .img-color-change rect,
 .img-color-change line,
 .subitems-list .list li,
+.glosario .text-glosario,
 .list-news .player:after,
 .img-color-change circle,
 #section-meuEspacoCamara,
@@ -910,7 +912,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .mescam-content .icon svg,
 .mescam-content .icon img{max-width: 40px; max-height: 40px;}
 
-.section-header-generic{padding: 20px 0; background: #ebebeb;}
+.section-header-generic{padding: 20px 0;}
 .section-header-generic .center{max-width: 1240px;}
 .section-header-generic .breadcrumb{margin-bottom: 20px}
 .section-header-generic .breadcrumb li{color: #004a2f; display: inline-block; font-size: 14px; font-size: 0.875rem;}
@@ -922,7 +924,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .box-title .social li{display: inline-block; margin: 0 10px;}
 .box-title .social a{display: block;}
 .box-title .social img{display: block; width: 25px; height: 25px; border-radius: 50%;}
-.article-sidebar{background: #ebebeb;}
 .article-sidebar .center{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; max-width: 1240px;}
 .article-sidebar .center > .box-side{-webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1;}
 .article-sidebar .center > .box-see-too{-webkit-box-ordinal-group: 4;-ms-flex-order: 3;order: 3;}
@@ -982,6 +983,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .box-dialog .box-buttons .button{margin: 5px; min-width: inherit;}
 .box-dialog .button.cancel{background: #767676;}
 /* box-dialog */
+.glosario{position: relative; border-bottom: 1px dashed #0094db; cursor: help; z-index: 10;}
+.glosario:after{content: ''; width:0; height: 0; position: absolute; top:-20px; left: 50%; margin-left: -10px; background: #fff7d0; -webkit-transform: rotate(45deg); transform: rotate(45deg); z-index: 2; border-bottom:0px solid #0094db; border-right: 0px solid #0094db; pointer-events: none; opacity: 0;overflow: hidden;}
+.glosario:hover:after{border-width:1px; width:20px; height: 20px; opacity: 1; opacity: 1; overflow: visible;pointer-events: auto;}
+.glosario .text-glosario{position: absolute;bottom: calc(100% + 10px); left: -50%; margin-left:-45px;border:0px solid #0094db; background:#fff7d0; z-index: 1; pointer-events: none; -webkit-box-sizing: border-box; box-sizing: border-box; opacity: 0; height: 0; overflow: hidden; width: 290px}
+.glosario .text-glosario .text{width: 0; overflow: hidden;height: 0; width: 250px; padding: 10px; display: block; max-height: 100%;}
+.glosario:hover .text-glosario{padding: 15px 10px; border-width: 1px; opacity: 1; pointer-events: auto;height: 130px; overflow: visible;}
+.glosario:hover .text-glosario:after{content: ''; position: absolute; bottom: -20px; left: 0; width: 100%; height: 20px;}
+.glosario:hover .text-glosario .text{height: 80px; overflow: auto;}
 @media screen and (max-width: 767px) {
 	.section-news .box-news.mobile-invert-order{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
 	.mobile-invert-order > div:first-child{-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2; -ms-flex-preferred-size:100%; flex-basis:100%;}
@@ -1383,8 +1392,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.article-sidebar .center > .box-side{width: 216px; -webkit-box-flex: 0; -ms-flex: 0 0 216px; flex: 0 0 216px;}
 	.article-sidebar .center > .box-see-too{width: 216px; -webkit-box-flex: 0; -ms-flex: 0 0 216px; flex: 0 0 216px;}
 	.article-sidebar .center > .box-container{width: calc(100% - 216px); -webkit-box-flex: 0; -ms-flex: 0 0 calc(100% - 216px); flex: 0 0 calc(100% - 216px);}
+	.corner-menu > li + li{border-top: 1px solid #dcdcdc;}
 	.corner-menu > li > a,
-	.nav-side{background: #fff;}
+	.nav-side{background: #ebebeb;}
 	.nav-side{margin-bottom: 20px;}
 	.corner-menu > li > a{color: #333333;}
 	.corner-menu > li > a.act{color: #fff;}
