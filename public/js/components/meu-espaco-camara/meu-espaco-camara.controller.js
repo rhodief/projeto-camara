@@ -32,11 +32,13 @@
             $rootScope.$broadcast('initMescamFavorites', true);
             angular.element(document.getElementById('section-meuEspacoCamara')).addClass('act');
             vm.opened = true;
+            angular.element(document.getElementsByTagName('body')).addClass('no-scroll');
         }
 
         function close(){
             angular.element(document.getElementById('section-meuEspacoCamara')).removeClass('act');
             vm.opened = false;
+            angular.element(document.getElementsByTagName('body')).removeClass('no-scroll');
         }
 
         function pressKey(e){

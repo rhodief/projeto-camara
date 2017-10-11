@@ -789,7 +789,7 @@ div.panel-det{margin:1em}
 #div-meuEspacoCamara .content .actions li a.act{background-color:#fff;color:#276c4d;}
 #div-meuEspacoCamara .content .rows li a.ok:hover,
 #div-meuEspacoCamara .content .rows li a.ok:focus{background-color:#5DA987;}
-#div-meuEspacoCamara .content .tabs{background: #fff;min-height: 450px;padding:0.5em}
+#div-meuEspacoCamara .content .tabs{background: #fff;min-height: 500px;padding:0.5em}
 #div-meuEspacoCamara .content .tabs .filters{display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex;}
 #div-meuEspacoCamara .content .tabs .filters li{margin:5px;}
 #div-meuEspacoCamara .content .tabs .filters a{padding: 2px; display: block; text-decoration:none; border-bottom:5px solid transparent;}
@@ -797,7 +797,7 @@ div.panel-det{margin:1em}
 #div-meuEspacoCamara .content .tabs .section{padding: 0.5em 0 0 0;}
 #div-meuEspacoCamara .content .tabs ul.panels button.act{background-color:#276C4C; color:#fff}
 #div-meuEspacoCamara .content .tabs .list{margin:10px 0; overflow: auto;}
-#div-meuEspacoCamara .content .tabs .list ul {max-height: 270px; overflow: auto; margin-bottom: 10px;}
+#div-meuEspacoCamara .content .tabs .list ul {max-height: 380px; overflow: auto; margin-bottom: 10px;}
 #div-meuEspacoCamara .content .tabs .list li{padding: 8px 0; display: -webkit-box; display: -ms-flexbox; display: flex; position:relative}
 #div-meuEspacoCamara .content .tabs .list li .delete,
 #div-meuEspacoCamara .content .tabs .list li .edit{text-indent: -5000em; width: 20px; height: 20px; cursor: pointer; margin-top: 15px}
