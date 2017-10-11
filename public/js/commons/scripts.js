@@ -232,8 +232,31 @@ $(document).ready(function () {
 		}
 
 	});
+
+	//show-shortcut no body ao se pressionar o (alt ou Alt+Shift...)
+	var altDown = false;
+	$('body').keydown(function(e){
+		if(e.altKey && !altDown){
+			altDown = true;
+			_onKeyDown();
+		}
+	});
+	$('body').keyup(function(e){
+		if(!e.altKey && altDown){
+			altDown = false;
+			_onRelease();
+		}
+	});
+
+	function _onKeyDown(){
+		$('body').addClass('show-shortcut');
+	}
+
+	function _onRelease(){
+		$('body').removeClass('show-shortcut');
+	}
 	
-	
+	//DIALOG
 	$(document).on('click', '*[data-dialog-type]',function(e){
 		/******
 		// data-dialog-type[type, position]
