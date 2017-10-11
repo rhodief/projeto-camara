@@ -16,9 +16,10 @@
             restrict: 'E',
             scope: {
                 url:'@',
-                title: '@'
+                title: '@',
+                visible:'@'
             },
-            template: '<button class="favorite-button" ng-class="{act: vm.included, show:vm.included}" ng-click="vm.toggleInclude(vm.url, vm.title)">{{vm.included ? "Favoritado" : "Não Favoritado. Favoritar?"}}</button>',
+            template: '<button class="favorite-button" ng-style="vm.block" ng-class="{act: vm.included, show:vm.included}" ng-click="vm.toggleInclude(vm.url, vm.title)">{{vm.included ? "Favoritado" : "Não Favoritado. Favoritar?"}}</button>',
             controller: favoritesButtonController,
             controllerAs:'vm'
         };
@@ -33,6 +34,7 @@
         vm.toggleInclude = toggleInclude;
         vm.url = $scope.url || null;
         vm.title = $scope.title || null;
+        vm.block = $scope.visible ? {display:'block'} : {};
 
         $scope.$on('refrashFavorites', function(ev, data){
             if(data){
