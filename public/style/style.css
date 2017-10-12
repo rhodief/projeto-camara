@@ -1,5 +1,6 @@
 html,body,header,footer,p,a,h1,h2,h3,h4,figure,form{margin: 0; padding: 0;}
 ul, li, ol{list-style: none; margin: 0; padding: 0;}
+section{position: relative;}
 body,
 .appointment .pickadate{font:normal 100% 'Open Sans', sans-serif;}
 .no-scroll{overflow: hidden;}
@@ -216,6 +217,7 @@ p.subtitle {color: #084b30;font-size: 0.95rem;margin:1em 0 1em}
 .ResultadoBusca .list-columns .category-list{margin: 0 10px;}
 .footer .menu,
 .header .menu{display: none; position: absolute; top:100%; left: 0; z-index: 3; background: rgba(0,48,30,0.95); width: 100%; overflow: auto; border-top: 5px solid #fff200; -webkit-box-sizing: border-box; box-sizing: border-box; padding-bottom: 10px;}
+.menu .main-menu{position: relative;}
 .menu .main-menu li{display: block; position: relative;}
 .main-menu > li > a{display: block; font-size: 14px; font-size: 0.875rem; color:#fff; font-weight: 500; text-decoration: none; padding: 17px 16px; background: #004a2f;}
 .main-menu > li > a.act{background: rgba(39, 108, 77, 0.75);}
@@ -331,7 +333,7 @@ a.act .bt-submenu span:last-child{right: 7px;}
 .footer-text .legislatura{font-size: 14px; font-size: 0.875rem; display: block; margin-bottom: 10px;}
 .footer-text p{font-size: 14px; font-size: 0.875rem; display: block; margin-bottom: 10px;}
 .footer-text p span{display: inline-block;}
-.footer-links{padding: 20px 0; background: rgba(0,48,30,0.95);}
+.footer-links{padding: 20px 0; background: rgba(0,48,30,0.95); position: relative;}
 .footer-links ul{display: inline-block; width: 100%; text-align: center;}
 .footer-links li{display: inline-block; margin: 5px 10px;}
 .footer-links a{color: #fff; text-decoration: none; font-size: 14px; font-size: 0.875rem;}
@@ -577,7 +579,7 @@ div.panel-det{margin:1em}
 .section-news{background: #ebebeb; padding: 20px 0;}
 .section-news .text-top{margin-bottom: 15px;}
 .section-news .box-news{background: none; max-width: none;}
-.section-news .center{padding: 0; max-width: 1240px;}
+.section-news .center{padding: 0; max-width: 1240px; position: relative;}
 .section-news .last-news{background: #fff; margin: 0 10px 10px; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box;}
 .section-news .last-news .title{font-size: 18px; font-size: 1.125rem; text-transform: uppercase; text-align: center; color: #004a2f; margin-bottom: 8px;}
 .section-news .last-news .tabs{display: table; width: 100%;}
@@ -996,6 +998,19 @@ favorites-button.right{position: absolute; right:4rem}
 .glosario:hover .text-glosario{padding: 15px 10px; border-width: 1px; opacity: 1; pointer-events: auto;height: 130px; overflow: visible;}
 .glosario:hover .text-glosario:after{content: ''; position: absolute; bottom: -20px; left: 0; width: 100%; height: 20px;}
 .glosario:hover .text-glosario .text{height: 80px; overflow: auto;}
+
+.shortcut{display: none;}
+.show-shortcut .shortcut{display: block;position: absolute;z-index: 10;background: #0094db; color:#fff; padding: 8px;opacity: 0.9;border: 1px solid #fff; font-size:12px;font-size:0.75rem; width:100px; text-indent:0; text-align:cemter;}
+.show-shortcut .shortcut.bottom{bottom: 0;}
+.show-shortcut .shortcut.top{top: 0;}
+.show-shortcut .shortcut.left{left: 0;}
+.show-shortcut .shortcut.right{right: 0;}
+.show-shortcut .shortcut.bottom-out{top: 100%; margin-top:-20px;}
+.show-shortcut .shortcut.top-out{bottom: 100%; margin-bottom:-20px;}
+.show-shortcut .shortcut.left-out{right: 100%; margin-right:-20px;}
+.show-shortcut .shortcut.right-out{left: 100%; margin-left:-20px;}
+.show-shortcut .shortcut + *{position: relative;}
+.show-shortcut .shortcut + *:after{content: ''; position: absolute; width:100%; height:100%; outline: 5px solid #ffd600; top: 0; left: 0; background: #0094db; opacity: 0.2;}
 @media screen and (max-width: 767px) {
 	.section-news .box-news.mobile-invert-order{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
 	.mobile-invert-order > div:first-child{-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2; -ms-flex-preferred-size:100%; flex-basis:100%;}
