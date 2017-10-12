@@ -612,7 +612,7 @@ div.panel-det{margin:1em}
 .section-education .box-posts a:focus:after,
 .section-news .last-news .list a:focus:after{opacity: 0.1;}
 .list-news .img{position: relative; overflow: hidden; display: block; height: 100%;}
-.list-news .img:before{content: ''; width: 100%; height: 100%; bottom: 100%; position: absolute; left: 0; -webkit-box-shadow: 0 0px 90px 60px rgba(0, 0, 0, 0.6); box-shadow: 0 0px 90px 60px rgba(0, 0, 0, 0.6); background: rgba(0,0,0,0.6); z-index: 1;}
+/*.list-news .img:before{content: ''; width: 100%; height: 100%; bottom: 100%; position: absolute; left: 0; -webkit-box-shadow: 0 0px 90px 60px rgba(0, 0, 0, 0.6); box-shadow: 0 0px 90px 60px rgba(0, 0, 0, 0.6); background: rgba(0,0,0,0.6); z-index: 1;}*/
 .section-news .last-news .list li + li{border-top:1px solid #ebebeb;}
 .section-news .last-news a{font-size: 14px; font-size: 0.875rem; line-height: 16px; line-height: 1rem; color: #333333; text-decoration: none; display: block; margin-bottom: 5px;}
 .section-news .last-news .date-time{font-size: 12px; font-size: 0.75rem; color: #767676;}
@@ -901,17 +901,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .mescam-content .social-links img{display: block; width: 35px; height: 35px; border-radius: 50%;}
 .section-links-footer .col .buttons{display: -webkit-box;display: -ms-flexbox;display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between;}
 .section-links-footer .buttons .button{min-width: auto; padding-left: 30px; padding-right: 30px;}
-favorites-button.right{position: absolute; right:4rem}
-.favorite-button{width: 31px; height: 31px; position: absolute; top: 10px; left: 10px; z-index: 3; background: url(../img/layout/sprite_favorite_share.png) no-repeat 0 0; text-indent: -5000em; cursor: pointer;}
+.favorites-button.right{position: absolute; right:4rem}
+.favorite-button{width: 31px; height: 31px; position: absolute; top: 10px; left: 10px; z-index: 3; background:rgba(255, 214, 0, 0.2)url(../img/layout/sprite_favorite_share.png) no-repeat center 0; text-indent: -5000em; cursor: pointer; border-radius:50%;-webkit-box-shadow: 0 0px 5px 5px rgba(255, 214, 0, 0.2);box-shadow: 0 0px 5px 5px rgba(255, 214, 0, 0.2);}
+/*.share-options:after,
+.favorite-button:after{content: ''; width: 35px; height: 35px; bottom: 0; position: absolute; left: 0; -webkit-box-shadow: 0 0px 5px 5px rgba(0, 0, 0, 0.2); box-shadow: 0 0px 5px 5px rgba(255, 214, 0, 0.2); z-index: -1; border-radius:50%; opacity:0.5;}*/
 .favorite-button:hover,
-.favorite-button:focus{background-position: 0 -32px;}
-.favorite-button.act{background-position: 0 -63px;}
+.favorite-button:focus{background-position: center -32px;}
+.favorite-button.act{background-position: center -63px;}
 .share-options{position: absolute; top: 10px; right: 10px; z-index: 3; cursor: pointer;}
-.share-options .share-button{display: block; text-align: center;background: url(../img/layout/sprite_favorite_share.png) no-repeat 0 -95px;width: 31px; height: 31px; }
+.share-options .share-button{display: block; text-align: center;background:  rgba(255, 214, 0, 0.2)url(../img/layout/sprite_favorite_share.png) no-repeat center -93px;width: 35px; height: 35px; border-radius:50%;-webkit-box-shadow: 0 0px 5px 5px rgba(255, 214, 0, 0.2);box-shadow: 0 0px 5px 5px rgba(255, 214, 0, 0.2);}
 .share-options .share-button:hover,
-.share-options .share-button:focus{background-position: 0 -127px;}
+.share-options .share-button:focus{background-position: center -125px;}
 .share-options .share-button:before{display: none;}
-.share-options.act .share-button{background-position: 0 -159px;}
+.share-options.act .share-button{background-position: center -157px;}
 .share-options .box-options{position: absolute; right: 0; top: 100%; display: none;}
 .share-options .box-options li{background: none; margin: 0; padding: 5px 0;}
 .share-options .box-options a:after,
