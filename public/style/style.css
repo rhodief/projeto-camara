@@ -628,7 +628,7 @@ div.panel-det{margin:1em}
 .list-news li.size3{-webkit-box-flex: 1;-ms-flex: 1 0 230px;flex: 1 0 230px;}
 .list-news li.size5{-webkit-box-flex: 1;-ms-flex: 1 0 170px;flex: 1 0 170px;}
 .list-news li.size6{-webkit-box-flex: 1;-ms-flex: 1 0 210px;flex: 1 0 210px;}
-.list-news a{text-decoration: none; display: block;}
+.list-news a{text-decoration: none; display: block; overflow: hidden;}
 .list-news li > .title{margin: 10px; font-size: 18px; font-size: 1.125rem; text-align: center; font-weight: 600; color: #276c4d;}
 .list-news .img img{display: block; width: 100%; height: 210px; -o-object-fit: cover; object-fit: cover;}
 .list-news .box-text{padding: 10px; display: block;}
@@ -668,12 +668,14 @@ div.panel-det{margin:1em}
 .options .toggle-category.act{opacity: 1;}
 .options{position: relative; z-index: 5;}
 .options .title-list{font-size: 16px; font-size: 1rem; display: inline-block; color: #276c4d; font-weight: 600; padding-bottom: 3px; border-bottom: 2px solid #276c4d; margin-bottom: 10px;}
-.options .box-list{position: absolute; /*right: 2em*/; top: 100%; background: #fff; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box; min-width:200px; width:100%;display: none;}
+.options .box-list{position: absolute; right: 0; top: 100%; background: #fff; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box; min-width:200px; width:100%;display: none;}
 .options .box-list ul{max-height: 300px; overflow: auto;}
 .options .news-list li{font-size: 14px; font-size: 0.875rem; position: relative;padding: 5px 0;}
 .options .news-list li + li{border-top: 1px solid #eaeaea;}
 .options .news-list li a{text-decoration: none;}
-
+.custom-categories{position: relative;}
+.custom-categories .options{position: static; z-index: inherit;}
+.custom-categories .options .box-list{z-index:3; border: 1px solid #004a2f;}
 .live.redpoint.icon{display: inline-block !important; vertical-align: middle; margin-left:5px; position: relative; left: -10px; text-indent: -5000em; width:12px !important; height: 12px !important; background: #c30f16; border-radius: 50%; -webkit-animation: animate-fade-toggle 2s linear infinite;animation: animate-fade-toggle 2s linear infinite;}
 
 .vertical.scroll .media-tabs .live .icon{display: inline-block; vertical-align: middle; margin-left: 10px; position: relative; left: -10px; text-indent: -5000em; width:12px; height: 12px; background: #c30f16; border-radius: 50%; -webkit-animation: animate-fade-toggle 2s linear infinite;animation: animate-fade-toggle 2s linear infinite;}
@@ -1020,7 +1022,7 @@ favorites-button.right{position: absolute; right:4rem}
 	.field-dropdown-mobile .dropdown.act{height: auto; overflow: visible;z-index: 1}
 	.field-dropdown-mobile .dropdown button{display: block; width: 100%; text-align: left;}
 	.field-dropdown-mobile .dropdown button.act{position: absolute; top:0; left: 0;}
-	.section-news .box-title .title{min-width: 290px}
+	.section-news .box-title .title{min-width: 259px}
 }
 @media screen and (min-width: 768px) {
 	.my-camara{text-align: justify}
