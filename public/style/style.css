@@ -923,7 +923,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .mescam-content .icon svg,
 .mescam-content .icon img{max-width: 40px; max-height: 40px;}
 
-.section-header-generic{padding: 20px 0;}
+.section-header-generic{padding: 20px 0; background: #ebebeb;}
 .section-header-generic .center{max-width: 1240px;}
 .section-header-generic .breadcrumb{margin-bottom: 20px}
 .section-header-generic .breadcrumb li{color: #004a2f; display: inline-block; font-size: 14px; font-size: 0.875rem;}
@@ -934,11 +934,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .section-header-generic .box-title .social{display: table; margin: 10px auto 20px;}
 .box-title .social li{display: inline-block; margin: 0 10px;}
 .box-title .social a{display: block;}
+.box-title .social .favorite-button{position: static;}
 .box-title .social img{display: block; width: 25px; height: 25px; border-radius: 50%;}
+.article-sidebar{background: #ebebeb;}
 .article-sidebar .center{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; max-width: 1240px;}
 .article-sidebar .center > .box-side{-webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1;}
 .article-sidebar .center > .box-see-too{-webkit-box-ordinal-group: 4;-ms-flex-order: 3;order: 3;}
-.article-sidebar .center > .box-container{-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2;}
+.article-sidebar .center > .box-container{-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box;}
 .nav-side{background: rgba(0,48,30,0.95);}
 .side-menu .bt-menu .bar{margin: 0 0 4px;}
 .side-menu .bt-menu .text{display: inline-block; color: #fff; position: absolute; left: 50px; top: 0;}
@@ -950,7 +952,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 .corner-menu > li > a .bt-submenu span:first-child{left: 7px; -webkit-transform: rotate(90deg) scale(1) skew(1deg) translate(0px); transform: rotate(90deg) scale(1) skew(1deg) translate(0px);}
 .corner-menu > li > a.act .bt-submenu span:last-child{right: 0; -webkit-transform: rotate(180deg) scale(1) skew(1deg) translate(0px); transform: rotate(180deg) scale(1) skew(1deg) translate(0px);}
 .corner-menu > li > a.act .bt-submenu span:first-child{-webkit-transform: rotate(0deg) scale(1) skew(1deg) translate(0px);transform: rotate(0deg) scale(1) skew(1deg) translate(0px);}
-.section-container{padding: 40px 10px; color: #333333;}
+.section-container{padding: 40px 10px; color: #333333; background: #fff; -webkit-box-sizing: border-box; box-sizing: border-box;}
 .section-container .form{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin:-10px -10px 40px;}
 .section-container .form .button{margin: 0;}
 .section-container h2{font-size: 25px; font-size: 1.563rem;}
@@ -1420,7 +1422,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.article-sidebar .center > .box-container{width: calc(100% - 216px); -webkit-box-flex: 0; -ms-flex: 0 0 calc(100% - 216px); flex: 0 0 calc(100% - 216px);}
 	.corner-menu > li + li{border-top: 1px solid #dcdcdc;}
 	.corner-menu > li > a,
-	.nav-side{background: #ebebeb;}
+	.nav-side{background: #fff;}
 	.nav-side{margin-bottom: 20px;}
 	.corner-menu > li > a{color: #333333;}
 	.corner-menu > li > a.act{color: #fff;}
@@ -1435,7 +1437,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.corner-menu a.act .bt-submenu span{background: #fff;}
 	.corner-menu > li .submenu{background: #d2d2d2;}
 	.corner-menu .submenu li > a{color: #333333; border-bottom: 1px solid rgba(255,255,255,0.5);}
-	.section-container{padding: 0 20px 40px;}
+	.section-container{padding: 0 10px 10px;}
 	#div-meuEspacoCamara .content .tabs .list li .delete,
 	#div-meuEspacoCamara .content .tabs .list li .edit{opacity: 0;}
 	#div-meuEspacoCamara .content .tabs .list li:hover .delete,
