@@ -65,7 +65,6 @@
                     }
                 }
                 oldUrl = oldUrl || angular.copy(attrs.href);
-                _LoadingAnimation(element);
                 _getCategoryNews(category, thisType).then(okNews).catch(error);
             }
 
@@ -77,6 +76,8 @@
             }
 
             function okNews(news) {
+                if(!news) return;
+                _LoadingAnimation(element);
                 if(img){
                     img.src = news.img;
                     img.alt = news.alt;
@@ -102,6 +103,7 @@
             function okData(data) {
                 var ret = data.data.dados;
                 var newCategory = ret[category];
+                if(!newCategory) return false;
                 if (type) newCategory = newCategory['opt' + type];
                 return newCategory;
             }

@@ -20,11 +20,13 @@
             scope: {
                 ngModel: '=',
                 buttonClass: '@',
-                title: '@'
+                title: '@',
+                h2:'@'
             },
             controller: selecterController,
             controllerAs: 'vm',
-            template: `<span>{{ngModel.value}}</span>
+            template: `<span ng-if="!h2">{{ngModel.value}}</span>
+            <h2 ng-if="h2" class="title macrotheme">{{ngModel.value}}</h2>
             <div class="options">
             <button ng-class="buttonClass" ng-class="{act: vm.isOpened}" ng-click="vm.toggle()" title="{{title}}">{{buttonClass}}</button>
             <div class="box-list shadow" ng-style="vm.openList">
@@ -104,7 +106,7 @@
                 url: '',
             },
             {
-                index: 'economias',
+                index: 'economia',
                 value: 'Economia',
                 url: '',
             },

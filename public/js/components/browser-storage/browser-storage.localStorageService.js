@@ -259,7 +259,6 @@
                 if(preferences === false || !preferences.themes){
                     preferences = {themes:{}};
                 }
-                console.log(preferences);
                 preferences.themes[index] = obj.category;
                 _setPreferences(preferences);
             }

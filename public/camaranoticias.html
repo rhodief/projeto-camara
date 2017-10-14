@@ -808,38 +808,12 @@
 				<div class="box-news mobile-invert-order">
 					<div class="list-news">
 						<ul>
-							<li class="size1 type1 show-text shadow">
-								<favorites-button class="ng-isolate-scope"><button class="favorite-button ng-binding" ng-class="{act: vm.included}" ng-click="vm.toggleInclude()">Favoritado</button></favorites-button>
-								<div class="share-options">
-									<button class="share-button" title="Compartilhar"></button>
-									<ul class="box-options">
-										<li>
-											<a href="#"><img src="img/layout/icon_mail.png" alt="email" class="shadow"></a>
-										</li>
-										<li>
-											<a href="#"><img src="img/layout/icon_facebook.png" alt="Facebook" class="shadow"></a>
-										</li>
-										<li>
-											<a href="#"><img src="img/layout/icon_twitter.png" alt="Twitter" class="shadow"></a>
-										</li>
-									</ul>
-								</div>
-								<a href="#">
-   									<span class="img"><img src="img/uploads/img_03.jpg" alt=""></span>
-   									<span class="box-text">
-										<span class="hat-text"><span>Lorem Ipsum</span></span>
-										<span class="title">Parecer sobre a denúncia contra Temer deve ser lido na CCJ na próxima segunda</span>
-										<span class="text">Os dois projetos tramitam em caráter conclusivo e devem ser transformados em um texto único, que segue para o Senado, a não ser que haja recurso</span>
-										<span class="date-category"><span>Política</span>05/07/2017</span>
-   									</span>
-   								</a>
-							</li>
 							<li class="size1 thumb-menu shadow">
 								<div class="box-media">
 									<div class="vertical scroll">
 										<ul class="media-tabs">
-											<li>
-												<a href="#" class="act">TV 1 (ao vivo)</a>
+											<li class="live">
+												<a href="#" class="act"><span class="icon">(ao vivo)</span> Programação ao vivo</a>
 											</li>
 											<li>
 												<a href="#">TV 2</a>
@@ -1018,41 +992,11 @@
 			</div>
 		</div>
 	</section>
-	<section>
+	<section ng-controller="camaraNoticiasController as vm">
 		<div class="section-news">
 			<div class="center">
 				<div class="box-title">
-					<h2 class="title macrotheme">Relações Exteriores</h2>
-					<div class="options">
-						<button class="toggle-category" title="Alterar Assunto">Alterar Assunto</button>
-						<div class="box-list shadow">
-							<p class="title-list">Alterar Assunto</p>
-							<ul class="news-list">
-								<li><a href="macrotema.html">Administração Pública</a></li>
-								<li><a href="macrotema.html">Agropecuária</a></li>
-								<li><a href="macrotema.html">Assistência Social</a></li>
-								<li><a href="macrotema.html">Cidades</a></li>
-								<li><a href="macrotema.html">Ciência e Tecnologia</a></li>
-								<li><a href="macrotema.html">Comunicação</a></li>
-								<li><a href="macrotema.html">Consumidor</a></li>
-								<li><a href="macrotema.html">Direito e Justiça</a></li>
-								<li><a href="macrotema.html">Direitos Humanos</a></li>
-								<li><a href="macrotema.html">Economia</a></li>
-								<li><a href="macrotema.html">Educação e Cultura</a></li>
-								<li><a href="macrotema.html">Esportes</a></li>
-								<li><a href="macrotema.html">Indústria e Comércio</a></li>
-								<li><a href="macrotema.html">Institucional</a></li>
-								<li><a href="macrotema.html">Meio Ambiente</a></li>
-								<li><a href="macrotema.html">Política</a></li>
-								<li><a href="macrotema.html">Relações Exteriores</a></li>
-								<li><a href="macrotema.html">Saúde</a></li>
-								<li><a href="macrotema.html">Segurança</a></li>
-								<li><a href="macrotema.html">Trabalho e Previdência</a></li>
-								<li><a href="macrotema.html">Transporte e Trânsito</a></li>
-								<li><a href="macrotema.html">Turismo</a></li>
-							</ul>
-						</div>
-					</div>
+					<selecter button-class="toggle-category" title="Alterar Assunto" ng-model="vm.opt.op1" h2="true"></selecter>
 				</div>
 				<div class="list-news">
 					<ul>
@@ -1161,43 +1105,13 @@
 			</div>
 		</div>
 	</section>
-	<section>
+	<section ng-controller="camaraNoticiasController as vm">
 		<div class="section-news">
 			<div class="center">
 				<div class="box-custom-subject">
 					<div class="col">
 						<div class="box-title">
-							<h2 class="title macrotheme">Administração Pública</h2>
-							<div class="options">
-								<button class="toggle-category" title="Alterar Assunto">Alterar Assunto</button>
-								<div class="box-list shadow">
-									<p class="title-list">Alterar Assunto</p>
-									<ul class="news-list">
-										<li><a href="macrotema.html">Administração Pública</a></li>
-										<li><a href="macrotema.html">Agropecuária</a></li>
-										<li><a href="macrotema.html">Assistência Social</a></li>
-										<li><a href="macrotema.html">Cidades</a></li>
-										<li><a href="macrotema.html">Ciência e Tecnologia</a></li>
-										<li><a href="macrotema.html">Comunicação</a></li>
-										<li><a href="macrotema.html">Consumidor</a></li>
-										<li><a href="macrotema.html">Direito e Justiça</a></li>
-										<li><a href="macrotema.html">Direitos Humanos</a></li>
-										<li><a href="macrotema.html">Economia</a></li>
-										<li><a href="macrotema.html">Educação e Cultura</a></li>
-										<li><a href="macrotema.html">Esportes</a></li>
-										<li><a href="macrotema.html">Indústria e Comércio</a></li>
-										<li><a href="macrotema.html">Institucional</a></li>
-										<li><a href="macrotema.html">Meio Ambiente</a></li>
-										<li><a href="macrotema.html">Política</a></li>
-										<li><a href="macrotema.html">Relações Exteriores</a></li>
-										<li><a href="macrotema.html">Saúde</a></li>
-										<li><a href="macrotema.html">Segurança</a></li>
-										<li><a href="macrotema.html">Trabalho e Previdência</a></li>
-										<li><a href="macrotema.html">Transporte e Trânsito</a></li>
-										<li><a href="macrotema.html">Turismo</a></li>
-									</ul>
-								</div>
-							</div>
+								<selecter button-class="toggle-category" title="Alterar Assunto" ng-model="vm.opt.op2" h2="true"></selecter>
 						</div>
 						<div class="list-news">
 							<ul>
@@ -1282,37 +1196,7 @@
 					</div>
 					<div class="col">
 						<div class="box-title">
-							<h2 class="title macrotheme">Direitos Humanos</h2>
-							<div class="options">
-								<button class="toggle-category" title="Alterar Assunto">Alterar Assunto</button>
-								<div class="box-list shadow">
-									<p class="title-list">Alterar Assunto</p>
-									<ul class="news-list">
-										<li><a href="macrotema.html">Administração Pública</a></li>
-										<li><a href="macrotema.html">Agropecuária</a></li>
-										<li><a href="macrotema.html">Assistência Social</a></li>
-										<li><a href="macrotema.html">Cidades</a></li>
-										<li><a href="macrotema.html">Ciência e Tecnologia</a></li>
-										<li><a href="macrotema.html">Comunicação</a></li>
-										<li><a href="macrotema.html">Consumidor</a></li>
-										<li><a href="macrotema.html">Direito e Justiça</a></li>
-										<li><a href="macrotema.html">Direitos Humanos</a></li>
-										<li><a href="macrotema.html">Economia</a></li>
-										<li><a href="macrotema.html">Educação e Cultura</a></li>
-										<li><a href="macrotema.html">Esportes</a></li>
-										<li><a href="macrotema.html">Indústria e Comércio</a></li>
-										<li><a href="macrotema.html">Institucional</a></li>
-										<li><a href="macrotema.html">Meio Ambiente</a></li>
-										<li><a href="macrotema.html">Política</a></li>
-										<li><a href="macrotema.html">Relações Exteriores</a></li>
-										<li><a href="macrotema.html">Saúde</a></li>
-										<li><a href="macrotema.html">Segurança</a></li>
-										<li><a href="macrotema.html">Trabalho e Previdência</a></li>
-										<li><a href="macrotema.html">Transporte e Trânsito</a></li>
-										<li><a href="macrotema.html">Turismo</a></li>
-									</ul>
-								</div>
-							</div>
+								<selecter button-class="toggle-category" title="Alterar Assunto" ng-model="vm.opt.op3" h2="true"></selecter>
 						</div>
 						<div class="list-news">
 							<ul>
@@ -1397,37 +1281,7 @@
 					</div>
 					<div class="col">
 						<div class="box-title">
-							<h2 class="title macrotheme">Economia</h2>
-							<div class="options">
-								<button class="toggle-category" title="Alterar Assunto">Alterar Assunto</button>
-								<div class="box-list shadow">
-									<p class="title-list">Alterar Assunto</p>
-									<ul class="news-list">
-										<li><a href="macrotema.html">Administração Pública</a></li>
-										<li><a href="macrotema.html">Agropecuária</a></li>
-										<li><a href="macrotema.html">Assistência Social</a></li>
-										<li><a href="macrotema.html">Cidades</a></li>
-										<li><a href="macrotema.html">Ciência e Tecnologia</a></li>
-										<li><a href="macrotema.html">Comunicação</a></li>
-										<li><a href="macrotema.html">Consumidor</a></li>
-										<li><a href="macrotema.html">Direito e Justiça</a></li>
-										<li><a href="macrotema.html">Direitos Humanos</a></li>
-										<li><a href="macrotema.html">Economia</a></li>
-										<li><a href="macrotema.html">Educação e Cultura</a></li>
-										<li><a href="macrotema.html">Esportes</a></li>
-										<li><a href="macrotema.html">Indústria e Comércio</a></li>
-										<li><a href="macrotema.html">Institucional</a></li>
-										<li><a href="macrotema.html">Meio Ambiente</a></li>
-										<li><a href="macrotema.html">Política</a></li>
-										<li><a href="macrotema.html">Relações Exteriores</a></li>
-										<li><a href="macrotema.html">Saúde</a></li>
-										<li><a href="macrotema.html">Segurança</a></li>
-										<li><a href="macrotema.html">Trabalho e Previdência</a></li>
-										<li><a href="macrotema.html">Transporte e Trânsito</a></li>
-										<li><a href="macrotema.html">Turismo</a></li>
-									</ul>
-								</div>
-							</div>
+								<selecter button-class="toggle-category" title="Alterar Assunto" ng-model="vm.opt.op4" h2="true"></selecter>
 						</div>
 						<div class="list-news">
 							<ul>
@@ -1513,36 +1367,6 @@
 					<div class="col">
 						<div class="box-title">
 							<h2 class="title macrotheme">Segurança</h2>
-							<div class="options">
-								<button class="toggle-category" title="Alterar Assunto">Alterar Assunto</button>
-								<div class="box-list shadow">
-									<p class="title-list">Alterar Assunto</p>
-									<ul class="news-list">
-										<li><a href="macrotema.html">Administração Pública</a></li>
-										<li><a href="macrotema.html">Agropecuária</a></li>
-										<li><a href="macrotema.html">Assistência Social</a></li>
-										<li><a href="macrotema.html">Cidades</a></li>
-										<li><a href="macrotema.html">Ciência e Tecnologia</a></li>
-										<li><a href="macrotema.html">Comunicação</a></li>
-										<li><a href="macrotema.html">Consumidor</a></li>
-										<li><a href="macrotema.html">Direito e Justiça</a></li>
-										<li><a href="macrotema.html">Direitos Humanos</a></li>
-										<li><a href="macrotema.html">Economia</a></li>
-										<li><a href="macrotema.html">Educação e Cultura</a></li>
-										<li><a href="macrotema.html">Esportes</a></li>
-										<li><a href="macrotema.html">Indústria e Comércio</a></li>
-										<li><a href="macrotema.html">Institucional</a></li>
-										<li><a href="macrotema.html">Meio Ambiente</a></li>
-										<li><a href="macrotema.html">Política</a></li>
-										<li><a href="macrotema.html">Relações Exteriores</a></li>
-										<li><a href="macrotema.html">Saúde</a></li>
-										<li><a href="macrotema.html">Segurança</a></li>
-										<li><a href="macrotema.html">Trabalho e Previdência</a></li>
-										<li><a href="macrotema.html">Transporte e Trânsito</a></li>
-										<li><a href="macrotema.html">Turismo</a></li>
-									</ul>
-								</div>
-							</div>
 						</div>
 						<div class="list-news">
 							<ul>
@@ -1993,15 +1817,15 @@
 						<div class="last-news">
 							<h2 class="title">Discursos no Plenário</h2>
 							<ul class="list">
-								<li><a href="">Deputados mantêm em MP regras sobre concessão de uso de instalações olímpicas</a>
+								<li><a href="">Deputada Jandira Feghali sobre financiamento público de campanha </a>
 								</li>
-								<li><a href="">Plenário mantém cargos previstos em autarquia que vai administrar legado olímpico</a>
+								<li><a href="">Deputado Mauro Pereira sobre financiamento públio de campanha</a>
 								</li>
-								<li><a href="">Plenário aprova MP que cria autarquia para administrar legado olímpico; falta votar destaques</a>
+								<li><a href="">Walney Rocha extinção de propaganda eleitoral no rádio e televisão</a>
 								</li>
 								<li><a href="">Deputado critica autorização para uso de instalações esportivas sem concorrência</a>
 								</li>
-								<li><a href="">Comissão que trata de taxa de juros para contratos do BNDES vota relatório em agosto</a>
+								<li><a href="">Deputado Zé Geraldo sobra a nova legislação eleitoral</a>
 								</li>
 							</ul>
 							<a href="camaranoticias.html" class="button more-news">Ver mais discursos</a>
@@ -2024,7 +1848,11 @@
 					</div>
 					<div class="col">
 						<div class="social-links">
-							<ul><li><h2>Siga-nos nas Principais Redes Sociais</h2></li></ul>
+							<ul>
+								<li>
+									<h2>Siga-nos nas Redes Sociais</h2>
+								</li>
+							</ul>
 						</div>
 						<div class="social-links">
 							<ul>
@@ -2042,8 +1870,10 @@
 					</div>
 					<div class="col boletins">
 						<h2 class="title">Boletins Informativos</h2>
-						<p class="subtitle">A Câmara oferece o serviço de boletim eletrônico, enviado por e-mail, com informações atualizadas sobre a atuação dos deputados, proposições, notícias. Também é possível receber a programação da TV Câmara e da Rádio Câmara.</p>
-						<p class="subtitle">Esta inscrição requer usuário cadastrado no Portal Câmara. Se você ainda não possui cadastro no Portal, clique na opção "quero me cadastrar". Se você já for cadastrado, informe o seu e-mail e senha para continuar.</p>
+						<p class="subtitle">A Câmara oferece o serviço de boletim eletrônico, enviado por e-mail, com informações atualizadas sobre a atuação dos
+							deputados, proposições, notícias. Também é possível receber a programação da TV Câmara e da Rádio Câmara.</p>
+						<p class="subtitle">Esta inscrição requer usuário cadastrado no Portal Câmara. Se você ainda não possui cadastro no Portal, clique na opção
+							"quero me cadastrar". Se você já for cadastrado, informe o seu e-mail e senha para continuar.</p>
 						<div class="form">
 							<div class="row">
 								<label><span>E-mail*</span><input type="email" placeholder="Digite seu E-mail" required></label>
@@ -2339,42 +2169,43 @@
 
 
 	<!-- Scripts Bower -->
-    <script src="bower_components/angular/angular.min.js"></script>
-    <!-- lazyLoad -->
-    <script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
-    <!-- Main App -->
-    <script src="js/components/app.js"></script>
-    <script src="js/components/app.run.js"></script>
-    <!-- Search -->
-    <script src="js/components/search/search.js"></script>
-    <!-- SelectFilter -->
-    <script src="js/components/select-filter/select-filter.js"></script>
-    <!-- Meu Espaço Câmara -->
-    <script src="js/components/meu-espaco-camara/meu-espaco-camara.js"></script>
-    <script src="js/components/meu-espaco-camara/meu-espaco-camara.controller.js"></script>
-    <script src="js/components/meu-espaco-camara/meu-espaco-camara.espaco-nav.js"></script>
-    <script src="js/components/meu-espaco-camara/meu-espaco-camara.favorites-button.js"></script>
-    <!-- Browser Storage -->
-    <script src="js/components/browser-storage/browser-storage.js"></script>
-    <script src="js/components/browser-storage/browser-storage.localStorageService.js"></script>
-    <!-- Dialog -->
-    <script src="js/components/dialog/dialog.js"></script>
-    <!-- Selecter -->
-    <script src="js/components/selecter/selecter.js"></script>
-    <!-- Dynamic News -->
-    <script src="js/components/dynamic-news/dynamic-news.js"></script>
-    <!-- Meu Espaço Câmara -->
-    <!-- Panels Gen -->
-    <script src="js/components/panels-gen/panels-gen.js"></script>
-    <script src="js/components/panels-gen/panels-gen.directive.js"></script>
-    <script src="js/components/panels-gen/panels-gen.service.js"></script>
-    <script src="js/components/panels-gen/locale_pt-br.js"></script>
-    <!-- Panels Requisição para WS -->
-    <script src="js/components/ws-request/ws-request.js"></script>
-    <!-- Simulador de Requisições WS -->
-    <script src="js/components/ws-request/ws-mock.js"></script>
-    <!-- Panels Requisição para WS -->
-    <script src="js/components/gps/gps.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<!-- lazyLoad -->
+	<script src="bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+	<!-- Main App -->
+	<script src="js/components/app.js"></script>
+	<script src="js/components/app.run.js"></script>
+	<script src="js/components/camara_noticias.controller.js"></script>
+	<!-- Search -->
+	<script src="js/components/search/search.js"></script>
+	<!-- SelectFilter -->
+	<script src="js/components/select-filter/select-filter.js"></script>
+	<!-- Meu Espaço Câmara -->
+	<script src="js/components/meu-espaco-camara/meu-espaco-camara.js"></script>
+	<script src="js/components/meu-espaco-camara/meu-espaco-camara.controller.js"></script>
+	<script src="js/components/meu-espaco-camara/meu-espaco-camara.espaco-nav.js"></script>
+	<script src="js/components/meu-espaco-camara/meu-espaco-camara.favorites-button.js"></script>
+	<!-- Browser Storage -->
+	<script src="js/components/browser-storage/browser-storage.js"></script>
+	<script src="js/components/browser-storage/browser-storage.localStorageService.js"></script>
+	<!-- Dialog -->
+	<script src="js/components/dialog/dialog.js"></script>
+	<!-- Selecter -->
+	<script src="js/components/selecter/selecter.js"></script>
+	<!-- Dynamic News -->
+	<script src="js/components/dynamic-news/dynamic-news.js"></script>
+	<!-- Meu Espaço Câmara -->
+	<!-- Panels Gen -->
+	<script src="js/components/panels-gen/panels-gen.js"></script>
+	<script src="js/components/panels-gen/panels-gen.directive.js"></script>
+	<script src="js/components/panels-gen/panels-gen.service.js"></script>
+	<script src="js/components/panels-gen/locale_pt-br.js"></script>
+	<!-- Panels Requisição para WS -->
+	<script src="js/components/ws-request/ws-request.js"></script>
+	<!-- Simulador de Requisições WS -->
+	<script src="js/components/ws-request/ws-mock.js"></script>
+	<!-- Panels Requisição para WS -->
+	<script src="js/components/gps/gps.js"></script>
 
 </body>
 

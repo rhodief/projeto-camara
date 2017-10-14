@@ -1066,7 +1066,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00301e', end
 	.section-news .box-news{display: -webkit-box;display: -ms-flexbox;display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;}
 	.section-news .box-news .last-news{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto; max-width: 240px; margin: 5px;}
 	.section-news .box-news .list-news{-webkit-box-flex:1;-ms-flex:1 1 275px;flex:1 1 275px;}
-	.section-news .last-news ul.list{max-height: none;}
+	.section-news .last-news ul.list{max-height: none;min-height: 250px}
 	.section-news .last-news .list{max-height: none;}
 	.list-news li{margin: 5px;}
 	.list-news li.size1{-ms-flex-preferred-size: 40%;flex-basis: 40%;}
