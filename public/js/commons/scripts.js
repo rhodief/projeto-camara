@@ -73,8 +73,9 @@ $(document).ready(function () {
 		}
 
 		function _showResults(error, data) {
-			var html = '<ul class="horizontal-result">';
+			var html = '';
 			if (!error) {
+				html += '<ul class="horizontal-result"><a href="#" class="title">Páginas</a>'
 				for (var i = 0; i < data.length; i++) {
 					var name = data[i].name;
 					var description = data[i].description || '';
@@ -90,38 +91,39 @@ $(document).ready(function () {
 					html += '<p class="description">' + description + '</p>';
 					html += '</a></li>'
 				}
+				html += '</ul>';
+				html += `<ul class="list-columns">
+				<div class="col">
+					<a href="#" class="title">Notícias</a>
+					<ul class="category-list">
+						<li><a href=""><p class="directory">Há 30 minutos</p><p class="name">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</p><p class="description">Os dois projetos tramitam em caráter conclusivo e devem ser transformados em um texto único, que segue para o Senado, a não ser que haja recurso</p></a></li>
+						<li><a href=""><p class="directory">Há 3 horas</p><p class="name">Projetos que estimulam enoturismo são aprovados</p><p class="description">O Projeto segurá para o Senado Federal</p></a></li>
+						<li><a href=""><p class="directory">Há 1 dia</p><p class="name">Audiência Pública discute segurança alimentar</p><p class="description">Audiênicia contará com a presença de vários especialistas</p></a></li>
+					</ul>
+				</div>
+				<div class="col">
+					<a href="#" class="title">Legislação</a>
+					<ul class="category-list">
+						<li><a href=""><p class="directory"><strong>Lei</strong> Federal</p><p class="name"><strong>Lei</strong> 12.527 de 2011</p><p class="description"><strong>Lei</strong> de Acesso à informação</p></a></li>
+					</ul>
+				</div>
+				<div class="col">
+					<a href="#" class="title">Deputados</a>
+					<ul class="category-list">
+						<li><a href=""><p class="directory">Deputada</p><p class="name">Mara Gabrilli </p><p class="description">PSDB/SP</p></a></li>
+						<li><a href=""><p class="directory">Deputado</p><p class="name">Rodrigo Maia</p><p class="description">Presidente da Câmara dos Deputados</p></a></li>
+					</ul>
+				</div>
+				<div class="col">
+					<a href="#" class="title">Proposições</a>
+					<ul class="category-list">
+						<li><a href=""><p class="directory">CCJ</p><p class="name">PL 5734/2001</p><p class="description">Dispões sobre tal coisa</p></a></li>
+						<li><a href=""><p class="directory">CMO</p><p class="name">PLN 2/2018</p><p class="description">Projeto de <strong>Lei</strong> de Diretrizes Orçamentárias</p></a></li>
+					</ul>
+				</div>
+			</ul>`;
 			}
-			html += '</ul>';
-			html += `<ul class="list-columns">
-			<div class="col">
-				<a href="#" class="title">Notícias</a>
-				<ul class="category-list">
-					<li><a href=""><p class="directory">Há 30 minutos</p><p class="name">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</p><p class="description">Os dois projetos tramitam em caráter conclusivo e devem ser transformados em um texto único, que segue para o Senado, a não ser que haja recurso</p></a></li>
-					<li><a href=""><p class="directory">Há 3 horas</p><p class="name">Projetos que estimulam enoturismo são aprovados</p><p class="description">O Projeto segurá para o Senado Federal</p></a></li>
-					<li><a href=""><p class="directory">Há 1 dia</p><p class="name">Audiência Pública discute segurança alimentar</p><p class="description">Audiênicia contará com a presença de vários especialistas</p></a></li>
-				</ul>
-			</div>
-			<div class="col">
-				<a href="#" class="title">Legislação</a>
-				<ul class="category-list">
-					<li><a href=""><p class="directory"><strong>Lei</strong> Federal</p><p class="name"><strong>Lei</strong> 12.527 de 2011</p><p class="description"><strong>Lei</strong> de Acesso à informação</p></a></li>
-				</ul>
-			</div>
-			<div class="col">
-				<a href="#" class="title">Deputados</a>
-				<ul class="category-list">
-					<li><a href=""><p class="directory">Deputada</p><p class="name">Mara Gabrilli </p><p class="description">PSDB/SP</p></a></li>
-					<li><a href=""><p class="directory">Deputado</p><p class="name">Rodrigo Maia</p><p class="description">Presidente da Câmara dos Deputados</p></a></li>
-				</ul>
-			</div>
-			<div class="col">
-				<a href="#" class="title">Proposições</a>
-				<ul class="category-list">
-					<li><a href=""><p class="directory">CCJ</p><p class="name">PL 5734/2001</p><p class="description">Dispões sobre tal coisa</p></a></li>
-					<li><a href=""><p class="directory">CMO</p><p class="name">PLN 2/2018</p><p class="description">Projeto de <strong>Lei</strong> de Diretrizes Orçamentárias</p></a></li>
-				</ul>
-			</div>
-		</ul>`;
+
 			$('#ResultadoBusca').html(html);
 		}
 
@@ -196,49 +198,49 @@ $(document).ready(function () {
 		sideSubmenu($(this));
 	});
 
-	$('.settings-icon').click(function(){
+	$('.settings-icon').click(function () {
 		$(this).toggleClass('act').next('.site-settings').toggleClass('act');
 		$('.toogle-show').fadeToggle();
 		return false;
 	});
-	$('.font-size.less').click(function(){
+	$('.font-size.less').click(function () {
 		var size = $("html").css('font-size').replace('px', '');
-		if (size > 12){
-			$("html").css('font-size', (--size)+'px');
+		if (size > 12) {
+			$("html").css('font-size', (--size) + 'px');
 		}
 		return false;
 	});
-	$('.font-size.more').click(function(){
+	$('.font-size.more').click(function () {
 		var size = $("html").css('font-size').replace('px', '');
-		if (size < 20){
-			$("html").css('font-size', (++size)+'px');
+		if (size < 20) {
+			$("html").css('font-size', (++size) + 'px');
 		}
 		return false;
 	});
-	$('.font-size.reset').click(function(){
+	$('.font-size.reset').click(function () {
 		var size = $("html").css('font-size').replace('px', '');
 		$("html").css('font-size', '100%');
 		return false;
 	});
-	$('.hight-contrast').click(function(){
+	$('.hight-contrast').click(function () {
 		$("html").addClass('hight-contrast');
 		$(this).addClass('act');
 		return false;
 	});
-	$('.normal-contrast').click(function(){
+	$('.normal-contrast').click(function () {
 		$("html").removeClass('hight-contrast');
 		$('.box-contrast a').removeClass('act');
 		return false;
 	});
-	$('.share-button').click(function(){
+	$('.share-button').click(function () {
 		$(this).parent().toggleClass('act').children('.box-options').slideToggle();
 	});
-	
-	$('.toggle-category').click(function(){
+
+	$('.toggle-category').click(function () {
 		$(this).toggleClass('act').next('.box-list').slideToggle();
 		return false;
 	});
-	
+
 	// ATALHOS DO TECLADO!!!
 	var sectionIndex = 0;
 	$('html').keydown(function (e) {
@@ -257,7 +259,7 @@ $(document).ready(function () {
 			goToSection(sectionIndex);
 			(sectionIndex >= 4 ? sectionIndex = 0 : sectionIndex++);
 		}
-		if(control && e.which == 52){
+		if (control && e.which == 52) {
 			goToFooter();
 		}
 
@@ -265,29 +267,29 @@ $(document).ready(function () {
 
 	//show-shortcut no body ao se pressionar o (alt ou Alt+Shift...)
 	var altDown = false;
-	$('body').keydown(function(e){
-		if(e.altKey && !altDown){
+	$('body').keydown(function (e) {
+		if (e.altKey && !altDown) {
 			altDown = true;
 			_onKeyDown();
 		}
 	});
-	$('body').keyup(function(e){
-		if(!e.altKey && altDown){
+	$('body').keyup(function (e) {
+		if (!e.altKey && altDown) {
 			altDown = false;
 			_onRelease();
 		}
 	});
 
-	function _onKeyDown(){
+	function _onKeyDown() {
 		$('body').addClass('show-shortcut');
 	}
 
-	function _onRelease(){
+	function _onRelease() {
 		$('body').removeClass('show-shortcut');
 	}
-	
+
 	//DIALOG
-	$(document).on('click', '*[data-dialog-type]',function(e){
+	$(document).on('click', '*[data-dialog-type]', function (e) {
 		/******
 		// data-dialog-type[type, position]
 		//// type: 1 = question (botao ok + cancelar)
@@ -295,7 +297,7 @@ $(document).ready(function () {
 		//// position: 0 = adiciona o dialogo apos o elemento
 		//// position: 1 = posicao absoluta ao pai do elento clicado
 		//// position: 2 = posicao fixa ao html
-		******/	
+		******/
 		e.preventDefault();
 		var dialogValues = $(this).attr('data-dialog-type').split(',');
 		var buttons = '';
@@ -303,40 +305,40 @@ $(document).ready(function () {
 		var acceptFunction = '';
 		var cancelFunction = '';
 		var positionClass = '';
-		
-		if ($(this).attr('data-dialog-accept-function') != ''){
-			acceptFunction = 'onclick="'+$(this).attr('data-dialog-accept-function')+'"';
+
+		if ($(this).attr('data-dialog-accept-function') != '') {
+			acceptFunction = 'onclick="' + $(this).attr('data-dialog-accept-function') + '"';
 		}
-		if ($(this).attr('data-dialog-cancel-function') != ''){
-			cancelFunction = 'onclick="'+$(this).attr('data-dialog-cancel-function')+'"';
+		if ($(this).attr('data-dialog-cancel-function') != '') {
+			cancelFunction = 'onclick="' + $(this).attr('data-dialog-cancel-function') + '"';
 		}
-		var acceptButton = '<button class="button accept invert-contrast" '+acceptFunction+'>Ok</button>'
-		var cancelButton = '<button class="button cancel" '+cancelFunction+'>Cancelar</button>'
+		var acceptButton = '<button class="button accept invert-contrast" ' + acceptFunction + '>Ok</button>'
+		var cancelButton = '<button class="button cancel" ' + cancelFunction + '>Cancelar</button>'
 		$(this).addClass('target');
-		if (dialogValues[0] == 1){
+		if (dialogValues[0] == 1) {
 			buttons = acceptButton;
 		}
-		if (dialogValues[0] == 2){
-			buttons = acceptButton+''+cancelButton;
+		if (dialogValues[0] == 2) {
+			buttons = acceptButton + '' + cancelButton;
 		}
-		if ($(this).attr('data-dialog-message') != ''){
-			message = '<div class="box-text"><p class="message">'+$(this).attr('data-dialog-message')+'</p></div>'
+		if ($(this).attr('data-dialog-message') != '') {
+			message = '<div class="box-text"><p class="message">' + $(this).attr('data-dialog-message') + '</p></div>'
 		};
 		$('.box-dialog, .bg-dialog').remove();
-		if(dialogValues[1] == 0){
+		if (dialogValues[1] == 0) {
 			positionClass = 'position-0';
 		};
-		if(dialogValues[1] == 1){
+		if (dialogValues[1] == 1) {
 			positionClass = 'position-1';
 		};
-		if(dialogValues[1] == 2){
+		if (dialogValues[1] == 2) {
 			positionClass = 'position-2';
 		};
-		var html = '<div class="box-dialog '+positionClass+'"><div class="center"><div class="middle shadow">'+message+'<div class="box-buttons">'+buttons+'</div></div></div></div><div class="bg-dialog"></div>';
+		var html = '<div class="box-dialog ' + positionClass + '"><div class="center"><div class="middle shadow">' + message + '<div class="box-buttons">' + buttons + '</div></div></div></div><div class="bg-dialog"></div>';
 		$(html).hide().insertAfter($(this)).fadeIn().parent().css('position', 'relative');
 		//$(this).after(html).fadeIn().parent().css('position', 'relative');
 	});
-	
+
 	moverRecomendados();
 	menu_max_height();
 	atualizaMinHeight();
@@ -473,13 +475,13 @@ function goToEasyAccess() {
 	$('#easy-access li a').first().focus();
 }
 
-function goToSection(index){
+function goToSection(index) {
 	var selector = '#section-' + (index + 1);
 	scrollToElement(selector);
 	$(selector + ' li a, ' + selector + ' button').first().focus();
 }
 
-function goToFooter(){
+function goToFooter() {
 	scrollToElement('footer');
 	$('footer .footer-links a').first().focus();
 }
@@ -500,19 +502,19 @@ function scrollToDivPoint(containerEl, pointEl) {
 	});
 }
 
-function animateScroll(container, scrollTo){
+function animateScroll(container, scrollTo) {
 	container.animate({
 		scrollTop: scrollTo.offset().top
 	});
 }
 
-function acceptButton(e){
+function acceptButton(e) {
 	/*$(e).parent().parent().find('.target').removeClass('target').click();
 	cancelButton($(e));*/
 };
-function cancelButton(e){
-	$('.box-dialog').parent().css('position','').find('.target').removeClass('target');
-	$('.box-dialog, .bg-dialog').fadeOut("normal", function() {
-        $(this).remove();
-    });
+function cancelButton(e) {
+	$('.box-dialog').parent().css('position', '').find('.target').removeClass('target');
+	$('.box-dialog, .bg-dialog').fadeOut("normal", function () {
+		$(this).remove();
+	});
 };
