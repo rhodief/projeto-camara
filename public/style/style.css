@@ -493,6 +493,8 @@ div.panel-det{margin:1em}
 .form input[type=email],
 .form input[type=search],
 .form input[type=password]{width: 100%; display: block; height: 40px; height: 2.5rem; border:1px solid #004a2f; color:#494949; font-size:14px; font-size:0.875rem; padding: 0 6px; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.facebookWrapper iframe,
+.twitterwrapper iframe{width: 100%;}
 .form{max-width: 1200px; margin: 0 auto;}
 .form .label,
 .form label{display: block; font-weight: 600; color: #004a2f; font-size: 14px; font-size: 0.875rem; width: 100%; margin:0 0 5px;}
