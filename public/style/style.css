@@ -583,7 +583,8 @@ div.panel-det{margin:1em}
 .section-news .box-news{background: none; max-width: none;}
 .section-news .center{padding: 0; max-width: 1240px; position: relative;}
 .section-news .last-news{background: #fff; margin: 0 10px 10px; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box;}
-.section-news .last-news .title{font-size: 18px; font-size: 1.125rem; text-transform: uppercase; text-align: center; color: #004a2f; margin-bottom: 8px;}
+.section-news .last-news .title{font-size: 1.125rem; text-transform: uppercase; text-align: center; color: #004a2f; margin-bottom: 8px;}
+.section-news .last-news .subtitle{font-size: 0.9rem; text-align: center; color: #004a2f; margin-bottom: 8px;}
 .section-news .last-news .tabs{display: table; width: 100%;}
 .section-news .last-news .tabs li{display: table-cell; text-align: center;}
 .section-news .last-news .tabs li a{background: #dcdcdc; color: #004a2f; font-weight: 600; padding: 10px;}
