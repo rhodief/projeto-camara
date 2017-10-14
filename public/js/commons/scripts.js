@@ -73,7 +73,7 @@ $(document).ready(function () {
 		}
 
 		function _showResults(error, data) {
-			var html = '<ul>';
+			var html = '<ul class="horizontal-result">';
 			if (!error) {
 				for (var i = 0; i < data.length; i++) {
 					var name = data[i].name;
@@ -84,14 +84,44 @@ $(document).ready(function () {
 							breadCrumbs += data[i].breadCrumbs[j].name + ' / ';
 						}
 					}
-					html += '<li>';
+					html += '<li><a href=""';
 					html += '<p class="directory">' + breadCrumbs + '</p>';
 					html += '<p class="name">' + name + '</p>';
 					html += '<p class="description">' + description + '</p>';
-					html += '</li>'
+					html += '</a></li>'
 				}
 			}
 			html += '</ul>';
+			html += `<ul class="list-columns">
+			<div class="col">
+				<a href="#" class="title">Notícias</a>
+				<ul class="category-list">
+					<li><a href=""><p class="directory">Há 30 minutos</p><p class="name">Parlamentos de língua portuguesa debatem estrutura de apoio à atividade legislativa</p><p class="description">Os dois projetos tramitam em caráter conclusivo e devem ser transformados em um texto único, que segue para o Senado, a não ser que haja recurso</p></a></li>
+					<li><a href=""><p class="directory">Há 3 horas</p><p class="name">Projetos que estimulam enoturismo são aprovados</p><p class="description">O Projeto segurá para o Senado Federal</p></a></li>
+					<li><a href=""><p class="directory">Há 1 dia</p><p class="name">Audiência Pública discute segurança alimentar</p><p class="description">Audiênicia contará com a presença de vários especialistas</p></a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<a href="#" class="title">Legislação</a>
+				<ul class="category-list">
+					<li><a href=""><p class="directory"><strong>Lei</strong> Federal</p><p class="name"><strong>Lei</strong> 12.527 de 2011</p><p class="description"><strong>Lei</strong> de Acesso à informação</p></a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<a href="#" class="title">Deputados</a>
+				<ul class="category-list">
+					<li><a href=""><p class="directory">Deputada</p><p class="name">Mara Gabrilli </p><p class="description">PSDB/SP</p></a></li>
+					<li><a href=""><p class="directory">Deputado</p><p class="name">Rodrigo Maia</p><p class="description">Presidente da Câmara dos Deputados</p></a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<a href="#" class="title">Proposições</a>
+				<ul class="category-list">
+					<li><a href=""><p class="directory">CCJ</p><p class="name">PL 5734/2001</p><p class="description">Dispões sobre tal coisa</p></a></li>
+					<li><a href=""><p class="directory">CMO</p><p class="name">PLN 2/2018</p><p class="description">Projeto de <strong>Lei</strong> de Diretrizes Orçamentárias</p></a></li>
+				</ul>
+			</div>
+		</ul>`;
 			$('#ResultadoBusca').html(html);
 		}
 

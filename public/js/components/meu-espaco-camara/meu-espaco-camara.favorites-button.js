@@ -17,9 +17,10 @@
             scope: {
                 url:'@',
                 title: '@',
-                visible:'@'
+                visible:'@',
+                position:'@'
             },
-            template: '<button class="favorite-button" ng-style="vm.block" ng-class="{act: vm.included, show:vm.included}" ng-click="vm.toggleInclude(vm.url, vm.title)">{{vm.included ? "Favoritado" : "Não Favoritado. Favoritar?"}}</button>',
+            template: '<button class="favorite-button" ng-style="vm.block" ng-class="{act: vm.included, show:vm.included, right:vm.position}" ng-click="vm.toggleInclude(vm.url, vm.title)">{{vm.included ? "Favoritado" : "Não Favoritado. Favoritar?"}}</button>',
             controller: favoritesButtonController,
             controllerAs:'vm'
         };
@@ -35,7 +36,7 @@
         vm.url = $scope.url || null;
         vm.title = $scope.title || null;
         vm.block = $scope.visible ? {display:'block'} : {};
-
+        vm.position = $scope.position || '';
         $scope.$on('refrashFavorites', function(ev, data){
             if(data){
                 _refrashFromDynamicNews(data);
