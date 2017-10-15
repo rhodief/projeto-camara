@@ -1,6 +1,6 @@
 # Projeto Novo Portal da Câmara dos Deputados
 
-##Introdução
+## Introdução
 Este é o projeto criado por Jhonatan Cordeiro e Rhodie A. Ferreira para o desafio “Novo Portal da Câmara dos Deputados”.
 Para montarmos o conceito do projeto, nos baseamos nas lições de Giacomo Sani (1992) que mostram que a participação política não é linear, possui 3 níveis de engajamento.
 O primeiro nível é a Presença, em que o indivíduo se expõe de maneira passiva à mensagem política, como assistir a uma reunião.
@@ -11,7 +11,7 @@ A conclusão disso é que não temos um  perfil único de usuário cidadão, mas
 Foi com base nisso que desenhamos o conceito geral do nosso projeto: ele deve ser progressivo e personalizável para fornecer, num nível mais básico, amplo acesso à informação de forma clara e explicativa. Num nível intermediário, deve fomentar o engajamento em relação aos debates e aos mecanismos de fiscalização da atividade parlamentar e, num nível mais avançado, convidar à participação nas decisões, presencial ou remotamente. 
 Em resumo: o portal deve acomodar o espectro entre ser ser intuitivo e explicativo para o usuário leigo e, ao mesmo tempo, dinâmico e denso para o usuário avançado.
 
-##Aspectos Gerais de Layout e Experiência do usuário
+## Aspectos Gerais de Layout e Experiência do usuário
 Inicialmente, falarei dos aspectos gerais de layout e experiência do usuário nas telas do projeto, após destacarei aspectos de navegação e arquitetura da informação e, por fim, mostraremos o espaço de personalização local que acreditamos colaborar para um maior engajamento.
 Num primeiro nível, privilegiamos a informação didática. Assim, a página inicial mostra um resumo convidativo aos principais conteúdos do portal.
 A primeira seção é de notícias, mostrando as principais no momento do acesso. 
@@ -25,7 +25,7 @@ No agregador “Transparência”, são mostradas primeiro informações sobre o
 No agregador de “Participação”, são mostradas primeiro as principais ações sobre participação e, após, uma amostra mais detalhada dos mecanismos de participação, com ênfase no fale conosco, e-democracia e redes sociais.
 A página padrão é simples e limpa, para privilegiar o conteúdo, com menu recolhível e links relacionados.
 
-##Aspectos Gerais de Navegação e Arquitetura da Informação
+## Aspectos Gerais de Navegação e Arquitetura da Informação
 Sobre a navegação e arquitetura da informação falaremos agora sobre os elementos comuns em todas as páginas.
 No topo estão as configurações de acessibilidade. É possível mudar o tamanho da fonte e ativar o modo alto-contraste.
 O menu é simples, possibilitando a navegação para os principais pontos do site. Ele também se encontra no rodapé, com nova forma de visualização.
@@ -35,7 +35,7 @@ A guia agenda mostra os eventos da casa, com informações dinâmicas num format
 A guia notícias possui acesso direto aos agregadores de macrotemas de notícas, além do Câmara Notícias.
 Destacamos, por fim, os atalhos de navegação pelo teclado, que possuem descrição dinâmica de suas ações, que aparecem ao manter pressionada a tecla “Alt”.
 
-##\#MeuEspaçoCâmara
+## \#MeuEspaçoCâmara
 Apelidamos de \#MeuEspaçoCâmara o espaço de configuração personalizada que pode ser acessado por meio do botão com a logo da Câmara, sempre visível no canto inferior direito da página.
 Nele é possível guardar qualquer página do portal para posterior acesso rápido, bastando acionar o botão de favoritos. (estrela amarela)
 Para acessar o conteúdo gravado, basta ir ao  \#MeuEspaçoCâmara, na guia “Favoritos”. 
@@ -49,7 +49,7 @@ Repare que mesmo ao recarregar a página as informações personalizadas continu
 
 O \#MeuEspaçoCâmara transforma a home do site numa verdadeira aplicação local, como um app de celular.
 
-##Conclusão
+## Conclusão
 A possibilidade de personalização local é uma forma fácil e sem burocracias de incentivar o usuário a conhecer e usar recursos disponíveis para obter a informação do seu interesse, sem necessidade de cadastros.
 Conforme o engajamento aumente, o portal incentiva a inscrição para utilizar serviços de participação mais direta, como os do e-democracia.
 Futuramente, caso seja implementada a ideia dos painéis na home, ela pode ser aberta à colaboração.
@@ -57,6 +57,6 @@ Assim, se alguém desenvolve um painel usando os dados abertos da Câmara, e cas
 Os painéis que colocamos neste projeto foram somente para exemplificar.
 Esses foram os principais pontos. Agradecemos a oportunidade, aprendemos bastante nessa caminhada!
 
-#Referência
+# Referência
 SANI, Giacomo. Participação política. In: BOBBIO, N. et al. *Dicionário de política*.
 Brasília: UnB, 1992, p. 888-890. 
