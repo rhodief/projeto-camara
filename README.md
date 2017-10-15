@@ -7,7 +7,7 @@ O primeiro nível é a Presença, em que o indivíduo se expõe de maneira passi
 O segundo é a Ativação, em que o indivíduo se engaja em algo coletivo, como participação em campanhas e protestos, por exemplo.
 O terceiro é a Decisão, em que o indivíduo busca participação, ou de forma indireta, pelo voto, ou diretamente candidatando-se a um cargo eletivo.
 Ademais, o autor destaca que a informação é insumo indispensável para o exercício da participação, pois sem ela, não há sobre o quê se posicionar.
-A conclusão disso é que não temos um  perfil único de usuário cidadão, mas usuários com diferentes interesses em diferentes profundidades.
+A conclusão disso é que não temos um  perfil único de usuário-cidadão, mas usuários com diferentes interesses em diferentes profundidades.
 Foi com base nisso que desenhamos o conceito geral do nosso projeto: ele deve ser progressivo e personalizável para fornecer, num nível mais básico, amplo acesso à informação de forma clara e explicativa. Num nível intermediário, deve fomentar o engajamento em relação aos debates e aos mecanismos de fiscalização da atividade parlamentar e, num nível mais avançado, convidar à participação nas decisões, presencial ou remotamente. 
 Em resumo: o portal deve acomodar o espectro entre ser ser intuitivo e explicativo para o usuário leigo e, ao mesmo tempo, dinâmico e denso para o usuário avançado.
 
@@ -21,7 +21,7 @@ Após, “Fiscalize”, mostrando as principais informações disponíveis, com 
 Por fim, a seção “Educação para a Democracia”, mostrando projetos institucionais de fomento à educação disponibilizados pela Câmara.
 Utilizamos o padrão de cartão para o conteúdo do portal, que deixa o visual limpo, moderno e coeso. Utilizamos também alternância entre o fundo sólido e imagens entre as seções, para não cansar o usuário com a visualização dos mesmos elementos,  e ao mesmo tempo buscamos destacar o belo conjunto arquitetônico do Congresso Nacional nas imagens de fundo.
 A página “Câmara Notícias” e de “agregador de macrotemas” foram pensadas para valorizar a informação. Assim, é mostrada cada notícia em um cartão, podendo ser exibida de diferentes formas para dar fluidez e organização à página, privilegiando o conteúdo ao vivo e os principais serviços da rede de comunicação da casa, além de informações correlatas de outros pontos do portal.
-No agregador “Transparência”, são mostradas primeiro informações sobre o acesso à informação, convidando o usuário cidadão a conhecer quais estão disponíveis e como acessá-las, tudo com descrição dos elementos para os quais os links apontam.
+No agregador “Transparência”, são mostradas primeiro informações sobre o acesso à informação, convidando o usuário-cidadão a conhecer quais estão disponíveis e como acessá-las, tudo com descrição dos elementos para os quais os links apontam.
 No agregador de “Participação”, são mostradas primeiro as principais ações sobre participação e, após, uma amostra mais detalhada dos mecanismos de participação, com ênfase no fale conosco, e-democracia e redes sociais.
 A página padrão é simples e limpa, para privilegiar o conteúdo, com menu recolhível e links relacionados.
 
