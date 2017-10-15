@@ -7,7 +7,7 @@ O diretório "server_simulator" possui arquivos que são requisitados (usando AJ
 
 O projeto também usa requisições internamente, logo, mesmo sem backend, deve ser rodado num servidor para que todas as funcionalidades estajam disponíveis. 
 
-Clique para acessar a [demonstração](https://rhodief.github.io/projeto-camara/public/).
+Clique para acessar a [demonstração](https://rhodief.github.io/projeto-camara/public/) e o [vídeo de apresentação](https://www.youtube.com/watch?v=J7ZkXXmHXzw&feature=youtu.be).
 
 ## Introdução
 Este é o projeto criado por Jhonatan Cordeiro e Rhodie A. Ferreira para o desafio “Novo Portal da Câmara dos Deputados”.
