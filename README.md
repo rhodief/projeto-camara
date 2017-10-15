@@ -1,8 +1,10 @@
 # Projeto Novo Portal da Câmara dos Deputados
 
 ## Informações Preliminares
-O conteúdo do projeto está no diretório "public". O diretório "server_simulator" possui arquivos que são requisitados (usando AJAX) pelas páginas do projeto somente para simular "backend", no intuito de destacar a experiência do usuário.
+O conteúdo do projeto está no diretório "public". O diretório "server_simulator" possui arquivos que são requisitados (usando AJAX) pelas páginas do projeto somente para simular, "backend", no intuito de destacar a experiência do usuário.
 O projeto também usa requisições internamente, logo, mesmo sem backend, deve ser rodado num servidor para que todas as funcionalidades estajam disponíveis. 
+Clique para acessar a [demonstração](https://rhodief.github.io/projeto-camara/public/).
+
 ## Introdução
 Este é o projeto criado por Jhonatan Cordeiro e Rhodie A. Ferreira para o desafio “Novo Portal da Câmara dos Deputados”.
 Para montarmos o conceito do projeto, nos baseamos nas lições de Giacomo Sani (1992) que mostram que a participação política não é linear, possui 3 níveis de engajamento.
