@@ -1,7 +1,9 @@
 # Projeto Novo Portal da Câmara dos Deputados
 
 ## Informações Preliminares
-O conteúdo do projeto está no diretório "public". O diretório "server_simulator" possui arquivos que são requisitados (usando AJAX) pelas páginas do projeto somente para simular, "backend", no intuito de destacar a experiência do usuário.
+O conteúdo do projeto (contendo os trabalhos elencados no item 2.1 do Edital, alíneas "a" até "e".) está no diretório "public". 
+
+O diretório "server_simulator" possui arquivos que são requisitados (usando AJAX) pelas páginas do projeto somente para simular, "backend", no intuito de destacar a experiência do usuário.
 
 O projeto também usa requisições internamente, logo, mesmo sem backend, deve ser rodado num servidor para que todas as funcionalidades estajam disponíveis. 
 
