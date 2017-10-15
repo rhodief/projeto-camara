@@ -1,6 +1,0 @@
-Ver... Modicaço direta!!!!
-Nova modificação
-Outra linha
-Outra Linha Rhodie
-licença do jhonatan
-modificação 2
